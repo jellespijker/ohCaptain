@@ -1,23 +1,28 @@
 #!/usr/bin/python
 
 import os
-import sys
 import requests
-import tarfile
 
 buildpath = "./build"
+arch_rootfs = "./build/arch_rootfs"
 if not os.path.exists(buildpath):
     os.mkdir(buildpath, 0o755)
 
-if not os.path.exists("./build/gcc-linaro"):
-    url = "https://releases.linaro.org/components/toolchain/binaries/5.3-2016.02/arm-linux-gnueabihf/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf.tar.xz"
-    filename ="./build/gcc-linaro.tar.xz"
-    if not os.path.isfile(filename):
-        r = requests.get(url)
-        with open(filename, "wb") as code:
+if not os.path.exists(arch_rootfs):
+    url_arch = "http://os.archlinuxarm.org/os/ArchLinuxARM-am33x-latest.tar.gz"
+    url_boost = "http://mirror.archlinuxarm.org/armv7h/extra/boost-1.60.0-5-armv7h.pkg.tar.xz"
+    filename_arch ="./build/ArchLinuxARM-am33x-latest.tar.gz"
+    filename_boost = "./build/boost-1.60.0-5-armv7h.pkg.tar.xz"
+    os.mkdir(arch_rootfs, 0o755)
+    if not os.path.isfile(filename_arch):
+        r = requests.get(url_arch)
+        with open(filename_arch, "wb") as code:
             code.write(r.content)
-        tar = tarfile.open(filename)
-        tar.extractall(buildpath)
-        tar.close()
-        os.remove(filename)
-        os.rename("./build/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf", "./build/gcc-linaro")
+        os.system("bsdtar -xpf " + filename_arch + " -C " + arch_rootfs)
+        os.remove(filename_arch)
+
+        r = requests.get(url_boost)
+        with open(filename_boost, "wb") as code:
+            code.write(r.content)
+        os.system("bsdtar -xpf " + filename_boost + " -C " + arch_rootfs)
+        os.remove(filename_boost)
