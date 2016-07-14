@@ -169,7 +169,7 @@ namespace oCpt {
     protected:
     };
 
-/*!
+    /*!
      * \brief An object representing a coverage path task
      *
      *  All these types of tasks need a robot to cover a complete region in order to
