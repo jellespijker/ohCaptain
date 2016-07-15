@@ -1,4 +1,4 @@
-# load with -DCMAKE_TOOLCHAIN_FILE=cmake/Toolchain_BBB.cmake
+# load with -DCMAKE_TOOLCHAIN_FILE=./cmake/Toolchain_BBB.cmake
 set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_SYSTEM_PROCESSOR arm)
 set(CMAKE_CROSSCOMPILING 1)
@@ -12,8 +12,3 @@ SET(CMAKE_FIND_ROOT_PATH                "${ohCaptain_main_SOURCE_DIR}/build/arch
 SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM   NEVER)
 SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY   ONLY)
 SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE   ONLY)
-
-
-
-#SET(CMAKE_EXE_LINKER_FLAGS "-Wl,-rpath-link="${ohCaptain_main_SOURCE_DIR}/build/rootfs/usr/lib/arm-linux-gnueabihf")
-
