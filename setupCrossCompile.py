@@ -2,9 +2,12 @@
 
 import os
 import requests
+import mmap
 
-buildpath = "./build"
-arch_rootfs = "./build/arch_rootfs"
+buildpath = "build"
+arch_rootfs = "build/arch_rootfs"
+sharepath = "build/share"
+nfs4sharepath = "/srv/nfs4/ohCaptain"
 if not os.path.exists(buildpath):
     os.mkdir(buildpath, 0o755)
 
@@ -26,3 +29,15 @@ if not os.path.exists(arch_rootfs):
             code.write(r.content)
         os.system("bsdtar -xpf " + filename_boost + " -C " + arch_rootfs)
         os.remove(filename_boost)
+
+if not os.path.exists(sharepath):
+    if not os.path.exists(nfs4sharepath):
+        os.mkdir(nfs4sharepath, 0o755)
+    os.mkdir(sharepath, 0o755)
+    os.system("mount --bind " + sharepath + " " + nfs4sharepath)
+    os.system("exportfs -rav")
+    f = open("/etc/fstab")
+    s = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
+    if s.find(nfs4sharepath) == -1:
+        with open("etc/fstab", "a") as fstabFile:
+            fstabFile.write(os.getcwd() + sharepath + " " + nfs4sharepath + " none bind 0  0")

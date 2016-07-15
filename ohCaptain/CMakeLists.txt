@@ -22,22 +22,22 @@ file(GLOB_RECURSE ohCaptain_INC_FILES ${ohCaptain_INCLUDE_DIR} *.h)
 file(GLOB_RECURSE ohCaptain_SRC_FILES ${ohCaptain_SOURCE_DIR} *.cpp)
 
 #Build documentation
-find_package(Doxygen)
-if(DOXYGEN_FOUND)
-    set(DOXYGEN_INPUT           "${ohCaptain_SOURCE_DIR}/Doxyfile")
-    set(DOXYGEN_OUTPUT          "${ohCaptain_SOURCE_DIR}/doc")
+#find_package(Doxygen)
+#if(DOXYGEN_FOUND)
+#    set(DOXYGEN_INPUT           "${ohCaptain_SOURCE_DIR}/Doxyfile")
+#    set(DOXYGEN_OUTPUT          "${ohCaptain_SOURCE_DIR}/doc")
 
-    ADD_CUSTOM_COMMAND(
-            OUTPUT              ${DOXYGEN_OUTPUT}
-            COMMAND             ${CMAKE_COMMAND} -E echo_append "Building Documentation..."
-            COMMAND             ${DOXYGEN_EXECUTABLE} ${DOXYGEN_INPUT}
-            COMMAND             ${CMAKE_COMMAND} -E echo "Done."
-            WORKING_DIRECTORY   ${CMAKE_CURRENT_SOURCE_DIR}
-            DEPENDS             ${DOXYGEN_INPUT}
-    )
+#    ADD_CUSTOM_COMMAND(
+#            OUTPUT              ${DOXYGEN_OUTPUT}
+#            COMMAND             ${CMAKE_COMMAND} -E echo_append "Building Documentation..."
+#            COMMAND             ${DOXYGEN_EXECUTABLE} ${DOXYGEN_INPUT}
+#            COMMAND             ${CMAKE_COMMAND} -E echo "Done."
+#            WORKING_DIRECTORY   ${CMAKE_CURRENT_SOURCE_DIR}
+#            DEPENDS             ${DOXYGEN_INPUT}
+#    )
 
-    ADD_CUSTOM_TARGET(doc ALL DEPENDS ${DOXYGEN_INPUT})
-endif(DOXYGEN_FOUND)
+#    ADD_CUSTOM_TARGET(doc ALL DEPENDS ${DOXYGEN_INPUT})
+#endif(DOXYGEN_FOUND)
 
 #Build shared library
 add_library(ohCaptain SHARED ${ohCaptain_SRC_FILES} ${ohCaptain_INC_FILES})
