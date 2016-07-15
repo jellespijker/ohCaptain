@@ -14,8 +14,14 @@ include_directories(${Boost_INCLUDE_DIR})
 #Cross compile folders
 if (ARCH_CROSS_COMPILE)
     include_directories("${ohCaptain_main_SOURCE_DIR}/build/arch_rootfs/usr/include/${CXX_COMPILER_ID}/")
-    set(DEPLOY_FOLDER           "${ohCaptain_main_SOURCE_DIR}/build/share")
+    set(DEPLOY_FOLDER      "${ohCaptain_main_SOURCE_DIR}/build/share")
 endif (ARCH_CROSS_COMPILE)
+
+#build executable
+add_executable(runTests Task_check.cpp)
+target_link_libraries(runTests gtest gtest_main)
+target_link_libraries(runTests ohCaptain)
+target_link_libraries(runTests pthread)
 
 #Install targets
 if (ARCH_CROSS_COMPILE)
@@ -23,9 +29,3 @@ if (ARCH_CROSS_COMPILE)
 else()
     install( TARGETS runTests DESTINATION "/usr/local/ohCaptain/bin")
 endif(ARCH_CROSS_COMPILE)
-
-#build executable
-add_executable(runTests Task_check.cpp)
-target_link_libraries(runTests gtest gtest_main)
-target_link_libraries(runTests ohCaptain)
-target_link_libraries(runTests pthread)
