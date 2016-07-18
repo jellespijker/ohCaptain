@@ -18,7 +18,7 @@ if (ARCH_CROSS_COMPILE)
 endif (ARCH_CROSS_COMPILE)
 
 #build executable
-add_executable(runTests Task_check.cpp)
+add_executable(runTests Tests.cpp)
 target_link_libraries(runTests gtest gtest_main)
 target_link_libraries(runTests ohCaptain)
 target_link_libraries(runTests pthread)

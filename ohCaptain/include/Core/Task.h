@@ -6,6 +6,10 @@
 
 #include <boost/shared_ptr.hpp>
 
+#include <list>
+
+#include "Vessel.h"
+
 namespace oCpt {
 
     /*! \brief Task interface, all tasks need to adhere to this structure
@@ -16,6 +20,9 @@ namespace oCpt {
     class iTask {
     public:
         typedef boost::shared_ptr<iTask> ptr; //!< Boost shared_ptr to a task
+        typedef std::list<iTask::ptr> taskqueue; //!< A list of shared pointer tasks
+
+        taskqueue Work;
 
         class Status {
         public:
@@ -63,14 +70,14 @@ namespace oCpt {
          * Enumeration indicating which type of task the object is
          */
         enum TypeOf {
-            Route = 1, Work = 2
+            ROUTE = 1, WORK = 2
         };
 
         /*!
          * Constructor of the interface
          * @return
          */
-        iTask();
+        iTask(iVessel::ptr vessel, bool concurrent = false);
 
         /*!
          * Deconstructor of the interface
@@ -92,6 +99,10 @@ namespace oCpt {
          * The stop command for a task
          */
         virtual void stop() = 0;
+
+    protected:
+        bool _concurrent = false;   //!< Allowed to run as a seperate thread
+        Vessel::ptr _vessel =  nullptr; //!< Pointer to the world
     };
 
     /*!
@@ -103,7 +114,7 @@ namespace oCpt {
          * The contructor
          * @return
          */
-        Task();
+        Task(Vessel::ptr vessel, bool concurrent = false);
 
         /*!
          * The deconstructor
@@ -140,7 +151,7 @@ namespace oCpt {
          * Constructor of the interface
          * @return
          */
-        RouteTask();
+        RouteTask(Vessel::ptr vessel, bool concurrent = false);
         
         /*!
          * The deconstructor
@@ -159,7 +170,7 @@ namespace oCpt {
          * Constructor of the interface
          * @return
          */
-        WorkTask();
+        WorkTask(Vessel::ptr vessel, bool concurrent = false);
 
         /*!
          * The deconstructor
@@ -193,7 +204,7 @@ namespace oCpt {
         * Constructor of the interface
         * @return
         */
-        CoveragePathTask();
+        CoveragePathTask(Vessel::ptr vessel, bool concurrent = false);
 
         /*!
          * The deconstructor
@@ -214,7 +225,7 @@ namespace oCpt {
          * Constructor of the interface
          * @return
          */
-        FollowTask();
+        FollowTask(Vessel::ptr vessel, bool concurrent =  false);
 
         /*!
          * The deconstructor
@@ -236,7 +247,7 @@ namespace oCpt {
          * Constructor of the interface
          * @return
          */
-        PathTask();
+        PathTask(Vessel::ptr vessel, bool concurrent = false);
 
         /*!
          * The deconstructor
@@ -257,7 +268,7 @@ namespace oCpt {
         * Constructor of the interface
         * @return
         */
-        LogTask();
+        LogTask(Vessel::ptr vessel, bool concurrent = true);
 
         /*!
          * The deconstructor
@@ -279,12 +290,37 @@ namespace oCpt {
          * Constructor of the interface
          * @return
          */
-        DredgeTask();
+        DredgeTask(Vessel::ptr vessel, bool concurrent = true);
 
         /*!
          * The deconstructor
          */
         virtual ~DredgeTask();
+
+    protected:
+    };
+
+    class SensorTask : public WorkTask {
+    public:
+        SensorTask(Vessel::ptr vessel, bool concurrent = true);
+        virtual ~SensorTask();
+
+    protected:
+    };
+
+    class ActuatorTask : public WorkTask {
+    public:
+        ActuatorTask(Vessel::ptr vessel, bool concurrent = true);
+        virtual ~ActuatorTask();
+
+    protected:
+
+    };
+
+    class CommunicationTask : public WorkTask {
+    public:
+        CommunicationTask(Vessel::ptr vessel, bool concurrent = true);
+        virtual ~CommunicationTask();
 
     protected:
     };
