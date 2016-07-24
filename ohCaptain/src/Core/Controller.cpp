@@ -43,15 +43,15 @@ namespace oCpt {
         }
 
         adc::adc(uint8_t id, uint8_t device, std::string modName) {
-            _device = device;
-            _id = id;
+            device_ = device;
+            id_ = id;
             std::stringstream ss;
-            ss << "/sys/bus/iio/devices/iio:device"  << std::to_string(_device) << "/in_voltage" << std::to_string(_id) << "_raw";
-            _path = ss.str();
+            ss << "/sys/bus/iio/devices/iio:device"  << std::to_string(device_) << "/in_voltage" << std::to_string(id_) << "_raw";
+            path_ = ss.str();
             if (!modLoaded(modName)) {
                 throw oCptException("Exception! Module not loaded", 0);
             }
-            if (!fileExist(_path)) {
+            if (!fileExist(path_)) {
                 throw oCptException("Exception! Userspacefile doesn't exist", 1);
             }
         }
@@ -60,49 +60,39 @@ namespace oCpt {
 
         uint16_t  &adc::getValue() {
             std::ifstream fs;
-            fs.open(_path.c_str());
-            fs >> _value;
+            fs.open(path_.c_str());
+            fs >> value_;
             fs.close();
-            return _value;
+            return value_;
         }
 
         bool adc::operator==(const adc &rhs) {
-            return (rhs._path.compare(_path) == 0);
+            return (rhs.path_.compare(path_) == 0);
         }
 
         bool adc::compare(const uint8_t &id, const uint8_t &device) {
-            return (_id == id && _device == device);
+            return (id_ == id && device_ == device);
         }
     }
 
-    iController::iController() {}
+    iController::iController(World::ptr world)
+            : world_(world) {}
 
     iController::~iController() {}
 
-    ARM::ARM() {
-    }
+    ARM::ARM(World::ptr world)
+            : iController(world) {  }
 
     ARM::~ARM() {}
 
     protocol::adc::ptr ARM::getADC(uint8_t id, uint8_t device) {
-        std::for_each(_adcVector.begin(), _adcVector.end(),[&](protocol::adc::ptr &A){
+        std::for_each(adcVector_.begin(), adcVector_.end(),[&](protocol::adc::ptr &A){
            if (A->compare(id, device)) { return A; }
         });
         return protocol::adc::ptr();
     }
 
     std::vector<protocol::adc::ptr> *ARM::getAdcVector() {
-        return &_adcVector;
+        return &adcVector_;
     }
-
-    BBB::BBB() {
-        // Init IIO device 0 port 0..6 load
-        for (uint8_t i = 0; i < 7; i++) {
-            protocol::adc::ptr adc_in(new protocol::adc(i, 0, "ti_am335x_adc"));
-            _adcVector.push_back(adc_in);
-        }
-    }
-
-    BBB::~BBB() {}
-
 }

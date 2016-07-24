@@ -8,42 +8,53 @@
 #include <boost/enable_shared_from_this.hpp>
 
 #include <vector>
+#include <thread>
 
 #include "World.h"
-#include "Sensor.h"
 #include "Controller.h"
+#include "Captain.h"
+#include "Boatswain.h"
+#include "Actuator.h"
 
 namespace oCpt {
-
-    class iVessel  {
+    class iVessel {
     public:
         typedef boost::shared_ptr<iVessel> ptr;
 
         iVessel();
-        virtual iVessel(iController::ptr controller) = 0;
+
+        iVessel(iController::ptr controller);
+
         virtual ~iVessel();
 
-        virtual World::ptr getWorld() = 0;
-        virtual iSensor::ptr getSensor(std::string id) = 0;
-        virtual std::vector<iSensor::ptr> getSensors() = 0;
-        virtual iController::ptr getController() = 0;
+        virtual void initialize() = 0;
+
+        virtual void run() = 0;
+
+        virtual void stop() = 0;
     };
 
     class Vessel : public iVessel {
     public:
         Vessel();
-        virtual Vessel(iController::ptr controller);
+
+        Vessel(iController::ptr controller);
+
         virtual ~Vessel();
 
-        virtual World::ptr getWorld();
-        virtual iSensor::ptr getSensor(std::string id);
-        virtual std::vector<iSensor::ptr> getSensors();
-        virtual iController::ptr getController();
+        virtual void initialize() override;
 
-    private:
-        World::ptr _world;
-        iController::ptr _controller;
-        std::vector<iSensor::ptr> _sensors;
+        virtual void run() override;
+
+        virtual void stop() override;
+
+    protected:
+        World::ptr world_;
+        iController::ptr controller_;
+        iCaptain::ptr captain_;
+        iBoatswain::ptr boatswain_;
+        std::vector<iSensor::ptr> sensors_;
+        std::vector<iActuator::ptr> actuators_;
     };
 
 }

@@ -6,12 +6,33 @@
 
 #include "../Core/Sensor.h"
 
+#include <utility>
 
 namespace oCpt {
     namespace components {
         namespace sensors {
             class PT100 : public Sensor {
+            public:
 
+                PT100(iController::ptr controller, std::string id, uint8_t pinid, uint8_t device);
+
+                ~PT100();
+
+                void updateSensor();
+
+                void run();
+
+                void stop();
+
+                void setCalibrationTemperature(std::pair<double, double> temparature,
+                                               std::pair<uint16_t, uint16_t> analogeValue);
+
+            private:
+                uint16_t _analogeValue;
+                uint8_t _device = 0;
+                uint8_t _pinid = 0;
+                double _dy_dx = 1.0;
+                double _constant = 0.0;
             };
         }
     }

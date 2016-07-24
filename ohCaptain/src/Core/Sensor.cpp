@@ -3,48 +3,58 @@
 //
 
 #include "../../include/Core/Sensor.h"
-
-#include <algorithm>
+#include "../../include/Core/Boatswain.h"
 
 namespace oCpt {
 
-    iSensor::iState::iState(const std::string &symbol, const auto &value) {
-        _symbol = symbol;
-        _value = value;
-    }
-
-    iSensor::iState::~iState() {}
-
-    iSensor::Parameter::Parameter(const std::string &symbol, const auto &value) : iState(symbol, value){ }
-
-    iSensor::Parameter::~Parameter() {}
-
-    auto& iSensor::Parameter::getValue() {
-        return _value;
-    }
-
-    std::string& iSensor::Parameter::getSymbol() {
-        return _value;
-    }
-
-    iSensor::iSensor(std::string id, Parameters &parameters) {
-        for (int i = 0; i < parameters.size(); i++) {
-            if (parameters[i]->getSymbol().compare("threadallowed") == 0){
-                _threadedAllowed = parameters[i]->getValue();
-                parameters.erase(parameters.begin() + i--);
-            }
-        }
+    iSensor::iSensor(iController::ptr controller,  World::ptr world, std::string id, std::string typeOfSensor)
+            : controller_(controller),
+              world_(world), id_(id),
+              typeOfSensor_(typeOfSensor),
+              timer_(0) {
+        state_.Value._longlong_t = 0;
     }
 
     iSensor::~iSensor() {}
 
-    std::string &iSensor::getID() {
-        return _id;
+    const boost::posix_time::milliseconds &iSensor::getTimer() const {
+        return timer_;
     }
 
-    void iSensor::setID(const std::string &_id) {
-        iSensor::_id = _id;
+    void iSensor::setTimer(const boost::posix_time::milliseconds &timer) {
+        iSensor::timer_ = timer;
     }
 
+    const iSensor::signal_t &iSensor::getSig_() const {
+        return sig_;
+    }
 
+    const iSensor::State &iSensor::getState() const {
+        return state_;
+    }
+
+    bool iSensor::operator==(iSensor::ptr rhs) {
+        return (id_.compare(rhs->id_) == 0 && typeOfSensor_.compare(rhs->typeOfSensor_) == 0 && controller_ == rhs->controller_);
+    }
+
+    Sensor::Sensor(iController::ptr controller, World::ptr world, std::string id, std::string typeOfSensor)
+            : iSensor(controller, world, id, typeOfSensor) {
+
+    }
+
+    Sensor::~Sensor() {
+
+    }
+
+    void Sensor::updateSensor() {
+
+    }
+
+    void Sensor::run() {
+
+    }
+
+    void Sensor::stop() {
+
+    }
 }

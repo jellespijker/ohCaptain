@@ -6,80 +6,87 @@
 
 #include <boost/shared_ptr.hpp>
 #include <boost/signals2.hpp>
+#include <boost/chrono.hpp>
+#include <boost/asio/steady_timer.hpp>
+#include <boost/date_time/posix_time/posix_time.hpp>
 
 #include <string>
 #include <vector>
+
+#include "Controller.h"
+#include "Exception.h"
 
 namespace oCpt {
 
     class iSensor {
     public:
-
-        class iState {
-        public:
-            typedef boost::shared_ptr<iState> ptr;
-            iState(const std::string &symbol, const auto &value);
-            virtual ~iState();
-
-            auto &getValue();
-            std::string &getSymbol();
-        protected:
-            std::string _symbol;
-            auto _value;
-        };
-
-        class Parameter : public iState {
-        public:
-            Parameter(const std::string &symbol, const auto &value);
-            ~Parameter();
-
-            auto &getValue();
-            std::string &getSymbol();
-        };
-
-        class SensorState : public iState {
-        public:
-            SensorState(const std::string &symbol, const auto &value);
-            ~SensorState();
-
-            auto &getValue();
-            std::string &getSymbol();
-        };
-
-        typedef std::vector<Parameter::ptr> Parameters;
-        typedef std::vector<SensorState::ptr> SensorStates;
-
         typedef boost::shared_ptr<iSensor> ptr;
-        typedef boost::signals2::signal<auto ()> signal_t;
+        typedef boost::signals2::signal<void()> signal_t;
 
-        iSensor(std::string id = "", Parameters &parameters);
-        ~iSensor();
+        struct State {
+            union {
+                char _char_t;
+                unsigned char _uchar_t;
+                short _short_t;
+                unsigned short _ushort_;
+                int _int_t;
+                unsigned int _uint_t;
+                long _long_t;
+                unsigned long _ulong_t;
+                long long _longlong_t;
+                unsigned long long _ulonglong_t;
+                float _float_t;
+                double _double_t;
+                long double _longdouble_t;
+                bool _bool_t;
+            } Value;
+            boost::chrono::time_point<boost::chrono::steady_clock> Stamp;
+        };
 
-        std::string &getID();
-        void setID(const std::string &id);
+        iSensor(iController::ptr controller, World::ptr world ,std::string id, std::string typeOfSensor = "");
 
-        std::string &getType();
-        void setType(const std::string &typeName);
+        virtual ~iSensor();
 
-        virtual SensorState getState() = 0;
-        virtual void Run() = 0;
-        virtual void Stop() = 0;
+        virtual void updateSensor() = 0;
 
-        signal_t sig;
+        virtual void run() = 0;
+
+        virtual void stop() = 0;
+
+        virtual bool operator==(iSensor::ptr rhs);
+
+        const boost::posix_time::milliseconds &getTimer() const;
+
+        void setTimer(const boost::posix_time::milliseconds &timer);
+
+        const signal_t &getSig_() const;
+
+        const State &getState() const;
 
     protected:
-        std::string _id = "";
-        std::string _typeName = "";
-        SensorState _state;
-        bool _threadedAllowed = false;
+        std::string id_;
+        std::string typeOfSensor_;
+        iController::ptr controller_;
+        World::ptr world_;
+        boost::posix_time::milliseconds timer_;
+        signal_t sig_;
+        State state_;
     };
 
     class Sensor : public iSensor {
     public:
-        Sensor(std::string id = "", Parameters &parameters);
-        virtual ~Sensor();
+        Sensor(iController::ptr controller, World::ptr world, std::string id, std::string typeOfSensor);
+
+        virtual ~Sensor() override;
+
+        virtual void updateSensor() override;
+
+        virtual void run() override;
+
+        virtual void stop() override;
 
 
     };
+
 
 }

@@ -3,12 +3,17 @@ project(runTests CXX)
 
 set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} -std=c++14")
 
-#setup boost
+#setup GTest
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 set(BUILD_GMOCK             OFF)
 set(BUILD_GTEST             ON)
 set(BUILD_SHARED_LIBS       ON)
-find_package(Boost)
+
+#setup boost
+set(Boost_USE_STATIC_LIBS       OFF)
+set(Boost_USE_MULTITHREADED     ON)
+set(Boost_USE_STATIC_RUNTIME    OFF)
+find_package(Boost COMPONENTS system chrono REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
 #Cross compile folders
