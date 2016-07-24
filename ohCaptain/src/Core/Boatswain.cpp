@@ -63,6 +63,7 @@ namespace oCpt {
             i++;
         });
         //TODO eliminate drift
+        timers_[i] = timerPtr(new boost::asio::deadline_timer(ioservice_, sensor->getTimer()));
         timers_[i]->async_wait(boost::bind(&iSensor::run, sensor));
         timers_[i]->async_wait(boost::bind(&Boatswain::resetTimer, this, sensor));
     }
