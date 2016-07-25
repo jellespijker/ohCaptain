@@ -15,12 +15,14 @@ namespace oCpt {
         typedef boost::shared_ptr<World> ptr;
 
         class Time {
-        private:
-            boost::chrono::steady_clock timeClock_;
         public:
             typedef boost::shared_ptr<Time> ptr;
             typedef boost::chrono::steady_clock::period tick_period;
-
+            typedef boost::chrono::steady_clock clock_t;
+            typedef boost::chrono::time_point<clock_t> timepoint_t;
+        private:
+            clock_t timeClock_;
+        public:
             Time();
 
             virtual ~Time();
@@ -29,22 +31,21 @@ namespace oCpt {
             class Log {
             public:
                 typedef boost::shared_ptr<Log> ptr;
-                typedef boost::chrono::steady_clock::time_point tp;
             private:
-                tp _epoch;
+                timepoint_t _epoch;
                 T _value;
             public:
 
                 Log() {}
 
-                Log(const T &value, const tp &epoch = boost::chrono::steady_clock::now()) {
+                Log(const T &value, const timepoint_t &epoch = clock_t::now()) {
                     this->_value = value;
                     this->_epoch = epoch;
                 }
 
                 virtual ~Log() {}
 
-                const tp &getEpoch() const {
+                const timepoint_t &getEpoch() const {
                     return _epoch;
                 }
 
@@ -56,9 +57,9 @@ namespace oCpt {
             template<typename T>
             using History = std::vector<boost::shared_ptr<Log<T>>>;
 
-            boost::chrono::steady_clock &getTimeClock();
+            clock_t &getTimeClock();
 
-            boost::chrono::steady_clock::time_point now();
+            timepoint_t now();
         };
 
         World();
@@ -66,6 +67,8 @@ namespace oCpt {
         virtual ~World();
 
         Time &getTime();
+
+        Time::timepoint_t now();
 
     protected:
         Time time_;

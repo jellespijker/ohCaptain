@@ -6,24 +6,30 @@
 
 namespace oCpt {
 
-    oCpt::World::Time::Time() {}
+    World::Time::Time() {}
 
-    oCpt::World::Time::~Time() {}
+    World::Time::~Time() {}
 
-    boost::chrono::steady_clock &oCpt::World::Time::getTimeClock() {
+    World::Time::clock_t &oCpt::World::Time::getTimeClock() {
         return timeClock_;
     }
 
-    boost::chrono::steady_clock::time_point oCpt::World::Time::now() {
+    World::Time::timepoint_t oCpt::World::Time::now() {
         return timeClock_.now();
     }
 
-    oCpt::World::World() {}
+   World::World() {
 
-    oCpt::World::~World() {}
+    }
+
+    World::~World() {}
 
     World::Time &World::getTime() {
         return time_;
+    }
+
+    World::Time::timepoint_t World::now() {
+        return time_.now();
     }
 
 }
