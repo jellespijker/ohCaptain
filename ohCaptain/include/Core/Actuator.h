@@ -19,6 +19,7 @@ namespace oCpt {
         typedef boost::shared_ptr<iActuator> ptr;
 
         iActuator();
+
         virtual ~iActuator();
 
         virtual void setActuator() = 0;

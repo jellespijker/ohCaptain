@@ -32,6 +32,12 @@ namespace oCpt {
         virtual void run() = 0;
 
         virtual void stop() = 0;
+    protected:
+        boost::shared_ptr<bool> stopThread_;
+    public:
+        const boost::shared_ptr<bool> &getStopThread() const;
+
+        void setStopThread(const boost::shared_ptr<bool> &stopThread);
     };
 
     class Vessel : public iVessel {

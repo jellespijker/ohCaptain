@@ -39,11 +39,17 @@ namespace oCpt {
 
         virtual void registerActuator(iActuator::ptr actuator) = 0;
 
+        const boost::shared_ptr<bool> &getStopThread() const;
+
+        void setStopThread(const boost::shared_ptr<bool> &stopThread);
+
     protected:
         boost::asio::io_service ioservice_;
         iController::ptr controller_;
         std::vector<timerPtr> timers_;
         std::vector<iSensor::ptr> timerSensors_;
+        boost::shared_ptr<bool> stopThread_;
+        boost::shared_ptr<bool> localStopThread_;
 
         virtual void resetTimer(iSensor::ptr sensor) = 0;
     };
@@ -63,6 +69,7 @@ namespace oCpt {
         virtual void registerSensor(iSensor::ptr sensor) override;
 
         virtual void registerActuator(iActuator::ptr actuator) override;
+
     protected:
         void resetTimer(iSensor::ptr sensor) override;
 

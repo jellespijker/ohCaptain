@@ -6,9 +6,9 @@
 
 namespace oCpt {
 
-    oCpt::World::Time::Time() { }
+    oCpt::World::Time::Time() {}
 
-    oCpt::World::Time::~Time() { }
+    oCpt::World::Time::~Time() {}
 
     boost::chrono::steady_clock &oCpt::World::Time::getTimeClock() {
         return timeClock_;
@@ -20,7 +20,7 @@ namespace oCpt {
 
     oCpt::World::World() {}
 
-    oCpt::World::~World() { }
+    oCpt::World::~World() {}
 
     World::Time &World::getTime() {
         return time_;

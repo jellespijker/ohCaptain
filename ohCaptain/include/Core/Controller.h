@@ -9,6 +9,7 @@
 
 #include <string>
 #include <vector>
+#include <mutex>
 
 #include "World.h"
 
@@ -27,6 +28,8 @@ namespace oCpt {
             bool fileExist(std::string fileName);
 
             bool dtboLoaded(std::string dtboName);
+
+            std::mutex usMutex;
         };
 
         class adc : public userspace {

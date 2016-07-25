@@ -12,7 +12,7 @@ namespace oCpt {
             PT100::PT100(iController::ptr controller, std::string id, uint8_t pinid, uint8_t device)
                     : Sensor(controller, oCpt::World::ptr(), id, "PT100"),
                       _pinid(pinid),
-                      _device(device){
+                      _device(device) {
 
             }
 
@@ -21,8 +21,7 @@ namespace oCpt {
             }
 
             void PT100::updateSensor() {
-                _analogeValue = controller_->getAdcVector()->at(0)->getValue();
-                        //->getADC(_pinid, _device)->getValue();
+                _analogeValue = controller_->getAdcVector()->at(_pinid)->getValue();
                 state_.Value._double_t = _dy_dx * _analogeValue + _constant;
                 //state_.Stamp = world_->getTime().now();
                 //TODO fix time stamp

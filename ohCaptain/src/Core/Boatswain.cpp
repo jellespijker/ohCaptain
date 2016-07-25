@@ -8,11 +8,19 @@
 namespace oCpt {
     iBoatswain::iBoatswain(iController::ptr controller)
             : controller_(controller) {
-
+        localStopThread_ = boost::shared_ptr<bool>(new bool{false});
     }
 
     iBoatswain::~iBoatswain() {
 
+    }
+
+    const boost::shared_ptr<bool> &iBoatswain::getStopThread() const {
+        return stopThread_;
+    }
+
+    void iBoatswain::setStopThread(const boost::shared_ptr<bool> &stopThread) {
+        iBoatswain::stopThread_ = stopThread;
     }
 
     Boatswain::Boatswain(iController::ptr controller) : iBoatswain(controller) {
@@ -24,13 +32,13 @@ namespace oCpt {
     }
 
     void Boatswain::run() {
-        //std::thread boatswainThreads(boost::bind(&Boatswain::runIO, this));
-        //boatswainThreads.detach();
+        std::thread boatswainThreads(boost::bind(&boost::asio::io_service::run, &ioservice_));
         ioservice_.run();
+        boatswainThreads.join();
     }
 
     void Boatswain::stop() {
-        //TODO write stop function
+        *localStopThread_ = true;
     }
 
     void Boatswain::initialize() {
@@ -55,13 +63,15 @@ namespace oCpt {
     }
 
     void Boatswain::resetTimer(iSensor::ptr sensor) {
-        int i = 0;
-        std::for_each(timerSensors_.begin(), timerSensors_.end(),[&](iSensor::ptr &P){
-            if (P == sensor) {
-                return;
-            }
+        if (*stopThread_ || *localStopThread_) {
+            return;
+        }
+        int i = -1;
+        std::find_if(timerSensors_.begin(), timerSensors_.end(),[&](iSensor::ptr &S){
             i++;
-        });
+            return S == sensor;
+        } );
+
         //TODO eliminate drift
         timers_[i] = timerPtr(new boost::asio::deadline_timer(ioservice_, sensor->getTimer()));
         timers_[i]->async_wait(boost::bind(&iSensor::run, sensor));

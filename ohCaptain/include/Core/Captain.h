@@ -23,7 +23,13 @@ namespace oCpt {
 
         virtual void initialize() = 0;
 
+        const boost::shared_ptr<bool> &getStopThread_() const;
+
+        void setStopThread_(const boost::shared_ptr<bool> &stopThread_);
+
     protected:
+        boost::shared_ptr<bool> stopThread_;
+        boost::shared_ptr<bool> localStopThread_;
         World::ptr world_;
     };
 

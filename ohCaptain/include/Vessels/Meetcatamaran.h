@@ -11,6 +11,7 @@ namespace oCpt {
         class Meetcatamaran : public Vessel {
         public:
             Meetcatamaran();
+
             virtual ~Meetcatamaran();
         };
     }

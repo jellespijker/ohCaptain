@@ -39,11 +39,11 @@ namespace oCpt {
                 double _double_t;
                 long double _longdouble_t;
                 bool _bool_t;
-            } Value;
+            } Value; //TODO replace with boost::any
             boost::chrono::time_point<boost::chrono::steady_clock> Stamp;
         };
 
-        iSensor(iController::ptr controller, World::ptr world ,std::string id, std::string typeOfSensor = "");
+        iSensor(iController::ptr controller, World::ptr world, std::string id, std::string typeOfSensor = "");
 
         virtual ~iSensor();
 
@@ -65,6 +65,16 @@ namespace oCpt {
 
     protected:
         std::string id_;
+    public:
+        const std::string &getID() const;
+
+        void setId_(const std::string &id_);
+
+        const std::string &getTypeOfSensor() const;
+
+        void setTypeOfSensor_(const std::string &typeOfSensor_);
+
+    protected:
         std::string typeOfSensor_;
         iController::ptr controller_;
         World::ptr world_;

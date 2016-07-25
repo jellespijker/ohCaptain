@@ -7,7 +7,7 @@
 
 namespace oCpt {
 
-    iSensor::iSensor(iController::ptr controller,  World::ptr world, std::string id, std::string typeOfSensor)
+    iSensor::iSensor(iController::ptr controller, World::ptr world, std::string id, std::string typeOfSensor)
             : controller_(controller),
               world_(world), id_(id),
               typeOfSensor_(typeOfSensor),
@@ -34,7 +34,24 @@ namespace oCpt {
     }
 
     bool iSensor::operator==(iSensor::ptr rhs) {
-        return (id_.compare(rhs->id_) == 0 && typeOfSensor_.compare(rhs->typeOfSensor_) == 0 && controller_ == rhs->controller_);
+        return (id_.compare(rhs->id_) == 0 && typeOfSensor_.compare(rhs->typeOfSensor_) == 0 &&
+                controller_ == rhs->controller_);
+    }
+
+    const std::string &iSensor::getID() const {
+        return id_;
+    }
+
+    void iSensor::setId_(const std::string &id_) {
+        iSensor::id_ = id_;
+    }
+
+    const std::string &iSensor::getTypeOfSensor() const {
+        return typeOfSensor_;
+    }
+
+    void iSensor::setTypeOfSensor_(const std::string &typeOfSensor_) {
+        iSensor::typeOfSensor_ = typeOfSensor_;
     }
 
     Sensor::Sensor(iController::ptr controller, World::ptr world, std::string id, std::string typeOfSensor)

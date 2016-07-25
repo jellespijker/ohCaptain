@@ -102,7 +102,7 @@ namespace oCpt {
 
     protected:
         bool _concurrent = false;   //!< Allowed to run as a seperate thread
-        Vessel::ptr _vessel =  nullptr; //!< Pointer to the world
+        Vessel::ptr _vessel = nullptr; //!< Pointer to the world
     };
 
     /*!
@@ -152,7 +152,7 @@ namespace oCpt {
          * @return
          */
         RouteTask(Vessel::ptr vessel, bool concurrent = false);
-        
+
         /*!
          * The deconstructor
          */
@@ -225,7 +225,7 @@ namespace oCpt {
          * Constructor of the interface
          * @return
          */
-        FollowTask(Vessel::ptr vessel, bool concurrent =  false);
+        FollowTask(Vessel::ptr vessel, bool concurrent = false);
 
         /*!
          * The deconstructor
@@ -303,6 +303,7 @@ namespace oCpt {
     class SensorTask : public WorkTask {
     public:
         SensorTask(Vessel::ptr vessel, bool concurrent = true);
+
         virtual ~SensorTask();
 
     protected:
@@ -311,6 +312,7 @@ namespace oCpt {
     class ActuatorTask : public WorkTask {
     public:
         ActuatorTask(Vessel::ptr vessel, bool concurrent = true);
+
         virtual ~ActuatorTask();
 
     protected:
@@ -320,6 +322,7 @@ namespace oCpt {
     class CommunicationTask : public WorkTask {
     public:
         CommunicationTask(Vessel::ptr vessel, bool concurrent = true);
+
         virtual ~CommunicationTask();
 
     protected:

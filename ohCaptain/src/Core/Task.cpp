@@ -29,7 +29,7 @@ namespace oCpt {
     Task::~Task() {}
 
     void Task::start() {
-        std::for_each(Work.begin(), Work.end(),[&](iTask::ptr &T){
+        std::for_each(Work.begin(), Work.end(), [&](iTask::ptr &T) {
 
         });
     }
