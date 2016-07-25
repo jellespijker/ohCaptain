@@ -40,7 +40,7 @@ namespace oCpt {
                 long double _longdouble_t;
                 bool _bool_t;
             } Value; //TODO replace with boost::any
-            boost::chrono::time_point<boost::chrono::steady_clock> Stamp;
+            World::Time::timepoint_t Stamp;
         };
 
         iSensor(iController::ptr controller, World::ptr world, std::string id, std::string typeOfSensor = "");

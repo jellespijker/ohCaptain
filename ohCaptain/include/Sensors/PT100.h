@@ -14,7 +14,7 @@ namespace oCpt {
             class PT100 : public Sensor {
             public:
 
-                PT100(iController::ptr controller, std::string id, uint8_t pinid, uint8_t device);
+                PT100(iController::ptr controller, World::ptr world, std::string id, uint8_t pinid, uint8_t device);
 
                 ~PT100();
 

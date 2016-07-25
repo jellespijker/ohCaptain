@@ -9,8 +9,8 @@
 namespace oCpt {
     namespace components {
         namespace sensors {
-            PT100::PT100(iController::ptr controller, std::string id, uint8_t pinid, uint8_t device)
-                    : Sensor(controller, oCpt::World::ptr(), id, "PT100"),
+            PT100::PT100(iController::ptr controller, World::ptr world, std::string id, uint8_t pinid, uint8_t device)
+                    : Sensor(controller, world, id, "PT100"),
                       _pinid(pinid),
                       _device(device) {
 
@@ -23,10 +23,9 @@ namespace oCpt {
             void PT100::updateSensor() {
                 _analogeValue = controller_->getAdcVector()->at(_pinid)->getValue();
                 state_.Value._double_t = _dy_dx * _analogeValue + _constant;
-                //state_.Stamp = world_->getTime().now();
-                //TODO fix time stamp
+                state_.Stamp = world_->now();
                 sig_();
-                std::cout << _analogeValue << std::endl;
+                std::cout << _analogeValue << "timestamp " << state_.Stamp << std::endl;
             }
 
             void PT100::setCalibrationTemperature(std::pair<double, double> temparature,
