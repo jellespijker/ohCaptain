@@ -45,7 +45,7 @@ namespace oCpt {
     }
 
     void Vessel::run() {
-        std::thread bs_thread(boost::bind(&iBoatswain::run, boatswain_));
+        std::thread bs_thread(boost::bind(&iBoatswain::run, boatswain_)); //TODO write thread wrapper
         captain_->run();
         bs_thread.join();
         //TODO make a work queue
