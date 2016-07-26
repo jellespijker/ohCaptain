@@ -6,9 +6,9 @@
 
 namespace oCpt {
 
-    iCom::iCom(boost::shared_ptr<boost::asio::io_service> ioservice)
-            : ioservice_(ioservice) {
-
+    iCom::iCom() {
+        ioservice_ = boost::shared_ptr<boost::asio::io_service>(new boost::asio::io_service());
+        critical_ = false;
     }
 
     iCom::~iCom() {
@@ -19,12 +19,12 @@ namespace oCpt {
         readFunc_ = handler;
     }
 
-    Serial::Serial(boost::shared_ptr<boost::asio::io_service> ioservice, const std::string &device, unsigned int baud)
-            : iCom(ioservice),
+    Serial::Serial(const std::string &device, unsigned int baud)
+            : iCom(),
               device_(device),
               baud_(boost::asio::serial_port_base::baud_rate(baud)) {
         //TODO make pointer safe!!!
-        serialPort_ = boost::shared_ptr<boost::asio::serial_port>( new boost::asio::serial_port(*ioservice.get(), device_) );
+        serialPort_ = boost::shared_ptr<boost::asio::serial_port>( new boost::asio::serial_port(*ioservice_.get(), device_) );
         deviceOpen_ = false;
         stopMessaging_ = false;
     }
@@ -161,6 +161,18 @@ namespace oCpt {
         if (!writeInProgress) {
             writeStart();
         }
+    }
+
+    void Serial::setIOservice(boost::shared_ptr<boost::asio::io_service> ioservice) {
+        ioservice_ = ioservice;
+    }
+
+    bool Serial::isCritical() const {
+        return critical_;
+    }
+
+    void Serial::setCritical(bool critical_) {
+        Serial::critical_ = critical_;
     }
 
 }

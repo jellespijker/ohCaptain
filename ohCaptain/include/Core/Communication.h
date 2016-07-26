@@ -23,7 +23,7 @@ namespace oCpt {
         typedef boost::shared_ptr<iCom> ptr;
         typedef boost::function<void (const unsigned char*, size_t)> read_function;
 
-        iCom(boost::shared_ptr<boost::asio::io_service> ioservice);
+        iCom();
 
         virtual ~iCom();
 
@@ -41,14 +41,21 @@ namespace oCpt {
 
         virtual bool write(const std::string &msg) = 0;
 
+        virtual void setIOservice(boost::shared_ptr<boost::asio::io_service> ioservice) = 0;
+
+        virtual bool isCritical() const = 0;
+
+        virtual void setCritical(bool critical_) = 0;
+
     protected:
         read_function readFunc_;
         boost::shared_ptr<boost::asio::io_service> ioservice_;
+        bool critical_;
     };
 
     class Serial : public iCom {
     public:
-        Serial(boost::shared_ptr<boost::asio::io_service> ioservice, const std::string &device, unsigned int baud);
+        Serial(const std::string &device, unsigned int baud);
 
         virtual ~Serial() override;
 
@@ -72,6 +79,12 @@ namespace oCpt {
                                          boost::asio::serial_port_base::flow_control::none),
                                  boost::asio::serial_port_base::stop_bits stop = boost::asio::serial_port_base::stop_bits(
                                          boost::asio::serial_port_base::stop_bits::one));
+
+        virtual void setIOservice(boost::shared_ptr<boost::asio::io_service> ioservice) override;
+
+        bool isCritical() const;
+
+        void setCritical(bool critical_);
 
     protected:
         void closeCallBack(const boost::system::error_code &error);
