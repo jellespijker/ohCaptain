@@ -24,8 +24,7 @@ namespace oCpt {
                 _analogeValue = controller_->getAdcVector()->at(_pinid)->getValue();
                 state_.Value._double_t = _dy_dx * _analogeValue + _constant;
                 state_.Stamp = world_->now();
-                sig_();
-                std::cout << _analogeValue << "timestamp " << state_.Stamp << std::endl;
+                std::cout << _analogeValue << " timestamp " << state_.Stamp << std::endl;
             }
 
             void PT100::setCalibrationTemperature(std::pair<double, double> temparature,
@@ -36,6 +35,7 @@ namespace oCpt {
 
             void PT100::run() {
                 updateSensor();
+                sig_();
             }
 
             void PT100::stop() {

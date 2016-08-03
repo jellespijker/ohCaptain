@@ -24,6 +24,10 @@ namespace oCpt {
         iBoatswain::stopThread_ = stopThread;
     }
 
+    boost::shared_ptr<boost::asio::io_service> &iBoatswain::getIOservice() {
+        return ioservice_;
+    }
+
     Boatswain::Boatswain(iController::ptr controller) : iBoatswain(controller) {
 
     }
@@ -33,28 +37,18 @@ namespace oCpt {
     }
 
     void Boatswain::run() {
-        std::for_each(comDevices_.begin(), comDevices_.end(),[&](iCom::ptr &C){
-            C->start();
+        std::for_each(manualSensors_.begin(), manualSensors_.end(),[](iSensor::ptr &P){
+            P->run();
         });
-        std::thread boatswainThreads(boost::bind(&boost::asio::io_service::run, ioservice_)); //TODO write thread wrapper
         ioservice_->run();
-        boatswainThreads.join();
     }
 
     void Boatswain::stop() {
-        std::for_each(comDevices_.begin(), comDevices_.end(),[&](iCom::ptr &C){
-            if (!C->isCritical()) { //TODO further critical device handling
-                C->stop();
-                C->close();
-            }
-        });
         *localStopThread_ = true;
     }
 
     void Boatswain::initialize() {
-        std::for_each(comDevices_.begin(), comDevices_.end(),[&](iCom::ptr &C){
-            C->open();
-        });
+
     }
 
     void Boatswain::registerSensor(iSensor::ptr sensor) {
@@ -65,6 +59,8 @@ namespace oCpt {
             timers_.push_back(timer);
             timerSensors_.push_back(sensor);
         } else {
+            sensor->setIOservice(ioservice_);
+            manualSensors_.push_back(sensor);
             //TODO implement sensors update polling
             //TODO implement sensor update manual request
         }
@@ -89,11 +85,5 @@ namespace oCpt {
         timers_[i]->async_wait(boost::bind(&iSensor::run, sensor));
         timers_[i]->async_wait(boost::bind(&Boatswain::resetTimer, this, sensor));
     }
-
-    void Boatswain::registerCommunicator(iCom::ptr communicator) {
-        communicator->setIOservice(ioservice_);
-        comDevices_.push_back(communicator);
-    }
-
 
 }

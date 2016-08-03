@@ -74,4 +74,8 @@ namespace oCpt {
     void Sensor::stop() {
 
     }
+
+    void Sensor::setIOservice(boost::shared_ptr<boost::asio::io_service> ioservice) {
+
+    }
 }

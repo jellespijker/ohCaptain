@@ -13,6 +13,8 @@ namespace oCpt {
             Meetcatamaran();
 
             virtual ~Meetcatamaran();
+        private:
+
         };
     }
 }

@@ -8,6 +8,7 @@
 #include <boost/signals2.hpp>
 #include <boost/chrono.hpp>
 #include <boost/asio/steady_timer.hpp>
+#include <boost/asio.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 
 #include <string>
@@ -53,6 +54,8 @@ namespace oCpt {
 
         virtual void stop() = 0;
 
+        virtual void setIOservice(boost::shared_ptr<boost::asio::io_service> ioservice) = 0;
+
         virtual bool operator==(iSensor::ptr rhs);
 
         const boost::posix_time::milliseconds &getTimer() const;
@@ -94,6 +97,8 @@ namespace oCpt {
         virtual void run() override;
 
         virtual void stop() override;
+
+        virtual void setIOservice(boost::shared_ptr<boost::asio::io_service> ioservice) override;
 
 
     };
