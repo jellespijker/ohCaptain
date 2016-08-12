@@ -8,6 +8,7 @@
 
 #include <boost/shared_ptr.hpp>
 #include <boost/chrono.hpp>
+#include <boost/geometry.hpp>
 
 namespace oCpt {
     class World {
@@ -61,6 +62,34 @@ namespace oCpt {
 
             timepoint_t now();
         };
+
+        class Location {
+        public:
+            typedef boost::shared_ptr<Location> ptr;
+            typedef boost::geometry::model::point<
+                    double, 2, boost::geometry::cs::spherical_equatorial<boost::geometry::degree>
+                    > Earth_point;
+
+            struct RoutePoint {
+                typedef boost::shared_ptr<RoutePoint> ptr;
+                Time::timepoint_t TimePoint;
+                Earth_point Location;
+            };
+
+            Location();
+
+            virtual ~Location();
+
+            RoutePoint::ptr getCurrentLocation(bool newMeasurement = false);
+
+            void push_back(RoutePoint::ptr routePoint);
+
+            std::vector<RoutePoint::ptr> getLocationHistory();
+        private:
+            RoutePoint::ptr currentLocation_;
+            std::vector<RoutePoint::ptr> LocationHistory;
+        };
+
 
         World();
 

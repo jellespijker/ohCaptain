@@ -5,7 +5,7 @@
 #include "../../include/Vessels/Meetcatamaran.h"
 #include "../../include/Controllers/BeagleboneBlack.h"
 #include "../../include/Sensors/PT100.h"
-#include "../../include/Sensors/NavilockNL602U.h"
+#include "../../include/Sensors/NavilockNLX02.h"
 
 #include <boost/bind.hpp>
 #include <iostream>
@@ -22,8 +22,8 @@ namespace oCpt {
             boatswain_->registerSensor(tempSensor1);
             sensors_.push_back(tempSensor1);
 
-            sensors::NavilockNL602U::ptr locSensor(
-                    new sensors::NavilockNL602U(controller_, world_, "locSensor", "/dev/ttyACM0"));
+            sensors::NavilockNLX02::ptr locSensor(
+                    new sensors::NavilockNLX02(controller_, world_, "locSensor", "/dev/ttyUSB0", 4800));
             boatswain_->registerSensor(locSensor);
             sensors_.push_back(locSensor);
 //

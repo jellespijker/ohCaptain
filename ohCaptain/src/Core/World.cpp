@@ -32,4 +32,23 @@ namespace oCpt {
         return time_.now();
     }
 
+    World::Location::Location() {
+
+    }
+
+    World::Location::~Location() {
+
+    }
+
+    World::Location::RoutePoint::ptr World::Location::getCurrentLocation(bool newMeasurement) {
+        return oCpt::World::Location::RoutePoint::ptr();
+    }
+
+    void World::Location::push_back(World::Location::RoutePoint::ptr routePoint) {
+
+    }
+
+    std::vector<World::Location::RoutePoint::ptr> World::Location::getLocationHistory() {
+        return std::vector<World::Location::RoutePoint::ptr>();
+    }
 }
