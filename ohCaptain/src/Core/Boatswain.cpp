@@ -86,4 +86,8 @@ namespace oCpt {
         timers_[i]->async_wait(boost::bind(&Boatswain::resetTimer, this, sensor));
     }
 
+    void Boatswain::registerComm(iComm::ptr comm) {
+
+    }
+
 }

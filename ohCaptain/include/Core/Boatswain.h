@@ -17,6 +17,7 @@
 #include "Controller.h"
 #include "Sensor.h"
 #include "Actuator.h"
+#include "Communication.h"
 
 namespace oCpt {
 
@@ -38,6 +39,8 @@ namespace oCpt {
         virtual void registerSensor(iSensor::ptr sensor) = 0;
 
         virtual void registerActuator(iActuator::ptr actuator) = 0;
+
+        virtual void registerComm(iComm::ptr comm) = 0;
 
         const boost::shared_ptr<bool> &getStopThread() const;
 
@@ -72,6 +75,8 @@ namespace oCpt {
         virtual void registerSensor(iSensor::ptr sensor) override;
 
         virtual void registerActuator(iActuator::ptr actuator) override;
+
+        virtual void registerComm(iComm::ptr comm) override;
 
     protected:
         void resetTimer(iSensor::ptr sensor) override;
