@@ -6,6 +6,7 @@
 #include "../../include/Core/Exception.h"
 
 #include <fstream>
+#include <thread>
 
 #include <boost/make_shared.hpp>
 
@@ -86,7 +87,8 @@ namespace oCpt {
                   csize_(csize),
                   flow_(flow),
                   stop_(stop),
-                  serialport_(*ioservice.get(), device_) {
+                  serialport_(*ioservice.get(), device_),
+                  receivedMsg_("") {
             callback_ = boost::bind(&Serial::internalCallback, this, _1, _2);
         }
 
@@ -140,7 +142,9 @@ namespace oCpt {
             }
             ReadStart();
 
-            ioservice_->run();
+            std::thread io_thread(boost::bind(&boost::asio::io_service::run, ioservice_));
+            io_thread.detach();
+//            ioservice_->run();
             //TODO check if run io_service should be called from here? threaded? or from boatswain
         }
 
@@ -175,24 +179,30 @@ namespace oCpt {
 
         void Serial::internalCallback(const unsigned char *data, size_t size) {
             std::istringstream str;
-            str.rdbuf()->pubsetbuf(reinterpret_cast<char*>(const_cast<unsigned char*>(data)), size);
-            if (!firstMsg) {
-                std::string appendToLast;
-                std::getline(str, appendToLast);
-                if (!returnMsgQueue_.empty()) {
-                    returnMsgQueue_.back().append(appendToLast);
+            str.rdbuf()->pubsetbuf(reinterpret_cast<char *>(const_cast<unsigned char *>(data)), size);
+            if (!receivedMsg_.empty()) {
+                std::string appMsg = "";
+                std::getline(str, appMsg);
+                receivedMsg_.append(appMsg);
+                if (receivedMsg_.back() == 13) {
+                    receivedMsg_.pop_back();
+                    returnMsgQueue_.push_back(receivedMsg_);
+                    receivedMsg_ = "";
+                    msgRecievedSig();
                 } else {
-                    returnMsgQueue_.push_back(appendToLast);
-                }
-                sig();
-            }
-            while (std::getline(str, msg_)) {
-                returnMsgQueue_.push_back(msg_);
-                if (!str.eof()) {
-                    sig();
+                    return;
                 }
             }
-            firstMsg = false;
+
+            while (std::getline(str, receivedMsg_)) {
+                if (receivedMsg_.back() == 13) {
+                    receivedMsg_.pop_back();
+                    returnMsgQueue_.push_back(receivedMsg_);
+                    receivedMsg_ = "";
+                    msgRecievedSig();
+                }
+            }
+
         }
 
         bool Serial::write(const std::string &msg) {
