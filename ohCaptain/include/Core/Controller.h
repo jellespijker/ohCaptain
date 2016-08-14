@@ -75,7 +75,7 @@ namespace oCpt {
             typedef boost::asio::serial_port_base::stop_bits stop_bits_t;
             typedef boost::shared_ptr<boost::asio::io_service> io_service_t;
             typedef boost::asio::serial_port serialport_t;
-            typedef boost::signals2::signal<void ()> signal_t;
+            typedef boost::signals2::signal<void()> signal_t;
 
             Serial(const std::string &device, unsigned int baudrate,
                    io_service_t ioservice = io_service_t(new boost::asio::io_service()),
@@ -104,7 +104,7 @@ namespace oCpt {
 
             std::string readFiFoMsg();
 
-            signal_t sig;
+            signal_t msgRecievedSig;
 
         protected:
             void internalCallback(const unsigned char *data, size_t size);
@@ -124,6 +124,7 @@ namespace oCpt {
             std::deque<std::vector<unsigned char>> msgQueue_;
             std::deque<std::string> returnMsgQueue_;
             std::string msg_;
+            std::string receivedMsg_;
             unsigned char read_msg[MAX_READ_LENGTH];
             cb_func callback_;
             io_service_t ioservice_;
@@ -141,6 +142,7 @@ namespace oCpt {
     class iController {
     public:
         typedef boost::shared_ptr<iController> ptr;
+        typedef boost::shared_ptr<boost::asio::io_service> io_t;
 
         iController(World::ptr world);
 

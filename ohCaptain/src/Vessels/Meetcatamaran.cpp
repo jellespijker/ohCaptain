@@ -5,7 +5,7 @@
 #include "../../include/Vessels/Meetcatamaran.h"
 #include "../../include/Controllers/BeagleboneBlack.h"
 #include "../../include/Sensors/PT100.h"
-#include "../../include/Sensors/NavilockNLX02.h"
+#include "../../include/Communication/LoRa_RN2483.h"
 
 #include <boost/bind.hpp>
 #include <iostream>
@@ -22,15 +22,10 @@ namespace oCpt {
             boatswain_->registerSensor(tempSensor1);
             sensors_.push_back(tempSensor1);
 
-            sensors::NavilockNLX02::ptr locSensor(
-                    new sensors::NavilockNLX02(controller_, world_, "locSensor", "/dev/ttyUSB0", 4800));
-            boatswain_->registerSensor(locSensor);
-            sensors_.push_back(locSensor);
-//
-//            sensors::PT100::ptr tempSensor2(new sensors::PT100(controller_, world_, "tempSensor2", 6, 0));
-//            tempSensor2->setTimer(boost::posix_time::milliseconds(10000));
-//            boatswain_->registerSensor(tempSensor2);
-//            sensors_.push_back(tempSensor2);
+            comm::LoRa_RN2483::ptr rn2483(new comm::LoRa_RN2483("rn2483", "/dev/ttyACM0"));
+            boatswain_->registerComm(rn2483);
+            comm_.push_back(rn2483);
+
         }
 
         Meetcatamaran::~Meetcatamaran() {
