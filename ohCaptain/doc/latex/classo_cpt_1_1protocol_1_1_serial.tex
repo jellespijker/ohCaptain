@@ -1,0 +1,625 @@
+\hypertarget{classo_cpt_1_1protocol_1_1_serial}{}\section{o\+Cpt\+:\+:protocol\+:\+:Serial Class Reference}
+\label{classo_cpt_1_1protocol_1_1_serial}\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+
+
+{\ttfamily \#include $<$Controller.\+h$>$}
+
+
+
+Inheritance diagram for o\+Cpt\+:\+:protocol\+:\+:Serial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classo_cpt_1_1protocol_1_1_serial__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for o\+Cpt\+:\+:protocol\+:\+:Serial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classo_cpt_1_1protocol_1_1_serial__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classo_cpt_1_1protocol_1_1_serial}{Serial} $>$ \hyperlink{classo_cpt_1_1protocol_1_1_serial_a4c97c6a2456d649974e07a186f634780}{ptr}
+\item 
+typedef std\+::function$<$ void(const unsigned char $\ast$, size\+\_\+t)$>$ \hyperlink{classo_cpt_1_1protocol_1_1_serial_ad55591180be8bea2fe3832b1265b7496}{cb\+\_\+func}
+\item 
+typedef boost\+::asio\+::serial\+\_\+port\+\_\+base\+::parity \hyperlink{classo_cpt_1_1protocol_1_1_serial_aae21a39fe2f321475ca19d46bf40d5f3}{parity\+\_\+t}
+\item 
+typedef boost\+::asio\+::serial\+\_\+port\+\_\+base\+::character\+\_\+size \hyperlink{classo_cpt_1_1protocol_1_1_serial_a8799e83d5d812132c296dd4a6a17d6f6}{character\+\_\+size\+\_\+t}
+\item 
+typedef boost\+::asio\+::serial\+\_\+port\+\_\+base\+::flow\+\_\+control \hyperlink{classo_cpt_1_1protocol_1_1_serial_ad32f1d64fb16a5443d7aae92e8b14232}{flow\+\_\+control\+\_\+t}
+\item 
+typedef boost\+::asio\+::serial\+\_\+port\+\_\+base\+::stop\+\_\+bits \hyperlink{classo_cpt_1_1protocol_1_1_serial_aadc4c803ade35920211e6c6a202a8c1f}{stop\+\_\+bits\+\_\+t}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$ \hyperlink{classo_cpt_1_1protocol_1_1_serial_ac9305799ef4be4eb50f1274184492f04}{io\+\_\+service\+\_\+t}
+\item 
+typedef boost\+::asio\+::serial\+\_\+port \hyperlink{classo_cpt_1_1protocol_1_1_serial_a3949fae08041279672bcb29b94d4cd52}{serialport\+\_\+t}
+\item 
+typedef boost\+::signals2\+::signal$<$ void()$>$ \hyperlink{classo_cpt_1_1protocol_1_1_serial_ad6b50eec67a064c4a2eb34d3ac605ffb}{signal\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1_serial_ac6137f4499128a58dec0c6848ffeb733}{Serial} (const std\+::string \&device, unsigned int baudrate, \hyperlink{classo_cpt_1_1protocol_1_1_serial_ac9305799ef4be4eb50f1274184492f04}{io\+\_\+service\+\_\+t} ioservice=\hyperlink{classo_cpt_1_1protocol_1_1_serial_ac9305799ef4be4eb50f1274184492f04}{io\+\_\+service\+\_\+t}(new boost\+::asio\+::io\+\_\+service()), \hyperlink{classo_cpt_1_1protocol_1_1_serial_aae21a39fe2f321475ca19d46bf40d5f3}{parity\+\_\+t} parity=\hyperlink{classo_cpt_1_1protocol_1_1_serial_aae21a39fe2f321475ca19d46bf40d5f3}{parity\+\_\+t}(parity\+\_\+t\+::none), \hyperlink{classo_cpt_1_1protocol_1_1_serial_a8799e83d5d812132c296dd4a6a17d6f6}{character\+\_\+size\+\_\+t} csize=\hyperlink{classo_cpt_1_1protocol_1_1_serial_a8799e83d5d812132c296dd4a6a17d6f6}{character\+\_\+size\+\_\+t}(8), \hyperlink{classo_cpt_1_1protocol_1_1_serial_ad32f1d64fb16a5443d7aae92e8b14232}{flow\+\_\+control\+\_\+t} flow=\hyperlink{classo_cpt_1_1protocol_1_1_serial_ad32f1d64fb16a5443d7aae92e8b14232}{flow\+\_\+control\+\_\+t}(flow\+\_\+control\+\_\+t\+::none), \hyperlink{classo_cpt_1_1protocol_1_1_serial_aadc4c803ade35920211e6c6a202a8c1f}{stop\+\_\+bits\+\_\+t} stop=\hyperlink{classo_cpt_1_1protocol_1_1_serial_aadc4c803ade35920211e6c6a202a8c1f}{stop\+\_\+bits\+\_\+t}(stop\+\_\+bits\+\_\+t\+::one))
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1_serial_a7738b1566f37b36c97055a8800482a10}{open} ()
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1_serial_a6231948447729037b55df7531065749f}{start} ()
+\item 
+bool \hyperlink{classo_cpt_1_1protocol_1_1_serial_ab63afb811bbfd0da9cba8a4edf8d76fe}{is\+Open} ()
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1_serial_a8c7e9cd0aaa7c31893cf4380e8148fec}{close} ()
+\item 
+bool \hyperlink{classo_cpt_1_1protocol_1_1_serial_aa8e04c844af565e2532e771002a5a654}{write} (const std\+::string \&msg)
+\item 
+bool \hyperlink{classo_cpt_1_1protocol_1_1_serial_ae99cac9dc20997ca09742df8d1bc6091}{write} (const std\+::vector$<$ unsigned char $>$ \&data)
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1_serial_ab86f007388ac73b97fdbf14921bc1e32}{set\+Read\+Callback} (\hyperlink{classo_cpt_1_1protocol_1_1_serial_ad55591180be8bea2fe3832b1265b7496}{cb\+\_\+func} cb\+\_\+function)
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1_serial_abddd54f13b696af1ca6ac0f97950708b}{set\+I\+Oservice} (boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$ io\+\_\+ptr)
+\item 
+std\+::deque$<$ std\+::string $>$ $\ast$ \hyperlink{classo_cpt_1_1protocol_1_1_serial_ad1c50382b0f52828b3111f4dc2f03bad}{get\+Return\+Msg\+Queue} ()
+\item 
+std\+::string \hyperlink{classo_cpt_1_1protocol_1_1_serial_a34fd0ec3f90b067eb7f749f39986d31d}{read\+Fi\+Fo\+Msg} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1_serial_ad6b50eec67a064c4a2eb34d3ac605ffb}{signal\+\_\+t} \hyperlink{classo_cpt_1_1protocol_1_1_serial_a363071a4e7ead980f7f3369f57acf578}{sig}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1_serial_adb32d1835a99365baa9fb97689e0b664}{internal\+Callback} (const unsigned char $\ast$data, size\+\_\+t size)
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1_serial_a3abae181678a125e420092465d063526}{close\+Callback} (const boost\+::system\+::error\+\_\+code \&error)
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1_serial_ac7d84ba0853d120852157c490bdcd097}{read\+Complete} (const boost\+::system\+::error\+\_\+code \&error, size\+\_\+t bytes\+\_\+transferred)
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1_serial_a02f091d3e3333bc1f723216cbeb757af}{write\+Callback} (const std\+::vector$<$ unsigned char $>$ \&msg)
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1_serial_a1fedc27e16c383de81e5a05fee742581}{write\+Start} ()
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1_serial_a8b1037a2eefdd4215f1d4732e168272c}{write\+Complete} (const boost\+::system\+::error\+\_\+code \&error)
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1_serial_a5bf4aa913654c4ebef3c48ec54cf8b03}{Read\+Start} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::deque$<$ std\+::vector$<$ unsigned char $>$ $>$ \hyperlink{classo_cpt_1_1protocol_1_1_serial_a220138abdeaa8734f9f9b1b1ecd8ccd8}{msg\+Queue\+\_\+}
+\item 
+std\+::deque$<$ std\+::string $>$ \hyperlink{classo_cpt_1_1protocol_1_1_serial_aeed234980f18b4b66f8c88c50d6188f8}{return\+Msg\+Queue\+\_\+}
+\item 
+std\+::string \hyperlink{classo_cpt_1_1protocol_1_1_serial_a418ed31316844cd2ea8bc6edd89e9619}{msg\+\_\+}
+\item 
+unsigned char \hyperlink{classo_cpt_1_1protocol_1_1_serial_a74e416bfc7291e2eee8964c9cc670368}{read\+\_\+msg} \mbox{[}\hyperlink{_controller_8h_a5380750991f1b5aeaa5393d5bdeac7ef}{M\+A\+X\+\_\+\+R\+E\+A\+D\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1_serial_ad55591180be8bea2fe3832b1265b7496}{cb\+\_\+func} \hyperlink{classo_cpt_1_1protocol_1_1_serial_a653c57dab573b8f0d6d06e0f1443d045}{callback\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1_serial_ac9305799ef4be4eb50f1274184492f04}{io\+\_\+service\+\_\+t} \hyperlink{classo_cpt_1_1protocol_1_1_serial_a313201e80bdb7495b837960c16d244a2}{ioservice\+\_\+}
+\item 
+std\+::string \hyperlink{classo_cpt_1_1protocol_1_1_serial_aef59f7008f19eb073071a836b923c47e}{device\+\_\+}
+\item 
+unsigned int \hyperlink{classo_cpt_1_1protocol_1_1_serial_ad24eda3d37c870d3f83af0a67d63d2ae}{baudrate\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1_serial_aae21a39fe2f321475ca19d46bf40d5f3}{parity\+\_\+t} \hyperlink{classo_cpt_1_1protocol_1_1_serial_a2b7e174e85959fcb20bb9cb26fecafc1}{parity\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1_serial_a8799e83d5d812132c296dd4a6a17d6f6}{character\+\_\+size\+\_\+t} \hyperlink{classo_cpt_1_1protocol_1_1_serial_ab64a625816c6697c301c5d6c79612044}{csize\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1_serial_ad32f1d64fb16a5443d7aae92e8b14232}{flow\+\_\+control\+\_\+t} \hyperlink{classo_cpt_1_1protocol_1_1_serial_a08eb8b737e453a84f6db746c79c0fab1}{flow\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1_serial_aadc4c803ade35920211e6c6a202a8c1f}{stop\+\_\+bits\+\_\+t} \hyperlink{classo_cpt_1_1protocol_1_1_serial_a0905cfeb2f2e21ce6a141e068813f75c}{stop\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1_serial_a3949fae08041279672bcb29b94d4cd52}{serialport\+\_\+t} \hyperlink{classo_cpt_1_1protocol_1_1_serial_a3297de5a49ff3956439fcd5c030c75a0}{serialport\+\_\+}
+\item 
+bool \hyperlink{classo_cpt_1_1protocol_1_1_serial_affbe5790cd34027fa6b65dbb98f5d5bc}{first\+Msg} = true
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!cb\+\_\+func@{cb\+\_\+func}}
+\index{cb\+\_\+func@{cb\+\_\+func}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{cb\+\_\+func}{cb_func}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::function$<$void(const unsigned char $\ast$, size\+\_\+t)$>$ {\bf o\+Cpt\+::protocol\+::\+Serial\+::cb\+\_\+func}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_ad55591180be8bea2fe3832b1265b7496}{}\label{classo_cpt_1_1protocol_1_1_serial_ad55591180be8bea2fe3832b1265b7496}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!character\+\_\+size\+\_\+t@{character\+\_\+size\+\_\+t}}
+\index{character\+\_\+size\+\_\+t@{character\+\_\+size\+\_\+t}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{character\+\_\+size\+\_\+t}{character_size_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::asio\+::serial\+\_\+port\+\_\+base\+::character\+\_\+size {\bf o\+Cpt\+::protocol\+::\+Serial\+::character\+\_\+size\+\_\+t}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a8799e83d5d812132c296dd4a6a17d6f6}{}\label{classo_cpt_1_1protocol_1_1_serial_a8799e83d5d812132c296dd4a6a17d6f6}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!flow\+\_\+control\+\_\+t@{flow\+\_\+control\+\_\+t}}
+\index{flow\+\_\+control\+\_\+t@{flow\+\_\+control\+\_\+t}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{flow\+\_\+control\+\_\+t}{flow_control_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::asio\+::serial\+\_\+port\+\_\+base\+::flow\+\_\+control {\bf o\+Cpt\+::protocol\+::\+Serial\+::flow\+\_\+control\+\_\+t}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_ad32f1d64fb16a5443d7aae92e8b14232}{}\label{classo_cpt_1_1protocol_1_1_serial_ad32f1d64fb16a5443d7aae92e8b14232}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!io\+\_\+service\+\_\+t@{io\+\_\+service\+\_\+t}}
+\index{io\+\_\+service\+\_\+t@{io\+\_\+service\+\_\+t}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{io\+\_\+service\+\_\+t}{io_service_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::shared\+\_\+ptr$<$boost\+::asio\+::io\+\_\+service$>$ {\bf o\+Cpt\+::protocol\+::\+Serial\+::io\+\_\+service\+\_\+t}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_ac9305799ef4be4eb50f1274184492f04}{}\label{classo_cpt_1_1protocol_1_1_serial_ac9305799ef4be4eb50f1274184492f04}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!parity\+\_\+t@{parity\+\_\+t}}
+\index{parity\+\_\+t@{parity\+\_\+t}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{parity\+\_\+t}{parity_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::asio\+::serial\+\_\+port\+\_\+base\+::parity {\bf o\+Cpt\+::protocol\+::\+Serial\+::parity\+\_\+t}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_aae21a39fe2f321475ca19d46bf40d5f3}{}\label{classo_cpt_1_1protocol_1_1_serial_aae21a39fe2f321475ca19d46bf40d5f3}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!ptr@{ptr}}
+\index{ptr@{ptr}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{ptr}{ptr}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::shared\+\_\+ptr$<${\bf Serial}$>$ {\bf o\+Cpt\+::protocol\+::\+Serial\+::ptr}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a4c97c6a2456d649974e07a186f634780}{}\label{classo_cpt_1_1protocol_1_1_serial_a4c97c6a2456d649974e07a186f634780}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!serialport\+\_\+t@{serialport\+\_\+t}}
+\index{serialport\+\_\+t@{serialport\+\_\+t}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{serialport\+\_\+t}{serialport_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::asio\+::serial\+\_\+port {\bf o\+Cpt\+::protocol\+::\+Serial\+::serialport\+\_\+t}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a3949fae08041279672bcb29b94d4cd52}{}\label{classo_cpt_1_1protocol_1_1_serial_a3949fae08041279672bcb29b94d4cd52}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!signal\+\_\+t@{signal\+\_\+t}}
+\index{signal\+\_\+t@{signal\+\_\+t}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{signal\+\_\+t}{signal_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::signals2\+::signal$<$void ()$>$ {\bf o\+Cpt\+::protocol\+::\+Serial\+::signal\+\_\+t}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_ad6b50eec67a064c4a2eb34d3ac605ffb}{}\label{classo_cpt_1_1protocol_1_1_serial_ad6b50eec67a064c4a2eb34d3ac605ffb}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!stop\+\_\+bits\+\_\+t@{stop\+\_\+bits\+\_\+t}}
+\index{stop\+\_\+bits\+\_\+t@{stop\+\_\+bits\+\_\+t}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{stop\+\_\+bits\+\_\+t}{stop_bits_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::asio\+::serial\+\_\+port\+\_\+base\+::stop\+\_\+bits {\bf o\+Cpt\+::protocol\+::\+Serial\+::stop\+\_\+bits\+\_\+t}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_aadc4c803ade35920211e6c6a202a8c1f}{}\label{classo_cpt_1_1protocol_1_1_serial_aadc4c803ade35920211e6c6a202a8c1f}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!Serial@{Serial}}
+\index{Serial@{Serial}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{Serial(const std\+::string \&device, unsigned int baudrate, io\+\_\+service\+\_\+t ioservice=io\+\_\+service\+\_\+t(new boost\+::asio\+::io\+\_\+service()), parity\+\_\+t parity=parity\+\_\+t(parity\+\_\+t\+::none), character\+\_\+size\+\_\+t csize=character\+\_\+size\+\_\+t(8), flow\+\_\+control\+\_\+t flow=flow\+\_\+control\+\_\+t(flow\+\_\+control\+\_\+t\+::none), stop\+\_\+bits\+\_\+t stop=stop\+\_\+bits\+\_\+t(stop\+\_\+bits\+\_\+t\+::one))}{Serial(const std::string &device, unsigned int baudrate, io_service_t ioservice=io_service_t(new boost::asio::io_service()), parity_t parity=parity_t(parity_t::none), character_size_t csize=character_size_t(8), flow_control_t flow=flow_control_t(flow_control_t::none), stop_bits_t stop=stop_bits_t(stop_bits_t::one))}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::protocol\+::\+Serial\+::\+Serial (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{device, }
+\item[{unsigned int}]{baudrate, }
+\item[{{\bf io\+\_\+service\+\_\+t}}]{ioservice = {\ttfamily {\bf io\+\_\+service\+\_\+t}(new~boost\+:\+:asio\+:\+:io\+\_\+service())}, }
+\item[{{\bf Serial\+::parity\+\_\+t}}]{parity = {\ttfamily {\bf parity\+\_\+t}(parity\+\_\+t\+:\+:none)}, }
+\item[{{\bf Serial\+::character\+\_\+size\+\_\+t}}]{csize = {\ttfamily {\bf character\+\_\+size\+\_\+t}(8)}, }
+\item[{{\bf Serial\+::flow\+\_\+control\+\_\+t}}]{flow = {\ttfamily {\bf flow\+\_\+control\+\_\+t}(flow\+\_\+control\+\_\+t\+:\+:none)}, }
+\item[{{\bf Serial\+::stop\+\_\+bits\+\_\+t}}]{stop = {\ttfamily {\bf stop\+\_\+bits\+\_\+t}(stop\+\_\+bits\+\_\+t\+:\+:one)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1protocol_1_1_serial_ac6137f4499128a58dec0c6848ffeb733}{}\label{classo_cpt_1_1protocol_1_1_serial_ac6137f4499128a58dec0c6848ffeb733}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classo_cpt_1_1protocol_1_1_serial_ac6137f4499128a58dec0c6848ffeb733_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!close@{close}}
+\index{close@{close}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{close()}{close()}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::protocol\+::\+Serial\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a8c7e9cd0aaa7c31893cf4380e8148fec}{}\label{classo_cpt_1_1protocol_1_1_serial_a8c7e9cd0aaa7c31893cf4380e8148fec}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classo_cpt_1_1protocol_1_1_serial_a8c7e9cd0aaa7c31893cf4380e8148fec_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!close\+Callback@{close\+Callback}}
+\index{close\+Callback@{close\+Callback}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{close\+Callback(const boost\+::system\+::error\+\_\+code \&error)}{closeCallback(const boost::system::error_code &error)}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::protocol\+::\+Serial\+::close\+Callback (
+\begin{DoxyParamCaption}
+\item[{const boost\+::system\+::error\+\_\+code \&}]{error}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a3abae181678a125e420092465d063526}{}\label{classo_cpt_1_1protocol_1_1_serial_a3abae181678a125e420092465d063526}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_a3abae181678a125e420092465d063526_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!get\+Return\+Msg\+Queue@{get\+Return\+Msg\+Queue}}
+\index{get\+Return\+Msg\+Queue@{get\+Return\+Msg\+Queue}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{get\+Return\+Msg\+Queue()}{getReturnMsgQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::deque$<$ std\+::string $>$ $\ast$ o\+Cpt\+::protocol\+::\+Serial\+::get\+Return\+Msg\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1protocol_1_1_serial_ad1c50382b0f52828b3111f4dc2f03bad}{}\label{classo_cpt_1_1protocol_1_1_serial_ad1c50382b0f52828b3111f4dc2f03bad}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!internal\+Callback@{internal\+Callback}}
+\index{internal\+Callback@{internal\+Callback}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{internal\+Callback(const unsigned char $\ast$data, size\+\_\+t size)}{internalCallback(const unsigned char *data, size_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::protocol\+::\+Serial\+::internal\+Callback (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{data, }
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_adb32d1835a99365baa9fb97689e0b664}{}\label{classo_cpt_1_1protocol_1_1_serial_adb32d1835a99365baa9fb97689e0b664}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classo_cpt_1_1protocol_1_1_serial_adb32d1835a99365baa9fb97689e0b664_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!is\+Open@{is\+Open}}
+\index{is\+Open@{is\+Open}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{is\+Open()}{isOpen()}}]{\setlength{\rightskip}{0pt plus 5cm}bool o\+Cpt\+::protocol\+::\+Serial\+::is\+Open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1protocol_1_1_serial_ab63afb811bbfd0da9cba8a4edf8d76fe}{}\label{classo_cpt_1_1protocol_1_1_serial_ab63afb811bbfd0da9cba8a4edf8d76fe}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_ab63afb811bbfd0da9cba8a4edf8d76fe_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!open@{open}}
+\index{open@{open}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{open()}{open()}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::protocol\+::\+Serial\+::open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a7738b1566f37b36c97055a8800482a10}{}\label{classo_cpt_1_1protocol_1_1_serial_a7738b1566f37b36c97055a8800482a10}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classo_cpt_1_1protocol_1_1_serial_a7738b1566f37b36c97055a8800482a10_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classo_cpt_1_1protocol_1_1_serial_a7738b1566f37b36c97055a8800482a10_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!read\+Complete@{read\+Complete}}
+\index{read\+Complete@{read\+Complete}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{read\+Complete(const boost\+::system\+::error\+\_\+code \&error, size\+\_\+t bytes\+\_\+transferred)}{readComplete(const boost::system::error_code &error, size_t bytes_transferred)}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::protocol\+::\+Serial\+::read\+Complete (
+\begin{DoxyParamCaption}
+\item[{const boost\+::system\+::error\+\_\+code \&}]{error, }
+\item[{size\+\_\+t}]{bytes\+\_\+transferred}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_ac7d84ba0853d120852157c490bdcd097}{}\label{classo_cpt_1_1protocol_1_1_serial_ac7d84ba0853d120852157c490bdcd097}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_ac7d84ba0853d120852157c490bdcd097_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_ac7d84ba0853d120852157c490bdcd097_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!read\+Fi\+Fo\+Msg@{read\+Fi\+Fo\+Msg}}
+\index{read\+Fi\+Fo\+Msg@{read\+Fi\+Fo\+Msg}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{read\+Fi\+Fo\+Msg()}{readFiFoMsg()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string o\+Cpt\+::protocol\+::\+Serial\+::read\+Fi\+Fo\+Msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a34fd0ec3f90b067eb7f749f39986d31d}{}\label{classo_cpt_1_1protocol_1_1_serial_a34fd0ec3f90b067eb7f749f39986d31d}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_a34fd0ec3f90b067eb7f749f39986d31d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!Read\+Start@{Read\+Start}}
+\index{Read\+Start@{Read\+Start}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{Read\+Start()}{ReadStart()}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::protocol\+::\+Serial\+::\+Read\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a5bf4aa913654c4ebef3c48ec54cf8b03}{}\label{classo_cpt_1_1protocol_1_1_serial_a5bf4aa913654c4ebef3c48ec54cf8b03}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_a5bf4aa913654c4ebef3c48ec54cf8b03_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_a5bf4aa913654c4ebef3c48ec54cf8b03_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!set\+I\+Oservice@{set\+I\+Oservice}}
+\index{set\+I\+Oservice@{set\+I\+Oservice}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{set\+I\+Oservice(boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$ io\+\_\+ptr)}{setIOservice(boost::shared_ptr< boost::asio::io_service > io_ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::protocol\+::\+Serial\+::set\+I\+Oservice (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$}]{io\+\_\+ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1protocol_1_1_serial_abddd54f13b696af1ca6ac0f97950708b}{}\label{classo_cpt_1_1protocol_1_1_serial_abddd54f13b696af1ca6ac0f97950708b}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!set\+Read\+Callback@{set\+Read\+Callback}}
+\index{set\+Read\+Callback@{set\+Read\+Callback}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{set\+Read\+Callback(cb\+\_\+func cb\+\_\+function)}{setReadCallback(cb_func cb_function)}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::protocol\+::\+Serial\+::set\+Read\+Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf cb\+\_\+func}}]{cb\+\_\+function}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1protocol_1_1_serial_ab86f007388ac73b97fdbf14921bc1e32}{}\label{classo_cpt_1_1protocol_1_1_serial_ab86f007388ac73b97fdbf14921bc1e32}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classo_cpt_1_1protocol_1_1_serial_ab86f007388ac73b97fdbf14921bc1e32_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!start@{start}}
+\index{start@{start}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{start()}{start()}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::protocol\+::\+Serial\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a6231948447729037b55df7531065749f}{}\label{classo_cpt_1_1protocol_1_1_serial_a6231948447729037b55df7531065749f}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_a6231948447729037b55df7531065749f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classo_cpt_1_1protocol_1_1_serial_a6231948447729037b55df7531065749f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!write@{write}}
+\index{write@{write}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{write(const std\+::string \&msg)}{write(const std::string &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool o\+Cpt\+::protocol\+::\+Serial\+::write (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1protocol_1_1_serial_aa8e04c844af565e2532e771002a5a654}{}\label{classo_cpt_1_1protocol_1_1_serial_aa8e04c844af565e2532e771002a5a654}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classo_cpt_1_1protocol_1_1_serial_aa8e04c844af565e2532e771002a5a654_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!write@{write}}
+\index{write@{write}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{write(const std\+::vector$<$ unsigned char $>$ \&data)}{write(const std::vector< unsigned char > &data)}}]{\setlength{\rightskip}{0pt plus 5cm}bool o\+Cpt\+::protocol\+::\+Serial\+::write (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ unsigned char $>$ \&}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1protocol_1_1_serial_ae99cac9dc20997ca09742df8d1bc6091}{}\label{classo_cpt_1_1protocol_1_1_serial_ae99cac9dc20997ca09742df8d1bc6091}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_ae99cac9dc20997ca09742df8d1bc6091_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!write\+Callback@{write\+Callback}}
+\index{write\+Callback@{write\+Callback}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{write\+Callback(const std\+::vector$<$ unsigned char $>$ \&msg)}{writeCallback(const std::vector< unsigned char > &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::protocol\+::\+Serial\+::write\+Callback (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ unsigned char $>$ \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a02f091d3e3333bc1f723216cbeb757af}{}\label{classo_cpt_1_1protocol_1_1_serial_a02f091d3e3333bc1f723216cbeb757af}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_a02f091d3e3333bc1f723216cbeb757af_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classo_cpt_1_1protocol_1_1_serial_a02f091d3e3333bc1f723216cbeb757af_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!write\+Complete@{write\+Complete}}
+\index{write\+Complete@{write\+Complete}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{write\+Complete(const boost\+::system\+::error\+\_\+code \&error)}{writeComplete(const boost::system::error_code &error)}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::protocol\+::\+Serial\+::write\+Complete (
+\begin{DoxyParamCaption}
+\item[{const boost\+::system\+::error\+\_\+code \&}]{error}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a8b1037a2eefdd4215f1d4732e168272c}{}\label{classo_cpt_1_1protocol_1_1_serial_a8b1037a2eefdd4215f1d4732e168272c}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classo_cpt_1_1protocol_1_1_serial_a8b1037a2eefdd4215f1d4732e168272c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_a8b1037a2eefdd4215f1d4732e168272c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!write\+Start@{write\+Start}}
+\index{write\+Start@{write\+Start}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{write\+Start()}{writeStart()}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::protocol\+::\+Serial\+::write\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a1fedc27e16c383de81e5a05fee742581}{}\label{classo_cpt_1_1protocol_1_1_serial_a1fedc27e16c383de81e5a05fee742581}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_a1fedc27e16c383de81e5a05fee742581_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1_serial_a1fedc27e16c383de81e5a05fee742581_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!baudrate\+\_\+@{baudrate\+\_\+}}
+\index{baudrate\+\_\+@{baudrate\+\_\+}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{baudrate\+\_\+}{baudrate_}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int o\+Cpt\+::protocol\+::\+Serial\+::baudrate\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_ad24eda3d37c870d3f83af0a67d63d2ae}{}\label{classo_cpt_1_1protocol_1_1_serial_ad24eda3d37c870d3f83af0a67d63d2ae}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!callback\+\_\+@{callback\+\_\+}}
+\index{callback\+\_\+@{callback\+\_\+}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{callback\+\_\+}{callback_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cb\+\_\+func} o\+Cpt\+::protocol\+::\+Serial\+::callback\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a653c57dab573b8f0d6d06e0f1443d045}{}\label{classo_cpt_1_1protocol_1_1_serial_a653c57dab573b8f0d6d06e0f1443d045}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!csize\+\_\+@{csize\+\_\+}}
+\index{csize\+\_\+@{csize\+\_\+}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{csize\+\_\+}{csize_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf character\+\_\+size\+\_\+t} o\+Cpt\+::protocol\+::\+Serial\+::csize\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_ab64a625816c6697c301c5d6c79612044}{}\label{classo_cpt_1_1protocol_1_1_serial_ab64a625816c6697c301c5d6c79612044}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!device\+\_\+@{device\+\_\+}}
+\index{device\+\_\+@{device\+\_\+}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{device\+\_\+}{device_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string o\+Cpt\+::protocol\+::\+Serial\+::device\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_aef59f7008f19eb073071a836b923c47e}{}\label{classo_cpt_1_1protocol_1_1_serial_aef59f7008f19eb073071a836b923c47e}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!first\+Msg@{first\+Msg}}
+\index{first\+Msg@{first\+Msg}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{first\+Msg}{firstMsg}}]{\setlength{\rightskip}{0pt plus 5cm}bool o\+Cpt\+::protocol\+::\+Serial\+::first\+Msg = true\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_affbe5790cd34027fa6b65dbb98f5d5bc}{}\label{classo_cpt_1_1protocol_1_1_serial_affbe5790cd34027fa6b65dbb98f5d5bc}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!flow\+\_\+@{flow\+\_\+}}
+\index{flow\+\_\+@{flow\+\_\+}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{flow\+\_\+}{flow_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf flow\+\_\+control\+\_\+t} o\+Cpt\+::protocol\+::\+Serial\+::flow\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a08eb8b737e453a84f6db746c79c0fab1}{}\label{classo_cpt_1_1protocol_1_1_serial_a08eb8b737e453a84f6db746c79c0fab1}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!ioservice\+\_\+@{ioservice\+\_\+}}
+\index{ioservice\+\_\+@{ioservice\+\_\+}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{ioservice\+\_\+}{ioservice_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf io\+\_\+service\+\_\+t} o\+Cpt\+::protocol\+::\+Serial\+::ioservice\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a313201e80bdb7495b837960c16d244a2}{}\label{classo_cpt_1_1protocol_1_1_serial_a313201e80bdb7495b837960c16d244a2}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!msg\+\_\+@{msg\+\_\+}}
+\index{msg\+\_\+@{msg\+\_\+}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{msg\+\_\+}{msg_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string o\+Cpt\+::protocol\+::\+Serial\+::msg\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a418ed31316844cd2ea8bc6edd89e9619}{}\label{classo_cpt_1_1protocol_1_1_serial_a418ed31316844cd2ea8bc6edd89e9619}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!msg\+Queue\+\_\+@{msg\+Queue\+\_\+}}
+\index{msg\+Queue\+\_\+@{msg\+Queue\+\_\+}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{msg\+Queue\+\_\+}{msgQueue_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::deque$<$std\+::vector$<$unsigned char$>$ $>$ o\+Cpt\+::protocol\+::\+Serial\+::msg\+Queue\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a220138abdeaa8734f9f9b1b1ecd8ccd8}{}\label{classo_cpt_1_1protocol_1_1_serial_a220138abdeaa8734f9f9b1b1ecd8ccd8}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!parity\+\_\+@{parity\+\_\+}}
+\index{parity\+\_\+@{parity\+\_\+}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{parity\+\_\+}{parity_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf parity\+\_\+t} o\+Cpt\+::protocol\+::\+Serial\+::parity\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a2b7e174e85959fcb20bb9cb26fecafc1}{}\label{classo_cpt_1_1protocol_1_1_serial_a2b7e174e85959fcb20bb9cb26fecafc1}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!read\+\_\+msg@{read\+\_\+msg}}
+\index{read\+\_\+msg@{read\+\_\+msg}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{read\+\_\+msg}{read_msg}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char o\+Cpt\+::protocol\+::\+Serial\+::read\+\_\+msg\mbox{[}{\bf M\+A\+X\+\_\+\+R\+E\+A\+D\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a74e416bfc7291e2eee8964c9cc670368}{}\label{classo_cpt_1_1protocol_1_1_serial_a74e416bfc7291e2eee8964c9cc670368}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!return\+Msg\+Queue\+\_\+@{return\+Msg\+Queue\+\_\+}}
+\index{return\+Msg\+Queue\+\_\+@{return\+Msg\+Queue\+\_\+}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{return\+Msg\+Queue\+\_\+}{returnMsgQueue_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::deque$<$std\+::string$>$ o\+Cpt\+::protocol\+::\+Serial\+::return\+Msg\+Queue\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_aeed234980f18b4b66f8c88c50d6188f8}{}\label{classo_cpt_1_1protocol_1_1_serial_aeed234980f18b4b66f8c88c50d6188f8}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!serialport\+\_\+@{serialport\+\_\+}}
+\index{serialport\+\_\+@{serialport\+\_\+}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{serialport\+\_\+}{serialport_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf serialport\+\_\+t} o\+Cpt\+::protocol\+::\+Serial\+::serialport\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a3297de5a49ff3956439fcd5c030c75a0}{}\label{classo_cpt_1_1protocol_1_1_serial_a3297de5a49ff3956439fcd5c030c75a0}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!sig@{sig}}
+\index{sig@{sig}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{sig}{sig}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf signal\+\_\+t} o\+Cpt\+::protocol\+::\+Serial\+::sig}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a363071a4e7ead980f7f3369f57acf578}{}\label{classo_cpt_1_1protocol_1_1_serial_a363071a4e7ead980f7f3369f57acf578}
+\index{o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}!stop\+\_\+@{stop\+\_\+}}
+\index{stop\+\_\+@{stop\+\_\+}!o\+Cpt\+::protocol\+::\+Serial@{o\+Cpt\+::protocol\+::\+Serial}}
+\subsubsection[{\texorpdfstring{stop\+\_\+}{stop_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf stop\+\_\+bits\+\_\+t} o\+Cpt\+::protocol\+::\+Serial\+::stop\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1protocol_1_1_serial_a0905cfeb2f2e21ce6a141e068813f75c}{}\label{classo_cpt_1_1protocol_1_1_serial_a0905cfeb2f2e21ce6a141e068813f75c}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\hyperlink{_controller_8h}{Controller.\+h}\item 
+src/\+Core/\hyperlink{_controller_8cpp}{Controller.\+cpp}\end{DoxyCompactItemize}
