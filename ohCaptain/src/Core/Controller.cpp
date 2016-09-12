@@ -9,6 +9,7 @@
 #include <thread>
 
 #include <boost/make_shared.hpp>
+#include <boost/filesystem.hpp>
 
 namespace oCpt {
 
@@ -21,7 +22,7 @@ namespace oCpt {
         bool userspace::modLoaded(std::string modName) {
             //TODO check if Mutex is needed, probably
             if (modName.compare("") == 0) { return true; }
-            std::ifstream fs("/proc/modules");
+            std::ifstream fs(MODULE_PATH);
             std::string line;
             while (std::getline(fs, line)) {
                 if (line.find(modName, 0) != std::string::npos) {
@@ -39,16 +40,24 @@ namespace oCpt {
         }
 
         bool userspace::dtboLoaded(std::string dtboName) {
-            //TODO make method that determine if the dtbo is loaded
-            return true;
+            std::ifstream fs(BBB_CAPE_MNGR);
+            std::string line;
+            while (std::getline(fs, line)) {
+                if (line.find(dtboName, 0) != std::string::npos) {
+                    fs.close();
+                    return true;
+                }
+            }
+            fs.close();
+            return false;
         }
 
         adc::adc(uint8_t id, uint8_t device, std::string modName) {
             device_ = device;
             id_ = id;
             std::stringstream ss;
-            ss << "/sys/bus/iio/devices/iio:device" << std::to_string(device_) << "/in_voltage" << std::to_string(id_)
-               << "_raw";
+            ss << ADC_IO_BASE_PATH << std::to_string(device_) << ADC_VOLTAGE_PATH << std::to_string(id_)
+               << ADC_VOLTAGE_SUB_PATH;
             path_ = ss.str();
             if (!modLoaded(modName)) {
                 throw oCptException("Exception! Module not loaded", 0);
@@ -248,6 +257,130 @@ namespace oCpt {
                 }
             } else {
                 closeCallback(error);
+            }
+        }
+
+        int gpio::getPinNumber() const {
+            return pinNumber_;
+        }
+
+        void gpio::setPinNumber(int pinNumber) {
+            gpio::pinNumber_ = pinNumber;
+        }
+
+        gpio::Value gpio::getValue() const {
+            if (direction_ == Direction::INPUT) {
+                return readPinValue<Value>(pinNumber_);
+            }
+            return value_;
+        }
+
+        void gpio::setValue(gpio::Value value) {
+            if (direction_ == Direction::OUTPUT) {
+                writePinValue<Value>(gpiopath_, value);
+            }
+            gpio::value_ = value;
+        }
+
+        gpio::Direction gpio::getDirection() const {
+            return direction_;
+        }
+
+        void gpio::setDirection(gpio::Direction direction) {
+            writePinValue<Direction>(gpiopath_, direction_);
+            gpio::direction_ = direction;
+        }
+
+        gpio::Edge gpio::getEdge() const {
+            if (direction_ == Direction::INPUT) {
+                return readPinValue<Edge>(gpiopath_);
+            }
+            return edge_;
+        }
+
+        void gpio::setEdge(gpio::Edge edge) {
+            if (direction_ == Direction::OUTPUT) {
+                writePinValue<Edge>(gpiopath_, edge);
+            }
+            gpio::edge_ = edge;
+        }
+
+        gpio::gpio(int pinNumber, gpio::Direction direction,  gpio::Value value, gpio::Edge edge)
+                : pinNumber_(pinNumber),
+                  direction_(direction),
+                  value_(value),
+                  edge_(edge){
+            gpiopath_ = GPIO_BASE_PATH;
+            gpiopath_.append("gpio" + std::to_string(pinNumber_));
+            exportPin(pinNumber_);
+            writePinValue<Direction>(gpiopath_, direction_);
+            writePinValue<Edge>(gpiopath_, edge_);
+            writePinValue<Value>(gpiopath_, value_);
+        }
+
+        gpio::~gpio() {
+            unexportPin(pinNumber_);
+        }
+
+        std::vector<gpio::ptr> gpio::exportedGpios() {
+            std::vector<gpio::ptr> gpios;
+            boost::filesystem::path p(GPIO_BASE_PATH);
+            const unsigned int sizeOfBasePath = p.string().size();
+
+            //! Iterate through all exported pins
+            boost::filesystem::directory_iterator end_itr;
+            for (boost::filesystem::directory_iterator itr(p); itr != end_itr; ++itr) {
+                std::string path = itr->path().string();
+                if ((path.find("gpio", sizeOfBasePath) != std::string::npos) && (path.find("chip", sizeOfBasePath) == std::string::npos)) {
+                    const unsigned int loc = path.find("gpio",sizeOfBasePath) + 4;
+                    const std::string nr = path.substr(loc);
+                    int pinnumber = std::atoi(nr.c_str());
+                    Direction direction = readPinValue<Direction>(pinnumber);
+                    Value value = readPinValue<Value>(pinnumber);
+                    Edge edge = readPinValue<Edge>(pinnumber);
+                    gpio::ptr gpio_ptr( new gpio(pinnumber, direction, value, edge));
+                    gpios.push_back(gpio_ptr);
+                }
+            }
+            return gpios;
+        }
+
+        void gpio::exportPin(const int &number) {
+            const std::string exportPath = std::string(GPIO_BASE_PATH) + "export";
+            std::ofstream fs;
+            try {
+                fs.open(exportPath);
+            } catch (std::ofstream::failure const &ex) {
+                //TODO error handling
+                return;
+            }
+            fs << std::to_string(number) << std::endl;
+            fs.close();
+            usleep(250000);
+        }
+
+        void gpio::unexportPin(const int &number) {
+            const std::string exportPath = std::string(GPIO_BASE_PATH) + "unexport";
+            std::ofstream fs;
+            try {
+                fs.open(exportPath);
+            } catch (std::ofstream::failure const &ex) {
+                //TODO error handling
+                return;
+            }
+            fs << std::to_string(number) << std::endl;
+            fs.close();
+            usleep(250000);
+        }
+
+        void gpio::toggle() {
+            //TODO write optimized function currently around 7kHz
+            if (value_ == Value::HIGH) {
+                value_ = Value::LOW;
+                writePinValue<Value>(gpiopath_, Value::LOW);
+            } else {
+                value_ = Value::HIGH;
+                writePinValue<>(gpiopath_, Value::HIGH);
             }
         }
     }

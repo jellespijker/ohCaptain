@@ -6,7 +6,7 @@ project(ohCaptain)
 set(Boost_USE_STATIC_LIBS       OFF)
 set(Boost_USE_MULTITHREADED     ON)
 set(Boost_USE_STATIC_RUNTIME    OFF)
-find_package(Boost COMPONENTS system chrono REQUIRED)
+find_package(Boost COMPONENTS filesystem system chrono REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
 #cross compile folders
