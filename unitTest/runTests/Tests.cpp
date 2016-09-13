@@ -70,12 +70,22 @@ TEST(Controller, gpio_output) {
     ASSERT_EQ(p.getValue(), gpio::Value::HIGH);
 }
 
-TEST(Controller, gpio_toggle) {
+TEST(Controller, gpio_toggle) { //TODO implement assert
     using namespace oCpt::protocol;
-    oCpt::protocol::gpio p(60, gpio::Direction::OUTPUT);
-    while(1) {
+    gpio p(60, gpio::Direction::OUTPUT);
+
+    for (int i = 0; i < 100; i++) {
         p.toggle();
     }
+}
+
+TEST(Controller, gpio_poll) { //TODO implement assert
+    using namespace oCpt::protocol;
+    gpio p(60, gpio::Direction::INPUT, gpio::Value::LOW, gpio::Edge::BOTH);
+    p.signalChanged.connect([]{
+        std::cout << "input recieved!" << std::endl;
+    });
+    //p.waitForEdgeAsync();
 }
 
 //TEST(Meetcatamaran, SerielTest) {

@@ -79,6 +79,8 @@ namespace oCpt {
         class gpio : public userspace {
         public:
             typedef boost::shared_ptr<gpio> ptr;
+            typedef boost::signals2::signal<void()> signal_t;
+            typedef std::function<void()> cb_func;
 
             enum Direction {INPUT = 105, OUTPUT = 111};
             enum Value { LOW = 48, HIGH = 49};
@@ -104,9 +106,17 @@ namespace oCpt {
 
             void setEdge(Edge edge);
 
+            void setCallbackFunction(cb_func cb);
+
+            void waitForEdge();
+
+            void waitForEdgeAsync();
+
             static std::vector<ptr> exportedGpios();
 
             void toggle();
+
+            signal_t signalChanged;
 
         private:
             int pinNumber_;
@@ -114,6 +124,10 @@ namespace oCpt {
             Direction direction_;
             Edge edge_;
             std::string gpiopath_;
+            cb_func cb_;
+            bool threadRunning_;
+
+            void internalCbFunc();
 
             void exportPin(const int &number);
 

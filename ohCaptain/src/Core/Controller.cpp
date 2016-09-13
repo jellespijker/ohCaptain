@@ -7,7 +7,10 @@
 
 #include <fstream>
 #include <thread>
+#include <sys/poll.h>
+#include <fcntl.h>
 
+#include <boost/bind.hpp>
 #include <boost/make_shared.hpp>
 #include <boost/filesystem.hpp>
 
@@ -309,13 +312,16 @@ namespace oCpt {
                 : pinNumber_(pinNumber),
                   direction_(direction),
                   value_(value),
-                  edge_(edge){
+                  edge_(edge),
+                  threadRunning_(false){
             gpiopath_ = GPIO_BASE_PATH;
             gpiopath_.append("gpio" + std::to_string(pinNumber_));
             exportPin(pinNumber_);
             writePinValue<Direction>(gpiopath_, direction_);
             writePinValue<Edge>(gpiopath_, edge_);
             writePinValue<Value>(gpiopath_, value_);
+            cb_  = gpio::cb_func(boost::bind(&gpio::internalCbFunc, this));
+                    //= boost::bind(&gpio::internalCbFunc);
         }
 
         gpio::~gpio() {
@@ -374,15 +380,58 @@ namespace oCpt {
         }
 
         void gpio::toggle() {
+            writePinValue<Value>(gpiopath_, static_cast<Value>(value_ ^ 1));
             //TODO write optimized function currently around 7kHz
-            if (value_ == Value::HIGH) {
-                value_ = Value::LOW;
-                writePinValue<Value>(gpiopath_, Value::LOW);
-            } else {
-                value_ = Value::HIGH;
-                writePinValue<>(gpiopath_, Value::HIGH);
-            }
         }
+
+        void gpio::setCallbackFunction(gpio::cb_func cb) {
+            cb_ = cb;
+        }
+
+        void gpio::internalCbFunc() {
+            signalChanged();
+        }
+
+        void gpio::waitForEdge() {
+            if (direction_ == Direction::OUTPUT) {
+                return;
+            }
+            int fd, i, epollfd, count=0;
+            struct epoll_event ev;
+            epollfd = epoll_create(1);
+            if (epollfd == -1) {
+                //TODO error handling
+            }
+            std::string path = gpiopath_;
+            path.append("/value");
+            if ((fd = open(path.c_str(), O_RDONLY | O_NONBLOCK)) == -1) {
+                //TODO error handling
+            }
+            ev.events = EPOLLIN | EPOLLET | EPOLLPRI;
+            ev.data.fd =fd;
+
+            if (epoll_ctl(epollfd, EPOLL_CTL_ADD, fd, &ev) == -1) {
+                //TODO errror handling
+            }
+
+            while(count <= 1) {
+                i = epoll_wait(epollfd, &ev, 1, -1);
+                if (i == -1) {
+                    count = 5;
+                    //TODO error handling
+                } else {
+                    count++;
+                }
+            }
+            cb_();
+            close(fd);
+        }
+
+        void gpio::waitForEdgeAsync() {
+            std::thread poll_thread(boost::bind(&gpio::waitForEdge, this));
+            poll_thread.detach();
+        }
+
     }
 
     iController::iController(World::ptr world)
