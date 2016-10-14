@@ -12,7 +12,7 @@ namespace oCpt {
               world_(world), id_(id),
               typeOfSensor_(typeOfSensor),
               timer_(0) {
-        state_.Value._longlong_t = 0;
+        state_.Value = static_cast<uint8_t >(0);
     }
 
     iSensor::~iSensor() {}
@@ -72,6 +72,10 @@ namespace oCpt {
     }
 
     void Sensor::stop() {
+
+    }
+
+    void Sensor::init() {
 
     }
 

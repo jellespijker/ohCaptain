@@ -10,6 +10,7 @@
 #include <boost/asio/steady_timer.hpp>
 #include <boost/asio.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
+#include <boost/any.hpp>
 
 #include <string>
 #include <vector>
@@ -17,30 +18,18 @@
 #include "Controller.h"
 #include "Exception.h"
 
+#define CAST(x) boost::any_cast<Razor::ReturnValue_t>(x)
+
 namespace oCpt {
 
     class iSensor {
     public:
         typedef boost::shared_ptr<iSensor> ptr;
         typedef boost::signals2::signal<void()> signal_t;
+        typedef boost::any generic_t;
 
         struct State {
-            union {
-                char _char_t;
-                unsigned char _uchar_t;
-                short _short_t;
-                unsigned short _ushort_;
-                int _int_t;
-                unsigned int _uint_t;
-                long _long_t;
-                unsigned long _ulong_t;
-                long long _longlong_t;
-                unsigned long long _ulonglong_t;
-                float _float_t;
-                double _double_t;
-                long double _longdouble_t;
-                bool _bool_t;
-            } Value; //TODO replace with boost::any
+            generic_t Value;
             World::Time::timepoint_t Stamp;
         };
 
@@ -53,6 +42,8 @@ namespace oCpt {
         virtual void run() = 0;
 
         virtual void stop() = 0;
+
+        virtual void init() = 0;
 
         virtual void setIOservice(boost::shared_ptr<boost::asio::io_service> ioservice) = 0;
 
@@ -97,6 +88,8 @@ namespace oCpt {
         virtual void run() override;
 
         virtual void stop() override;
+
+        virtual void init() override;
 
         virtual void setIOservice(boost::shared_ptr<boost::asio::io_service> ioservice) override;
 

@@ -22,7 +22,7 @@ namespace oCpt {
 
             void PT100::updateSensor() {
                 _analogeValue = controller_->getAdcVector()->at(_pinid)->getValue();
-                state_.Value._double_t = _dy_dx * _analogeValue + _constant;
+                state_.Value = static_cast<ReturnValue_t >(_dy_dx * _analogeValue + _constant);
                 state_.Stamp = world_->now();
                 std::cout << _analogeValue << " timestamp " << state_.Stamp << std::endl;
             }
@@ -40,6 +40,10 @@ namespace oCpt {
 
             void PT100::stop() {
                 Sensor::stop();
+            }
+
+            void PT100::init() {
+                Sensor::init();
             }
         }
     }
