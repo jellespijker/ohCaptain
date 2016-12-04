@@ -227,7 +227,8 @@ namespace oCpt {
                    parity_t parity = parity_t(parity_t::none),
                    character_size_t csize = character_size_t(8),
                    flow_control_t flow = flow_control_t(flow_control_t::none),
-                   stop_bits_t stop = stop_bits_t(stop_bits_t::one));
+                   stop_bits_t stop = stop_bits_t(stop_bits_t::one),
+                   unsigned int maxreadlentgh = MAX_READ_LENGTH);
 
             void open();
 
@@ -266,6 +267,11 @@ namespace oCpt {
 
             void ReadStart();
 
+            unsigned int maxReadLength_;
+        public:
+            void setMaxReadLength(unsigned int maxReadLength);
+
+        protected:
             std::deque<std::vector<unsigned char>> msgQueue_;
             std::deque<std::string> returnMsgQueue_;
             std::string msg_;

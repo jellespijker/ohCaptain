@@ -4,11 +4,10 @@
 
 #include "gtest/gtest.h"
 
-//#include "../../ohCaptain/include/Sensors/PT100.h"
 #include "../../ohCaptain/include/Controllers/BeagleboneBlack.h"
 #include "../../ohCaptain/include/Vessels/Meetcatamaran.h"
 #include "../../ohCaptain/include/Communication/LoRa_RN2483.h"
-#include "../../ohCaptain/include/Core/Controller.h"
+#include "../../ohCaptain/include/Sensors/Razor.h"
 
 #include <boost/filesystem.hpp>
 
@@ -88,6 +87,36 @@ TEST(Controller, gpio_poll) { //TODO implement assert
     //p.waitForEdgeAsync();
 }
 
+
+TEST(Sensor, Razor) {
+    using namespace oCpt::components::sensors;
+    using namespace oCpt::components::controller;
+    using namespace oCpt;
+    using namespace oCpt::vessels;
+
+    World::ptr w(new World());
+    BBB::ptr bbb(new BBB(w));
+
+    Razor::ptr r(new Razor(bbb, w, "Razor", "/dev/ttyS4", 57600, Razor::Mode::CONT, 250));
+    r->init();
+    r->run();
+    r->getSig().connect([&] {
+        Razor::ReturnValue_t retVal = CAST(r->getState().Value);
+        std::cout << std::to_string(retVal.acc[0]) << std::endl;
+        std::cout << std::to_string(retVal.acc[1]) << std::endl;
+        std::cout << std::to_string(retVal.acc[2]) << std::endl;
+        std::cout << std::to_string(retVal.mag[0]) << std::endl;
+        std::cout << std::to_string(retVal.mag[1]) << std::endl;
+        std::cout << std::to_string(retVal.mag[2]) << std::endl;
+        std::cout << std::to_string(retVal.gyro[0]) << std::endl;
+        std::cout << std::to_string(retVal.gyro[1]) << std::endl;
+        std::cout << std::to_string(retVal.gyro[2]) << std::endl;
+    });
+
+    for (;;) {
+        r->updateSensor();
+    }
+}
 //TEST(Meetcatamaran, SerielTest) {
 //    oCpt::protocol::Serial serial("/dev/ttyACM0", 57600);
 //    serial.open();
