@@ -11,12 +11,17 @@ namespace oCpt {
             class Razor : public Sensor {
             public:
                 typedef struct ReturnValue {
-                    double gyro[3];
-                    double mag[3];
-                    double acc[3];
+                    float gyro[3];
+                    float mag[3];
+                    float acc[3];
                 } ReturnValue_t;
 
-                Razor(iController::ptr controller, World::ptr world, std::string id, std::string device, unsigned int baudrate);
+                enum Mode {
+                    CONT = 0,
+                    REQ = 1
+                };
+
+                Razor(iController::ptr controller, World::ptr world, std::string id, std::string device, unsigned int baudrate, Mode mode = Mode::REQ, uint8_t freq = 50);
 
                 ~Razor();
 
@@ -33,6 +38,25 @@ namespace oCpt {
             private:
                 std::string device_;
                 protocol::Serial::ptr serial_;
+                protocol::Serial::cb_func cb;
+                Mode mode_;
+            public:
+                Mode getMode() const;
+
+                void setMode(Mode mode);
+
+                uint8_t getFreq() const;
+
+                void setFreq(uint8_t freq);
+
+            private:
+                uint8_t freq_ = 50;
+
+                void fillReturnValue(ReturnValue_t &retVal, float *values);
+
+                void msgHandler(const unsigned char *data, size_t size);
+
+                bool checkLRC(std::vector<char *> data);
             };
         }
     }

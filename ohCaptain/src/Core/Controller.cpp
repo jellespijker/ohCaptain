@@ -91,7 +91,10 @@ namespace oCpt {
 
         Serial::Serial(const std::string &device, unsigned int baudrate, io_service_t ioservice,
                        Serial::parity_t parity,
-                       Serial::character_size_t csize, Serial::flow_control_t flow, Serial::stop_bits_t stop)
+                       Serial::character_size_t csize,
+                       Serial::flow_control_t flow,
+                       Serial::stop_bits_t stop,
+                       unsigned int maxreadlentgh)
                 : device_(device),
                   baudrate_(baudrate),
                   ioservice_(ioservice),
@@ -100,7 +103,8 @@ namespace oCpt {
                   flow_(flow),
                   stop_(stop),
                   serialport_(*ioservice.get(), device_),
-                  receivedMsg_("") {
+                  receivedMsg_(""),
+                  maxReadLength_(maxreadlentgh){
             callback_ = boost::bind(&Serial::internalCallback, this, _1, _2);
         }
 
@@ -162,7 +166,7 @@ namespace oCpt {
 
         void Serial::ReadStart() {
             if (isOpen()) {
-                serialport_.async_read_some(boost::asio::buffer(read_msg, MAX_READ_LENGTH),
+                serialport_.async_read_some(boost::asio::buffer(read_msg, maxReadLength_),
                                             boost::bind(&Serial::readComplete,
                                                         this,
                                                         boost::asio::placeholders::error,
@@ -186,6 +190,7 @@ namespace oCpt {
         std::string Serial::readFiFoMsg() {
             std::string msg = returnMsgQueue_.front();
             returnMsgQueue_.pop_front();
+            //TODO check if it is necceasry to resend the msg receive signal if there are still msgs in the que
             return msg;
         }
 
@@ -261,6 +266,10 @@ namespace oCpt {
             } else {
                 closeCallback(error);
             }
+        }
+
+        void Serial::setMaxReadLength(unsigned int maxReadLength) {
+            Serial::maxReadLength_ = maxReadLength;
         }
 
         int gpio::getPinNumber() const {

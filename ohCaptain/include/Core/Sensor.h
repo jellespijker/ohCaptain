@@ -53,7 +53,7 @@ namespace oCpt {
 
         void setTimer(const boost::posix_time::milliseconds &timer);
 
-        const signal_t &getSig_() const;
+        signal_t &getSig();
 
         const State &getState() const;
 
@@ -75,6 +75,7 @@ namespace oCpt {
         boost::posix_time::milliseconds timer_;
         signal_t sig_;
         State state_;
+        bool sensorRunning_ ;
     };
 
     class Sensor : public iSensor {

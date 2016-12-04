@@ -11,7 +11,7 @@ namespace oCpt {
             : controller_(controller),
               world_(world), id_(id),
               typeOfSensor_(typeOfSensor),
-              timer_(0) {
+              timer_(0), sensorRunning_(false) {
         state_.Value = static_cast<uint8_t >(0);
     }
 
@@ -25,7 +25,7 @@ namespace oCpt {
         iSensor::timer_ = timer;
     }
 
-    const iSensor::signal_t &iSensor::getSig_() const {
+    iSensor::signal_t &iSensor::getSig()  {
         return sig_;
     }
 
@@ -68,11 +68,11 @@ namespace oCpt {
     }
 
     void Sensor::run() {
-
+        sensorRunning_ = true;
     }
 
     void Sensor::stop() {
-
+        sensorRunning_ = false;
     }
 
     void Sensor::init() {
