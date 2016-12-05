@@ -45,6 +45,9 @@ TEST(Controller, fileExist) {
 }
 
 TEST(Controller, exportedGpios) {
+    using namespace oCpt::protocol;
+    oCpt::protocol::gpio p_60(60, gpio::Direction::INPUT);
+    oCpt::protocol::gpio p_61(61, gpio::Direction::INPUT);
     boost::filesystem::path p("/sys/class/gpio/");
     size_t sum = 0;
     boost::filesystem::directory_iterator end_itr;
@@ -52,7 +55,7 @@ TEST(Controller, exportedGpios) {
         sum++;
     }
     std::vector<oCpt::protocol::gpio::ptr> v_gpio = oCpt::protocol::gpio::exportedGpios();
-    ASSERT_EQ(v_gpio.size(), sum - 7);
+    ASSERT_EQ(v_gpio.size(), sum - 6);
 }
 
 TEST(Controller, gpio_input) {
@@ -87,6 +90,16 @@ TEST(Controller, gpio_poll) { //TODO implement assert
     //p.waitForEdgeAsync();
 }
 
+TEST(Sensor, LoRaTest) {
+    oCpt::components::comm::LoRa_RN2483 loRaRn2483("loRaRn2483", "/dev/ttyACM0");
+    loRaRn2483.initialize();
+    loRaRn2483.msgRecievedSig.connect([&] {
+        std::cout << loRaRn2483.readFiFoMsg()->Payload << std::endl;
+    });
+    //loRaRn2483.run();
+    //for(;;);
+    //loRaRn2483.stop();
+}
 
 TEST(Sensor, Razor) {
     using namespace oCpt::components::sensors;
@@ -137,15 +150,6 @@ TEST(Sensor, Razor) {
 //
 
 /*
-TEST(Meetcatamaran, LoRaTest) {
-    oCpt::components::comm::LoRa_RN2483 loRaRn2483("loRaRn2483", "/dev/ttyACM0");
-    loRaRn2483.initialize();
-    loRaRn2483.msgRecievedSig.connect([&]{
-        std::cout << loRaRn2483.readFiFoMsg()->Payload << std::endl;
-    });
-    loRaRn2483.run();
-    for(;;);
-    loRaRn2483.stop();
-}
+
 
 */
