@@ -6,6 +6,7 @@
 #include "../Core/Communication.h"
 
 //Yes point to point is possible . Ive tried this myself. use this initialisation on both TX and RX
+//"sys reset"
 //"radio set mod lora"
 //"radio set freq 868000000"
 //"radio set pwr 14"

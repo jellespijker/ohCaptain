@@ -5,6 +5,7 @@ project(ohCaptain_main)
 
 add_subdirectory(ohCaptain)
 add_subdirectory(unitTest)
+add_subdirectory(tools)
 
 #Deploy project
 add_custom_target(deploy_${PROJECT_NAME}
