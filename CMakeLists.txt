@@ -7,7 +7,7 @@ add_subdirectory(ohCaptain)
 add_subdirectory(unitTest)
 
 #Deploy project
-add_custom_target(install_${PROJECT_NAME}
+add_custom_target(deploy_${PROJECT_NAME}
         make install
         DEPENDS ${runTests} ${ohCaptain}
         COMMENT "Installing ${PROJECT_NAME}")

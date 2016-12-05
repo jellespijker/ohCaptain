@@ -197,6 +197,21 @@ namespace oCpt {
         void hexToString(const std::string hexStr, std::string &str);
 
         template<typename T>
+        std::string encodeTypeToHex(T value, bool capital = true){
+            std::string retVal;
+            retVal.resize(sizeof(T) * 2);
+            static const char a = capital ? 0x40 : 0x60;
+            char *begin = reinterpret_cast<char *>(&value);
+            for (uint8_t i = 0; i < sizeof(T); i++) {
+                unsigned char p = *(begin + i);
+                char c = (p >> 4) & 0xF;
+                retVal[i * 2] = c > 9 ? (c - 9) | a : c | '0';
+                retVal[i * 2 + 1] = (p & 0xF) > 9 ? (p - 9) & 0xF | a : p & 0xF | '0';
+            }
+            return retVal;
+        }
+
+        template<typename T>
         std::string buildMacCmdString(MacCommand cmd, T value = 0, GetSet prop = NONE) {
             std::string retVal = "mac ";
             if (prop == SET) {

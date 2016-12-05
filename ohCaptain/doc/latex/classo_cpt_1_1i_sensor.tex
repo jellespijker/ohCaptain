@@ -1,0 +1,269 @@
+\hypertarget{classo_cpt_1_1i_sensor}{}\section{o\+Cpt\+:\+:i\+Sensor Class Reference}
+\label{classo_cpt_1_1i_sensor}\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+
+
+{\ttfamily \#include $<$Sensor.\+h$>$}
+
+
+
+Inheritance diagram for o\+Cpt\+:\+:i\+Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classo_cpt_1_1i_sensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for o\+Cpt\+:\+:i\+Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classo_cpt_1_1i_sensor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structo_cpt_1_1i_sensor_1_1_state}{State}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classo_cpt_1_1i_sensor}{i\+Sensor} $>$ \hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{ptr}
+\item 
+typedef boost\+::signals2\+::signal$<$ void()$>$ \hyperlink{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d}{signal\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1i_sensor_a548ca1dbeea64980181c434518659d3e}{i\+Sensor} (\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr} controller, \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} world, std\+::string id, std\+::string type\+Of\+Sensor=\char`\"{}\char`\"{})
+\item 
+virtual \hyperlink{classo_cpt_1_1i_sensor_a47eeead807cf3dc127fe55df4bc68c47}{$\sim$i\+Sensor} ()
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_sensor_aa55bc04979e4852989af2bd4f64e70bc}{update\+Sensor} ()=0
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_sensor_abbface05a16b17354c23389d9747bf7c}{run} ()=0
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_sensor_aa85c22a8c8f7c2445379e1f82835f8dc}{stop} ()=0
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_sensor_a83b62cc63498ca4c335f85639e39656d}{set\+I\+Oservice} (boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$ ioservice)=0
+\item 
+virtual bool \hyperlink{classo_cpt_1_1i_sensor_affc8319846828aac6cab641f294a04aa}{operator==} (\hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{i\+Sensor\+::ptr} rhs)
+\item 
+const boost\+::posix\+\_\+time\+::milliseconds \& \hyperlink{classo_cpt_1_1i_sensor_ab0198a66371e1f20edb8aa876bb69953}{get\+Timer} () const 
+\item 
+void \hyperlink{classo_cpt_1_1i_sensor_a4c956646ebf60201b5b23e0f5ad288ce}{set\+Timer} (const boost\+::posix\+\_\+time\+::milliseconds \&timer)
+\item 
+const \hyperlink{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d}{signal\+\_\+t} \& \hyperlink{classo_cpt_1_1i_sensor_a65d4574e71a75c911a73629a05c22d0d}{get\+Sig\+\_\+} () const 
+\item 
+const \hyperlink{structo_cpt_1_1i_sensor_1_1_state}{State} \& \hyperlink{classo_cpt_1_1i_sensor_aa08600adeeeec0965f6cf0ac46987997}{get\+State} () const 
+\item 
+const std\+::string \& \hyperlink{classo_cpt_1_1i_sensor_a524a5baf9a771c4f4e540cd030373763}{get\+ID} () const 
+\item 
+void \hyperlink{classo_cpt_1_1i_sensor_ab3347720d3139b82d6968c03141ddee2}{set\+Id\+\_\+} (const std\+::string \&\hyperlink{classo_cpt_1_1i_sensor_a4c9bd54d193ec8f2cc01eede5eadacdc}{id\+\_\+})
+\item 
+const std\+::string \& \hyperlink{classo_cpt_1_1i_sensor_a652dcc1d28a0b36856e733f735dae18c}{get\+Type\+Of\+Sensor} () const 
+\item 
+void \hyperlink{classo_cpt_1_1i_sensor_ab5a881988f2f9b8849892f091b01ed87}{set\+Type\+Of\+Sensor\+\_\+} (const std\+::string \&\hyperlink{classo_cpt_1_1i_sensor_a37396b5c63f5e99cb6e80c266f85dbfa}{type\+Of\+Sensor\+\_\+})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classo_cpt_1_1i_sensor_a4c9bd54d193ec8f2cc01eede5eadacdc}{id\+\_\+}
+\item 
+std\+::string \hyperlink{classo_cpt_1_1i_sensor_a37396b5c63f5e99cb6e80c266f85dbfa}{type\+Of\+Sensor\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr} \hyperlink{classo_cpt_1_1i_sensor_a65e41d8be53d71b1db21bac89c5c3c0d}{controller\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} \hyperlink{classo_cpt_1_1i_sensor_aab033b6462d7e8710c006f19c51e033e}{world\+\_\+}
+\item 
+boost\+::posix\+\_\+time\+::milliseconds \hyperlink{classo_cpt_1_1i_sensor_ac2a089853910118f6b490c00fc354d77}{timer\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d}{signal\+\_\+t} \hyperlink{classo_cpt_1_1i_sensor_a4f4943cf2af0b1a06bf5f0d8c46d1cb8}{sig\+\_\+}
+\item 
+\hyperlink{structo_cpt_1_1i_sensor_1_1_state}{State} \hyperlink{classo_cpt_1_1i_sensor_ad27fe02a89f013951a05f296ec457a08}{state\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!ptr@{ptr}}
+\index{ptr@{ptr}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{ptr}{ptr}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::shared\+\_\+ptr$<${\bf i\+Sensor}$>$ {\bf o\+Cpt\+::i\+Sensor\+::ptr}}\hypertarget{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{}\label{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!signal\+\_\+t@{signal\+\_\+t}}
+\index{signal\+\_\+t@{signal\+\_\+t}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{signal\+\_\+t}{signal_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::signals2\+::signal$<$void()$>$ {\bf o\+Cpt\+::i\+Sensor\+::signal\+\_\+t}}\hypertarget{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d}{}\label{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!i\+Sensor@{i\+Sensor}}
+\index{i\+Sensor@{i\+Sensor}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{i\+Sensor(i\+Controller\+::ptr controller, World\+::ptr world, std\+::string id, std\+::string type\+Of\+Sensor="""")}{iSensor(iController::ptr controller, World::ptr world, std::string id, std::string typeOfSensor="")}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::i\+Sensor\+::i\+Sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Controller\+::ptr}}]{controller, }
+\item[{{\bf World\+::ptr}}]{world, }
+\item[{std\+::string}]{id, }
+\item[{std\+::string}]{type\+Of\+Sensor = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1i_sensor_a548ca1dbeea64980181c434518659d3e}{}\label{classo_cpt_1_1i_sensor_a548ca1dbeea64980181c434518659d3e}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!````~i\+Sensor@{$\sim$i\+Sensor}}
+\index{````~i\+Sensor@{$\sim$i\+Sensor}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{$\sim$i\+Sensor()}{~iSensor()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::i\+Sensor\+::$\sim$i\+Sensor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1i_sensor_a47eeead807cf3dc127fe55df4bc68c47}{}\label{classo_cpt_1_1i_sensor_a47eeead807cf3dc127fe55df4bc68c47}
+
+
+\subsection{Member Function Documentation}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!get\+ID@{get\+ID}}
+\index{get\+ID@{get\+ID}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+I\+D() const }{getID() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& o\+Cpt\+::i\+Sensor\+::get\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classo_cpt_1_1i_sensor_a524a5baf9a771c4f4e540cd030373763}{}\label{classo_cpt_1_1i_sensor_a524a5baf9a771c4f4e540cd030373763}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!get\+Sig\+\_\+@{get\+Sig\+\_\+}}
+\index{get\+Sig\+\_\+@{get\+Sig\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+Sig\+\_\+() const }{getSig_() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf i\+Sensor\+::signal\+\_\+t} \& o\+Cpt\+::i\+Sensor\+::get\+Sig\+\_\+ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classo_cpt_1_1i_sensor_a65d4574e71a75c911a73629a05c22d0d}{}\label{classo_cpt_1_1i_sensor_a65d4574e71a75c911a73629a05c22d0d}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+State() const }{getState() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf i\+Sensor\+::\+State} \& o\+Cpt\+::i\+Sensor\+::get\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classo_cpt_1_1i_sensor_aa08600adeeeec0965f6cf0ac46987997}{}\label{classo_cpt_1_1i_sensor_aa08600adeeeec0965f6cf0ac46987997}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!get\+Timer@{get\+Timer}}
+\index{get\+Timer@{get\+Timer}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+Timer() const }{getTimer() const }}]{\setlength{\rightskip}{0pt plus 5cm}const boost\+::posix\+\_\+time\+::milliseconds \& o\+Cpt\+::i\+Sensor\+::get\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classo_cpt_1_1i_sensor_ab0198a66371e1f20edb8aa876bb69953}{}\label{classo_cpt_1_1i_sensor_ab0198a66371e1f20edb8aa876bb69953}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!get\+Type\+Of\+Sensor@{get\+Type\+Of\+Sensor}}
+\index{get\+Type\+Of\+Sensor@{get\+Type\+Of\+Sensor}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+Type\+Of\+Sensor() const }{getTypeOfSensor() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& o\+Cpt\+::i\+Sensor\+::get\+Type\+Of\+Sensor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classo_cpt_1_1i_sensor_a652dcc1d28a0b36856e733f735dae18c}{}\label{classo_cpt_1_1i_sensor_a652dcc1d28a0b36856e733f735dae18c}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!operator==@{operator==}}
+\index{operator==@{operator==}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{operator==(i\+Sensor\+::ptr rhs)}{operator==(iSensor::ptr rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}bool o\+Cpt\+::i\+Sensor\+::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Sensor\+::ptr}}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1i_sensor_affc8319846828aac6cab641f294a04aa}{}\label{classo_cpt_1_1i_sensor_affc8319846828aac6cab641f294a04aa}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!run@{run}}
+\index{run@{run}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{run()=0}{run()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void o\+Cpt\+::i\+Sensor\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classo_cpt_1_1i_sensor_abbface05a16b17354c23389d9747bf7c}{}\label{classo_cpt_1_1i_sensor_abbface05a16b17354c23389d9747bf7c}
+
+
+Implemented in \hyperlink{classo_cpt_1_1_sensor_aef25b0e5f3a8358ee81c97c73909fbe6}{o\+Cpt\+::\+Sensor}, and \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a41dfc55a4be7993949feeb5ac013690d}{o\+Cpt\+::components\+::sensors\+::\+P\+T100}.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1i_sensor_abbface05a16b17354c23389d9747bf7c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!set\+Id\+\_\+@{set\+Id\+\_\+}}
+\index{set\+Id\+\_\+@{set\+Id\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{set\+Id\+\_\+(const std\+::string \&id\+\_\+)}{setId_(const std::string &id_)}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::i\+Sensor\+::set\+Id\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{id\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1i_sensor_ab3347720d3139b82d6968c03141ddee2}{}\label{classo_cpt_1_1i_sensor_ab3347720d3139b82d6968c03141ddee2}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!set\+I\+Oservice@{set\+I\+Oservice}}
+\index{set\+I\+Oservice@{set\+I\+Oservice}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{set\+I\+Oservice(boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$ ioservice)=0}{setIOservice(boost::shared_ptr< boost::asio::io_service > ioservice)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void o\+Cpt\+::i\+Sensor\+::set\+I\+Oservice (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$}]{ioservice}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classo_cpt_1_1i_sensor_a83b62cc63498ca4c335f85639e39656d}{}\label{classo_cpt_1_1i_sensor_a83b62cc63498ca4c335f85639e39656d}
+
+
+Implemented in \hyperlink{classo_cpt_1_1_sensor_ae7d47e18df5eb7854bf71fbbee9568df}{o\+Cpt\+::\+Sensor}.
+
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!set\+Timer@{set\+Timer}}
+\index{set\+Timer@{set\+Timer}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{set\+Timer(const boost\+::posix\+\_\+time\+::milliseconds \&timer)}{setTimer(const boost::posix_time::milliseconds &timer)}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::i\+Sensor\+::set\+Timer (
+\begin{DoxyParamCaption}
+\item[{const boost\+::posix\+\_\+time\+::milliseconds \&}]{timer}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1i_sensor_a4c956646ebf60201b5b23e0f5ad288ce}{}\label{classo_cpt_1_1i_sensor_a4c956646ebf60201b5b23e0f5ad288ce}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!set\+Type\+Of\+Sensor\+\_\+@{set\+Type\+Of\+Sensor\+\_\+}}
+\index{set\+Type\+Of\+Sensor\+\_\+@{set\+Type\+Of\+Sensor\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{set\+Type\+Of\+Sensor\+\_\+(const std\+::string \&type\+Of\+Sensor\+\_\+)}{setTypeOfSensor_(const std::string &typeOfSensor_)}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::i\+Sensor\+::set\+Type\+Of\+Sensor\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{type\+Of\+Sensor\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1i_sensor_ab5a881988f2f9b8849892f091b01ed87}{}\label{classo_cpt_1_1i_sensor_ab5a881988f2f9b8849892f091b01ed87}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!stop@{stop}}
+\index{stop@{stop}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{stop()=0}{stop()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void o\+Cpt\+::i\+Sensor\+::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classo_cpt_1_1i_sensor_aa85c22a8c8f7c2445379e1f82835f8dc}{}\label{classo_cpt_1_1i_sensor_aa85c22a8c8f7c2445379e1f82835f8dc}
+
+
+Implemented in \hyperlink{classo_cpt_1_1_sensor_a44ad78c2c091ca9cf72295293f8c5b74}{o\+Cpt\+::\+Sensor}, and \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a6d80e18a58cf4e1b9b6ce82b441209e2}{o\+Cpt\+::components\+::sensors\+::\+P\+T100}.
+
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!update\+Sensor@{update\+Sensor}}
+\index{update\+Sensor@{update\+Sensor}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{update\+Sensor()=0}{updateSensor()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void o\+Cpt\+::i\+Sensor\+::update\+Sensor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classo_cpt_1_1i_sensor_aa55bc04979e4852989af2bd4f64e70bc}{}\label{classo_cpt_1_1i_sensor_aa55bc04979e4852989af2bd4f64e70bc}
+
+
+Implemented in \hyperlink{classo_cpt_1_1_sensor_ab4b0dedb06f11bcf2368852035beb2b2}{o\+Cpt\+::\+Sensor}, and \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a66619675288a5344a55242d9bf097aee}{o\+Cpt\+::components\+::sensors\+::\+P\+T100}.
+
+
+
+\subsection{Member Data Documentation}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!controller\+\_\+@{controller\+\_\+}}
+\index{controller\+\_\+@{controller\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{controller\+\_\+}{controller_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf i\+Controller\+::ptr} o\+Cpt\+::i\+Sensor\+::controller\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1i_sensor_a65e41d8be53d71b1db21bac89c5c3c0d}{}\label{classo_cpt_1_1i_sensor_a65e41d8be53d71b1db21bac89c5c3c0d}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!id\+\_\+@{id\+\_\+}}
+\index{id\+\_\+@{id\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{id\+\_\+}{id_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string o\+Cpt\+::i\+Sensor\+::id\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1i_sensor_a4c9bd54d193ec8f2cc01eede5eadacdc}{}\label{classo_cpt_1_1i_sensor_a4c9bd54d193ec8f2cc01eede5eadacdc}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!sig\+\_\+@{sig\+\_\+}}
+\index{sig\+\_\+@{sig\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{sig\+\_\+}{sig_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf signal\+\_\+t} o\+Cpt\+::i\+Sensor\+::sig\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1i_sensor_a4f4943cf2af0b1a06bf5f0d8c46d1cb8}{}\label{classo_cpt_1_1i_sensor_a4f4943cf2af0b1a06bf5f0d8c46d1cb8}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{state\+\_\+}{state_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State} o\+Cpt\+::i\+Sensor\+::state\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1i_sensor_ad27fe02a89f013951a05f296ec457a08}{}\label{classo_cpt_1_1i_sensor_ad27fe02a89f013951a05f296ec457a08}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!timer\+\_\+@{timer\+\_\+}}
+\index{timer\+\_\+@{timer\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{timer\+\_\+}{timer_}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::posix\+\_\+time\+::milliseconds o\+Cpt\+::i\+Sensor\+::timer\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1i_sensor_ac2a089853910118f6b490c00fc354d77}{}\label{classo_cpt_1_1i_sensor_ac2a089853910118f6b490c00fc354d77}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!type\+Of\+Sensor\+\_\+@{type\+Of\+Sensor\+\_\+}}
+\index{type\+Of\+Sensor\+\_\+@{type\+Of\+Sensor\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{type\+Of\+Sensor\+\_\+}{typeOfSensor_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string o\+Cpt\+::i\+Sensor\+::type\+Of\+Sensor\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1i_sensor_a37396b5c63f5e99cb6e80c266f85dbfa}{}\label{classo_cpt_1_1i_sensor_a37396b5c63f5e99cb6e80c266f85dbfa}
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!world\+\_\+@{world\+\_\+}}
+\index{world\+\_\+@{world\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection[{\texorpdfstring{world\+\_\+}{world_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World\+::ptr} o\+Cpt\+::i\+Sensor\+::world\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1i_sensor_aab033b6462d7e8710c006f19c51e033e}{}\label{classo_cpt_1_1i_sensor_aab033b6462d7e8710c006f19c51e033e}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\hyperlink{_sensor_8h}{Sensor.\+h}\item 
+src/\+Core/\hyperlink{_sensor_8cpp}{Sensor.\+cpp}\end{DoxyCompactItemize}

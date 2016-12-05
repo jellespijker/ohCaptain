@@ -7,8 +7,12 @@
 
 #include <fstream>
 #include <thread>
+#include <sys/poll.h>
+#include <fcntl.h>
 
+#include <boost/bind.hpp>
 #include <boost/make_shared.hpp>
+#include <boost/filesystem.hpp>
 
 namespace oCpt {
 
@@ -21,7 +25,7 @@ namespace oCpt {
         bool userspace::modLoaded(std::string modName) {
             //TODO check if Mutex is needed, probably
             if (modName.compare("") == 0) { return true; }
-            std::ifstream fs("/proc/modules");
+            std::ifstream fs(MODULE_PATH);
             std::string line;
             while (std::getline(fs, line)) {
                 if (line.find(modName, 0) != std::string::npos) {
@@ -39,16 +43,24 @@ namespace oCpt {
         }
 
         bool userspace::dtboLoaded(std::string dtboName) {
-            //TODO make method that determine if the dtbo is loaded
-            return true;
+            std::ifstream fs(BBB_CAPE_MNGR);
+            std::string line;
+            while (std::getline(fs, line)) {
+                if (line.find(dtboName, 0) != std::string::npos) {
+                    fs.close();
+                    return true;
+                }
+            }
+            fs.close();
+            return false;
         }
 
         adc::adc(uint8_t id, uint8_t device, std::string modName) {
             device_ = device;
             id_ = id;
             std::stringstream ss;
-            ss << "/sys/bus/iio/devices/iio:device" << std::to_string(device_) << "/in_voltage" << std::to_string(id_)
-               << "_raw";
+            ss << ADC_IO_BASE_PATH << std::to_string(device_) << ADC_VOLTAGE_PATH << std::to_string(id_)
+               << ADC_VOLTAGE_SUB_PATH;
             path_ = ss.str();
             if (!modLoaded(modName)) {
                 throw oCptException("Exception! Module not loaded", 0);
@@ -79,7 +91,10 @@ namespace oCpt {
 
         Serial::Serial(const std::string &device, unsigned int baudrate, io_service_t ioservice,
                        Serial::parity_t parity,
-                       Serial::character_size_t csize, Serial::flow_control_t flow, Serial::stop_bits_t stop)
+                       Serial::character_size_t csize,
+                       Serial::flow_control_t flow,
+                       Serial::stop_bits_t stop,
+                       unsigned int maxreadlentgh)
                 : device_(device),
                   baudrate_(baudrate),
                   ioservice_(ioservice),
@@ -88,7 +103,8 @@ namespace oCpt {
                   flow_(flow),
                   stop_(stop),
                   serialport_(*ioservice.get(), device_),
-                  receivedMsg_("") {
+                  receivedMsg_(""),
+                  maxReadLength_(maxreadlentgh){
             callback_ = boost::bind(&Serial::internalCallback, this, _1, _2);
         }
 
@@ -150,7 +166,7 @@ namespace oCpt {
 
         void Serial::ReadStart() {
             if (isOpen()) {
-                serialport_.async_read_some(boost::asio::buffer(read_msg, MAX_READ_LENGTH),
+                serialport_.async_read_some(boost::asio::buffer(read_msg, maxReadLength_),
                                             boost::bind(&Serial::readComplete,
                                                         this,
                                                         boost::asio::placeholders::error,
@@ -174,6 +190,7 @@ namespace oCpt {
         std::string Serial::readFiFoMsg() {
             std::string msg = returnMsgQueue_.front();
             returnMsgQueue_.pop_front();
+            //TODO check if it is necceasry to resend the msg receive signal if there are still msgs in the que
             return msg;
         }
 
@@ -250,6 +267,180 @@ namespace oCpt {
                 closeCallback(error);
             }
         }
+
+        void Serial::setMaxReadLength(unsigned int maxReadLength) {
+            Serial::maxReadLength_ = maxReadLength;
+        }
+
+        int gpio::getPinNumber() const {
+            return pinNumber_;
+        }
+
+        void gpio::setPinNumber(int pinNumber) {
+            gpio::pinNumber_ = pinNumber;
+        }
+
+        gpio::Value gpio::getValue() const {
+            if (direction_ == Direction::INPUT) {
+                return readPinValue<Value>(pinNumber_);
+            }
+            return value_;
+        }
+
+        void gpio::setValue(gpio::Value value) {
+            if (direction_ == Direction::OUTPUT) {
+                writePinValue<Value>(gpiopath_, value);
+            }
+            gpio::value_ = value;
+        }
+
+        gpio::Direction gpio::getDirection() const {
+            return direction_;
+        }
+
+        void gpio::setDirection(gpio::Direction direction) {
+            writePinValue<Direction>(gpiopath_, direction_);
+            gpio::direction_ = direction;
+        }
+
+        gpio::Edge gpio::getEdge() const {
+            if (direction_ == Direction::INPUT) {
+                return readPinValue<Edge>(gpiopath_);
+            }
+            return edge_;
+        }
+
+        void gpio::setEdge(gpio::Edge edge) {
+            if (direction_ == Direction::OUTPUT) {
+                writePinValue<Edge>(gpiopath_, edge);
+            }
+            gpio::edge_ = edge;
+        }
+
+        gpio::gpio(int pinNumber, gpio::Direction direction,  gpio::Value value, gpio::Edge edge)
+                : pinNumber_(pinNumber),
+                  direction_(direction),
+                  value_(value),
+                  edge_(edge),
+                  threadRunning_(false){
+            gpiopath_ = GPIO_BASE_PATH;
+            gpiopath_.append("gpio" + std::to_string(pinNumber_));
+            exportPin(pinNumber_);
+            writePinValue<Direction>(gpiopath_, direction_);
+            writePinValue<Edge>(gpiopath_, edge_);
+            writePinValue<Value>(gpiopath_, value_);
+            cb_  = gpio::cb_func(boost::bind(&gpio::internalCbFunc, this));
+                    //= boost::bind(&gpio::internalCbFunc);
+        }
+
+        gpio::~gpio() {
+            unexportPin(pinNumber_);
+        }
+
+        std::vector<gpio::ptr> gpio::exportedGpios() {
+            std::vector<gpio::ptr> gpios;
+            boost::filesystem::path p(GPIO_BASE_PATH);
+            const unsigned int sizeOfBasePath = p.string().size();
+
+            //! Iterate through all exported pins
+            boost::filesystem::directory_iterator end_itr;
+            for (boost::filesystem::directory_iterator itr(p); itr != end_itr; ++itr) {
+                std::string path = itr->path().string();
+                if ((path.find("gpio", sizeOfBasePath) != std::string::npos) && (path.find("chip", sizeOfBasePath) == std::string::npos)) {
+                    const unsigned int loc = path.find("gpio",sizeOfBasePath) + 4;
+                    const std::string nr = path.substr(loc);
+                    int pinnumber = std::atoi(nr.c_str());
+                    Direction direction = readPinValue<Direction>(pinnumber);
+                    Value value = readPinValue<Value>(pinnumber);
+                    Edge edge = readPinValue<Edge>(pinnumber);
+                    gpio::ptr gpio_ptr( new gpio(pinnumber, direction, value, edge));
+                    gpios.push_back(gpio_ptr);
+                }
+            }
+            return gpios;
+        }
+
+        void gpio::exportPin(const int &number) {
+            const std::string exportPath = std::string(GPIO_BASE_PATH) + "export";
+            std::ofstream fs;
+            try {
+                fs.open(exportPath);
+            } catch (std::ofstream::failure const &ex) {
+                //TODO error handling
+                return;
+            }
+            fs << std::to_string(number) << std::endl;
+            fs.close();
+            usleep(250000);
+        }
+
+        void gpio::unexportPin(const int &number) {
+            const std::string exportPath = std::string(GPIO_BASE_PATH) + "unexport";
+            std::ofstream fs;
+            try {
+                fs.open(exportPath);
+            } catch (std::ofstream::failure const &ex) {
+                //TODO error handling
+                return;
+            }
+            fs << std::to_string(number) << std::endl;
+            fs.close();
+            usleep(250000);
+        }
+
+        void gpio::toggle() {
+            writePinValue<Value>(gpiopath_, static_cast<Value>(value_ ^ 1));
+            //TODO write optimized function currently around 7kHz
+        }
+
+        void gpio::setCallbackFunction(gpio::cb_func cb) {
+            cb_ = cb;
+        }
+
+        void gpio::internalCbFunc() {
+            signalChanged();
+        }
+
+        void gpio::waitForEdge() {
+            if (direction_ == Direction::OUTPUT) {
+                return;
+            }
+            int fd, i, epollfd, count=0;
+            struct epoll_event ev;
+            epollfd = epoll_create(1);
+            if (epollfd == -1) {
+                //TODO error handling
+            }
+            std::string path = gpiopath_;
+            path.append("/value");
+            if ((fd = open(path.c_str(), O_RDONLY | O_NONBLOCK)) == -1) {
+                //TODO error handling
+            }
+            ev.events = EPOLLIN | EPOLLET | EPOLLPRI;
+            ev.data.fd =fd;
+
+            if (epoll_ctl(epollfd, EPOLL_CTL_ADD, fd, &ev) == -1) {
+                //TODO errror handling
+            }
+
+            while(count <= 1) {
+                i = epoll_wait(epollfd, &ev, 1, -1);
+                if (i == -1) {
+                    count = 5;
+                    //TODO error handling
+                } else {
+                    count++;
+                }
+            }
+            cb_();
+            close(fd);
+        }
+
+        void gpio::waitForEdgeAsync() {
+            std::thread poll_thread(boost::bind(&gpio::waitForEdge, this));
+            poll_thread.detach();
+        }
+
     }
 
     iController::iController(World::ptr world)

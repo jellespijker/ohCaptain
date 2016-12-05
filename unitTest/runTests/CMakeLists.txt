@@ -28,9 +28,4 @@ target_link_libraries(runTests gtest gtest_main)
 target_link_libraries(runTests ohCaptain)
 target_link_libraries(runTests pthread)
 
-#Install targets
-if (ARCH_CROSS_COMPILE)
-    install( TARGETS runTests DESTINATION "${DEPLOY_FOLDER}/bin" )
-else()
-    install( TARGETS runTests DESTINATION "/usr/local/ohCaptain/bin")
-endif(ARCH_CROSS_COMPILE)
+install( TARGETS runTests DESTINATION "${CMAKE_SOURCE_DIR}/binaries/bin" )

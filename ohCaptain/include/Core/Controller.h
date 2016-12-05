@@ -13,6 +13,7 @@
 #include <boost/function.hpp>
 #include <boost/bind.hpp>
 #include <boost/signals2.hpp>
+#include <boost/filesystem.hpp>
 
 #include <string>
 #include <vector>
@@ -23,6 +24,16 @@
 #include "World.h"
 
 #define MAX_READ_LENGTH 4096
+
+#define BBB_CAPE_MNGR "/sys/devices/platform/bone_capemgr/slots"
+
+#define GPIO_BASE_PATH "/sys/class/gpio/"
+
+#define ADC_IO_BASE_PATH "/sys/bus/iio/devices/iio:device"
+#define ADC_VOLTAGE_PATH "/in_voltage"
+#define ADC_VOLTAGE_SUB_PATH "_raw"
+
+#define MODULE_PATH "/proc/modules"
 
 namespace oCpt {
 
@@ -65,6 +76,140 @@ namespace oCpt {
             uint16_t value_ = 0;
         };
 
+        class gpio : public userspace {
+        public:
+            typedef boost::shared_ptr<gpio> ptr;
+            typedef boost::signals2::signal<void()> signal_t;
+            typedef std::function<void()> cb_func;
+
+            enum Direction {INPUT = 105, OUTPUT = 111};
+            enum Value { LOW = 48, HIGH = 49};
+            enum Edge { NONE = 110, RISING = 114, FALLING = 102, BOTH = 98};
+
+            gpio(int pinNumber, Direction direction = INPUT, Value value = LOW, Edge edge = NONE);
+
+            ~gpio();
+
+            int getPinNumber() const;
+
+            void setPinNumber(int pinNumber);
+
+            Value getValue() const;
+
+            void setValue(Value value);
+
+            Direction getDirection() const;
+
+            void setDirection(Direction direction);
+
+            Edge getEdge() const;
+
+            void setEdge(Edge edge);
+
+            void setCallbackFunction(cb_func cb);
+
+            void waitForEdge();
+
+            void waitForEdgeAsync();
+
+            static std::vector<ptr> exportedGpios();
+
+            void toggle();
+
+            signal_t signalChanged;
+
+        private:
+            int pinNumber_;
+            Value value_;
+            Direction direction_;
+            Edge edge_;
+            std::string gpiopath_;
+            cb_func cb_;
+            bool threadRunning_;
+
+            void internalCbFunc();
+
+            void exportPin(const int &number);
+
+            void unexportPin(const int &number);
+
+            template<typename T>
+            static T readPinValue(const int &number) {
+                std::string path = GPIO_BASE_PATH;
+                path.append("gpio" + std::to_string(number));
+                return readPinValue<T>(path);
+            }
+
+            template<typename T>
+            static T readPinValue(std::string path) {
+                T retVal;
+                if (std::is_same<T, Value>::value) {
+                    path.append("/value");
+                } else if (std::is_same<T, Direction>::value) {
+                    path.append("/direction");
+                } else if (std::is_same<T, Edge>::value) {
+                    path.append("/edge");
+                }
+                std::ifstream fs(path);
+                char c;
+                fs.get(c);
+                retVal = static_cast<T>(c);
+                fs.close();
+                return retVal;
+            }
+
+            template<typename T>
+            void writePinValue(const int &number, const T &value) {
+                std::string path = GPIO_BASE_PATH;
+                path.append("gpio" + std::to_string(number));
+                writePinValue<T>(path, value);
+            }
+
+            template<typename T>
+            void writePinValue(std::string path, const T &value) {
+                if (std::is_same<T, Value>::value) {
+                    path.append("/value");
+                    std::ofstream fs(path);
+                    fs << (value - 48);
+                    fs.close();
+                    return;
+                } else if (std::is_same<T, Direction>::value) {
+                    path.append("/direction");
+                    std::ofstream fs(path);
+                    switch (value) {
+                        case Direction::OUTPUT:
+                            fs << "out";
+                            break;
+                        case Direction::INPUT:
+                            fs << "in";
+                            break;
+                    }
+                    fs.close();
+                    return;
+                } else if (std::is_same<T, Edge>::value) {
+                    path.append("/edge");
+                    std::ofstream fs(path);
+                    switch (value) {
+                        case Edge::NONE:
+                            fs << "none";
+                            break;
+                        case Edge::RISING:
+                            fs << "edge";
+                            break;
+                        case Edge::FALLING:
+                            fs << "falling";
+                            break;
+                        case Edge::BOTH:
+                            fs << "both";
+                            break;
+                    }
+                    fs.close();
+                }
+                return;
+            }
+
+        };
+
         class Serial : public userspace {
         public:
             typedef boost::shared_ptr<Serial> ptr;
@@ -82,7 +227,8 @@ namespace oCpt {
                    parity_t parity = parity_t(parity_t::none),
                    character_size_t csize = character_size_t(8),
                    flow_control_t flow = flow_control_t(flow_control_t::none),
-                   stop_bits_t stop = stop_bits_t(stop_bits_t::one));
+                   stop_bits_t stop = stop_bits_t(stop_bits_t::one),
+                   unsigned int maxreadlentgh = MAX_READ_LENGTH);
 
             void open();
 
@@ -121,6 +267,11 @@ namespace oCpt {
 
             void ReadStart();
 
+            unsigned int maxReadLength_;
+        public:
+            void setMaxReadLength(unsigned int maxReadLength);
+
+        protected:
             std::deque<std::vector<unsigned char>> msgQueue_;
             std::deque<std::string> returnMsgQueue_;
             std::string msg_;

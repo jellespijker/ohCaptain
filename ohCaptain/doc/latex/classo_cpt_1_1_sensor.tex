@@ -1,0 +1,139 @@
+\hypertarget{classo_cpt_1_1_sensor}{}\section{o\+Cpt\+:\+:Sensor Class Reference}
+\label{classo_cpt_1_1_sensor}\index{o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}}
+
+
+{\ttfamily \#include $<$Sensor.\+h$>$}
+
+
+
+Inheritance diagram for o\+Cpt\+:\+:Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classo_cpt_1_1_sensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for o\+Cpt\+:\+:Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classo_cpt_1_1_sensor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1_sensor_af4ccce2da93252ee71cce9874dd75a81}{Sensor} (\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr} controller, \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} world, std\+::string id, std\+::string type\+Of\+Sensor)
+\item 
+virtual \hyperlink{classo_cpt_1_1_sensor_ac8bf20a2d505b88762876c09180ee97a}{$\sim$\+Sensor} () override
+\item 
+virtual void \hyperlink{classo_cpt_1_1_sensor_ab4b0dedb06f11bcf2368852035beb2b2}{update\+Sensor} () override
+\item 
+virtual void \hyperlink{classo_cpt_1_1_sensor_aef25b0e5f3a8358ee81c97c73909fbe6}{run} () override
+\item 
+virtual void \hyperlink{classo_cpt_1_1_sensor_a44ad78c2c091ca9cf72295293f8c5b74}{stop} () override
+\item 
+virtual void \hyperlink{classo_cpt_1_1_sensor_ae7d47e18df5eb7854bf71fbbee9568df}{set\+I\+Oservice} (boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$ ioservice) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}}
+\subsubsection[{\texorpdfstring{Sensor(i\+Controller\+::ptr controller, World\+::ptr world, std\+::string id, std\+::string type\+Of\+Sensor)}{Sensor(iController::ptr controller, World::ptr world, std::string id, std::string typeOfSensor)}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+Sensor\+::\+Sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Controller\+::ptr}}]{controller, }
+\item[{{\bf World\+::ptr}}]{world, }
+\item[{std\+::string}]{id, }
+\item[{std\+::string}]{type\+Of\+Sensor}
+\end{DoxyParamCaption}
+)}\hypertarget{classo_cpt_1_1_sensor_af4ccce2da93252ee71cce9874dd75a81}{}\label{classo_cpt_1_1_sensor_af4ccce2da93252ee71cce9874dd75a81}
+\index{o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}!````~Sensor@{$\sim$\+Sensor}}
+\index{````~Sensor@{$\sim$\+Sensor}!o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}}
+\subsubsection[{\texorpdfstring{$\sim$\+Sensor() override}{~Sensor() override}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+Sensor\+::$\sim$\+Sensor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_sensor_ac8bf20a2d505b88762876c09180ee97a}{}\label{classo_cpt_1_1_sensor_ac8bf20a2d505b88762876c09180ee97a}
+
+
+\subsection{Member Function Documentation}
+\index{o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}!run@{run}}
+\index{run@{run}!o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}}
+\subsubsection[{\texorpdfstring{run() override}{run() override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Sensor\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_sensor_aef25b0e5f3a8358ee81c97c73909fbe6}{}\label{classo_cpt_1_1_sensor_aef25b0e5f3a8358ee81c97c73909fbe6}
+
+
+Implements \hyperlink{classo_cpt_1_1i_sensor_abbface05a16b17354c23389d9747bf7c}{o\+Cpt\+::i\+Sensor}.
+
+
+
+Reimplemented in \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a41dfc55a4be7993949feeb5ac013690d}{o\+Cpt\+::components\+::sensors\+::\+P\+T100}.
+
+\index{o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}!set\+I\+Oservice@{set\+I\+Oservice}}
+\index{set\+I\+Oservice@{set\+I\+Oservice}!o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}}
+\subsubsection[{\texorpdfstring{set\+I\+Oservice(boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$ ioservice) override}{setIOservice(boost::shared_ptr< boost::asio::io_service > ioservice) override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Sensor\+::set\+I\+Oservice (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$}]{ioservice}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_sensor_ae7d47e18df5eb7854bf71fbbee9568df}{}\label{classo_cpt_1_1_sensor_ae7d47e18df5eb7854bf71fbbee9568df}
+
+
+Implements \hyperlink{classo_cpt_1_1i_sensor_a83b62cc63498ca4c335f85639e39656d}{o\+Cpt\+::i\+Sensor}.
+
+\index{o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}!stop@{stop}}
+\index{stop@{stop}!o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}}
+\subsubsection[{\texorpdfstring{stop() override}{stop() override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Sensor\+::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_sensor_a44ad78c2c091ca9cf72295293f8c5b74}{}\label{classo_cpt_1_1_sensor_a44ad78c2c091ca9cf72295293f8c5b74}
+
+
+Implements \hyperlink{classo_cpt_1_1i_sensor_aa85c22a8c8f7c2445379e1f82835f8dc}{o\+Cpt\+::i\+Sensor}.
+
+
+
+Reimplemented in \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a6d80e18a58cf4e1b9b6ce82b441209e2}{o\+Cpt\+::components\+::sensors\+::\+P\+T100}.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1_sensor_a44ad78c2c091ca9cf72295293f8c5b74_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}!update\+Sensor@{update\+Sensor}}
+\index{update\+Sensor@{update\+Sensor}!o\+Cpt\+::\+Sensor@{o\+Cpt\+::\+Sensor}}
+\subsubsection[{\texorpdfstring{update\+Sensor() override}{updateSensor() override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Sensor\+::update\+Sensor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_sensor_ab4b0dedb06f11bcf2368852035beb2b2}{}\label{classo_cpt_1_1_sensor_ab4b0dedb06f11bcf2368852035beb2b2}
+
+
+Implements \hyperlink{classo_cpt_1_1i_sensor_aa55bc04979e4852989af2bd4f64e70bc}{o\+Cpt\+::i\+Sensor}.
+
+
+
+Reimplemented in \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a66619675288a5344a55242d9bf097aee}{o\+Cpt\+::components\+::sensors\+::\+P\+T100}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\hyperlink{_sensor_8h}{Sensor.\+h}\item 
+src/\+Core/\hyperlink{_sensor_8cpp}{Sensor.\+cpp}\end{DoxyCompactItemize}

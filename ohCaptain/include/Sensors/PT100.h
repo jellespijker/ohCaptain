@@ -13,6 +13,7 @@ namespace oCpt {
         namespace sensors {
             class PT100 : public Sensor {
             public:
+                typedef double ReturnValue_t;
 
                 PT100(iController::ptr controller, World::ptr world, std::string id, uint8_t pinid, uint8_t device);
 
@@ -23,6 +24,8 @@ namespace oCpt {
                 void run();
 
                 void stop();
+
+                void init();
 
                 void setCalibrationTemperature(std::pair<double, double> temparature,
                                                std::pair<uint16_t, uint16_t> analogeValue);
