@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
-set(CMAKE_CXX_FLAGS             "${CMAKE_CXX_FLAGS} -std=c++14")
+set(CMAKE_CXX_FLAGS             "${CMAKE_CXX_FLAGS} -std=c++14 -g")
+set(CMAKE_BUILD_TYPE Debug)
 project(ohCaptain)
 
 #setup boost
@@ -12,7 +13,6 @@ include_directories(${Boost_INCLUDE_DIR})
 #cross compile folders
 if (ARCH_CROSS_COMPILE)
     include_directories("${ohCaptain_main_SOURCE_DIR}/build/arch_rootfs/usr/include/${CXX_COMPILER_ID}/")
-    set(DEPLOY_FOLDER           "${ohCaptain_main_SOURCE_DIR}/build/share")
 endif (ARCH_CROSS_COMPILE)
 
 #Setup include files
