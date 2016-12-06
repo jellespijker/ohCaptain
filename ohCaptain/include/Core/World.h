@@ -65,15 +65,29 @@ namespace oCpt {
 
         class Location {
         public:
+            enum cardinal_direction {
+                North,
+                South,
+                East,
+                West
+            };
+
+            typedef struct coordinate {
+                double value;
+                cardinal_direction direction;
+            } coordinate_t;
+
+            typedef struct gpsPoint {
+                coordinate_t longitude, latitude;
+                double height;
+            } gpsPoint_t;
+
             typedef boost::shared_ptr<Location> ptr;
-            typedef boost::geometry::model::point<
-                    double, 2, boost::geometry::cs::spherical_equatorial<boost::geometry::degree>
-                    > Earth_point;
 
             struct RoutePoint {
                 typedef boost::shared_ptr<RoutePoint> ptr;
                 Time::timepoint_t TimePoint;
-                Earth_point Location;
+                gpsPoint_t Location;
             };
 
             Location();
@@ -85,6 +99,8 @@ namespace oCpt {
             void push_back(RoutePoint::ptr routePoint);
 
             std::vector<RoutePoint::ptr> getLocationHistory();
+
+            static cardinal_direction stocd(std::string str);
         private:
             RoutePoint::ptr currentLocation_;
             std::vector<RoutePoint::ptr> LocationHistory;
