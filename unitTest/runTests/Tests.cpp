@@ -8,6 +8,7 @@
 #include "../../ohCaptain/include/Vessels/Meetcatamaran.h"
 #include "../../ohCaptain/include/Communication/LoRa_RN2483.h"
 #include "../../ohCaptain/include/Sensors/Razor.h"
+#include "../../ohCaptain/include/Sensors/Gps.h"
 
 #include <boost/filesystem.hpp>
 
@@ -101,6 +102,11 @@ TEST(Sensor, LoRaTest) {
     //loRaRn2483.stop();
 }
 
+TEST(Sensor, Gps) {
+    using namespace oCpt::components::sensors;
+
+}
+
 TEST(Sensor, Razor) {
     using namespace oCpt::components::sensors;
     using namespace oCpt::components::controller;
@@ -114,7 +120,7 @@ TEST(Sensor, Razor) {
     r->init();
     r->run();
     r->getSig().connect([&] {
-        Razor::ReturnValue_t retVal = CAST(r->getState().Value);
+        Razor::ReturnValue_t retVal = CAST(r->getState().Value, Razor);
         std::cout << std::to_string(retVal.acc[0]) << std::endl;
         std::cout << std::to_string(retVal.acc[1]) << std::endl;
         std::cout << std::to_string(retVal.acc[2]) << std::endl;
@@ -126,9 +132,9 @@ TEST(Sensor, Razor) {
         std::cout << std::to_string(retVal.gyro[2]) << std::endl;
     });
 
-    for (;;) {
-        r->updateSensor();
-    }
+    //for (;;) {
+    //    r->updateSensor();
+    //}
 }
 //TEST(Meetcatamaran, SerielTest) {
 //    oCpt::protocol::Serial serial("/dev/ttyACM0", 57600);
