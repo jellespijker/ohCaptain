@@ -18,7 +18,7 @@
 #include "Controller.h"
 #include "Exception.h"
 
-#define CAST(x) boost::any_cast<Razor::ReturnValue_t>(x)
+#define CAST(x, t) boost::any_cast<t::ReturnValue_t>(x)
 
 namespace oCpt {
 
