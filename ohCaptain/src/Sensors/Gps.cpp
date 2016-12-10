@@ -1,6 +1,7 @@
 #include "../../include/Sensors/Gps.h"
 
 #include <boost/tokenizer.hpp>
+#include <boost/foreach.hpp>
 
 #include <string>
 
@@ -56,32 +57,48 @@ namespace oCpt {
 
             void Gps::interpretMsg() {
                 std::string msg = serial_->readFiFoMsg();
-                boost::char_delimiters_separator<char> sep(",");
-                typedef boost::tokenizer<boost::char_delimiters_separator<char>> tokenizer_t;
+                boost::char_separator<char> sep(",");
+                typedef boost::tokenizer<boost::char_separator<char>> tokenizer_t;
                 tokenizer_t tok(msg, sep);
-                if (tok.begin()->compare("$GPGLL") == std::string::npos) return;
-                ReturnValue_t ret = CAST(state_.Value, Gps);
-                state_.Stamp = world_->now();
+                if ((*tok.begin()).compare("$GPGLL") != 0) return;
+
+                ReturnValue_t ret;
                 size_t i = 0;
                 auto iBegin = tok.begin();
                 std::advance(iBegin, 1);
                 auto iEnd = iBegin;
-                std::advance(iEnd, 4);
-                for (auto it = iBegin; it != iEnd; ++it) {
+                for (size_t j = 0;j < 4; j++){
+                    std::advance(iEnd, 1);
+                    if (iEnd.at_end()) {
+                        return;
+                    }
+                }
+                bool correctData = false;
+                std::for_each(iBegin, iEnd,[&](auto it){
+
                     switch (i++) {
                         case 0:
-                            ret.latitude.value = std::stod(*it);
+                            ret.latitude.value = std::stod(it);
+                            ret.latitude.value /= 100;
                             break;
                         case 1:
-                            ret.latitude.direction = World::Location::stocd(*it);
+                            ret.latitude.direction = World::Location::stocd(it);
                             break;
                         case 2:
-                            ret.longitude.value = std::stod(*it);
+                            ret.longitude.value = std::stod(it);
+                            ret.longitude.value /= 100;
                             break;
                         case 3:
-                            ret.longitude.direction =  World::Location::stocd(*it);
+                            ret.longitude.direction =  World::Location::stocd(it);
+                            correctData = true;
                             break;
                     }
+                });
+
+                if (correctData) {
+                    state_.Stamp = world_->now();
+                    state_.Value = ret;
+                    sig_();
                 }
             }
         }
