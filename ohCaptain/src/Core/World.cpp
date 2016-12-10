@@ -79,4 +79,10 @@ namespace oCpt {
         }
         return North;
     }
+
+    std::string World::Location::gpsPoint::toString() {
+        std::ostringstream strs;
+        strs << latitude.value << static_cast<char>(latitude.direction - 32) << ", " << longitude.value << static_cast<char>(longitude.direction - 32);
+        return strs.str();
+    }
 }

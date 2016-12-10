@@ -66,10 +66,10 @@ namespace oCpt {
         class Location {
         public:
             enum cardinal_direction {
-                North,
-                South,
-                East,
-                West
+                North = 110,
+                South = 115,
+                East = 101,
+                West = 119
             };
 
             typedef struct coordinate {
@@ -80,6 +80,7 @@ namespace oCpt {
             typedef struct gpsPoint {
                 coordinate_t longitude, latitude;
                 double height;
+                std::string toString();
             } gpsPoint_t;
 
             typedef boost::shared_ptr<Location> ptr;
