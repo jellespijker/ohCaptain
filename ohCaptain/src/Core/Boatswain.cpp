@@ -67,7 +67,7 @@ namespace oCpt {
     }
 
     void Boatswain::registerActuator(iActuator::ptr actuator) {
-
+        //TODO implement actuator shit
     }
 
     void Boatswain::resetTimer(iSensor::ptr sensor) {
