@@ -57,18 +57,16 @@ namespace oCpt {
 
         const State &getState() const;
 
-    protected:
-        std::string id_;
-    public:
         const std::string &getID() const;
 
-        void setId_(const std::string &id_);
+        void setID(const std::string &id);
 
         const std::string &getTypeOfSensor() const;
 
-        void setTypeOfSensor_(const std::string &typeOfSensor_);
+        void setTypeOfSensor(const std::string &typeOfSensor);
 
     protected:
+        std::string id_;
         std::string typeOfSensor_;
         iController::ptr controller_;
         World::ptr world_;
@@ -76,6 +74,7 @@ namespace oCpt {
         signal_t sig_;
         State state_;
         bool sensorRunning_ ;
+        boost::shared_ptr<boost::asio::io_service> ioservice_;
     };
 
     class Sensor : public iSensor {
