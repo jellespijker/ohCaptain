@@ -42,16 +42,16 @@ namespace oCpt {
         return id_;
     }
 
-    void iSensor::setId_(const std::string &id_) {
-        iSensor::id_ = id_;
+    void iSensor::setID(const std::string &id) {
+        iSensor::id_ = id;
     }
 
     const std::string &iSensor::getTypeOfSensor() const {
         return typeOfSensor_;
     }
 
-    void iSensor::setTypeOfSensor_(const std::string &typeOfSensor_) {
-        iSensor::typeOfSensor_ = typeOfSensor_;
+    void iSensor::setTypeOfSensor(const std::string &typeOfSensor) {
+        iSensor::typeOfSensor_ = typeOfSensor;
     }
 
     Sensor::Sensor(iController::ptr controller, World::ptr world, std::string id, std::string typeOfSensor)
@@ -80,6 +80,6 @@ namespace oCpt {
     }
 
     void Sensor::setIOservice(boost::shared_ptr<boost::asio::io_service> ioservice) {
-
+        ioservice_ = ioservice;
     }
 }

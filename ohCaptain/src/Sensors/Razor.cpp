@@ -68,6 +68,7 @@ namespace oCpt {
             }
 
             void Razor::setIOservice(boost::shared_ptr<boost::asio::io_service> ioservice) {
+                serial_->setIOservice(ioservice);
                 Sensor::setIOservice(ioservice);
             }
 
