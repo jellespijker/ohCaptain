@@ -140,9 +140,9 @@ namespace oCpt {
         iController::ptr controller_; //< shared_ptr to the controller
         World::ptr world_; //<! shared_ptr to the world
         boost::posix_time::milliseconds timer_; //<! milliseconds interval when an update should take place
-        signal_t sig_;
-        State state_;
-        bool sensorRunning_ ;
+        signal_t sig_; //<! the sensor reading complete signal
+        State state_; //<! the current state of the sensor
+        bool sensorRunning_ ; //<! indication if the sensor is running
         boost::shared_ptr<boost::asio::io_service> ioservice_;
     };
 
