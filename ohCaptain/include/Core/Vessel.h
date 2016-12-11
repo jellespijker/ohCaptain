@@ -119,7 +119,7 @@ namespace oCpt {
         iBoatswain::ptr boatswain_; //!< The boatswain, the worker asynchronize operations for actuators, sensors, and communication
         std::vector<iSensor::ptr> sensors_; //<! sensor vector
         std::vector<iActuator::ptr> actuators_; //<! actuator vector
-        std::vector<iComm::ptr> comm_;
+        std::vector<iComm::ptr> comm_; //<! communication device vector
     };
 
 }
