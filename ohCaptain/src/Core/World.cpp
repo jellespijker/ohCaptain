@@ -43,11 +43,11 @@ namespace oCpt {
     }
 
     World::Location::RoutePoint::ptr World::Location::getCurrentLocation(bool newMeasurement) {
-        return oCpt::World::Location::RoutePoint::ptr();
+        return oCpt::World::Location::RoutePoint::ptr(); //TODO implement obtain current Location
     }
 
     void World::Location::push_back(World::Location::RoutePoint::ptr routePoint) {
-
+        //TODO implement way point log
     }
 
     std::vector<World::Location::RoutePoint::ptr> World::Location::getLocationHistory() {
@@ -57,27 +57,16 @@ namespace oCpt {
     World::Location::cardinal_direction World::Location::stocd(std::string str) {
         char s;
 
+        /*
+         * Get the first character to be and make it lower case
+         */
         if (str.at(0) <= 'Z' && str.at(0) >= 'A') {
             s = str.at(0) - ('Z' - 'z');
         } else {
             s = str.at(0);
         }
 
-        switch (s) {
-            case 110: //n
-                return North;
-                break;
-            case 115: //s
-                return South;
-                break;
-            case 119: //w
-                return West;
-                break;
-            case 101: //e
-                return  East;
-                break;
-        }
-        return North;
+        return static_cast<cardinal_direction >(s);
     }
 
     std::string World::Location::gpsPoint::toString() {
