@@ -87,7 +87,7 @@ namespace oCpt {
     }
 
     void Boatswain::registerComm(iComm::ptr comm) {
-
+        comm->setIoservice(ioservice_);
     }
 
 }
