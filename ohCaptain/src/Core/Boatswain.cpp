@@ -2,13 +2,11 @@
 // Created by peer23peer on 7/21/16.
 //
 #include "../../include/Core/Boatswain.h"
-#include "../../include/Core/Exception.h"
-#include "../../include/Core/Sensor.h"
 
 namespace oCpt {
     iBoatswain::iBoatswain(iController::ptr controller)
             : controller_(controller) {
-        localStopThread_ = boost::shared_ptr<bool>(new bool{false});
+        localStopThread_ = boost::shared_ptr<bool>(new bool {false});
         ioservice_ = boost::shared_ptr<boost::asio::io_service>(new boost::asio::io_service());
     }
 
@@ -37,7 +35,7 @@ namespace oCpt {
     }
 
     void Boatswain::run() {
-        std::for_each(manualSensors_.begin(), manualSensors_.end(),[](iSensor::ptr &P){
+        std::for_each(manualSensors_.begin(), manualSensors_.end(), [](iSensor::ptr &P) {
             P->run();
         });
         ioservice_->run();
@@ -52,6 +50,10 @@ namespace oCpt {
     }
 
     void Boatswain::registerSensor(iSensor::ptr sensor) {
+        /*!
+         * If the timer is set for the sensor, create a new timer service, register the sensor with the timer sensors, and set the callback functions to execute the Sensor::run function and the internall resetTimer function.
+         * If the timer is not set register the Sonsor with the manual sensor.
+         */
         if (sensor->getTimer().total_microseconds() > 0) {
             timerPtr timer(new boost::asio::deadline_timer(*ioservice_.get(), sensor->getTimer()));
             timer->async_wait(boost::bind(&iSensor::run, sensor));
@@ -71,15 +73,24 @@ namespace oCpt {
     }
 
     void Boatswain::resetTimer(iSensor::ptr sensor) {
+        /*!
+         * Don't excute if the thread is stopped
+         */
         if (*stopThread_ || *localStopThread_) {
             return;
         }
+        /*!
+         * Find the current index of the sensor, this could maybe optimized by using a mappping list
+         */
         int i = -1;
-        std::find_if(timerSensors_.begin(), timerSensors_.end(),[&](iSensor::ptr &S){
+        std::find_if(timerSensors_.begin(), timerSensors_.end(), [&](iSensor::ptr &S) {
             i++;
             return S == sensor;
-        } );
+        });
 
+        /*!
+         * Set the new timer. drift isn't taken into account at the current time.
+         */
         //TODO eliminate drift
         timers_[i] = timerPtr(new boost::asio::deadline_timer(*ioservice_.get(), sensor->getTimer()));
         timers_[i]->async_wait(boost::bind(&iSensor::run, sensor));
