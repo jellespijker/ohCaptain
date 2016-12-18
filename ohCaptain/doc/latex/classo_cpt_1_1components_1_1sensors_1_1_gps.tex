@@ -1,0 +1,287 @@
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_gps}{}\section{o\+Cpt\+:\+:components\+:\+:sensors\+:\+:Gps Class Reference}
+\label{classo_cpt_1_1components_1_1sensors_1_1_gps}\index{o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}}
+
+
+{\ttfamily \#include $<$Gps.\+h$>$}
+
+
+
+Inheritance diagram for o\+Cpt\+:\+:components\+:\+:sensors\+:\+:Gps\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classo_cpt_1_1components_1_1sensors_1_1_gps__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for o\+Cpt\+:\+:components\+:\+:sensors\+:\+:Gps\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classo_cpt_1_1components_1_1sensors_1_1_gps__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classo_cpt_1_1_world_1_1_location_a3aa5e31e2888b4da40ad534b99473888}{o\+Cpt\+::\+World\+::\+Location\+::gps\+Point\+\_\+t} \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_a01613dafbb15790246b00223f850a962}{Return\+Value\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_a24c1c7c95c57f9c5fa47d0640ba5d6dc}{Gps} (\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr} controller, \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} world, std\+::string id, std\+::string device, unsigned int baudrate)
+\item 
+\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_aa8c7fc77c287b439f9d33bc8cfda1e68}{$\sim$\+Gps} ()
+\item 
+void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_a95976c5d8bba650d2732d4eb43979283}{update\+Sensor} ()
+\item 
+void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_af703c48b8b7220a1909570f46edae932}{run} ()
+\item 
+void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_a9206c32fa91311740ae920c01eed6094}{stop} ()
+\item 
+void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_ad613b81625402daa6fdae80022fde18c}{set\+I\+Oservice} (boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$ ioservice)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_a6effa9cffd5f203d84de1edce73be87a}{interpret\+Msg} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_a6b8c50dca0776870cedabbb527b2144e}{device\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1_serial_a4c97c6a2456d649974e07a186f634780}{protocol\+::\+Serial\+::ptr} \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_a42ea2d37ec01473e92be6ef3cda6de39}{serial\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 13 of file Gps.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_gps_a01613dafbb15790246b00223f850a962}{}\label{classo_cpt_1_1components_1_1sensors_1_1_gps_a01613dafbb15790246b00223f850a962} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}!Return\+Value\+\_\+t@{Return\+Value\+\_\+t}}
+\index{Return\+Value\+\_\+t@{Return\+Value\+\_\+t}!o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}}
+\subsubsection{\texorpdfstring{Return\+Value\+\_\+t}{ReturnValue\_t}}
+{\footnotesize\ttfamily typedef \hyperlink{classo_cpt_1_1_world_1_1_location_a3aa5e31e2888b4da40ad534b99473888}{o\+Cpt\+::\+World\+::\+Location\+::gps\+Point\+\_\+t} \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_a01613dafbb15790246b00223f850a962}{o\+Cpt\+::components\+::sensors\+::\+Gps\+::\+Return\+Value\+\_\+t}}
+
+
+
+Definition at line 15 of file Gps.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_gps_a24c1c7c95c57f9c5fa47d0640ba5d6dc}{}\label{classo_cpt_1_1components_1_1sensors_1_1_gps_a24c1c7c95c57f9c5fa47d0640ba5d6dc} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}!Gps@{Gps}}
+\index{Gps@{Gps}!o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}}
+\subsubsection{\texorpdfstring{Gps()}{Gps()}}
+{\footnotesize\ttfamily o\+Cpt\+::components\+::sensors\+::\+Gps\+::\+Gps (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr}}]{controller,  }\item[{\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}}]{world,  }\item[{std\+::string}]{id,  }\item[{std\+::string}]{device,  }\item[{unsigned int}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file Gps.\+cpp.
+
+
+
+References interpret\+Msg(), and serial\+\_\+.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_gps_a24c1c7c95c57f9c5fa47d0640ba5d6dc_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_gps_aa8c7fc77c287b439f9d33bc8cfda1e68}{}\label{classo_cpt_1_1components_1_1sensors_1_1_gps_aa8c7fc77c287b439f9d33bc8cfda1e68} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}!````~Gps@{$\sim$\+Gps}}
+\index{````~Gps@{$\sim$\+Gps}!o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}}
+\subsubsection{\texorpdfstring{$\sim$\+Gps()}{~Gps()}}
+{\footnotesize\ttfamily o\+Cpt\+::components\+::sensors\+::\+Gps\+::$\sim$\+Gps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file Gps.\+cpp.
+
+
+
+References serial\+\_\+.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_gps_a6effa9cffd5f203d84de1edce73be87a}{}\label{classo_cpt_1_1components_1_1sensors_1_1_gps_a6effa9cffd5f203d84de1edce73be87a} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}!interpret\+Msg@{interpret\+Msg}}
+\index{interpret\+Msg@{interpret\+Msg}!o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}}
+\subsubsection{\texorpdfstring{interpret\+Msg()}{interpretMsg()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+Gps\+::interpret\+Msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 59 of file Gps.\+cpp.
+
+
+
+References o\+Cpt\+::\+World\+::\+Location\+::coordinate\+::direction, o\+Cpt\+::\+World\+::\+Location\+::gps\+Point\+::latitude, o\+Cpt\+::\+World\+::\+Location\+::gps\+Point\+::longitude, serial\+\_\+, o\+Cpt\+::i\+Sensor\+::sig\+\_\+, o\+Cpt\+::i\+Sensor\+::\+State\+::\+Stamp, o\+Cpt\+::i\+Sensor\+::state\+\_\+, o\+Cpt\+::\+World\+::\+Location\+::stocd(), o\+Cpt\+::i\+Sensor\+::\+State\+::\+Value, o\+Cpt\+::\+World\+::\+Location\+::coordinate\+::value, and o\+Cpt\+::i\+Sensor\+::world\+\_\+.
+
+
+
+Referenced by Gps().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_gps_a6effa9cffd5f203d84de1edce73be87a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_gps_a6effa9cffd5f203d84de1edce73be87a_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_gps_af703c48b8b7220a1909570f46edae932}{}\label{classo_cpt_1_1components_1_1sensors_1_1_gps_af703c48b8b7220a1909570f46edae932} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}!run@{run}}
+\index{run@{run}!o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+Gps\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+virtual function starting the run service for the IO 
+
+Reimplemented from \hyperlink{classo_cpt_1_1_sensor_aef25b0e5f3a8358ee81c97c73909fbe6}{o\+Cpt\+::\+Sensor}.
+
+
+
+Definition at line 38 of file Gps.\+cpp.
+
+
+
+References o\+Cpt\+::\+Sensor\+::run(), o\+Cpt\+::i\+Sensor\+::sensor\+Running\+\_\+, and serial\+\_\+.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classo_cpt_1_1components_1_1sensors_1_1_gps_af703c48b8b7220a1909570f46edae932_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_gps_ad613b81625402daa6fdae80022fde18c}{}\label{classo_cpt_1_1components_1_1sensors_1_1_gps_ad613b81625402daa6fdae80022fde18c} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}!set\+I\+Oservice@{set\+I\+Oservice}}
+\index{set\+I\+Oservice@{set\+I\+Oservice}!o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}}
+\subsubsection{\texorpdfstring{set\+I\+Oservice()}{setIOservice()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+Gps\+::set\+I\+Oservice (\begin{DoxyParamCaption}\item[{boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$}]{ioservice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Setting the used Asynchronous Input Output service 
+\begin{DoxyParams}{Parameters}
+{\em ioservice} & A\+S\+IO IO service, which handles the async calls from multiple sensors \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classo_cpt_1_1_sensor_ae7d47e18df5eb7854bf71fbbee9568df}{o\+Cpt\+::\+Sensor}.
+
+
+
+Definition at line 54 of file Gps.\+cpp.
+
+
+
+References serial\+\_\+, and o\+Cpt\+::\+Sensor\+::set\+I\+Oservice().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_gps_ad613b81625402daa6fdae80022fde18c_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_gps_a9206c32fa91311740ae920c01eed6094}{}\label{classo_cpt_1_1components_1_1sensors_1_1_gps_a9206c32fa91311740ae920c01eed6094} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}!stop@{stop}}
+\index{stop@{stop}!o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+Gps\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+virtual function stopping the run 
+
+Reimplemented from \hyperlink{classo_cpt_1_1_sensor_a44ad78c2c091ca9cf72295293f8c5b74}{o\+Cpt\+::\+Sensor}.
+
+
+
+Definition at line 45 of file Gps.\+cpp.
+
+
+
+References o\+Cpt\+::i\+Sensor\+::sensor\+Running\+\_\+, serial\+\_\+, and o\+Cpt\+::\+Sensor\+::stop().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_gps_a9206c32fa91311740ae920c01eed6094_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_gps_a95976c5d8bba650d2732d4eb43979283}{}\label{classo_cpt_1_1components_1_1sensors_1_1_gps_a95976c5d8bba650d2732d4eb43979283} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}!update\+Sensor@{update\+Sensor}}
+\index{update\+Sensor@{update\+Sensor}!o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}}
+\subsubsection{\texorpdfstring{update\+Sensor()}{updateSensor()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+Gps\+::update\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+virtual function which performs a sensor update, obtaining a new value and sending a signal afterwards 
+
+Reimplemented from \hyperlink{classo_cpt_1_1_sensor_ab4b0dedb06f11bcf2368852035beb2b2}{o\+Cpt\+::\+Sensor}.
+
+
+
+Definition at line 34 of file Gps.\+cpp.
+
+
+
+References o\+Cpt\+::\+Sensor\+::update\+Sensor().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_gps_a95976c5d8bba650d2732d4eb43979283_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_gps_a6b8c50dca0776870cedabbb527b2144e}{}\label{classo_cpt_1_1components_1_1sensors_1_1_gps_a6b8c50dca0776870cedabbb527b2144e} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}!device\+\_\+@{device\+\_\+}}
+\index{device\+\_\+@{device\+\_\+}!o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}}
+\subsubsection{\texorpdfstring{device\+\_\+}{device\_}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::components\+::sensors\+::\+Gps\+::device\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file Gps.\+h.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_gps_a42ea2d37ec01473e92be6ef3cda6de39}{}\label{classo_cpt_1_1components_1_1sensors_1_1_gps_a42ea2d37ec01473e92be6ef3cda6de39} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}!serial\+\_\+@{serial\+\_\+}}
+\index{serial\+\_\+@{serial\+\_\+}!o\+Cpt\+::components\+::sensors\+::\+Gps@{o\+Cpt\+::components\+::sensors\+::\+Gps}}
+\subsubsection{\texorpdfstring{serial\+\_\+}{serial\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1_serial_a4c97c6a2456d649974e07a186f634780}{protocol\+::\+Serial\+::ptr} o\+Cpt\+::components\+::sensors\+::\+Gps\+::serial\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file Gps.\+h.
+
+
+
+Referenced by Gps(), interpret\+Msg(), run(), set\+I\+Oservice(), stop(), and $\sim$\+Gps().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Sensors/\hyperlink{_gps_8h}{Gps.\+h}\item 
+src/\+Sensors/\hyperlink{_gps_8cpp}{Gps.\+cpp}\end{DoxyCompactItemize}

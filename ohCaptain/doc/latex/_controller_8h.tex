@@ -1,20 +1,21 @@
 \hypertarget{_controller_8h}{}\section{include/\+Core/\+Controller.h File Reference}
 \label{_controller_8h}\index{include/\+Core/\+Controller.\+h@{include/\+Core/\+Controller.\+h}}
-{\ttfamily \#include $<$boost/shared\+\_\+ptr.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/shared\+\_\+array.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/enable\+\_\+shared\+\_\+from\+\_\+this.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/system/error\+\_\+code.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/date\+\_\+time/posix\+\_\+time/posix\+\_\+time\+\_\+duration.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/asio.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/function.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/bind.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/signals2.\+hpp$>$}\\*
-{\ttfamily \#include $<$string$>$}\\*
-{\ttfamily \#include $<$vector$>$}\\*
-{\ttfamily \#include $<$mutex$>$}\\*
-{\ttfamily \#include $<$stdexcept$>$}\\*
-{\ttfamily \#include $<$deque$>$}\\*
-{\ttfamily \#include \char`\"{}World.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$boost/shared\+\_\+ptr.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/shared\+\_\+array.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/enable\+\_\+shared\+\_\+from\+\_\+this.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/system/error\+\_\+code.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/date\+\_\+time/posix\+\_\+time/posix\+\_\+time\+\_\+duration.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/function.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/bind.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/signals2.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/filesystem.\+hpp$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include \char`\"{}World.\+h\char`\"{}}\newline
 Include dependency graph for Controller.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -38,6 +39,8 @@ class \hyperlink{classo_cpt_1_1protocol_1_1userspace}{o\+Cpt\+::protocol\+::user
 \item 
 class \hyperlink{classo_cpt_1_1protocol_1_1adc}{o\+Cpt\+::protocol\+::adc}
 \item 
+class \hyperlink{classo_cpt_1_1protocol_1_1gpio}{o\+Cpt\+::protocol\+::gpio}
+\item 
 class \hyperlink{classo_cpt_1_1protocol_1_1_serial}{o\+Cpt\+::protocol\+::\+Serial}
 \item 
 class \hyperlink{classo_cpt_1_1i_controller}{o\+Cpt\+::i\+Controller}
@@ -55,10 +58,113 @@ class \hyperlink{classo_cpt_1_1_a_r_m}{o\+Cpt\+::\+A\+RM}
 \begin{DoxyCompactItemize}
 \item 
 \#define \hyperlink{_controller_8h_a5380750991f1b5aeaa5393d5bdeac7ef}{M\+A\+X\+\_\+\+R\+E\+A\+D\+\_\+\+L\+E\+N\+G\+TH}~4096
+\item 
+\#define \hyperlink{_controller_8h_a5d6147fb2919fe359bc9f94ae775505a}{B\+B\+B\+\_\+\+C\+A\+P\+E\+\_\+\+M\+N\+GR}~\char`\"{}/sys/devices/platform/bone\+\_\+capemgr/slots\char`\"{}
+\item 
+\#define \hyperlink{_controller_8h_a00788bf15e9b485f99342cc93d7ee054}{G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH}~\char`\"{}/sys/class/gpio/\char`\"{}
+\item 
+\#define \hyperlink{_controller_8h_acc31370e3888a5b6f4cf33f8b9449bba}{A\+D\+C\+\_\+\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH}~\char`\"{}/sys/bus/iio/devices/iio\+:device\char`\"{}
+\item 
+\#define \hyperlink{_controller_8h_a358f53a96cbb68ea5df10ab996c80eff}{A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+P\+A\+TH}~\char`\"{}/in\+\_\+voltage\char`\"{}
+\item 
+\#define \hyperlink{_controller_8h_a8f8968cccfcc2ca2304962b6b0176b35}{A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+S\+U\+B\+\_\+\+P\+A\+TH}~\char`\"{}\+\_\+raw\char`\"{}
+\item 
+\#define \hyperlink{_controller_8h_a00c62a0aeb05e6681f7da3c45ff88df9}{M\+O\+D\+U\+L\+E\+\_\+\+P\+A\+TH}~\char`\"{}/proc/modules\char`\"{}
 \end{DoxyCompactItemize}
 
 
 \subsection{Macro Definition Documentation}
+\hypertarget{_controller_8h_acc31370e3888a5b6f4cf33f8b9449bba}{}\label{_controller_8h_acc31370e3888a5b6f4cf33f8b9449bba} 
+\index{Controller.\+h@{Controller.\+h}!A\+D\+C\+\_\+\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH@{A\+D\+C\+\_\+\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH}}
+\index{A\+D\+C\+\_\+\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH@{A\+D\+C\+\_\+\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH}!Controller.\+h@{Controller.\+h}}
+\subsubsection{\texorpdfstring{A\+D\+C\+\_\+\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH}{ADC\_IO\_BASE\_PATH}}
+{\footnotesize\ttfamily \#define A\+D\+C\+\_\+\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH~\char`\"{}/sys/bus/iio/devices/iio\+:device\char`\"{}}
+
+
+
+Definition at line 32 of file Controller.\+h.
+
+
+
+Referenced by o\+Cpt\+::protocol\+::adc\+::adc().
+
+\hypertarget{_controller_8h_a358f53a96cbb68ea5df10ab996c80eff}{}\label{_controller_8h_a358f53a96cbb68ea5df10ab996c80eff} 
+\index{Controller.\+h@{Controller.\+h}!A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+P\+A\+TH@{A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+P\+A\+TH}}
+\index{A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+P\+A\+TH@{A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+P\+A\+TH}!Controller.\+h@{Controller.\+h}}
+\subsubsection{\texorpdfstring{A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+P\+A\+TH}{ADC\_VOLTAGE\_PATH}}
+{\footnotesize\ttfamily \#define A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+P\+A\+TH~\char`\"{}/in\+\_\+voltage\char`\"{}}
+
+
+
+Definition at line 33 of file Controller.\+h.
+
+
+
+Referenced by o\+Cpt\+::protocol\+::adc\+::adc().
+
+\hypertarget{_controller_8h_a8f8968cccfcc2ca2304962b6b0176b35}{}\label{_controller_8h_a8f8968cccfcc2ca2304962b6b0176b35} 
+\index{Controller.\+h@{Controller.\+h}!A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+S\+U\+B\+\_\+\+P\+A\+TH@{A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+S\+U\+B\+\_\+\+P\+A\+TH}}
+\index{A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+S\+U\+B\+\_\+\+P\+A\+TH@{A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+S\+U\+B\+\_\+\+P\+A\+TH}!Controller.\+h@{Controller.\+h}}
+\subsubsection{\texorpdfstring{A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+S\+U\+B\+\_\+\+P\+A\+TH}{ADC\_VOLTAGE\_SUB\_PATH}}
+{\footnotesize\ttfamily \#define A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+S\+U\+B\+\_\+\+P\+A\+TH~\char`\"{}\+\_\+raw\char`\"{}}
+
+
+
+Definition at line 34 of file Controller.\+h.
+
+
+
+Referenced by o\+Cpt\+::protocol\+::adc\+::adc().
+
+\hypertarget{_controller_8h_a5d6147fb2919fe359bc9f94ae775505a}{}\label{_controller_8h_a5d6147fb2919fe359bc9f94ae775505a} 
+\index{Controller.\+h@{Controller.\+h}!B\+B\+B\+\_\+\+C\+A\+P\+E\+\_\+\+M\+N\+GR@{B\+B\+B\+\_\+\+C\+A\+P\+E\+\_\+\+M\+N\+GR}}
+\index{B\+B\+B\+\_\+\+C\+A\+P\+E\+\_\+\+M\+N\+GR@{B\+B\+B\+\_\+\+C\+A\+P\+E\+\_\+\+M\+N\+GR}!Controller.\+h@{Controller.\+h}}
+\subsubsection{\texorpdfstring{B\+B\+B\+\_\+\+C\+A\+P\+E\+\_\+\+M\+N\+GR}{BBB\_CAPE\_MNGR}}
+{\footnotesize\ttfamily \#define B\+B\+B\+\_\+\+C\+A\+P\+E\+\_\+\+M\+N\+GR~\char`\"{}/sys/devices/platform/bone\+\_\+capemgr/slots\char`\"{}}
+
+
+
+Definition at line 28 of file Controller.\+h.
+
+
+
+Referenced by o\+Cpt\+::protocol\+::userspace\+::dtbo\+Loaded().
+
+\hypertarget{_controller_8h_a00788bf15e9b485f99342cc93d7ee054}{}\label{_controller_8h_a00788bf15e9b485f99342cc93d7ee054} 
+\index{Controller.\+h@{Controller.\+h}!G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH@{G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH}}
+\index{G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH@{G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH}!Controller.\+h@{Controller.\+h}}
+\subsubsection{\texorpdfstring{G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH}{GPIO\_BASE\_PATH}}
+{\footnotesize\ttfamily \#define G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH~\char`\"{}/sys/class/gpio/\char`\"{}}
+
+
+
+Definition at line 30 of file Controller.\+h.
+
+
+
+Referenced by o\+Cpt\+::protocol\+::gpio\+::exported\+Gpios(), o\+Cpt\+::protocol\+::gpio\+::export\+Pin(), o\+Cpt\+::protocol\+::gpio\+::gpio(), o\+Cpt\+::protocol\+::gpio\+::read\+Pin\+Value(), o\+Cpt\+::protocol\+::gpio\+::unexport\+Pin(), and o\+Cpt\+::protocol\+::gpio\+::write\+Pin\+Value().
+
+\hypertarget{_controller_8h_a5380750991f1b5aeaa5393d5bdeac7ef}{}\label{_controller_8h_a5380750991f1b5aeaa5393d5bdeac7ef} 
 \index{Controller.\+h@{Controller.\+h}!M\+A\+X\+\_\+\+R\+E\+A\+D\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+X\+\_\+\+R\+E\+A\+D\+\_\+\+L\+E\+N\+G\+TH}}
 \index{M\+A\+X\+\_\+\+R\+E\+A\+D\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+X\+\_\+\+R\+E\+A\+D\+\_\+\+L\+E\+N\+G\+TH}!Controller.\+h@{Controller.\+h}}
-\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+R\+E\+A\+D\+\_\+\+L\+E\+N\+G\+TH}{MAX_READ_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+R\+E\+A\+D\+\_\+\+L\+E\+N\+G\+TH~4096}\hypertarget{_controller_8h_a5380750991f1b5aeaa5393d5bdeac7ef}{}\label{_controller_8h_a5380750991f1b5aeaa5393d5bdeac7ef}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+R\+E\+A\+D\+\_\+\+L\+E\+N\+G\+TH}{MAX\_READ\_LENGTH}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+R\+E\+A\+D\+\_\+\+L\+E\+N\+G\+TH~4096}
+
+
+
+Definition at line 26 of file Controller.\+h.
+
+\hypertarget{_controller_8h_a00c62a0aeb05e6681f7da3c45ff88df9}{}\label{_controller_8h_a00c62a0aeb05e6681f7da3c45ff88df9} 
+\index{Controller.\+h@{Controller.\+h}!M\+O\+D\+U\+L\+E\+\_\+\+P\+A\+TH@{M\+O\+D\+U\+L\+E\+\_\+\+P\+A\+TH}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+P\+A\+TH@{M\+O\+D\+U\+L\+E\+\_\+\+P\+A\+TH}!Controller.\+h@{Controller.\+h}}
+\subsubsection{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+P\+A\+TH}{MODULE\_PATH}}
+{\footnotesize\ttfamily \#define M\+O\+D\+U\+L\+E\+\_\+\+P\+A\+TH~\char`\"{}/proc/modules\char`\"{}}
+
+
+
+Definition at line 36 of file Controller.\+h.
+
+
+
+Referenced by o\+Cpt\+::protocol\+::userspace\+::mod\+Loaded().
+

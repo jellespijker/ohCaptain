@@ -6,18 +6,16 @@
 
 
 
-Inheritance diagram for o\+Cpt\+:\+:Vessel\+:
-\nopagebreak
+Inheritance diagram for o\+Cpt\+:\+:Vessel\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=229pt]{classo_cpt_1_1_vessel__inherit__graph}
+\includegraphics[width=230pt]{classo_cpt_1_1_vessel__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for o\+Cpt\+:\+:Vessel\+:
-\nopagebreak
+Collaboration diagram for o\+Cpt\+:\+:Vessel\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -62,24 +60,34 @@ std\+::vector$<$ \hyperlink{classo_cpt_1_1i_comm_af0c655f143251b7d03fcd98f896372
 \subsection{Detailed Description}
 The vessel base class 
 
+Definition at line 80 of file Vessel.\+h.
+
+
+
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1_vessel_ab6dd985345a5c23e200db425553f8358}{}\label{classo_cpt_1_1_vessel_ab6dd985345a5c23e200db425553f8358} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!Vessel@{Vessel}}
 \index{Vessel@{Vessel}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{Vessel()}{Vessel()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+Vessel\+::\+Vessel (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1_vessel_ab6dd985345a5c23e200db425553f8358}{}\label{classo_cpt_1_1_vessel_ab6dd985345a5c23e200db425553f8358}
+\subsubsection{\texorpdfstring{Vessel()}{Vessel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily o\+Cpt\+::\+Vessel\+::\+Vessel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 The constructor for a vessel \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+
+
+Definition at line 23 of file Vessel.\+cpp.
+
+
+
+References o\+Cpt\+::i\+Vessel\+::stop\+Thread\+\_\+.
+
+\hypertarget{classo_cpt_1_1_vessel_ac8dacffe9254893d8e55b6c08fbca6c2}{}\label{classo_cpt_1_1_vessel_ac8dacffe9254893d8e55b6c08fbca6c2} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!Vessel@{Vessel}}
 \index{Vessel@{Vessel}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{Vessel(i\+Controller\+::ptr controller)}{Vessel(iController::ptr controller)}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+Vessel\+::\+Vessel (
-\begin{DoxyParamCaption}
-\item[{{\bf i\+Controller\+::ptr}}]{controller}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1_vessel_ac8dacffe9254893d8e55b6c08fbca6c2}{}\label{classo_cpt_1_1_vessel_ac8dacffe9254893d8e55b6c08fbca6c2}
+\subsubsection{\texorpdfstring{Vessel()}{Vessel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily o\+Cpt\+::\+Vessel\+::\+Vessel (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr}}]{controller }\end{DoxyParamCaption})}
+
 The constructor for a vessel 
 \begin{DoxyParams}{Parameters}
 {\em controller} & shared\+\_\+ptr to the controller \\
@@ -88,100 +96,192 @@ The constructor for a vessel
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+
+
+Definition at line 33 of file Vessel.\+cpp.
+
+
+
+References boatswain\+\_\+, captain\+\_\+, controller\+\_\+, and world\+\_\+.
+
+\hypertarget{classo_cpt_1_1_vessel_ac48b6cdeb7449a1523d8398dfcff0b37}{}\label{classo_cpt_1_1_vessel_ac48b6cdeb7449a1523d8398dfcff0b37} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!````~Vessel@{$\sim$\+Vessel}}
 \index{````~Vessel@{$\sim$\+Vessel}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{$\sim$\+Vessel()}{~Vessel()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+Vessel\+::$\sim$\+Vessel (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_vessel_ac48b6cdeb7449a1523d8398dfcff0b37}{}\label{classo_cpt_1_1_vessel_ac48b6cdeb7449a1523d8398dfcff0b37}
+\subsubsection{\texorpdfstring{$\sim$\+Vessel()}{~Vessel()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+Vessel\+::$\sim$\+Vessel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 The deconstructor 
 
+Definition at line 40 of file Vessel.\+cpp.
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1_vessel_a64af8c6be9c915b76f37cff6abc5be36}{}\label{classo_cpt_1_1_vessel_a64af8c6be9c915b76f37cff6abc5be36} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!initialize@{initialize}}
 \index{initialize@{initialize}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{initialize() override}{initialize() override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Vessel\+::initialize (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_vessel_a64af8c6be9c915b76f37cff6abc5be36}{}\label{classo_cpt_1_1_vessel_a64af8c6be9c915b76f37cff6abc5be36}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Vessel\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
 Initialize the vessel 
 
 Implements \hyperlink{classo_cpt_1_1i_vessel_a866ddfa5330bbb24277de57554a41811}{o\+Cpt\+::i\+Vessel}.
 
+
+
+Definition at line 42 of file Vessel.\+cpp.
+
+
+
+References boatswain\+\_\+, and captain\+\_\+.
+
+\hypertarget{classo_cpt_1_1_vessel_a6cd07e32cc601b1f3a45881b42ea36ef}{}\label{classo_cpt_1_1_vessel_a6cd07e32cc601b1f3a45881b42ea36ef} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!run@{run}}
 \index{run@{run}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{run() override}{run() override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Vessel\+::run (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_vessel_a6cd07e32cc601b1f3a45881b42ea36ef}{}\label{classo_cpt_1_1_vessel_a6cd07e32cc601b1f3a45881b42ea36ef}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Vessel\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
 Run the vessel normal operations 
 
 Implements \hyperlink{classo_cpt_1_1i_vessel_a636c138c3d8cb4ddbb2725d36fb12e07}{o\+Cpt\+::i\+Vessel}.
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Definition at line 47 of file Vessel.\+cpp.
+
+
+
+References boatswain\+\_\+, captain\+\_\+, and o\+Cpt\+::i\+Boatswain\+::run().
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=318pt]{classo_cpt_1_1_vessel_a6cd07e32cc601b1f3a45881b42ea36ef_cgraph}
 \end{center}
 \end{figure}
-
-
+\hypertarget{classo_cpt_1_1_vessel_a87e321618ea1d1ca21fffbe64bbffbc0}{}\label{classo_cpt_1_1_vessel_a87e321618ea1d1ca21fffbe64bbffbc0} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!stop@{stop}}
 \index{stop@{stop}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{stop() override}{stop() override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Vessel\+::stop (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_vessel_a87e321618ea1d1ca21fffbe64bbffbc0}{}\label{classo_cpt_1_1_vessel_a87e321618ea1d1ca21fffbe64bbffbc0}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Vessel\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
 Stop the vessel, everything except critical parts, which are needed to survive 
 
 Implements \hyperlink{classo_cpt_1_1i_vessel_a1cfbb23ae3e73a3587688bf7fbc3f0af}{o\+Cpt\+::i\+Vessel}.
 
 
 
+Definition at line 54 of file Vessel.\+cpp.
+
+
+
+References o\+Cpt\+::i\+Vessel\+::stop\+Thread\+\_\+.
+
+
+
 \subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1_vessel_a9ca55a7aa5444fcaed183ebe9861198d}{}\label{classo_cpt_1_1_vessel_a9ca55a7aa5444fcaed183ebe9861198d} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!actuators\+\_\+@{actuators\+\_\+}}
 \index{actuators\+\_\+@{actuators\+\_\+}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{actuators\+\_\+}{actuators_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf i\+Actuator\+::ptr}$>$ o\+Cpt\+::\+Vessel\+::actuators\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1_vessel_a9ca55a7aa5444fcaed183ebe9861198d}{}\label{classo_cpt_1_1_vessel_a9ca55a7aa5444fcaed183ebe9861198d}
+\subsubsection{\texorpdfstring{actuators\+\_\+}{actuators\_}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classo_cpt_1_1i_actuator_a35847799558e92bb84fb6c71de772cac}{i\+Actuator\+::ptr}$>$ o\+Cpt\+::\+Vessel\+::actuators\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 121 of file Vessel.\+h.
+
+\hypertarget{classo_cpt_1_1_vessel_a7d23ca83ab0b60ced457b6c08ff8f171}{}\label{classo_cpt_1_1_vessel_a7d23ca83ab0b60ced457b6c08ff8f171} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!boatswain\+\_\+@{boatswain\+\_\+}}
 \index{boatswain\+\_\+@{boatswain\+\_\+}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{boatswain\+\_\+}{boatswain_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf i\+Boatswain\+::ptr} o\+Cpt\+::\+Vessel\+::boatswain\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1_vessel_a7d23ca83ab0b60ced457b6c08ff8f171}{}\label{classo_cpt_1_1_vessel_a7d23ca83ab0b60ced457b6c08ff8f171}
+\subsubsection{\texorpdfstring{boatswain\+\_\+}{boatswain\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1i_boatswain_ad5e2819c6252955a7eddba4a4c980e3c}{i\+Boatswain\+::ptr} o\+Cpt\+::\+Vessel\+::boatswain\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 The boatswain, the worker asynchronize operations for actuators, sensors, and communication. 
 
+
+
+Definition at line 119 of file Vessel.\+h.
+
+
+
+Referenced by initialize(), run(), and Vessel().
+
+\hypertarget{classo_cpt_1_1_vessel_ae135ec01edc448d7973726a78d2a677a}{}\label{classo_cpt_1_1_vessel_ae135ec01edc448d7973726a78d2a677a} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!captain\+\_\+@{captain\+\_\+}}
 \index{captain\+\_\+@{captain\+\_\+}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{captain\+\_\+}{captain_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf i\+Captain\+::ptr} o\+Cpt\+::\+Vessel\+::captain\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1_vessel_ae135ec01edc448d7973726a78d2a677a}{}\label{classo_cpt_1_1_vessel_ae135ec01edc448d7973726a78d2a677a}
+\subsubsection{\texorpdfstring{captain\+\_\+}{captain\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1i_captain_ae1595d808fa14777c26f1227a82ac4f5}{i\+Captain\+::ptr} o\+Cpt\+::\+Vessel\+::captain\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 The captain for strategical planning. 
 
+
+
+Definition at line 118 of file Vessel.\+h.
+
+
+
+Referenced by initialize(), run(), and Vessel().
+
+\hypertarget{classo_cpt_1_1_vessel_a0f09f5d34963356faa3834b379e8081e}{}\label{classo_cpt_1_1_vessel_a0f09f5d34963356faa3834b379e8081e} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!comm\+\_\+@{comm\+\_\+}}
 \index{comm\+\_\+@{comm\+\_\+}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{comm\+\_\+}{comm_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf i\+Comm\+::ptr}$>$ o\+Cpt\+::\+Vessel\+::comm\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1_vessel_a0f09f5d34963356faa3834b379e8081e}{}\label{classo_cpt_1_1_vessel_a0f09f5d34963356faa3834b379e8081e}
+\subsubsection{\texorpdfstring{comm\+\_\+}{comm\_}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classo_cpt_1_1i_comm_af0c655f143251b7d03fcd98f89637228}{i\+Comm\+::ptr}$>$ o\+Cpt\+::\+Vessel\+::comm\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 122 of file Vessel.\+h.
+
+\hypertarget{classo_cpt_1_1_vessel_a5416b2e16fd2457921fb6c15b45998e0}{}\label{classo_cpt_1_1_vessel_a5416b2e16fd2457921fb6c15b45998e0} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!controller\+\_\+@{controller\+\_\+}}
 \index{controller\+\_\+@{controller\+\_\+}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{controller\+\_\+}{controller_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf i\+Controller\+::ptr} o\+Cpt\+::\+Vessel\+::controller\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1_vessel_a5416b2e16fd2457921fb6c15b45998e0}{}\label{classo_cpt_1_1_vessel_a5416b2e16fd2457921fb6c15b45998e0}
+\subsubsection{\texorpdfstring{controller\+\_\+}{controller\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr} o\+Cpt\+::\+Vessel\+::controller\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 a shared\+\_\+ptr to the controller needed for sensors, actuators and coommunication 
 
+
+
+Definition at line 117 of file Vessel.\+h.
+
+
+
+Referenced by Vessel().
+
+\hypertarget{classo_cpt_1_1_vessel_a7d34053ac8f878e6eeaab2567005c6d5}{}\label{classo_cpt_1_1_vessel_a7d34053ac8f878e6eeaab2567005c6d5} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!sensors\+\_\+@{sensors\+\_\+}}
 \index{sensors\+\_\+@{sensors\+\_\+}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{sensors\+\_\+}{sensors_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf i\+Sensor\+::ptr}$>$ o\+Cpt\+::\+Vessel\+::sensors\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1_vessel_a7d34053ac8f878e6eeaab2567005c6d5}{}\label{classo_cpt_1_1_vessel_a7d34053ac8f878e6eeaab2567005c6d5}
+\subsubsection{\texorpdfstring{sensors\+\_\+}{sensors\_}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{i\+Sensor\+::ptr}$>$ o\+Cpt\+::\+Vessel\+::sensors\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 120 of file Vessel.\+h.
+
+\hypertarget{classo_cpt_1_1_vessel_a332359ea0b37185d1b6e8acc6f50546a}{}\label{classo_cpt_1_1_vessel_a332359ea0b37185d1b6e8acc6f50546a} 
 \index{o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}!world\+\_\+@{world\+\_\+}}
 \index{world\+\_\+@{world\+\_\+}!o\+Cpt\+::\+Vessel@{o\+Cpt\+::\+Vessel}}
-\subsubsection[{\texorpdfstring{world\+\_\+}{world_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World\+::ptr} o\+Cpt\+::\+Vessel\+::world\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1_vessel_a332359ea0b37185d1b6e8acc6f50546a}{}\label{classo_cpt_1_1_vessel_a332359ea0b37185d1b6e8acc6f50546a}
+\subsubsection{\texorpdfstring{world\+\_\+}{world\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} o\+Cpt\+::\+Vessel\+::world\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 a shared\+\_\+ptr to the world needed for time and location keeping 
+
+
+
+Definition at line 116 of file Vessel.\+h.
+
+
+
+Referenced by Vessel().
 
 
 

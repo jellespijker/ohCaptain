@@ -6,8 +6,7 @@
 
 
 
-Collaboration diagram for o\+Cpt\+:\+:World\+:
-\nopagebreak
+Collaboration diagram for o\+Cpt\+:\+:World\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,13 +16,15 @@ Collaboration diagram for o\+Cpt\+:\+:World\+:
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \hyperlink{classo_cpt_1_1_world_1_1_location}{Location}
+\item 
 class \hyperlink{classo_cpt_1_1_world_1_1_time}{Time}
 \end{DoxyCompactItemize}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
 typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classo_cpt_1_1_world}{World} $>$ \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{ptr}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Boost shared\+\_\+ptr to a \hyperlink{classo_cpt_1_1_world}{World} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,74 +43,112 @@ virtual \hyperlink{classo_cpt_1_1_world_a74dd3c254805c7dd16353b7b7e93dc45}{$\sim
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+The \hyperlink{classo_cpt_1_1_world}{World} class, this class is an shared pointer where the boatswain can place the state representation of the vessel at a certain time, which allows the captain to plan the strategic decisions 
+
+Definition at line 17 of file World.\+h.
+
+
+
 \subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{}\label{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67} 
 \index{o\+Cpt\+::\+World@{o\+Cpt\+::\+World}!ptr@{ptr}}
 \index{ptr@{ptr}!o\+Cpt\+::\+World@{o\+Cpt\+::\+World}}
-\subsubsection[{\texorpdfstring{ptr}{ptr}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::shared\+\_\+ptr$<${\bf World}$>$ {\bf o\+Cpt\+::\+World\+::ptr}}\hypertarget{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{}\label{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$\hyperlink{classo_cpt_1_1_world}{World}$>$ \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{o\+Cpt\+::\+World\+::ptr}}
+
+
+
+Boost shared\+\_\+ptr to a \hyperlink{classo_cpt_1_1_world}{World} class. 
+
+
+
+Definition at line 19 of file World.\+h.
+
 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1_world_adc3d3e562ec4f5979b8da40bf8bef36c}{}\label{classo_cpt_1_1_world_adc3d3e562ec4f5979b8da40bf8bef36c} 
 \index{o\+Cpt\+::\+World@{o\+Cpt\+::\+World}!World@{World}}
 \index{World@{World}!o\+Cpt\+::\+World@{o\+Cpt\+::\+World}}
-\subsubsection[{\texorpdfstring{World()}{World()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+World\+::\+World (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1_world_adc3d3e562ec4f5979b8da40bf8bef36c}{}\label{classo_cpt_1_1_world_adc3d3e562ec4f5979b8da40bf8bef36c}
+\subsubsection{\texorpdfstring{World()}{World()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+World\+::\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor for a \hyperlink{classo_cpt_1_1_world}{World} 
+
+Definition at line 23 of file World.\+cpp.
+
+\hypertarget{classo_cpt_1_1_world_a74dd3c254805c7dd16353b7b7e93dc45}{}\label{classo_cpt_1_1_world_a74dd3c254805c7dd16353b7b7e93dc45} 
 \index{o\+Cpt\+::\+World@{o\+Cpt\+::\+World}!````~World@{$\sim$\+World}}
 \index{````~World@{$\sim$\+World}!o\+Cpt\+::\+World@{o\+Cpt\+::\+World}}
-\subsubsection[{\texorpdfstring{$\sim$\+World()}{~World()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+World\+::$\sim$\+World (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_world_a74dd3c254805c7dd16353b7b7e93dc45}{}\label{classo_cpt_1_1_world_a74dd3c254805c7dd16353b7b7e93dc45}
+\subsubsection{\texorpdfstring{$\sim$\+World()}{~World()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+World\+::$\sim$\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Deconstuctor for a \hyperlink{classo_cpt_1_1_world}{World} 
+
+Definition at line 27 of file World.\+cpp.
+
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1_world_a505f4c14270cfd34d806bd04c4b67f95}{}\label{classo_cpt_1_1_world_a505f4c14270cfd34d806bd04c4b67f95} 
 \index{o\+Cpt\+::\+World@{o\+Cpt\+::\+World}!get\+Time@{get\+Time}}
 \index{get\+Time@{get\+Time}!o\+Cpt\+::\+World@{o\+Cpt\+::\+World}}
-\subsubsection[{\texorpdfstring{get\+Time()}{getTime()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World\+::\+Time} \& o\+Cpt\+::\+World\+::get\+Time (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1_world_a505f4c14270cfd34d806bd04c4b67f95}{}\label{classo_cpt_1_1_world_a505f4c14270cfd34d806bd04c4b67f95}
+\subsubsection{\texorpdfstring{get\+Time()}{getTime()}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_world_1_1_time}{World\+::\+Time} \& o\+Cpt\+::\+World\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the current time object \begin{DoxyReturn}{Returns}
+returns \hyperlink{classo_cpt_1_1_world_1_1_time}{Time} 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file World.\+cpp.
+
+
+
+References time\+\_\+.
+
+\hypertarget{classo_cpt_1_1_world_a82235ee23e403f81d38c04b813cdeb23}{}\label{classo_cpt_1_1_world_a82235ee23e403f81d38c04b813cdeb23} 
 \index{o\+Cpt\+::\+World@{o\+Cpt\+::\+World}!now@{now}}
 \index{now@{now}!o\+Cpt\+::\+World@{o\+Cpt\+::\+World}}
-\subsubsection[{\texorpdfstring{now()}{now()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World\+::\+Time\+::timepoint\+\_\+t} o\+Cpt\+::\+World\+::now (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1_world_a82235ee23e403f81d38c04b813cdeb23}{}\label{classo_cpt_1_1_world_a82235ee23e403f81d38c04b813cdeb23}
+\subsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{World\+::\+Time\+::timepoint\+\_\+t} o\+Cpt\+::\+World\+::now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the current Epoch \begin{DoxyReturn}{Returns}
+returns a timepoint representing now 
+\end{DoxyReturn}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Definition at line 33 of file World.\+cpp.
+
+
+
+References o\+Cpt\+::\+World\+::\+Time\+::now(), and time\+\_\+.
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=327pt]{classo_cpt_1_1_world_a82235ee23e403f81d38c04b813cdeb23_cgraph}
+\includegraphics[width=326pt]{classo_cpt_1_1_world_a82235ee23e403f81d38c04b813cdeb23_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classo_cpt_1_1_world_a82235ee23e403f81d38c04b813cdeb23_icgraph}
-\end{center}
-\end{figure}
-
-
 
 
 \subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1_world_a2f93632f34dd13d0a61eec6d8d2879ff}{}\label{classo_cpt_1_1_world_a2f93632f34dd13d0a61eec6d8d2879ff} 
 \index{o\+Cpt\+::\+World@{o\+Cpt\+::\+World}!time\+\_\+@{time\+\_\+}}
 \index{time\+\_\+@{time\+\_\+}!o\+Cpt\+::\+World@{o\+Cpt\+::\+World}}
-\subsubsection[{\texorpdfstring{time\+\_\+}{time_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} o\+Cpt\+::\+World\+::time\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1_world_a2f93632f34dd13d0a61eec6d8d2879ff}{}\label{classo_cpt_1_1_world_a2f93632f34dd13d0a61eec6d8d2879ff}
+\subsubsection{\texorpdfstring{time\+\_\+}{time\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_world_1_1_time}{Time} o\+Cpt\+::\+World\+::time\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 211 of file World.\+h.
+
+
+
+Referenced by get\+Time(), and now().
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

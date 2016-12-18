@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for o\+Cpt\+:\+:A\+RM\+:
-\nopagebreak
+Inheritance diagram for o\+Cpt\+:\+:A\+RM\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for o\+Cpt\+:\+:A\+RM\+:
 \end{figure}
 
 
-Collaboration diagram for o\+Cpt\+:\+:A\+RM\+:
-\nopagebreak
+Collaboration diagram for o\+Cpt\+:\+:A\+RM\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -38,46 +36,90 @@ virtual \hyperlink{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3d
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+An \hyperlink{classo_cpt_1_1_a_r_m}{A\+RM} like controller. Currently only \hyperlink{classo_cpt_1_1_a_r_m}{A\+RM} devices are implemented 
+
+Definition at line 597 of file Controller.\+h.
+
+
+
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1_a_r_m_af99c9e575fbee98bf8754220d7a8badd}{}\label{classo_cpt_1_1_a_r_m_af99c9e575fbee98bf8754220d7a8badd} 
 \index{o\+Cpt\+::\+A\+RM@{o\+Cpt\+::\+A\+RM}!A\+RM@{A\+RM}}
 \index{A\+RM@{A\+RM}!o\+Cpt\+::\+A\+RM@{o\+Cpt\+::\+A\+RM}}
-\subsubsection[{\texorpdfstring{A\+R\+M(\+World\+::ptr world)}{ARM(World::ptr world)}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+A\+R\+M\+::\+A\+RM (
-\begin{DoxyParamCaption}
-\item[{{\bf World\+::ptr}}]{world}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1_a_r_m_af99c9e575fbee98bf8754220d7a8badd}{}\label{classo_cpt_1_1_a_r_m_af99c9e575fbee98bf8754220d7a8badd}
+\subsubsection{\texorpdfstring{A\+R\+M()}{ARM()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+A\+R\+M\+::\+A\+RM (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}}]{world }\end{DoxyParamCaption})}
+
+The constructor of an \hyperlink{classo_cpt_1_1_a_r_m}{A\+RM} controller 
+\begin{DoxyParams}{Parameters}
+{\em world} & a shared\+\_\+ptr to the \hyperlink{classo_cpt_1_1_world}{World} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 469 of file Controller.\+cpp.
+
+\hypertarget{classo_cpt_1_1_a_r_m_a2be59dd26648e2a21c3996bcc3b2b153}{}\label{classo_cpt_1_1_a_r_m_a2be59dd26648e2a21c3996bcc3b2b153} 
 \index{o\+Cpt\+::\+A\+RM@{o\+Cpt\+::\+A\+RM}!````~A\+RM@{$\sim$\+A\+RM}}
 \index{````~A\+RM@{$\sim$\+A\+RM}!o\+Cpt\+::\+A\+RM@{o\+Cpt\+::\+A\+RM}}
-\subsubsection[{\texorpdfstring{$\sim$\+A\+R\+M()}{~ARM()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+A\+R\+M\+::$\sim$\+A\+RM (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_a_r_m_a2be59dd26648e2a21c3996bcc3b2b153}{}\label{classo_cpt_1_1_a_r_m_a2be59dd26648e2a21c3996bcc3b2b153}
+\subsubsection{\texorpdfstring{$\sim$\+A\+R\+M()}{~ARM()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+A\+R\+M\+::$\sim$\+A\+RM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The deconstructor 
+
+Definition at line 472 of file Controller.\+cpp.
+
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1_a_r_m_a2f773bcd04719d81994af8930ca974bd}{}\label{classo_cpt_1_1_a_r_m_a2f773bcd04719d81994af8930ca974bd} 
 \index{o\+Cpt\+::\+A\+RM@{o\+Cpt\+::\+A\+RM}!get\+A\+DC@{get\+A\+DC}}
 \index{get\+A\+DC@{get\+A\+DC}!o\+Cpt\+::\+A\+RM@{o\+Cpt\+::\+A\+RM}}
-\subsubsection[{\texorpdfstring{get\+A\+D\+C(uint8\+\_\+t id, uint8\+\_\+t device)}{getADC(uint8_t id, uint8_t device)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf protocol\+::adc\+::ptr} o\+Cpt\+::\+A\+R\+M\+::get\+A\+DC (
-\begin{DoxyParamCaption}
-\item[{uint8\+\_\+t}]{id, }
-\item[{uint8\+\_\+t}]{device}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_a_r_m_a2f773bcd04719d81994af8930ca974bd}{}\label{classo_cpt_1_1_a_r_m_a2f773bcd04719d81994af8930ca974bd}
+\subsubsection{\texorpdfstring{get\+A\+D\+C()}{getADC()}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff}{protocol\+::adc\+::ptr} o\+Cpt\+::\+A\+R\+M\+::get\+A\+DC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id,  }\item[{uint8\+\_\+t}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get a specific shared\+\_\+ptr to an A\+DC 
+\begin{DoxyParams}{Parameters}
+{\em id} & the pin ID \\
+\hline
+{\em device} & the device ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the specified A\+DC 
+\end{DoxyReturn}
 
 
 Implements \hyperlink{classo_cpt_1_1i_controller_a7abf65f5912df117a3ff4c1c9643bba3}{o\+Cpt\+::i\+Controller}.
 
+
+
+Definition at line 474 of file Controller.\+cpp.
+
+
+
+References o\+Cpt\+::i\+Controller\+::adc\+Vector\+\_\+.
+
+\hypertarget{classo_cpt_1_1_a_r_m_a32e77e29e34f3114f0b766b705366ba8}{}\label{classo_cpt_1_1_a_r_m_a32e77e29e34f3114f0b766b705366ba8} 
 \index{o\+Cpt\+::\+A\+RM@{o\+Cpt\+::\+A\+RM}!get\+Adc\+Vector@{get\+Adc\+Vector}}
 \index{get\+Adc\+Vector@{get\+Adc\+Vector}!o\+Cpt\+::\+A\+RM@{o\+Cpt\+::\+A\+RM}}
-\subsubsection[{\texorpdfstring{get\+Adc\+Vector()}{getAdcVector()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf protocol\+::adc\+::ptr} $>$ $\ast$ o\+Cpt\+::\+A\+R\+M\+::get\+Adc\+Vector (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_a_r_m_a32e77e29e34f3114f0b766b705366ba8}{}\label{classo_cpt_1_1_a_r_m_a32e77e29e34f3114f0b766b705366ba8}
+\subsubsection{\texorpdfstring{get\+Adc\+Vector()}{getAdcVector()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff}{protocol\+::adc\+::ptr} $>$ $\ast$ o\+Cpt\+::\+A\+R\+M\+::get\+Adc\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Obtain a vector of available A\+D\+Cs \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 Implements \hyperlink{classo_cpt_1_1i_controller_af414ebaf64b79ac45d1275e62799e36c}{o\+Cpt\+::i\+Controller}.
+
+
+
+Definition at line 481 of file Controller.\+cpp.
+
+
+
+References o\+Cpt\+::i\+Controller\+::adc\+Vector\+\_\+.
 
 
 

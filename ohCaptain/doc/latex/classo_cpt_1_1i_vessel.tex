@@ -6,12 +6,11 @@
 
 
 
-Inheritance diagram for o\+Cpt\+:\+:i\+Vessel\+:
-\nopagebreak
+Inheritance diagram for o\+Cpt\+:\+:i\+Vessel\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=229pt]{classo_cpt_1_1i_vessel__inherit__graph}
+\includegraphics[width=230pt]{classo_cpt_1_1i_vessel__inherit__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
@@ -34,7 +33,7 @@ virtual void \hyperlink{classo_cpt_1_1i_vessel_a636c138c3d8cb4ddbb2725d36fb12e07
 \item 
 virtual void \hyperlink{classo_cpt_1_1i_vessel_a1cfbb23ae3e73a3587688bf7fbc3f0af}{stop} ()=0
 \item 
-const boost\+::shared\+\_\+ptr$<$ bool $>$ \& \hyperlink{classo_cpt_1_1i_vessel_a542f07098bb7e1495a4273044ba323ce}{get\+Stop\+Thread} () const 
+const boost\+::shared\+\_\+ptr$<$ bool $>$ \& \hyperlink{classo_cpt_1_1i_vessel_aa0c1f81d32a997bb3be3a4edb292b8f9}{get\+Stop\+Thread} () const
 \item 
 void \hyperlink{classo_cpt_1_1i_vessel_aacfbb96114c16a264b133e2d75c5a083}{set\+Stop\+Thread} (const boost\+::shared\+\_\+ptr$<$ bool $>$ \&stop\+Thread)
 \end{DoxyCompactItemize}
@@ -48,34 +47,47 @@ boost\+::shared\+\_\+ptr$<$ bool $>$ \hyperlink{classo_cpt_1_1i_vessel_a9f52bb65
 \subsection{Detailed Description}
 The interface for each vessel 
 
+Definition at line 24 of file Vessel.\+h.
+
+
+
 \subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1i_vessel_a43711a596f3bdfd0ca732ed3901edc97}{}\label{classo_cpt_1_1i_vessel_a43711a596f3bdfd0ca732ed3901edc97} 
 \index{o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}!ptr@{ptr}}
 \index{ptr@{ptr}!o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}}
-\subsubsection[{\texorpdfstring{ptr}{ptr}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::shared\+\_\+ptr$<${\bf i\+Vessel}$>$ {\bf o\+Cpt\+::i\+Vessel\+::ptr}}\hypertarget{classo_cpt_1_1i_vessel_a43711a596f3bdfd0ca732ed3901edc97}{}\label{classo_cpt_1_1i_vessel_a43711a596f3bdfd0ca732ed3901edc97}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$\hyperlink{classo_cpt_1_1i_vessel}{i\+Vessel}$>$ \hyperlink{classo_cpt_1_1i_vessel_a43711a596f3bdfd0ca732ed3901edc97}{o\+Cpt\+::i\+Vessel\+::ptr}}
+
 
 
 Boost shared\+\_\+ptr to a vessel. 
 
 
 
+Definition at line 26 of file Vessel.\+h.
+
+
+
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1i_vessel_a28f9a5ff20f10dc68261b646da3940a5}{}\label{classo_cpt_1_1i_vessel_a28f9a5ff20f10dc68261b646da3940a5} 
 \index{o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}!i\+Vessel@{i\+Vessel}}
 \index{i\+Vessel@{i\+Vessel}!o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}}
-\subsubsection[{\texorpdfstring{i\+Vessel()}{iVessel()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::i\+Vessel\+::i\+Vessel (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1i_vessel_a28f9a5ff20f10dc68261b646da3940a5}{}\label{classo_cpt_1_1i_vessel_a28f9a5ff20f10dc68261b646da3940a5}
+\subsubsection{\texorpdfstring{i\+Vessel()}{iVessel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Vessel\+::i\+Vessel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 Constructor of the vessel interface \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+
+
+Definition at line 9 of file Vessel.\+cpp.
+
+\hypertarget{classo_cpt_1_1i_vessel_ac4f486fcfad657f860da2062fef9d7d6}{}\label{classo_cpt_1_1i_vessel_ac4f486fcfad657f860da2062fef9d7d6} 
 \index{o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}!i\+Vessel@{i\+Vessel}}
 \index{i\+Vessel@{i\+Vessel}!o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}}
-\subsubsection[{\texorpdfstring{i\+Vessel(i\+Controller\+::ptr controller)}{iVessel(iController::ptr controller)}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::i\+Vessel\+::i\+Vessel (
-\begin{DoxyParamCaption}
-\item[{{\bf i\+Controller\+::ptr}}]{controller}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1i_vessel_ac4f486fcfad657f860da2062fef9d7d6}{}\label{classo_cpt_1_1i_vessel_ac4f486fcfad657f860da2062fef9d7d6}
+\subsubsection{\texorpdfstring{i\+Vessel()}{iVessel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Vessel\+::i\+Vessel (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr}}]{controller }\end{DoxyParamCaption})}
+
 Constructor of the vessel interface 
 \begin{DoxyParams}{Parameters}
 {\em controller} & shared\+\_\+ptr to the controller \\
@@ -84,67 +96,85 @@ Constructor of the vessel interface
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+
+
+Definition at line 11 of file Vessel.\+cpp.
+
+\hypertarget{classo_cpt_1_1i_vessel_acceefb7d9bffed4f4d8c86fa6808ec23}{}\label{classo_cpt_1_1i_vessel_acceefb7d9bffed4f4d8c86fa6808ec23} 
 \index{o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}!````~i\+Vessel@{$\sim$i\+Vessel}}
 \index{````~i\+Vessel@{$\sim$i\+Vessel}!o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}}
-\subsubsection[{\texorpdfstring{$\sim$i\+Vessel()}{~iVessel()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::i\+Vessel\+::$\sim$i\+Vessel (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1i_vessel_acceefb7d9bffed4f4d8c86fa6808ec23}{}\label{classo_cpt_1_1i_vessel_acceefb7d9bffed4f4d8c86fa6808ec23}
+\subsubsection{\texorpdfstring{$\sim$i\+Vessel()}{~iVessel()}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Vessel\+::$\sim$i\+Vessel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 Deconstructor 
 
+Definition at line 13 of file Vessel.\+cpp.
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1i_vessel_aa0c1f81d32a997bb3be3a4edb292b8f9}{}\label{classo_cpt_1_1i_vessel_aa0c1f81d32a997bb3be3a4edb292b8f9} 
 \index{o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}!get\+Stop\+Thread@{get\+Stop\+Thread}}
 \index{get\+Stop\+Thread@{get\+Stop\+Thread}!o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}}
-\subsubsection[{\texorpdfstring{get\+Stop\+Thread() const }{getStopThread() const }}]{\setlength{\rightskip}{0pt plus 5cm}const boost\+::shared\+\_\+ptr$<$ bool $>$ \& o\+Cpt\+::i\+Vessel\+::get\+Stop\+Thread (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const}\hypertarget{classo_cpt_1_1i_vessel_a542f07098bb7e1495a4273044ba323ce}{}\label{classo_cpt_1_1i_vessel_a542f07098bb7e1495a4273044ba323ce}
+\subsubsection{\texorpdfstring{get\+Stop\+Thread()}{getStopThread()}}
+{\footnotesize\ttfamily const boost\+::shared\+\_\+ptr$<$ bool $>$ \& o\+Cpt\+::i\+Vessel\+::get\+Stop\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 Get the stop thread variable \begin{DoxyReturn}{Returns}
 shared\+\_\+ptr for each each thread; 
 \end{DoxyReturn}
+
+
+Definition at line 15 of file Vessel.\+cpp.
+
+
+
+References stop\+Thread\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_vessel_a866ddfa5330bbb24277de57554a41811}{}\label{classo_cpt_1_1i_vessel_a866ddfa5330bbb24277de57554a41811} 
 \index{o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}!initialize@{initialize}}
 \index{initialize@{initialize}!o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}}
-\subsubsection[{\texorpdfstring{initialize()=0}{initialize()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void o\+Cpt\+::i\+Vessel\+::initialize (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classo_cpt_1_1i_vessel_a866ddfa5330bbb24277de57554a41811}{}\label{classo_cpt_1_1i_vessel_a866ddfa5330bbb24277de57554a41811}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Vessel\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 Initialize the vessel 
 
 Implemented in \hyperlink{classo_cpt_1_1_vessel_a64af8c6be9c915b76f37cff6abc5be36}{o\+Cpt\+::\+Vessel}.
 
+\hypertarget{classo_cpt_1_1i_vessel_a636c138c3d8cb4ddbb2725d36fb12e07}{}\label{classo_cpt_1_1i_vessel_a636c138c3d8cb4ddbb2725d36fb12e07} 
 \index{o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}!run@{run}}
 \index{run@{run}!o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}}
-\subsubsection[{\texorpdfstring{run()=0}{run()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void o\+Cpt\+::i\+Vessel\+::run (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classo_cpt_1_1i_vessel_a636c138c3d8cb4ddbb2725d36fb12e07}{}\label{classo_cpt_1_1i_vessel_a636c138c3d8cb4ddbb2725d36fb12e07}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Vessel\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 Run the vessel normal operations 
 
 Implemented in \hyperlink{classo_cpt_1_1_vessel_a6cd07e32cc601b1f3a45881b42ea36ef}{o\+Cpt\+::\+Vessel}.
 
+\hypertarget{classo_cpt_1_1i_vessel_aacfbb96114c16a264b133e2d75c5a083}{}\label{classo_cpt_1_1i_vessel_aacfbb96114c16a264b133e2d75c5a083} 
 \index{o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}!set\+Stop\+Thread@{set\+Stop\+Thread}}
 \index{set\+Stop\+Thread@{set\+Stop\+Thread}!o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}}
-\subsubsection[{\texorpdfstring{set\+Stop\+Thread(const boost\+::shared\+\_\+ptr$<$ bool $>$ \&stop\+Thread)}{setStopThread(const boost::shared_ptr< bool > &stopThread)}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::i\+Vessel\+::set\+Stop\+Thread (
-\begin{DoxyParamCaption}
-\item[{const boost\+::shared\+\_\+ptr$<$ bool $>$ \&}]{stop\+Thread}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1i_vessel_aacfbb96114c16a264b133e2d75c5a083}{}\label{classo_cpt_1_1i_vessel_aacfbb96114c16a264b133e2d75c5a083}
+\subsubsection{\texorpdfstring{set\+Stop\+Thread()}{setStopThread()}}
+{\footnotesize\ttfamily void o\+Cpt\+::i\+Vessel\+::set\+Stop\+Thread (\begin{DoxyParamCaption}\item[{const boost\+::shared\+\_\+ptr$<$ bool $>$ \&}]{stop\+Thread }\end{DoxyParamCaption})}
+
 Set the stop thread variable 
 \begin{DoxyParams}{Parameters}
 {\em stop\+Thread} & a shared\+\_\+ptr for all threads \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 19 of file Vessel.\+cpp.
+
+
+
+References stop\+Thread\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_vessel_a1cfbb23ae3e73a3587688bf7fbc3f0af}{}\label{classo_cpt_1_1i_vessel_a1cfbb23ae3e73a3587688bf7fbc3f0af} 
 \index{o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}!stop@{stop}}
 \index{stop@{stop}!o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}}
-\subsubsection[{\texorpdfstring{stop()=0}{stop()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void o\+Cpt\+::i\+Vessel\+::stop (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classo_cpt_1_1i_vessel_a1cfbb23ae3e73a3587688bf7fbc3f0af}{}\label{classo_cpt_1_1i_vessel_a1cfbb23ae3e73a3587688bf7fbc3f0af}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Vessel\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 Stop the vessel, everything except critical parts, which are needed to survive 
 
 Implemented in \hyperlink{classo_cpt_1_1_vessel_a87e321618ea1d1ca21fffbe64bbffbc0}{o\+Cpt\+::\+Vessel}.
@@ -152,12 +182,23 @@ Implemented in \hyperlink{classo_cpt_1_1_vessel_a87e321618ea1d1ca21fffbe64bbffbc
 
 
 \subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1i_vessel_a9f52bb65db31b6eea42e29a6213dd78a}{}\label{classo_cpt_1_1i_vessel_a9f52bb65db31b6eea42e29a6213dd78a} 
 \index{o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}!stop\+Thread\+\_\+@{stop\+Thread\+\_\+}}
 \index{stop\+Thread\+\_\+@{stop\+Thread\+\_\+}!o\+Cpt\+::i\+Vessel@{o\+Cpt\+::i\+Vessel}}
-\subsubsection[{\texorpdfstring{stop\+Thread\+\_\+}{stopThread_}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$bool$>$ o\+Cpt\+::i\+Vessel\+::stop\+Thread\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classo_cpt_1_1i_vessel_a9f52bb65db31b6eea42e29a6213dd78a}{}\label{classo_cpt_1_1i_vessel_a9f52bb65db31b6eea42e29a6213dd78a}
+\subsubsection{\texorpdfstring{stop\+Thread\+\_\+}{stopThread\_}}
+{\footnotesize\ttfamily boost\+::shared\+\_\+ptr$<$bool$>$ o\+Cpt\+::i\+Vessel\+::stop\+Thread\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 The global shared pointer for stopping all threads. 
+
+
+
+Definition at line 74 of file Vessel.\+h.
+
+
+
+Referenced by get\+Stop\+Thread(), set\+Stop\+Thread(), o\+Cpt\+::\+Vessel\+::stop(), and o\+Cpt\+::\+Vessel\+::\+Vessel().
 
 
 

@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for o\+Cpt\+:\+:protocol\+:\+:adc\+:
-\nopagebreak
+Inheritance diagram for o\+Cpt\+:\+:protocol\+:\+:adc\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for o\+Cpt\+:\+:protocol\+:\+:adc\+:
 \end{figure}
 
 
-Collaboration diagram for o\+Cpt\+:\+:protocol\+:\+:adc\+:
-\nopagebreak
+Collaboration diagram for o\+Cpt\+:\+:protocol\+:\+:adc\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -42,69 +40,186 @@ bool \hyperlink{classo_cpt_1_1protocol_1_1adc_afd7e7e1ab0855f53227a4fbf91449687}
 \item 
 bool \hyperlink{classo_cpt_1_1protocol_1_1adc_ae5ff90755d50ef617e9c00d704a88f52}{compare} (const uint8\+\_\+t \&id, const uint8\+\_\+t \&device=0)
 \end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{classo_cpt_1_1protocol_1_1adc_a1ea5bd6df6c5163f98dd097796afddb7}{id\+\_\+} = 0
+\item 
+uint8\+\_\+t \hyperlink{classo_cpt_1_1protocol_1_1adc_a0781bbf803cff1a30fb79bc2118ee771}{device\+\_\+} = 0
+\item 
+std\+::string \hyperlink{classo_cpt_1_1protocol_1_1adc_a23481c789dd95444a3e9a19beb5b044e}{path\+\_\+} = \char`\"{}\char`\"{}
+\item 
+uint16\+\_\+t \hyperlink{classo_cpt_1_1protocol_1_1adc_a79ed77ed852cbe9c1b23e9c3601ffdb7}{value\+\_\+} = 0
+\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+The Analogue to Digital converter class. This class reads the voltage of an analogie pin, from user space. 
+
+Definition at line 89 of file Controller.\+h.
+
+
+
 \subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff}{}\label{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff} 
 \index{o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}!ptr@{ptr}}
 \index{ptr@{ptr}!o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}}
-\subsubsection[{\texorpdfstring{ptr}{ptr}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::shared\+\_\+ptr$<${\bf adc}$>$ {\bf o\+Cpt\+::protocol\+::adc\+::ptr}}\hypertarget{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff}{}\label{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$\hyperlink{classo_cpt_1_1protocol_1_1adc}{adc}$>$ \hyperlink{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff}{o\+Cpt\+::protocol\+::adc\+::ptr}}
+
+
+
+Definition at line 91 of file Controller.\+h.
+
 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1protocol_1_1adc_aec27fd40080992220a7b641adcdfe9f9}{}\label{classo_cpt_1_1protocol_1_1adc_aec27fd40080992220a7b641adcdfe9f9} 
 \index{o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}!adc@{adc}}
 \index{adc@{adc}!o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}}
-\subsubsection[{\texorpdfstring{adc(uint8\+\_\+t id, uint8\+\_\+t device, std\+::string mod\+Name="""")}{adc(uint8_t id, uint8_t device, std::string modName="")}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::protocol\+::adc\+::adc (
-\begin{DoxyParamCaption}
-\item[{uint8\+\_\+t}]{id, }
-\item[{uint8\+\_\+t}]{device, }
-\item[{std\+::string}]{mod\+Name = {\ttfamily \char`\"{}\char`\"{}}}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1protocol_1_1adc_aec27fd40080992220a7b641adcdfe9f9}{}\label{classo_cpt_1_1protocol_1_1adc_aec27fd40080992220a7b641adcdfe9f9}
+\subsubsection{\texorpdfstring{adc()}{adc()}}
+{\footnotesize\ttfamily o\+Cpt\+::protocol\+::adc\+::adc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id,  }\item[{uint8\+\_\+t}]{device,  }\item[{std\+::string}]{mod\+Name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+The constructor of the adc class 
+\begin{DoxyParams}{Parameters}
+{\em id} & the pin ID as an uint8\+\_\+t value \\
+\hline
+{\em device} & the device or chip which handles the communication with the analogue pins \\
+\hline
+{\em mod\+Name} & the name of the modules which needs to be loaded T\+O\+DO check if it is allways needed to load a module \\
+\hline
+\end{DoxyParams}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Definition at line 61 of file Controller.\+cpp.
+
+
+
+References A\+D\+C\+\_\+\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH, A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+P\+A\+TH, A\+D\+C\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+S\+U\+B\+\_\+\+P\+A\+TH, o\+Cpt\+::protocol\+::userspace\+::file\+Exist(), and o\+Cpt\+::protocol\+::userspace\+::mod\+Loaded().
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1adc_aec27fd40080992220a7b641adcdfe9f9_cgraph}
 \end{center}
 \end{figure}
-
-
+\hypertarget{classo_cpt_1_1protocol_1_1adc_ae61f97f81f6d76d5fc5fd783f49464ee}{}\label{classo_cpt_1_1protocol_1_1adc_ae61f97f81f6d76d5fc5fd783f49464ee} 
 \index{o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}!````~adc@{$\sim$adc}}
 \index{````~adc@{$\sim$adc}!o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}}
-\subsubsection[{\texorpdfstring{$\sim$adc()}{~adc()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::protocol\+::adc\+::$\sim$adc (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1protocol_1_1adc_ae61f97f81f6d76d5fc5fd783f49464ee}{}\label{classo_cpt_1_1protocol_1_1adc_ae61f97f81f6d76d5fc5fd783f49464ee}
+\subsubsection{\texorpdfstring{$\sim$adc()}{~adc()}}
+{\footnotesize\ttfamily o\+Cpt\+::protocol\+::adc\+::$\sim$adc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The deconstrcutor 
+
+Definition at line 79 of file Controller.\+cpp.
+
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1protocol_1_1adc_ae5ff90755d50ef617e9c00d704a88f52}{}\label{classo_cpt_1_1protocol_1_1adc_ae5ff90755d50ef617e9c00d704a88f52} 
 \index{o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}!compare@{compare}}
 \index{compare@{compare}!o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}}
-\subsubsection[{\texorpdfstring{compare(const uint8\+\_\+t \&id, const uint8\+\_\+t \&device=0)}{compare(const uint8_t &id, const uint8_t &device=0)}}]{\setlength{\rightskip}{0pt plus 5cm}bool o\+Cpt\+::protocol\+::adc\+::compare (
-\begin{DoxyParamCaption}
-\item[{const uint8\+\_\+t \&}]{id, }
-\item[{const uint8\+\_\+t \&}]{device = {\ttfamily 0}}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1protocol_1_1adc_ae5ff90755d50ef617e9c00d704a88f52}{}\label{classo_cpt_1_1protocol_1_1adc_ae5ff90755d50ef617e9c00d704a88f52}
+\subsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily bool o\+Cpt\+::protocol\+::adc\+::compare (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \&}]{id,  }\item[{const uint8\+\_\+t \&}]{device = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Compare function 
+\begin{DoxyParams}{Parameters}
+{\em id} & ID to be checked \\
+\hline
+{\em device} & Device name to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+either true or false 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file Controller.\+cpp.
+
+\hypertarget{classo_cpt_1_1protocol_1_1adc_a78a1abf9c5d72b7da8efea1be21e0a85}{}\label{classo_cpt_1_1protocol_1_1adc_a78a1abf9c5d72b7da8efea1be21e0a85} 
 \index{o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}!get\+Value@{get\+Value}}
 \index{get\+Value@{get\+Value}!o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}}
-\subsubsection[{\texorpdfstring{get\+Value()}{getValue()}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t \& o\+Cpt\+::protocol\+::adc\+::get\+Value (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1protocol_1_1adc_a78a1abf9c5d72b7da8efea1be21e0a85}{}\label{classo_cpt_1_1protocol_1_1adc_a78a1abf9c5d72b7da8efea1be21e0a85}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily uint16\+\_\+t \& o\+Cpt\+::protocol\+::adc\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+gets the current raw voltage level as resolution \begin{DoxyReturn}{Returns}
+the raw voltage level as uint16\+\_\+t 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file Controller.\+cpp.
+
+\hypertarget{classo_cpt_1_1protocol_1_1adc_afd7e7e1ab0855f53227a4fbf91449687}{}\label{classo_cpt_1_1protocol_1_1adc_afd7e7e1ab0855f53227a4fbf91449687} 
 \index{o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}!operator==@{operator==}}
 \index{operator==@{operator==}!o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}}
-\subsubsection[{\texorpdfstring{operator==(const adc \&rhs)}{operator==(const adc &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}bool o\+Cpt\+::protocol\+::adc\+::operator== (
-\begin{DoxyParamCaption}
-\item[{const {\bf adc} \&}]{rhs}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1protocol_1_1adc_afd7e7e1ab0855f53227a4fbf91449687}{}\label{classo_cpt_1_1protocol_1_1adc_afd7e7e1ab0855f53227a4fbf91449687}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool o\+Cpt\+::protocol\+::adc\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classo_cpt_1_1protocol_1_1adc}{adc} \&}]{rhs }\end{DoxyParamCaption})}
+
+Checks if adc object is the same 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & other adc object, to be checked against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+either true or false 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file Controller.\+cpp.
+
+
+
+References path\+\_\+.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1protocol_1_1adc_a0781bbf803cff1a30fb79bc2118ee771}{}\label{classo_cpt_1_1protocol_1_1adc_a0781bbf803cff1a30fb79bc2118ee771} 
+\index{o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}!device\+\_\+@{device\+\_\+}}
+\index{device\+\_\+@{device\+\_\+}!o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}}
+\subsubsection{\texorpdfstring{device\+\_\+}{device\_}}
+{\footnotesize\ttfamily uint8\+\_\+t o\+Cpt\+::protocol\+::adc\+::device\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 130 of file Controller.\+h.
+
+\hypertarget{classo_cpt_1_1protocol_1_1adc_a1ea5bd6df6c5163f98dd097796afddb7}{}\label{classo_cpt_1_1protocol_1_1adc_a1ea5bd6df6c5163f98dd097796afddb7} 
+\index{o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}!id\+\_\+@{id\+\_\+}}
+\index{id\+\_\+@{id\+\_\+}!o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}}
+\subsubsection{\texorpdfstring{id\+\_\+}{id\_}}
+{\footnotesize\ttfamily uint8\+\_\+t o\+Cpt\+::protocol\+::adc\+::id\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 129 of file Controller.\+h.
+
+\hypertarget{classo_cpt_1_1protocol_1_1adc_a23481c789dd95444a3e9a19beb5b044e}{}\label{classo_cpt_1_1protocol_1_1adc_a23481c789dd95444a3e9a19beb5b044e} 
+\index{o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}!path\+\_\+@{path\+\_\+}}
+\index{path\+\_\+@{path\+\_\+}!o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}}
+\subsubsection{\texorpdfstring{path\+\_\+}{path\_}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::protocol\+::adc\+::path\+\_\+ = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 131 of file Controller.\+h.
+
+
+
+Referenced by operator==().
+
+\hypertarget{classo_cpt_1_1protocol_1_1adc_a79ed77ed852cbe9c1b23e9c3601ffdb7}{}\label{classo_cpt_1_1protocol_1_1adc_a79ed77ed852cbe9c1b23e9c3601ffdb7} 
+\index{o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}!value\+\_\+@{value\+\_\+}}
+\index{value\+\_\+@{value\+\_\+}!o\+Cpt\+::protocol\+::adc@{o\+Cpt\+::protocol\+::adc}}
+\subsubsection{\texorpdfstring{value\+\_\+}{value\_}}
+{\footnotesize\ttfamily uint16\+\_\+t o\+Cpt\+::protocol\+::adc\+::value\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 132 of file Controller.\+h.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

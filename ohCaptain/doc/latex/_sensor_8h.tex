@@ -1,15 +1,16 @@
 \hypertarget{_sensor_8h}{}\section{include/\+Core/\+Sensor.h File Reference}
 \label{_sensor_8h}\index{include/\+Core/\+Sensor.\+h@{include/\+Core/\+Sensor.\+h}}
-{\ttfamily \#include $<$boost/shared\+\_\+ptr.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/signals2.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/chrono.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/asio/steady\+\_\+timer.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/asio.\+hpp$>$}\\*
-{\ttfamily \#include $<$boost/date\+\_\+time/posix\+\_\+time/posix\+\_\+time.\+hpp$>$}\\*
-{\ttfamily \#include $<$string$>$}\\*
-{\ttfamily \#include $<$vector$>$}\\*
-{\ttfamily \#include \char`\"{}Controller.\+h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}Exception.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$boost/shared\+\_\+ptr.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/signals2.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/chrono.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/steady\+\_\+timer.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/date\+\_\+time/posix\+\_\+time/posix\+\_\+time.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/any.\+hpp$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}Controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Exception.\+h\char`\"{}}\newline
 Include dependency graph for Sensor.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -40,3 +41,28 @@ class \hyperlink{classo_cpt_1_1_sensor}{o\+Cpt\+::\+Sensor}
 \item 
  \hyperlink{namespaceo_cpt}{o\+Cpt}
 \end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_sensor_8h_a1edee5ac6b15c590def9ae3e0bfa8d48}{C\+A\+ST}(x,  t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_sensor_8h_a1edee5ac6b15c590def9ae3e0bfa8d48}{}\label{_sensor_8h_a1edee5ac6b15c590def9ae3e0bfa8d48} 
+\index{Sensor.\+h@{Sensor.\+h}!C\+A\+ST@{C\+A\+ST}}
+\index{C\+A\+ST@{C\+A\+ST}!Sensor.\+h@{Sensor.\+h}}
+\subsubsection{\texorpdfstring{C\+A\+ST}{CAST}}
+{\footnotesize\ttfamily \#define C\+A\+ST(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{t }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+boost::any\_cast<t::ReturnValue\_t>(x) \textcolor{comment}{/*<! CAST the return value of a generic boost::any object, which can
+       change for each sensor to a the proper return value. where the first parameter is the getState().Value and
+       the second is the Sensor Class.}
+\textcolor{comment}{ */}
+\end{DoxyCode}
+
+
+Definition at line 21 of file Sensor.\+h.
+

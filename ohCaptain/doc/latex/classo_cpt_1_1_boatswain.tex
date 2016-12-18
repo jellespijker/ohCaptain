@@ -6,22 +6,20 @@
 
 
 
-Inheritance diagram for o\+Cpt\+:\+:Boatswain\+:
-\nopagebreak
+Inheritance diagram for o\+Cpt\+:\+:Boatswain\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=207pt]{classo_cpt_1_1_boatswain__inherit__graph}
+\includegraphics[width=208pt]{classo_cpt_1_1_boatswain__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for o\+Cpt\+:\+:Boatswain\+:
-\nopagebreak
+Collaboration diagram for o\+Cpt\+:\+:Boatswain\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=207pt]{classo_cpt_1_1_boatswain__coll__graph}
+\includegraphics[width=208pt]{classo_cpt_1_1_boatswain__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -40,6 +38,8 @@ virtual void \hyperlink{classo_cpt_1_1_boatswain_aa1c27c710e2156402c3851ac189ea1
 virtual void \hyperlink{classo_cpt_1_1_boatswain_ab36071db5e3f8a0db0053b5553e508f0}{register\+Sensor} (\hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{i\+Sensor\+::ptr} sensor) override
 \item 
 virtual void \hyperlink{classo_cpt_1_1_boatswain_ae3f318352a331d64840ff87ad1ce3e8e}{register\+Actuator} (\hyperlink{classo_cpt_1_1i_actuator_a35847799558e92bb84fb6c71de772cac}{i\+Actuator\+::ptr} actuator) override
+\item 
+virtual void \hyperlink{classo_cpt_1_1_boatswain_a7abff24ce1f199690a4890793ff8c23c}{register\+Comm} (\hyperlink{classo_cpt_1_1i_comm_af0c655f143251b7d03fcd98f89637228}{i\+Comm\+::ptr} comm) override
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -49,125 +49,208 @@ void \hyperlink{classo_cpt_1_1_boatswain_aca864b4219485c6d83ad0e92c7ea16fd}{rese
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+The \hyperlink{classo_cpt_1_1_boatswain}{Boatswain} performs all the labours tasks, suchs updateing and interpretting sensor readings, setting actuators according to the \hyperlink{classo_cpt_1_1_captain}{Captain} wishes, updating the state representation of the vessel in the \hyperlink{classo_cpt_1_1_world}{World}. Each \hyperlink{classo_cpt_1_1_boatswain}{Boatswain} runs on its own thread. It is possible for a vessel to have multiple Boatswains, responsible for multiple tasks, such as communication, localization, steering. Each \hyperlink{classo_cpt_1_1_boatswain}{Boatswain} has to adhere to the \hyperlink{classo_cpt_1_1i_boatswain}{i\+Boatswain} interface. 
+
+Definition at line 113 of file Boatswain.\+h.
+
+
+
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1_boatswain_a43e10039b53b8bde7ad2e9780db68949}{}\label{classo_cpt_1_1_boatswain_a43e10039b53b8bde7ad2e9780db68949} 
 \index{o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}!Boatswain@{Boatswain}}
 \index{Boatswain@{Boatswain}!o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}}
-\subsubsection[{\texorpdfstring{Boatswain(i\+Controller\+::ptr controller)}{Boatswain(iController::ptr controller)}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+Boatswain\+::\+Boatswain (
-\begin{DoxyParamCaption}
-\item[{{\bf i\+Controller\+::ptr}}]{controller}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1_boatswain_a43e10039b53b8bde7ad2e9780db68949}{}\label{classo_cpt_1_1_boatswain_a43e10039b53b8bde7ad2e9780db68949}
+\subsubsection{\texorpdfstring{Boatswain()}{Boatswain()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+Boatswain\+::\+Boatswain (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr}}]{controller }\end{DoxyParamCaption})}
+
+The constructor for a \hyperlink{classo_cpt_1_1_boatswain}{Boatswain} 
+\begin{DoxyParams}{Parameters}
+{\em controller} & a shared\+\_\+ptr to the controller with which teh \hyperlink{classo_cpt_1_1_boatswain}{Boatswain} interacts \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file Boatswain.\+cpp.
+
+\hypertarget{classo_cpt_1_1_boatswain_a0cff16b78dc5ee0e6b5d2169d693036f}{}\label{classo_cpt_1_1_boatswain_a0cff16b78dc5ee0e6b5d2169d693036f} 
 \index{o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}!````~Boatswain@{$\sim$\+Boatswain}}
 \index{````~Boatswain@{$\sim$\+Boatswain}!o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}}
-\subsubsection[{\texorpdfstring{$\sim$\+Boatswain() override}{~Boatswain() override}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+Boatswain\+::$\sim$\+Boatswain (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_boatswain_a0cff16b78dc5ee0e6b5d2169d693036f}{}\label{classo_cpt_1_1_boatswain_a0cff16b78dc5ee0e6b5d2169d693036f}
+\subsubsection{\texorpdfstring{$\sim$\+Boatswain()}{~Boatswain()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+Boatswain\+::$\sim$\+Boatswain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Deconstructor 
+
+Definition at line 33 of file Boatswain.\+cpp.
+
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1_boatswain_aa1c27c710e2156402c3851ac189ea162}{}\label{classo_cpt_1_1_boatswain_aa1c27c710e2156402c3851ac189ea162} 
 \index{o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}!initialize@{initialize}}
 \index{initialize@{initialize}!o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}}
-\subsubsection[{\texorpdfstring{initialize() override}{initialize() override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Boatswain\+::initialize (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_boatswain_aa1c27c710e2156402c3851ac189ea162}{}\label{classo_cpt_1_1_boatswain_aa1c27c710e2156402c3851ac189ea162}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Boatswain\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Initialize the \hyperlink{classo_cpt_1_1_boatswain}{Boatswain} 
 
 Implements \hyperlink{classo_cpt_1_1i_boatswain_a0749ff59de42e7a8a47586ab9d9ac98f}{o\+Cpt\+::i\+Boatswain}.
 
+
+
+Definition at line 48 of file Boatswain.\+cpp.
+
+\hypertarget{classo_cpt_1_1_boatswain_ae3f318352a331d64840ff87ad1ce3e8e}{}\label{classo_cpt_1_1_boatswain_ae3f318352a331d64840ff87ad1ce3e8e} 
 \index{o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}!register\+Actuator@{register\+Actuator}}
 \index{register\+Actuator@{register\+Actuator}!o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}}
-\subsubsection[{\texorpdfstring{register\+Actuator(i\+Actuator\+::ptr actuator) override}{registerActuator(iActuator::ptr actuator) override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Boatswain\+::register\+Actuator (
-\begin{DoxyParamCaption}
-\item[{{\bf i\+Actuator\+::ptr}}]{actuator}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_boatswain_ae3f318352a331d64840ff87ad1ce3e8e}{}\label{classo_cpt_1_1_boatswain_ae3f318352a331d64840ff87ad1ce3e8e}
+\subsubsection{\texorpdfstring{register\+Actuator()}{registerActuator()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Boatswain\+::register\+Actuator (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_actuator_a35847799558e92bb84fb6c71de772cac}{i\+Actuator\+::ptr}}]{actuator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Register a new \hyperlink{classo_cpt_1_1_actuator}{Actuator} with the \hyperlink{classo_cpt_1_1_boatswain}{Boatswain} 
+\begin{DoxyParams}{Parameters}
+{\em actuator} & a shared\+\_\+ptr to an \hyperlink{classo_cpt_1_1_actuator}{Actuator} \\
+\hline
+\end{DoxyParams}
 
 
 Implements \hyperlink{classo_cpt_1_1i_boatswain_a7915584ee17a28b1fc506a8968e27387}{o\+Cpt\+::i\+Boatswain}.
 
+
+
+Definition at line 71 of file Boatswain.\+cpp.
+
+\hypertarget{classo_cpt_1_1_boatswain_a7abff24ce1f199690a4890793ff8c23c}{}\label{classo_cpt_1_1_boatswain_a7abff24ce1f199690a4890793ff8c23c} 
+\index{o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}!register\+Comm@{register\+Comm}}
+\index{register\+Comm@{register\+Comm}!o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}}
+\subsubsection{\texorpdfstring{register\+Comm()}{registerComm()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Boatswain\+::register\+Comm (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_comm_af0c655f143251b7d03fcd98f89637228}{i\+Comm\+::ptr}}]{comm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Register a new \hyperlink{classo_cpt_1_1i_comm}{i\+Comm} device by setting a shared IO service 
+\begin{DoxyParams}{Parameters}
+{\em comm} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classo_cpt_1_1i_boatswain_aebae826c7516c1688e94d84de5606cac}{o\+Cpt\+::i\+Boatswain}.
+
+
+
+Definition at line 100 of file Boatswain.\+cpp.
+
+
+
+References o\+Cpt\+::i\+Boatswain\+::ioservice\+\_\+.
+
+\hypertarget{classo_cpt_1_1_boatswain_ab36071db5e3f8a0db0053b5553e508f0}{}\label{classo_cpt_1_1_boatswain_ab36071db5e3f8a0db0053b5553e508f0} 
 \index{o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}!register\+Sensor@{register\+Sensor}}
 \index{register\+Sensor@{register\+Sensor}!o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}}
-\subsubsection[{\texorpdfstring{register\+Sensor(i\+Sensor\+::ptr sensor) override}{registerSensor(iSensor::ptr sensor) override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Boatswain\+::register\+Sensor (
-\begin{DoxyParamCaption}
-\item[{{\bf i\+Sensor\+::ptr}}]{sensor}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_boatswain_ab36071db5e3f8a0db0053b5553e508f0}{}\label{classo_cpt_1_1_boatswain_ab36071db5e3f8a0db0053b5553e508f0}
+\subsubsection{\texorpdfstring{register\+Sensor()}{registerSensor()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Boatswain\+::register\+Sensor (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{i\+Sensor\+::ptr}}]{sensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Register a new \hyperlink{classo_cpt_1_1_sensor}{Sensor} with the \hyperlink{classo_cpt_1_1_boatswain}{Boatswain}. If the Timer for the \hyperlink{classo_cpt_1_1_sensor}{Sensor} is set to a value greater the 0, the \hyperlink{classo_cpt_1_1_sensor}{Sensor} is registered with the timer\+Sensors\+\_\+ and a timer is set. Otherwise the \hyperlink{classo_cpt_1_1_sensor}{Sensor} is registered as a manual\+Sensors\+\_\+ 
+\begin{DoxyParams}{Parameters}
+{\em sensor} & a shared\+\_\+ptr to a \hyperlink{classo_cpt_1_1_sensor}{Sensor} \\
+\hline
+\end{DoxyParams}
+If the timer is set for the sensor, create a new timer service, register the sensor with the timer sensors, and set the callback functions to execute the \hyperlink{classo_cpt_1_1_sensor_aef25b0e5f3a8358ee81c97c73909fbe6}{Sensor\+::run} function and the internall reset\+Timer function. If the timer is not set register the Sonsor with the manual sensor.
 
 Implements \hyperlink{classo_cpt_1_1i_boatswain_aa9f9014202617a705d7ce21db2877222}{o\+Cpt\+::i\+Boatswain}.
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Definition at line 52 of file Boatswain.\+cpp.
+
+
+
+References o\+Cpt\+::i\+Boatswain\+::ioservice\+\_\+, o\+Cpt\+::i\+Boatswain\+::manual\+Sensors\+\_\+, reset\+Timer(), o\+Cpt\+::i\+Sensor\+::run(), o\+Cpt\+::i\+Boatswain\+::timers\+\_\+, and o\+Cpt\+::i\+Boatswain\+::timer\+Sensors\+\_\+.
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classo_cpt_1_1_boatswain_ab36071db5e3f8a0db0053b5553e508f0_cgraph}
 \end{center}
 \end{figure}
-
-
+\hypertarget{classo_cpt_1_1_boatswain_aca864b4219485c6d83ad0e92c7ea16fd}{}\label{classo_cpt_1_1_boatswain_aca864b4219485c6d83ad0e92c7ea16fd} 
 \index{o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}!reset\+Timer@{reset\+Timer}}
 \index{reset\+Timer@{reset\+Timer}!o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}}
-\subsubsection[{\texorpdfstring{reset\+Timer(i\+Sensor\+::ptr sensor) override}{resetTimer(iSensor::ptr sensor) override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Boatswain\+::reset\+Timer (
-\begin{DoxyParamCaption}
-\item[{{\bf i\+Sensor\+::ptr}}]{sensor}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_boatswain_aca864b4219485c6d83ad0e92c7ea16fd}{}\label{classo_cpt_1_1_boatswain_aca864b4219485c6d83ad0e92c7ea16fd}
+\subsubsection{\texorpdfstring{reset\+Timer()}{resetTimer()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Boatswain\+::reset\+Timer (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{i\+Sensor\+::ptr}}]{sensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
+reset the timer of a \hyperlink{classo_cpt_1_1_sensor}{Sensor} 
+\begin{DoxyParams}{Parameters}
+{\em sensor} & a shared\+\_\+ptr to the \hyperlink{classo_cpt_1_1_sensor}{Sensor} \\
+\hline
+\end{DoxyParams}
+Don\textquotesingle{}t excute if the thread is stopped
+
+Find the current index of the sensor, this could maybe optimized by using a mappping list
+
+Set the new timer. drift isn\textquotesingle{}t taken into account at the current time.
 
 Implements \hyperlink{classo_cpt_1_1i_boatswain_a863c877ec067c55b5e06a04d0d9648ce}{o\+Cpt\+::i\+Boatswain}.
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Definition at line 75 of file Boatswain.\+cpp.
+
+
+
+References o\+Cpt\+::i\+Boatswain\+::ioservice\+\_\+, o\+Cpt\+::i\+Boatswain\+::local\+Stop\+Thread\+\_\+, o\+Cpt\+::i\+Sensor\+::run(), o\+Cpt\+::i\+Boatswain\+::stop\+Thread\+\_\+, o\+Cpt\+::i\+Boatswain\+::timers\+\_\+, and o\+Cpt\+::i\+Boatswain\+::timer\+Sensors\+\_\+.
+
+
+
+Referenced by register\+Sensor().
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classo_cpt_1_1_boatswain_aca864b4219485c6d83ad0e92c7ea16fd_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classo_cpt_1_1_boatswain_aca864b4219485c6d83ad0e92c7ea16fd_icgraph}
 \end{center}
 \end{figure}
-
-
+\hypertarget{classo_cpt_1_1_boatswain_a7665a4439b8e71ece31ff5e9755caf09}{}\label{classo_cpt_1_1_boatswain_a7665a4439b8e71ece31ff5e9755caf09} 
 \index{o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}!run@{run}}
 \index{run@{run}!o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}}
-\subsubsection[{\texorpdfstring{run() override}{run() override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Boatswain\+::run (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_boatswain_a7665a4439b8e71ece31ff5e9755caf09}{}\label{classo_cpt_1_1_boatswain_a7665a4439b8e71ece31ff5e9755caf09}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Boatswain\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Make the \hyperlink{classo_cpt_1_1_boatswain}{Boatswain} work and execute the actuators, sensors and communications 
 
 Implements \hyperlink{classo_cpt_1_1i_boatswain_a4512e742ba996b32dcc452d9f180724a}{o\+Cpt\+::i\+Boatswain}.
 
+
+
+Definition at line 37 of file Boatswain.\+cpp.
+
+
+
+References o\+Cpt\+::i\+Boatswain\+::ioservice\+\_\+, and o\+Cpt\+::i\+Boatswain\+::manual\+Sensors\+\_\+.
+
+\hypertarget{classo_cpt_1_1_boatswain_ad538cca1d6429dacf09b22c53291074f}{}\label{classo_cpt_1_1_boatswain_ad538cca1d6429dacf09b22c53291074f} 
 \index{o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}!stop@{stop}}
 \index{stop@{stop}!o\+Cpt\+::\+Boatswain@{o\+Cpt\+::\+Boatswain}}
-\subsubsection[{\texorpdfstring{stop() override}{stop() override}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::\+Boatswain\+::stop (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_boatswain_ad538cca1d6429dacf09b22c53291074f}{}\label{classo_cpt_1_1_boatswain_ad538cca1d6429dacf09b22c53291074f}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Boatswain\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Stop the execution of the tasks 
 
 Implements \hyperlink{classo_cpt_1_1i_boatswain_ad1fb6362c814a72ea6c4dc9a9042cf5e}{o\+Cpt\+::i\+Boatswain}.
+
+
+
+Definition at line 44 of file Boatswain.\+cpp.
+
+
+
+References o\+Cpt\+::i\+Boatswain\+::local\+Stop\+Thread\+\_\+.
 
 
 

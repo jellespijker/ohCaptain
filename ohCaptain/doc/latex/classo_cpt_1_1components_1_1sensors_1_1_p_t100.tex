@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for o\+Cpt\+:\+:components\+:\+:sensors\+:\+:P\+T100\+:
-\nopagebreak
+Inheritance diagram for o\+Cpt\+:\+:components\+:\+:sensors\+:\+:P\+T100\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,14 +15,18 @@ Inheritance diagram for o\+Cpt\+:\+:components\+:\+:sensors\+:\+:P\+T100\+:
 \end{figure}
 
 
-Collaboration diagram for o\+Cpt\+:\+:components\+:\+:sensors\+:\+:P\+T100\+:
-\nopagebreak
+Collaboration diagram for o\+Cpt\+:\+:components\+:\+:sensors\+:\+:P\+T100\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=217pt]{classo_cpt_1_1components_1_1sensors_1_1_p_t100__coll__graph}
 \end{center}
 \end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef double \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a385f85603cfd23bf76488f6b67e9fe2d}{Return\+Value\+\_\+t}
+\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,102 +40,182 @@ void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a41dfc55a4be79939
 \item 
 void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a6d80e18a58cf4e1b9b6ce82b441209e2}{stop} ()
 \item 
+void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a296d0c3c2a55df465e127462c8c30215}{init} ()
+\item 
 void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a77e36b92c5eb4b6594fa89114d0fb357}{set\+Calibration\+Temperature} (std\+::pair$<$ double, double $>$ temparature, std\+::pair$<$ uint16\+\_\+t, uint16\+\_\+t $>$ analoge\+Value)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aeb98d92a8864ca202bcc7f382a6053c0}{\+\_\+analoge\+Value}
+\item 
+uint8\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_af67b953bcfc2a50b211a36a6df5f311c}{\+\_\+device} = 0
+\item 
+uint8\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_ac49f21dd8a8f2c7cd7e377512f5e9b25}{\+\_\+pinid} = 0
+\item 
+double \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a3576ceab93d9cedce804469f72087155}{\+\_\+dy\+\_\+dx} = 1.\+0
+\item 
+double \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a9a38493994b9ec216a5a0d29f3c31cc3}{\+\_\+constant} = 0.\+0
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 14 of file P\+T100.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a385f85603cfd23bf76488f6b67e9fe2d}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a385f85603cfd23bf76488f6b67e9fe2d} 
+\index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!Return\+Value\+\_\+t@{Return\+Value\+\_\+t}}
+\index{Return\+Value\+\_\+t@{Return\+Value\+\_\+t}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
+\subsubsection{\texorpdfstring{Return\+Value\+\_\+t}{ReturnValue\_t}}
+{\footnotesize\ttfamily typedef double \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a385f85603cfd23bf76488f6b67e9fe2d}{o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+Return\+Value\+\_\+t}}
+
+
+
+Definition at line 16 of file P\+T100.\+h.
+
+
+
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aedb71224bcffefd6d43ee72458344826}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aedb71224bcffefd6d43ee72458344826} 
 \index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!P\+T100@{P\+T100}}
 \index{P\+T100@{P\+T100}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
-\subsubsection[{\texorpdfstring{P\+T100(i\+Controller\+::ptr controller, World\+::ptr world, std\+::string id, uint8\+\_\+t pinid, uint8\+\_\+t device)}{PT100(iController::ptr controller, World::ptr world, std::string id, uint8_t pinid, uint8_t device)}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+P\+T100 (
-\begin{DoxyParamCaption}
-\item[{{\bf i\+Controller\+::ptr}}]{controller, }
-\item[{{\bf World\+::ptr}}]{world, }
-\item[{std\+::string}]{id, }
-\item[{uint8\+\_\+t}]{pinid, }
-\item[{uint8\+\_\+t}]{device}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aedb71224bcffefd6d43ee72458344826}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aedb71224bcffefd6d43ee72458344826}
+\subsubsection{\texorpdfstring{P\+T100()}{PT100()}}
+{\footnotesize\ttfamily o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+P\+T100 (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr}}]{controller,  }\item[{\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}}]{world,  }\item[{std\+::string}]{id,  }\item[{uint8\+\_\+t}]{pinid,  }\item[{uint8\+\_\+t}]{device }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file P\+T100.\+cpp.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aa6fcce0276d47e75a16f153962c57b8c}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aa6fcce0276d47e75a16f153962c57b8c} 
 \index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!````~P\+T100@{$\sim$\+P\+T100}}
 \index{````~P\+T100@{$\sim$\+P\+T100}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
-\subsubsection[{\texorpdfstring{$\sim$\+P\+T100()}{~PT100()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::$\sim$\+P\+T100 (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aa6fcce0276d47e75a16f153962c57b8c}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aa6fcce0276d47e75a16f153962c57b8c}
+\subsubsection{\texorpdfstring{$\sim$\+P\+T100()}{~PT100()}}
+{\footnotesize\ttfamily o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::$\sim$\+P\+T100 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file P\+T100.\+cpp.
+
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a296d0c3c2a55df465e127462c8c30215}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a296d0c3c2a55df465e127462c8c30215} 
+\index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!init@{init}}
+\index{init@{init}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize the sensor 
+
+Reimplemented from \hyperlink{classo_cpt_1_1_sensor_aa612a305a9a3091dd62cd1afb9d4dd7d}{o\+Cpt\+::\+Sensor}.
+
+
+
+Definition at line 45 of file P\+T100.\+cpp.
+
+
+
+References o\+Cpt\+::\+Sensor\+::init().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a296d0c3c2a55df465e127462c8c30215_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a41dfc55a4be7993949feeb5ac013690d}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a41dfc55a4be7993949feeb5ac013690d} 
 \index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!run@{run}}
 \index{run@{run}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
-\subsubsection[{\texorpdfstring{run()}{run()}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::run (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a41dfc55a4be7993949feeb5ac013690d}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a41dfc55a4be7993949feeb5ac013690d}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+virtual function starting the run service for the IO 
 
 Reimplemented from \hyperlink{classo_cpt_1_1_sensor_aef25b0e5f3a8358ee81c97c73909fbe6}{o\+Cpt\+::\+Sensor}.
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Definition at line 36 of file P\+T100.\+cpp.
+
+
+
+References o\+Cpt\+::i\+Sensor\+::sig\+\_\+, and update\+Sensor().
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a41dfc55a4be7993949feeb5ac013690d_cgraph}
 \end{center}
 \end{figure}
-
-
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a77e36b92c5eb4b6594fa89114d0fb357}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a77e36b92c5eb4b6594fa89114d0fb357} 
 \index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!set\+Calibration\+Temperature@{set\+Calibration\+Temperature}}
 \index{set\+Calibration\+Temperature@{set\+Calibration\+Temperature}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
-\subsubsection[{\texorpdfstring{set\+Calibration\+Temperature(std\+::pair$<$ double, double $>$ temparature, std\+::pair$<$ uint16\+\_\+t, uint16\+\_\+t $>$ analoge\+Value)}{setCalibrationTemperature(std::pair< double, double > temparature, std::pair< uint16_t, uint16_t > analogeValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::set\+Calibration\+Temperature (
-\begin{DoxyParamCaption}
-\item[{std\+::pair$<$ double, double $>$}]{temparature, }
-\item[{std\+::pair$<$ uint16\+\_\+t, uint16\+\_\+t $>$}]{analoge\+Value}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a77e36b92c5eb4b6594fa89114d0fb357}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a77e36b92c5eb4b6594fa89114d0fb357}
+\subsubsection{\texorpdfstring{set\+Calibration\+Temperature()}{setCalibrationTemperature()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::set\+Calibration\+Temperature (\begin{DoxyParamCaption}\item[{std\+::pair$<$ double, double $>$}]{temparature,  }\item[{std\+::pair$<$ uint16\+\_\+t, uint16\+\_\+t $>$}]{analoge\+Value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file P\+T100.\+cpp.
+
+
+
+References \+\_\+constant, and \+\_\+dy\+\_\+dx.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a6d80e18a58cf4e1b9b6ce82b441209e2}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a6d80e18a58cf4e1b9b6ce82b441209e2} 
 \index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!stop@{stop}}
 \index{stop@{stop}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
-\subsubsection[{\texorpdfstring{stop()}{stop()}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::stop (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a6d80e18a58cf4e1b9b6ce82b441209e2}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a6d80e18a58cf4e1b9b6ce82b441209e2}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+virtual function stopping the run 
 
 Reimplemented from \hyperlink{classo_cpt_1_1_sensor_a44ad78c2c091ca9cf72295293f8c5b74}{o\+Cpt\+::\+Sensor}.
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Definition at line 41 of file P\+T100.\+cpp.
+
+
+
+References o\+Cpt\+::\+Sensor\+::stop().
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a6d80e18a58cf4e1b9b6ce82b441209e2_cgraph}
 \end{center}
 \end{figure}
-
-
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a66619675288a5344a55242d9bf097aee}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a66619675288a5344a55242d9bf097aee} 
 \index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!update\+Sensor@{update\+Sensor}}
 \index{update\+Sensor@{update\+Sensor}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
-\subsubsection[{\texorpdfstring{update\+Sensor()}{updateSensor()}}]{\setlength{\rightskip}{0pt plus 5cm}void o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::update\+Sensor (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a66619675288a5344a55242d9bf097aee}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a66619675288a5344a55242d9bf097aee}
+\subsubsection{\texorpdfstring{update\+Sensor()}{updateSensor()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::update\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+virtual function which performs a sensor update, obtaining a new value and sending a signal afterwards 
 
 Reimplemented from \hyperlink{classo_cpt_1_1_sensor_ab4b0dedb06f11bcf2368852035beb2b2}{o\+Cpt\+::\+Sensor}.
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Definition at line 23 of file P\+T100.\+cpp.
+
+
+
+References \+\_\+analoge\+Value, \+\_\+constant, \+\_\+dy\+\_\+dx, \+\_\+pinid, o\+Cpt\+::i\+Sensor\+::controller\+\_\+, o\+Cpt\+::i\+Sensor\+::\+State\+::\+Stamp, o\+Cpt\+::i\+Sensor\+::state\+\_\+, o\+Cpt\+::i\+Sensor\+::\+State\+::\+Value, and o\+Cpt\+::i\+Sensor\+::world\+\_\+.
+
+
+
+Referenced by run().
+
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -140,6 +223,73 @@ Here is the caller graph for this function\+:
 \end{center}
 \end{figure}
 
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aeb98d92a8864ca202bcc7f382a6053c0}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aeb98d92a8864ca202bcc7f382a6053c0} 
+\index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!\+\_\+analoge\+Value@{\+\_\+analoge\+Value}}
+\index{\+\_\+analoge\+Value@{\+\_\+analoge\+Value}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
+\subsubsection{\texorpdfstring{\+\_\+analoge\+Value}{\_analogeValue}}
+{\footnotesize\ttfamily uint16\+\_\+t o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+\_\+analoge\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 34 of file P\+T100.\+h.
+
+
+
+Referenced by update\+Sensor().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a9a38493994b9ec216a5a0d29f3c31cc3}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a9a38493994b9ec216a5a0d29f3c31cc3} 
+\index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!\+\_\+constant@{\+\_\+constant}}
+\index{\+\_\+constant@{\+\_\+constant}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
+\subsubsection{\texorpdfstring{\+\_\+constant}{\_constant}}
+{\footnotesize\ttfamily double o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+\_\+constant = 0.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 38 of file P\+T100.\+h.
+
+
+
+Referenced by set\+Calibration\+Temperature(), and update\+Sensor().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_af67b953bcfc2a50b211a36a6df5f311c}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_af67b953bcfc2a50b211a36a6df5f311c} 
+\index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!\+\_\+device@{\+\_\+device}}
+\index{\+\_\+device@{\+\_\+device}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
+\subsubsection{\texorpdfstring{\+\_\+device}{\_device}}
+{\footnotesize\ttfamily uint8\+\_\+t o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+\_\+device = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 35 of file P\+T100.\+h.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a3576ceab93d9cedce804469f72087155}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a3576ceab93d9cedce804469f72087155} 
+\index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!\+\_\+dy\+\_\+dx@{\+\_\+dy\+\_\+dx}}
+\index{\+\_\+dy\+\_\+dx@{\+\_\+dy\+\_\+dx}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
+\subsubsection{\texorpdfstring{\+\_\+dy\+\_\+dx}{\_dy\_dx}}
+{\footnotesize\ttfamily double o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+\_\+dy\+\_\+dx = 1.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 37 of file P\+T100.\+h.
+
+
+
+Referenced by set\+Calibration\+Temperature(), and update\+Sensor().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_ac49f21dd8a8f2c7cd7e377512f5e9b25}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_ac49f21dd8a8f2c7cd7e377512f5e9b25} 
+\index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!\+\_\+pinid@{\+\_\+pinid}}
+\index{\+\_\+pinid@{\+\_\+pinid}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
+\subsubsection{\texorpdfstring{\+\_\+pinid}{\_pinid}}
+{\footnotesize\ttfamily uint8\+\_\+t o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+\_\+pinid = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 36 of file P\+T100.\+h.
+
+
+
+Referenced by update\+Sensor().
 
 
 

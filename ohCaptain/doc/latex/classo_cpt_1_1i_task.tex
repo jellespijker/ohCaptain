@@ -9,10 +9,13 @@
 
 {\ttfamily \#include $<$Task.\+h$>$}
 
-Inheritance diagram for o\+Cpt\+:\+:i\+Task\+:\begin{figure}[H]
+
+
+Inheritance diagram for o\+Cpt\+:\+:i\+Task\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.817610cm]{classo_cpt_1_1i_task}
+\includegraphics[width=350pt]{classo_cpt_1_1i_task__inherit__graph}
 \end{center}
 \end{figure}
 \subsection*{Classes}
@@ -23,16 +26,18 @@ class \hyperlink{classo_cpt_1_1i_task_1_1_status}{Status}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11}{Type\+Of} \{ \hyperlink{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11a93ce60928daa3b96dad6b0ed409f70bd}{Route} = 1, 
-\hyperlink{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11abd0ae243043005573580ef90dff3d6ee}{Work} = 2
+enum \hyperlink{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11}{Type\+Of} \{ \hyperlink{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11a7ca85240095e3a76c70f5535d26c4dd3}{R\+O\+U\+TE} = 1, 
+\hyperlink{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11a1ec34e80717bb96ddd8376ff12d1b4c9}{W\+O\+RK} = 2
  \}
 \item 
 typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classo_cpt_1_1i_task}{i\+Task} $>$ \hyperlink{classo_cpt_1_1i_task_add2b02b5c97e63a1b7d6943ea4571543}{ptr}
-\begin{DoxyCompactList}\small\item\em Boost shared\+\_\+ptr to a task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Boost shared\+\_\+ptr to a task. \end{DoxyCompactList}\item 
+typedef std\+::list$<$ \hyperlink{classo_cpt_1_1i_task_add2b02b5c97e63a1b7d6943ea4571543}{i\+Task\+::ptr} $>$ \hyperlink{classo_cpt_1_1i_task_a8f949d091241347ea0cdfb8625b4dbca}{taskqueue}
+\begin{DoxyCompactList}\small\item\em A list of shared pointer tasks. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classo_cpt_1_1i_task_ad4c22f3e6378785586bf951651478c53}{i\+Task} ()
+\hyperlink{classo_cpt_1_1i_task_a5b5affdc2f5213d8c5f11e8cd1cda517}{i\+Task} (\hyperlink{classo_cpt_1_1i_vessel_a43711a596f3bdfd0ca732ed3901edc97}{i\+Vessel\+::ptr} vessel, bool concurrent=false)
 \item 
 virtual \hyperlink{classo_cpt_1_1i_task_aa2c1053421fff92430b5912e0d3c7fc7}{$\sim$i\+Task} ()
 \item 
@@ -42,6 +47,18 @@ virtual \hyperlink{classo_cpt_1_1i_task_1_1_status_aaf766c58d038e2defc3de2dddb92
 \item 
 virtual void \hyperlink{classo_cpt_1_1i_task_aedb88813b16914598dee9561813e56e8}{stop} ()=0
 \end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1i_task_a8f949d091241347ea0cdfb8625b4dbca}{taskqueue} \hyperlink{classo_cpt_1_1i_task_a41287056bebbed04966072dfd1a9f80f}{Work}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classo_cpt_1_1i_task_a1b6eaff4578d2ff18e70b07d00d7bb45}{\+\_\+concurrent} = false
+\begin{DoxyCompactList}\small\item\em Allowed to run as a seperate thread. \end{DoxyCompactList}\item 
+\hyperlink{classo_cpt_1_1i_vessel_a43711a596f3bdfd0ca732ed3901edc97}{Vessel\+::ptr} \hyperlink{classo_cpt_1_1i_task_ac6cc57220c87f87cdd4d1749119ae0cb}{\+\_\+vessel} = nullptr
+\begin{DoxyCompactList}\small\item\em Pointer to the world. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -49,70 +66,111 @@ virtual void \hyperlink{classo_cpt_1_1i_task_aedb88813b16914598dee9561813e56e8}{
 
 This interface make sure that all task adheres to the same runtime rules and enable run-\/time polymorphism 
 
+Definition at line 20 of file Task.\+h.
+
+
+
 \subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1i_task_add2b02b5c97e63a1b7d6943ea4571543}{}\label{classo_cpt_1_1i_task_add2b02b5c97e63a1b7d6943ea4571543} 
 \index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!ptr@{ptr}}
 \index{ptr@{ptr}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}
-\subsubsection[{\texorpdfstring{ptr}{ptr}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::shared\+\_\+ptr$<${\bf i\+Task}$>$ {\bf o\+Cpt\+::i\+Task\+::ptr}}\hypertarget{classo_cpt_1_1i_task_add2b02b5c97e63a1b7d6943ea4571543}{}\label{classo_cpt_1_1i_task_add2b02b5c97e63a1b7d6943ea4571543}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$\hyperlink{classo_cpt_1_1i_task}{i\+Task}$>$ \hyperlink{classo_cpt_1_1i_task_add2b02b5c97e63a1b7d6943ea4571543}{o\+Cpt\+::i\+Task\+::ptr}}
+
 
 
 Boost shared\+\_\+ptr to a task. 
 
 
 
+Definition at line 22 of file Task.\+h.
+
+\hypertarget{classo_cpt_1_1i_task_a8f949d091241347ea0cdfb8625b4dbca}{}\label{classo_cpt_1_1i_task_a8f949d091241347ea0cdfb8625b4dbca} 
+\index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!taskqueue@{taskqueue}}
+\index{taskqueue@{taskqueue}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}
+\subsubsection{\texorpdfstring{taskqueue}{taskqueue}}
+{\footnotesize\ttfamily typedef std\+::list$<$\hyperlink{classo_cpt_1_1i_task_add2b02b5c97e63a1b7d6943ea4571543}{i\+Task\+::ptr}$>$ \hyperlink{classo_cpt_1_1i_task_a8f949d091241347ea0cdfb8625b4dbca}{o\+Cpt\+::i\+Task\+::taskqueue}}
+
+
+
+A list of shared pointer tasks. 
+
+
+
+Definition at line 23 of file Task.\+h.
+
+
+
 \subsection{Member Enumeration Documentation}
+\hypertarget{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11}{}\label{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11} 
 \index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!Type\+Of@{Type\+Of}}
 \index{Type\+Of@{Type\+Of}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}
-\subsubsection[{\texorpdfstring{Type\+Of}{TypeOf}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf o\+Cpt\+::i\+Task\+::\+Type\+Of}}\hypertarget{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11}{}\label{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11}
-Enumeration indicating which type of task the object is \begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{Route@{Route}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}\index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!Route@{Route}}\item[{\em 
-Route\hypertarget{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11a93ce60928daa3b96dad6b0ed409f70bd}{}\label{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11a93ce60928daa3b96dad6b0ed409f70bd}
-}]\index{Work@{Work}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}\index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!Work@{Work}}\item[{\em 
-Work\hypertarget{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11abd0ae243043005573580ef90dff3d6ee}{}\label{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11abd0ae243043005573580ef90dff3d6ee}
-}]\end{description}
-\end{Desc}
+\subsubsection{\texorpdfstring{Type\+Of}{TypeOf}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11}{o\+Cpt\+::i\+Task\+::\+Type\+Of}}
+
+Enumeration indicating which type of task the object is \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+O\+U\+TE@{R\+O\+U\+TE}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}\index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!R\+O\+U\+TE@{R\+O\+U\+TE}}}\hypertarget{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11a7ca85240095e3a76c70f5535d26c4dd3}{}\label{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11a7ca85240095e3a76c70f5535d26c4dd3} 
+R\+O\+U\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+O\+RK@{W\+O\+RK}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}\index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!W\+O\+RK@{W\+O\+RK}}}\hypertarget{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11a1ec34e80717bb96ddd8376ff12d1b4c9}{}\label{classo_cpt_1_1i_task_a10d8726eb8957c2c305f468cf15b9f11a1ec34e80717bb96ddd8376ff12d1b4c9} 
+W\+O\+RK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 72 of file Task.\+h.
+
 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1i_task_a5b5affdc2f5213d8c5f11e8cd1cda517}{}\label{classo_cpt_1_1i_task_a5b5affdc2f5213d8c5f11e8cd1cda517} 
 \index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!i\+Task@{i\+Task}}
 \index{i\+Task@{i\+Task}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}
-\subsubsection[{\texorpdfstring{i\+Task()}{iTask()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::i\+Task\+::i\+Task (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1i_task_ad4c22f3e6378785586bf951651478c53}{}\label{classo_cpt_1_1i_task_ad4c22f3e6378785586bf951651478c53}
+\subsubsection{\texorpdfstring{i\+Task()}{iTask()}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Task\+::i\+Task (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_vessel_a43711a596f3bdfd0ca732ed3901edc97}{i\+Vessel\+::ptr}}]{vessel,  }\item[{bool}]{concurrent = {\ttfamily false} }\end{DoxyParamCaption})}
+
 Constructor of the interface \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+
+
+Definition at line 8 of file Task.\+cpp.
+
+
+
+References \+\_\+concurrent, and \+\_\+vessel.
+
+\hypertarget{classo_cpt_1_1i_task_aa2c1053421fff92430b5912e0d3c7fc7}{}\label{classo_cpt_1_1i_task_aa2c1053421fff92430b5912e0d3c7fc7} 
 \index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!````~i\+Task@{$\sim$i\+Task}}
 \index{````~i\+Task@{$\sim$i\+Task}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}
-\subsubsection[{\texorpdfstring{$\sim$i\+Task()}{~iTask()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::i\+Task\+::$\sim$i\+Task (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1i_task_aa2c1053421fff92430b5912e0d3c7fc7}{}\label{classo_cpt_1_1i_task_aa2c1053421fff92430b5912e0d3c7fc7}
+\subsubsection{\texorpdfstring{$\sim$i\+Task()}{~iTask()}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Task\+::$\sim$i\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 Deconstructor of the interface 
 
+Definition at line 13 of file Task.\+cpp.
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1i_task_aedd48e3c4df48aaae0738ce3863e222f}{}\label{classo_cpt_1_1i_task_aedd48e3c4df48aaae0738ce3863e222f} 
 \index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!start@{start}}
 \index{start@{start}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}
-\subsubsection[{\texorpdfstring{start()=0}{start()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void o\+Cpt\+::i\+Task\+::start (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classo_cpt_1_1i_task_aedd48e3c4df48aaae0738ce3863e222f}{}\label{classo_cpt_1_1i_task_aedd48e3c4df48aaae0738ce3863e222f}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Task\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 The start command for a task 
 
 Implemented in \hyperlink{classo_cpt_1_1_task_a8acd8d2125df0aef37eb1ebf0e3e49c8}{o\+Cpt\+::\+Task}.
 
+\hypertarget{classo_cpt_1_1i_task_a8d6126b2e337a0ab39fdef1d8d7b73b9}{}\label{classo_cpt_1_1i_task_a8d6126b2e337a0ab39fdef1d8d7b73b9} 
 \index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!status@{status}}
 \index{status@{status}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}
-\subsubsection[{\texorpdfstring{status()=0}{status()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf i\+Task\+::\+Status\+::ptr} o\+Cpt\+::i\+Task\+::status (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classo_cpt_1_1i_task_a8d6126b2e337a0ab39fdef1d8d7b73b9}{}\label{classo_cpt_1_1i_task_a8d6126b2e337a0ab39fdef1d8d7b73b9}
+\subsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily virtual \hyperlink{classo_cpt_1_1i_task_1_1_status_aaf766c58d038e2defc3de2dddb92d1eb}{i\+Task\+::\+Status\+::ptr} o\+Cpt\+::i\+Task\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 Retrieves the \hyperlink{classo_cpt_1_1i_task_1_1_status}{Status} of a task \begin{DoxyReturn}{Returns}
 Boost shared\+\_\+ptr of the task status 
 \end{DoxyReturn}
@@ -120,20 +178,72 @@ Boost shared\+\_\+ptr of the task status
 
 Implemented in \hyperlink{classo_cpt_1_1_task_a724445e158919a4b5644d8eef9f7c754}{o\+Cpt\+::\+Task}.
 
+\hypertarget{classo_cpt_1_1i_task_aedb88813b16914598dee9561813e56e8}{}\label{classo_cpt_1_1i_task_aedb88813b16914598dee9561813e56e8} 
 \index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!stop@{stop}}
 \index{stop@{stop}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}
-\subsubsection[{\texorpdfstring{stop()=0}{stop()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void o\+Cpt\+::i\+Task\+::stop (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classo_cpt_1_1i_task_aedb88813b16914598dee9561813e56e8}{}\label{classo_cpt_1_1i_task_aedb88813b16914598dee9561813e56e8}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Task\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 The stop command for a task 
 
 Implemented in \hyperlink{classo_cpt_1_1_task_a62b4f1bbc1cf24434d2a2130162507f7}{o\+Cpt\+::\+Task}.
 
 
 
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1i_task_a1b6eaff4578d2ff18e70b07d00d7bb45}{}\label{classo_cpt_1_1i_task_a1b6eaff4578d2ff18e70b07d00d7bb45} 
+\index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!\+\_\+concurrent@{\+\_\+concurrent}}
+\index{\+\_\+concurrent@{\+\_\+concurrent}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}
+\subsubsection{\texorpdfstring{\+\_\+concurrent}{\_concurrent}}
+{\footnotesize\ttfamily bool o\+Cpt\+::i\+Task\+::\+\_\+concurrent = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Allowed to run as a seperate thread. 
+
+
+
+Definition at line 104 of file Task.\+h.
+
+
+
+Referenced by i\+Task().
+
+\hypertarget{classo_cpt_1_1i_task_ac6cc57220c87f87cdd4d1749119ae0cb}{}\label{classo_cpt_1_1i_task_ac6cc57220c87f87cdd4d1749119ae0cb} 
+\index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!\+\_\+vessel@{\+\_\+vessel}}
+\index{\+\_\+vessel@{\+\_\+vessel}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}
+\subsubsection{\texorpdfstring{\+\_\+vessel}{\_vessel}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1i_vessel_a43711a596f3bdfd0ca732ed3901edc97}{Vessel\+::ptr} o\+Cpt\+::i\+Task\+::\+\_\+vessel = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Pointer to the world. 
+
+
+
+Definition at line 105 of file Task.\+h.
+
+
+
+Referenced by i\+Task().
+
+\hypertarget{classo_cpt_1_1i_task_a41287056bebbed04966072dfd1a9f80f}{}\label{classo_cpt_1_1i_task_a41287056bebbed04966072dfd1a9f80f} 
+\index{o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}!Work@{Work}}
+\index{Work@{Work}!o\+Cpt\+::i\+Task@{o\+Cpt\+::i\+Task}}
+\subsubsection{\texorpdfstring{Work}{Work}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1i_task_a8f949d091241347ea0cdfb8625b4dbca}{taskqueue} o\+Cpt\+::i\+Task\+::\+Work}
+
+
+
+Definition at line 25 of file Task.\+h.
+
+
+
+Referenced by o\+Cpt\+::\+Task\+::start().
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\hyperlink{_task_8h}{Task.\+h}\item 
-src/\hyperlink{_task_8cpp}{Task.\+cpp}\end{DoxyCompactItemize}
+include/\+Core/\hyperlink{_task_8h}{Task.\+h}\item 
+src/\+Core/\hyperlink{_task_8cpp}{Task.\+cpp}\end{DoxyCompactItemize}

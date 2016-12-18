@@ -13,9 +13,9 @@ class \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{Log}
 \begin{DoxyCompactItemize}
 \item 
 typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classo_cpt_1_1_world_1_1_time}{Time} $>$ \hyperlink{classo_cpt_1_1_world_1_1_time_ae99716d20374e14ec5053765a9921ef2}{ptr}
-\item 
+\begin{DoxyCompactList}\small\item\em Boost shared\+\_\+ptr to a \hyperlink{classo_cpt_1_1_world_1_1_time}{Time} class. \end{DoxyCompactList}\item 
 typedef boost\+::chrono\+::steady\+\_\+clock\+::period \hyperlink{classo_cpt_1_1_world_1_1_time_a8191b46c075d8d9ec6db0588797b59a5}{tick\+\_\+period}
-\item 
+\begin{DoxyCompactList}\small\item\em a tick period for a steady clock \end{DoxyCompactList}\item 
 typedef boost\+::chrono\+::steady\+\_\+clock \hyperlink{classo_cpt_1_1_world_1_1_time_ac41de01610f32d0ace4844ed3bf454f7}{clock\+\_\+t}
 \item 
 typedef boost\+::chrono\+::time\+\_\+point$<$ \hyperlink{classo_cpt_1_1_world_1_1_time_ac41de01610f32d0ace4844ed3bf454f7}{clock\+\_\+t} $>$ \hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{timepoint\+\_\+t}
@@ -33,69 +33,167 @@ virtual \hyperlink{classo_cpt_1_1_world_1_1_time_a18956e4ec6a4fb4cc3a2067c9163d7
 \item 
 \hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{timepoint\+\_\+t} \hyperlink{classo_cpt_1_1_world_1_1_time_a5f2069131e8ef21cb6e555fd633986fb}{now} ()
 \end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1_world_1_1_time_ac41de01610f32d0ace4844ed3bf454f7}{clock\+\_\+t} \hyperlink{classo_cpt_1_1_world_1_1_time_a219308dd501f332e4d49f30ad4e5206e}{time\+Clock\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classo_cpt_1_1_world_1_1_time}{Time} class all things time related, which allow for easy consite time manupulation trhough out the classes 
+
+Definition at line 24 of file World.\+h.
+
 
 
 \subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_time_ac41de01610f32d0ace4844ed3bf454f7}{}\label{classo_cpt_1_1_world_1_1_time_ac41de01610f32d0ace4844ed3bf454f7} 
 \index{o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}!clock\+\_\+t@{clock\+\_\+t}}
 \index{clock\+\_\+t@{clock\+\_\+t}!o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}}
-\subsubsection[{\texorpdfstring{clock\+\_\+t}{clock_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::chrono\+::steady\+\_\+clock {\bf o\+Cpt\+::\+World\+::\+Time\+::clock\+\_\+t}}\hypertarget{classo_cpt_1_1_world_1_1_time_ac41de01610f32d0ace4844ed3bf454f7}{}\label{classo_cpt_1_1_world_1_1_time_ac41de01610f32d0ace4844ed3bf454f7}
+\subsubsection{\texorpdfstring{clock\+\_\+t}{clock\_t}}
+{\footnotesize\ttfamily typedef boost\+::chrono\+::steady\+\_\+clock \hyperlink{classo_cpt_1_1_world_1_1_time_ac41de01610f32d0ace4844ed3bf454f7}{o\+Cpt\+::\+World\+::\+Time\+::clock\+\_\+t}}
+
+
+
+Definition at line 28 of file World.\+h.
+
+\hypertarget{classo_cpt_1_1_world_1_1_time_a7c51955f1bccc0f26b8a3d35599b6135}{}\label{classo_cpt_1_1_world_1_1_time_a7c51955f1bccc0f26b8a3d35599b6135} 
 \index{o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}!History@{History}}
 \index{History@{History}!o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}}
-\subsubsection[{\texorpdfstring{History}{History}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf o\+Cpt\+::\+World\+::\+Time\+::\+History} =  std\+::vector$<$boost\+::shared\+\_\+ptr$<${\bf Log}$<$T$>$$>$$>$}\hypertarget{classo_cpt_1_1_world_1_1_time_a7c51955f1bccc0f26b8a3d35599b6135}{}\label{classo_cpt_1_1_world_1_1_time_a7c51955f1bccc0f26b8a3d35599b6135}
+\subsubsection{\texorpdfstring{History}{History}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \hyperlink{classo_cpt_1_1_world_1_1_time_a7c51955f1bccc0f26b8a3d35599b6135}{o\+Cpt\+::\+World\+::\+Time\+::\+History} =  std\+::vector$<$boost\+::shared\+\_\+ptr$<$\hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{Log}$<$T$>$$>$$>$}
+
+
+
+Definition at line 94 of file World.\+h.
+
+\hypertarget{classo_cpt_1_1_world_1_1_time_ae99716d20374e14ec5053765a9921ef2}{}\label{classo_cpt_1_1_world_1_1_time_ae99716d20374e14ec5053765a9921ef2} 
 \index{o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}!ptr@{ptr}}
 \index{ptr@{ptr}!o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}}
-\subsubsection[{\texorpdfstring{ptr}{ptr}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::shared\+\_\+ptr$<${\bf Time}$>$ {\bf o\+Cpt\+::\+World\+::\+Time\+::ptr}}\hypertarget{classo_cpt_1_1_world_1_1_time_ae99716d20374e14ec5053765a9921ef2}{}\label{classo_cpt_1_1_world_1_1_time_ae99716d20374e14ec5053765a9921ef2}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$\hyperlink{classo_cpt_1_1_world_1_1_time}{Time}$>$ \hyperlink{classo_cpt_1_1_world_1_1_time_ae99716d20374e14ec5053765a9921ef2}{o\+Cpt\+::\+World\+::\+Time\+::ptr}}
+
+
+
+Boost shared\+\_\+ptr to a \hyperlink{classo_cpt_1_1_world_1_1_time}{Time} class. 
+
+
+
+Definition at line 26 of file World.\+h.
+
+\hypertarget{classo_cpt_1_1_world_1_1_time_a8191b46c075d8d9ec6db0588797b59a5}{}\label{classo_cpt_1_1_world_1_1_time_a8191b46c075d8d9ec6db0588797b59a5} 
 \index{o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}!tick\+\_\+period@{tick\+\_\+period}}
 \index{tick\+\_\+period@{tick\+\_\+period}!o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}}
-\subsubsection[{\texorpdfstring{tick\+\_\+period}{tick_period}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::chrono\+::steady\+\_\+clock\+::period {\bf o\+Cpt\+::\+World\+::\+Time\+::tick\+\_\+period}}\hypertarget{classo_cpt_1_1_world_1_1_time_a8191b46c075d8d9ec6db0588797b59a5}{}\label{classo_cpt_1_1_world_1_1_time_a8191b46c075d8d9ec6db0588797b59a5}
+\subsubsection{\texorpdfstring{tick\+\_\+period}{tick\_period}}
+{\footnotesize\ttfamily typedef boost\+::chrono\+::steady\+\_\+clock\+::period \hyperlink{classo_cpt_1_1_world_1_1_time_a8191b46c075d8d9ec6db0588797b59a5}{o\+Cpt\+::\+World\+::\+Time\+::tick\+\_\+period}}
+
+
+
+a tick period for a steady clock 
+
+
+
+Definition at line 27 of file World.\+h.
+
+\hypertarget{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{}\label{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c} 
 \index{o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}!timepoint\+\_\+t@{timepoint\+\_\+t}}
 \index{timepoint\+\_\+t@{timepoint\+\_\+t}!o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}}
-\subsubsection[{\texorpdfstring{timepoint\+\_\+t}{timepoint_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::chrono\+::time\+\_\+point$<${\bf clock\+\_\+t}$>$ {\bf o\+Cpt\+::\+World\+::\+Time\+::timepoint\+\_\+t}}\hypertarget{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{}\label{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}
+\subsubsection{\texorpdfstring{timepoint\+\_\+t}{timepoint\_t}}
+{\footnotesize\ttfamily typedef boost\+::chrono\+::time\+\_\+point$<$\hyperlink{classo_cpt_1_1_world_1_1_time_ac41de01610f32d0ace4844ed3bf454f7}{clock\+\_\+t}$>$ \hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{o\+Cpt\+::\+World\+::\+Time\+::timepoint\+\_\+t}}
+
+
+
+Definition at line 29 of file World.\+h.
+
 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_time_a831b0a1d8bd9ebe4ebe0111bd4516eb5}{}\label{classo_cpt_1_1_world_1_1_time_a831b0a1d8bd9ebe4ebe0111bd4516eb5} 
 \index{o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}!Time@{Time}}
 \index{Time@{Time}!o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}}
-\subsubsection[{\texorpdfstring{Time()}{Time()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+World\+::\+Time\+::\+Time (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1_world_1_1_time_a831b0a1d8bd9ebe4ebe0111bd4516eb5}{}\label{classo_cpt_1_1_world_1_1_time_a831b0a1d8bd9ebe4ebe0111bd4516eb5}
+\subsubsection{\texorpdfstring{Time()}{Time()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+World\+::\+Time\+::\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor of the \hyperlink{classo_cpt_1_1_world_1_1_time}{Time} class 
+
+Definition at line 11 of file World.\+cpp.
+
+\hypertarget{classo_cpt_1_1_world_1_1_time_a18956e4ec6a4fb4cc3a2067c9163d75d}{}\label{classo_cpt_1_1_world_1_1_time_a18956e4ec6a4fb4cc3a2067c9163d75d} 
 \index{o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}!````~Time@{$\sim$\+Time}}
 \index{````~Time@{$\sim$\+Time}!o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}}
-\subsubsection[{\texorpdfstring{$\sim$\+Time()}{~Time()}}]{\setlength{\rightskip}{0pt plus 5cm}o\+Cpt\+::\+World\+::\+Time\+::$\sim$\+Time (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classo_cpt_1_1_world_1_1_time_a18956e4ec6a4fb4cc3a2067c9163d75d}{}\label{classo_cpt_1_1_world_1_1_time_a18956e4ec6a4fb4cc3a2067c9163d75d}
+\subsubsection{\texorpdfstring{$\sim$\+Time()}{~Time()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+World\+::\+Time\+::$\sim$\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Deconstructor of the \hyperlink{classo_cpt_1_1_world_1_1_time}{Time} class 
+
+Definition at line 13 of file World.\+cpp.
+
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_time_a6fddffab679f3577de92c5ddf6f15f47}{}\label{classo_cpt_1_1_world_1_1_time_a6fddffab679f3577de92c5ddf6f15f47} 
 \index{o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}!get\+Time\+Clock@{get\+Time\+Clock}}
 \index{get\+Time\+Clock@{get\+Time\+Clock}!o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}}
-\subsubsection[{\texorpdfstring{get\+Time\+Clock()}{getTimeClock()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World\+::\+Time\+::clock\+\_\+t} \& o\+Cpt\+::\+World\+::\+Time\+::get\+Time\+Clock (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1_world_1_1_time_a6fddffab679f3577de92c5ddf6f15f47}{}\label{classo_cpt_1_1_world_1_1_time_a6fddffab679f3577de92c5ddf6f15f47}
+\subsubsection{\texorpdfstring{get\+Time\+Clock()}{getTimeClock()}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_world_1_1_time_ac41de01610f32d0ace4844ed3bf454f7}{World\+::\+Time\+::clock\+\_\+t} \& o\+Cpt\+::\+World\+::\+Time\+::get\+Time\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the current Time\+Clock \begin{DoxyReturn}{Returns}
+returns the time clock 
+\end{DoxyReturn}
+
+
+Definition at line 15 of file World.\+cpp.
+
+
+
+References time\+Clock\+\_\+.
+
+\hypertarget{classo_cpt_1_1_world_1_1_time_a5f2069131e8ef21cb6e555fd633986fb}{}\label{classo_cpt_1_1_world_1_1_time_a5f2069131e8ef21cb6e555fd633986fb} 
 \index{o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}!now@{now}}
 \index{now@{now}!o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}}
-\subsubsection[{\texorpdfstring{now()}{now()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World\+::\+Time\+::timepoint\+\_\+t} o\+Cpt\+::\+World\+::\+Time\+::now (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classo_cpt_1_1_world_1_1_time_a5f2069131e8ef21cb6e555fd633986fb}{}\label{classo_cpt_1_1_world_1_1_time_a5f2069131e8ef21cb6e555fd633986fb}
+\subsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{World\+::\+Time\+::timepoint\+\_\+t} o\+Cpt\+::\+World\+::\+Time\+::now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the current time, as in now \begin{DoxyReturn}{Returns}
+returns a timepoint\+\_\+t which is now 
+\end{DoxyReturn}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Definition at line 19 of file World.\+cpp.
+
+
+
+References time\+Clock\+\_\+.
+
+
+
+Referenced by o\+Cpt\+::\+World\+::now().
+
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classo_cpt_1_1_world_1_1_time_a5f2069131e8ef21cb6e555fd633986fb_icgraph}
+\includegraphics[width=326pt]{classo_cpt_1_1_world_1_1_time_a5f2069131e8ef21cb6e555fd633986fb_icgraph}
 \end{center}
 \end{figure}
 
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_time_a219308dd501f332e4d49f30ad4e5206e}{}\label{classo_cpt_1_1_world_1_1_time_a219308dd501f332e4d49f30ad4e5206e} 
+\index{o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}!time\+Clock\+\_\+@{time\+Clock\+\_\+}}
+\index{time\+Clock\+\_\+@{time\+Clock\+\_\+}!o\+Cpt\+::\+World\+::\+Time@{o\+Cpt\+::\+World\+::\+Time}}
+\subsubsection{\texorpdfstring{time\+Clock\+\_\+}{timeClock\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_world_1_1_time_ac41de01610f32d0ace4844ed3bf454f7}{clock\+\_\+t} o\+Cpt\+::\+World\+::\+Time\+::time\+Clock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 31 of file World.\+h.
+
+
+
+Referenced by get\+Time\+Clock(), and now().
 
 
 

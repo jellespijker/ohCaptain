@@ -1,0 +1,248 @@
+\hypertarget{classo_cpt_1_1_world_1_1_location}{}\section{o\+Cpt\+:\+:World\+:\+:Location Class Reference}
+\label{classo_cpt_1_1_world_1_1_location}\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+
+
+{\ttfamily \#include $<$World.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structo_cpt_1_1_world_1_1_location_1_1coordinate}{coordinate}
+\item 
+struct \hyperlink{structo_cpt_1_1_world_1_1_location_1_1gps_point}{gps\+Point}
+\item 
+struct \hyperlink{structo_cpt_1_1_world_1_1_location_1_1_route_point}{Route\+Point}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5}{cardinal\+\_\+direction} \{ \hyperlink{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5ac706574c1e2fcd94ec86cc17851b848b}{North} = 110, 
+\hyperlink{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5a6380581e8856626370ef7e28b88ff8c9}{South} = 115, 
+\hyperlink{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5a429b1917d3bf9c2f75eb55d30a0a2e20}{East} = 101, 
+\hyperlink{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5a362e85ccd8384db96571b670ad2d20a6}{West} = 119
+ \}
+\item 
+typedef struct \hyperlink{structo_cpt_1_1_world_1_1_location_1_1coordinate}{o\+Cpt\+::\+World\+::\+Location\+::coordinate} \hyperlink{classo_cpt_1_1_world_1_1_location_ade9263a17c41b7af085dfcb9055b18f3}{coordinate\+\_\+t}
+\item 
+typedef struct \hyperlink{structo_cpt_1_1_world_1_1_location_1_1gps_point}{o\+Cpt\+::\+World\+::\+Location\+::gps\+Point} \hyperlink{classo_cpt_1_1_world_1_1_location_a3aa5e31e2888b4da40ad534b99473888}{gps\+Point\+\_\+t}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classo_cpt_1_1_world_1_1_location}{Location} $>$ \hyperlink{classo_cpt_1_1_world_1_1_location_a33b7d6b8797958b6e4d792dfeaa6d160}{ptr}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1_world_1_1_location_a1554685bc8b0a13c024c707113f20657}{Location} ()
+\item 
+virtual \hyperlink{classo_cpt_1_1_world_1_1_location_a5b1fb5e70e570eb3e0d48c49b1b7bd41}{$\sim$\+Location} ()
+\item 
+\hyperlink{structo_cpt_1_1_world_1_1_location_1_1_route_point_aa042feea77cb3c1531ab4e8ecf42fbd6}{Route\+Point\+::ptr} \hyperlink{classo_cpt_1_1_world_1_1_location_a91d0729340a46c306af3fa6adb61c738}{get\+Current\+Location} (bool new\+Measurement=false)
+\item 
+void \hyperlink{classo_cpt_1_1_world_1_1_location_aa6211993ea4e0fdf714475d22e296220}{push\+\_\+back} (\hyperlink{structo_cpt_1_1_world_1_1_location_1_1_route_point_aa042feea77cb3c1531ab4e8ecf42fbd6}{Route\+Point\+::ptr} route\+Point)
+\item 
+std\+::vector$<$ \hyperlink{structo_cpt_1_1_world_1_1_location_1_1_route_point_aa042feea77cb3c1531ab4e8ecf42fbd6}{Route\+Point\+::ptr} $>$ \hyperlink{classo_cpt_1_1_world_1_1_location_a4407bfcd91b7b2dd7410341521d9dcb5}{get\+Location\+History} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5}{cardinal\+\_\+direction} \hyperlink{classo_cpt_1_1_world_1_1_location_a3ed4dcf41514af703d09b5ba17589f1e}{stocd} (std\+::string str)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structo_cpt_1_1_world_1_1_location_1_1_route_point_aa042feea77cb3c1531ab4e8ecf42fbd6}{Route\+Point\+::ptr} \hyperlink{classo_cpt_1_1_world_1_1_location_ad8835274ec8b5ea13b1c01a477bafff9}{current\+Location\+\_\+}
+\item 
+std\+::vector$<$ \hyperlink{structo_cpt_1_1_world_1_1_location_1_1_route_point_aa042feea77cb3c1531ab4e8ecf42fbd6}{Route\+Point\+::ptr} $>$ \hyperlink{classo_cpt_1_1_world_1_1_location_a11e2d55bfa797b41b98e032f50911021}{Location\+History}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A location in the \hyperlink{classo_cpt_1_1_world}{World} 
+
+Definition at line 112 of file World.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_location_ade9263a17c41b7af085dfcb9055b18f3}{}\label{classo_cpt_1_1_world_1_1_location_ade9263a17c41b7af085dfcb9055b18f3} 
+\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!coordinate\+\_\+t@{coordinate\+\_\+t}}
+\index{coordinate\+\_\+t@{coordinate\+\_\+t}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+\subsubsection{\texorpdfstring{coordinate\+\_\+t}{coordinate\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structo_cpt_1_1_world_1_1_location_1_1coordinate}{o\+Cpt\+::\+World\+::\+Location\+::coordinate}  \hyperlink{classo_cpt_1_1_world_1_1_location_ade9263a17c41b7af085dfcb9055b18f3}{o\+Cpt\+::\+World\+::\+Location\+::coordinate\+\_\+t}}
+
+\hypertarget{classo_cpt_1_1_world_1_1_location_a3aa5e31e2888b4da40ad534b99473888}{}\label{classo_cpt_1_1_world_1_1_location_a3aa5e31e2888b4da40ad534b99473888} 
+\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!gps\+Point\+\_\+t@{gps\+Point\+\_\+t}}
+\index{gps\+Point\+\_\+t@{gps\+Point\+\_\+t}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+\subsubsection{\texorpdfstring{gps\+Point\+\_\+t}{gpsPoint\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structo_cpt_1_1_world_1_1_location_1_1gps_point}{o\+Cpt\+::\+World\+::\+Location\+::gps\+Point}  \hyperlink{classo_cpt_1_1_world_1_1_location_a3aa5e31e2888b4da40ad534b99473888}{o\+Cpt\+::\+World\+::\+Location\+::gps\+Point\+\_\+t}}
+
+\hypertarget{classo_cpt_1_1_world_1_1_location_a33b7d6b8797958b6e4d792dfeaa6d160}{}\label{classo_cpt_1_1_world_1_1_location_a33b7d6b8797958b6e4d792dfeaa6d160} 
+\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!ptr@{ptr}}
+\index{ptr@{ptr}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$\hyperlink{classo_cpt_1_1_world_1_1_location}{Location}$>$ \hyperlink{classo_cpt_1_1_world_1_1_location_a33b7d6b8797958b6e4d792dfeaa6d160}{o\+Cpt\+::\+World\+::\+Location\+::ptr}}
+
+
+
+Definition at line 138 of file World.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5}{}\label{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5} 
+\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!cardinal\+\_\+direction@{cardinal\+\_\+direction}}
+\index{cardinal\+\_\+direction@{cardinal\+\_\+direction}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+\subsubsection{\texorpdfstring{cardinal\+\_\+direction}{cardinal\_direction}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5}{o\+Cpt\+::\+World\+::\+Location\+::cardinal\+\_\+direction}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{North@{North}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!North@{North}}}\hypertarget{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5ac706574c1e2fcd94ec86cc17851b848b}{}\label{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5ac706574c1e2fcd94ec86cc17851b848b} 
+North&enum value North \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{South@{South}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!South@{South}}}\hypertarget{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5a6380581e8856626370ef7e28b88ff8c9}{}\label{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5a6380581e8856626370ef7e28b88ff8c9} 
+South&enum value South \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{East@{East}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!East@{East}}}\hypertarget{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5a429b1917d3bf9c2f75eb55d30a0a2e20}{}\label{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5a429b1917d3bf9c2f75eb55d30a0a2e20} 
+East&enum value East \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{West@{West}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!West@{West}}}\hypertarget{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5a362e85ccd8384db96571b670ad2d20a6}{}\label{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5a362e85ccd8384db96571b670ad2d20a6} 
+West&enum value West \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 114 of file World.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_location_a1554685bc8b0a13c024c707113f20657}{}\label{classo_cpt_1_1_world_1_1_location_a1554685bc8b0a13c024c707113f20657} 
+\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!Location@{Location}}
+\index{Location@{Location}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+\subsubsection{\texorpdfstring{Location()}{Location()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+World\+::\+Location\+::\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor for the \hyperlink{classo_cpt_1_1_world_1_1_location}{Location} 
+
+Definition at line 37 of file World.\+cpp.
+
+\hypertarget{classo_cpt_1_1_world_1_1_location_a5b1fb5e70e570eb3e0d48c49b1b7bd41}{}\label{classo_cpt_1_1_world_1_1_location_a5b1fb5e70e570eb3e0d48c49b1b7bd41} 
+\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!````~Location@{$\sim$\+Location}}
+\index{````~Location@{$\sim$\+Location}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+\subsubsection{\texorpdfstring{$\sim$\+Location()}{~Location()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+World\+::\+Location\+::$\sim$\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Deconstruction for the \hyperlink{classo_cpt_1_1_world_1_1_location}{Location} 
+
+Definition at line 41 of file World.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_location_a91d0729340a46c306af3fa6adb61c738}{}\label{classo_cpt_1_1_world_1_1_location_a91d0729340a46c306af3fa6adb61c738} 
+\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!get\+Current\+Location@{get\+Current\+Location}}
+\index{get\+Current\+Location@{get\+Current\+Location}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+\subsubsection{\texorpdfstring{get\+Current\+Location()}{getCurrentLocation()}}
+{\footnotesize\ttfamily \hyperlink{structo_cpt_1_1_world_1_1_location_1_1_route_point_aa042feea77cb3c1531ab4e8ecf42fbd6}{World\+::\+Location\+::\+Route\+Point\+::ptr} o\+Cpt\+::\+World\+::\+Location\+::get\+Current\+Location (\begin{DoxyParamCaption}\item[{bool}]{new\+Measurement = {\ttfamily false} }\end{DoxyParamCaption})}
+
+get the current \hyperlink{classo_cpt_1_1_world_1_1_location}{Location} 
+\begin{DoxyParams}{Parameters}
+{\em new\+Measurement} & should a new measurement be executed? or is the lattest log sufficient \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the last Way point 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file World.\+cpp.
+
+\hypertarget{classo_cpt_1_1_world_1_1_location_a4407bfcd91b7b2dd7410341521d9dcb5}{}\label{classo_cpt_1_1_world_1_1_location_a4407bfcd91b7b2dd7410341521d9dcb5} 
+\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!get\+Location\+History@{get\+Location\+History}}
+\index{get\+Location\+History@{get\+Location\+History}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+\subsubsection{\texorpdfstring{get\+Location\+History()}{getLocationHistory()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{structo_cpt_1_1_world_1_1_location_1_1_route_point_aa042feea77cb3c1531ab4e8ecf42fbd6}{World\+::\+Location\+::\+Route\+Point\+::ptr} $>$ o\+Cpt\+::\+World\+::\+Location\+::get\+Location\+History (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the complete location history \begin{DoxyReturn}{Returns}
+returns a vector with shared\+\_\+ptr of all waypoints reached 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file World.\+cpp.
+
+\hypertarget{classo_cpt_1_1_world_1_1_location_aa6211993ea4e0fdf714475d22e296220}{}\label{classo_cpt_1_1_world_1_1_location_aa6211993ea4e0fdf714475d22e296220} 
+\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+World\+::\+Location\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{\hyperlink{structo_cpt_1_1_world_1_1_location_1_1_route_point_aa042feea77cb3c1531ab4e8ecf42fbd6}{Route\+Point\+::ptr}}]{route\+Point }\end{DoxyParamCaption})}
+
+Add a new waypoint to the history log 
+\begin{DoxyParams}{Parameters}
+{\em route\+Point} & a waypoint \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file World.\+cpp.
+
+\hypertarget{classo_cpt_1_1_world_1_1_location_a3ed4dcf41514af703d09b5ba17589f1e}{}\label{classo_cpt_1_1_world_1_1_location_a3ed4dcf41514af703d09b5ba17589f1e} 
+\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!stocd@{stocd}}
+\index{stocd@{stocd}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+\subsubsection{\texorpdfstring{stocd()}{stocd()}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_world_1_1_location_aa37d99a87b49ccc38470dcc6cc64ced5}{World\+::\+Location\+::cardinal\+\_\+direction} o\+Cpt\+::\+World\+::\+Location\+::stocd (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Convert a string to a cardinal direction 
+\begin{DoxyParams}{Parameters}
+{\em str} & North/north/\+N/n / West,west,W,w / South,south,S,s / East,east,E,e are taken as argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a cardinal direction 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file World.\+cpp.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+Gps\+::interpret\+Msg().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1_world_1_1_location_a3ed4dcf41514af703d09b5ba17589f1e_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_location_ad8835274ec8b5ea13b1c01a477bafff9}{}\label{classo_cpt_1_1_world_1_1_location_ad8835274ec8b5ea13b1c01a477bafff9} 
+\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!current\+Location\+\_\+@{current\+Location\+\_\+}}
+\index{current\+Location\+\_\+@{current\+Location\+\_\+}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+\subsubsection{\texorpdfstring{current\+Location\+\_\+}{currentLocation\_}}
+{\footnotesize\ttfamily \hyperlink{structo_cpt_1_1_world_1_1_location_1_1_route_point_aa042feea77cb3c1531ab4e8ecf42fbd6}{Route\+Point\+::ptr} o\+Cpt\+::\+World\+::\+Location\+::current\+Location\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 183 of file World.\+h.
+
+\hypertarget{classo_cpt_1_1_world_1_1_location_a11e2d55bfa797b41b98e032f50911021}{}\label{classo_cpt_1_1_world_1_1_location_a11e2d55bfa797b41b98e032f50911021} 
+\index{o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}!Location\+History@{Location\+History}}
+\index{Location\+History@{Location\+History}!o\+Cpt\+::\+World\+::\+Location@{o\+Cpt\+::\+World\+::\+Location}}
+\subsubsection{\texorpdfstring{Location\+History}{LocationHistory}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structo_cpt_1_1_world_1_1_location_1_1_route_point_aa042feea77cb3c1531ab4e8ecf42fbd6}{Route\+Point\+::ptr}$>$ o\+Cpt\+::\+World\+::\+Location\+::\+Location\+History\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 184 of file World.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\hyperlink{_world_8h}{World.\+h}\item 
+src/\+Core/\hyperlink{_world_8cpp}{World.\+cpp}\end{DoxyCompactItemize}
