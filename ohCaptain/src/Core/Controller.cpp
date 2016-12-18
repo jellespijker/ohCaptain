@@ -5,14 +5,9 @@
 #include "../../include/Core/Controller.h"
 #include "../../include/Core/Exception.h"
 
-#include <fstream>
 #include <thread>
-#include <sys/poll.h>
-#include <fcntl.h>
 
-#include <boost/bind.hpp>
 #include <boost/make_shared.hpp>
-#include <boost/filesystem.hpp>
 
 namespace oCpt {
 
@@ -24,33 +19,41 @@ namespace oCpt {
 
         bool userspace::modLoaded(std::string modName) {
             //TODO check if Mutex is needed, probably
+
+            // if the module name to be checked is empty return true
             if (modName.compare("") == 0) { return true; }
-            std::ifstream fs(MODULE_PATH);
+            std::ifstream fs(MODULE_PATH); //open the module path
             std::string line;
+            // Read the lines and check if the module name is in one of them. If this is the case, close the file and return true
             while (std::getline(fs, line)) {
                 if (line.find(modName, 0) != std::string::npos) {
                     fs.close();
                     return true;
                 }
             }
+            // The complete file has been run through without a hit, close the file and return false
             fs.close();
             return false;
         }
 
         bool userspace::fileExist(std::string fileName) {
+            // Check the file stat of Linux
             struct stat buffer;
             return (stat(fileName.c_str(), &buffer) == 0);
         }
 
         bool userspace::dtboLoaded(std::string dtboName) {
+            //Open the cape manager path
             std::ifstream fs(BBB_CAPE_MNGR);
             std::string line;
+            // check if the device tree overlay name is present. If that is the case close the file and return true
             while (std::getline(fs, line)) {
                 if (line.find(dtboName, 0) != std::string::npos) {
                     fs.close();
                     return true;
                 }
             }
+            // The complete file has been checked and no hit, close it and return false
             fs.close();
             return false;
         }
@@ -58,13 +61,16 @@ namespace oCpt {
         adc::adc(uint8_t id, uint8_t device, std::string modName) {
             device_ = device;
             id_ = id;
+            //construct the complete path, from the device and pin ID
             std::stringstream ss;
             ss << ADC_IO_BASE_PATH << std::to_string(device_) << ADC_VOLTAGE_PATH << std::to_string(id_)
                << ADC_VOLTAGE_SUB_PATH;
             path_ = ss.str();
+            // Check if necessary module is loaded
             if (!modLoaded(modName)) {
                 throw oCptException("Exception! Module not loaded", 0);
             }
+            // Check if the path is correct
             if (!fileExist(path_)) {
                 throw oCptException("Exception! Userspacefile doesn't exist", 1);
             }
@@ -74,6 +80,7 @@ namespace oCpt {
 
         uint16_t &adc::getValue() {
             //TODO check if Mutex is needed for a read operation
+            //Open the file, read the value and close if
             std::ifstream fs;
             fs.open(path_.c_str());
             fs >> value_;
@@ -104,20 +111,23 @@ namespace oCpt {
                   stop_(stop),
                   serialport_(*ioservice.get(), device_),
                   receivedMsg_(""),
-                  maxReadLength_(maxreadlentgh){
+                  maxReadLength_(maxreadlentgh) {
             callback_ = boost::bind(&Serial::internalCallback, this, _1, _2);
         }
 
         void Serial::open() {
+            //If the port is closed, try opening it
             if (!isOpen()) {
                 try {
                     serialport_ = serialport_t(*ioservice_.get(), device_);
                 } catch (const std::exception &e) {
                     std::cerr << "Unable to open device: " << device_ << std::endl;
                     throw;
+                    //TODO better error handling
                 }
             }
 
+            //Set the settings for the specified port
             serialport_.set_option(boost::asio::serial_port_base::baud_rate(baudrate_));
             serialport_.set_option(parity_);
             serialport_.set_option(csize_);
@@ -130,6 +140,7 @@ namespace oCpt {
         }
 
         void Serial::close() {
+            //Close the port if it is open and set the callback to the internal closeCallback if needed
             if (serialport_.is_open()) {
                 ioservice_->post(boost::bind(&Serial::closeCallback,
                                              this,
@@ -195,8 +206,10 @@ namespace oCpt {
         }
 
         void Serial::internalCallback(const unsigned char *data, size_t size) {
+            //Create an stringstream and set the pointer for its buffer towards the obtained char buffer
             std::istringstream str;
             str.rdbuf()->pubsetbuf(reinterpret_cast<char *>(const_cast<unsigned char *>(data)), size);
+            //Fill the last obtained strings if needed
             if (!receivedMsg_.empty()) {
                 std::string appMsg = "";
                 std::getline(str, appMsg);
@@ -223,6 +236,7 @@ namespace oCpt {
         }
 
         bool Serial::write(const std::string &msg) {
+            //convert the msg string to a vector of chars
             std::vector<unsigned char> msg_vec(msg.begin(), msg.end());
             return write(msg_vec);
         }
@@ -240,14 +254,15 @@ namespace oCpt {
         }
 
         void Serial::writeCallback(const std::vector<unsigned char> &msg) {
-            bool write_inProgress = !msgQueue_.empty();
-            msgQueue_.push_back(msg);
+            bool write_inProgress = !msgQueue_.empty(); //writing in progress when the que isn't empty
+            msgQueue_.push_back(msg); // push the message to the back of the que
             if (!write_inProgress) {
-                writeStart();
+                writeStart(); // Send the first message
             }
         }
 
         void Serial::writeStart() {
+            //Write the characters asynchronous and bind the writeComplete function
             boost::asio::async_write(serialport_,
                                      boost::asio::buffer(&msgQueue_.front()[0],
                                                          msgQueue_.front().size()),
@@ -258,6 +273,7 @@ namespace oCpt {
         }
 
         void Serial::writeComplete(const boost::system::error_code &error) {
+            // If writing of a message was oke, remove the message from the write que and perform the next write from the que
             if (!error) {
                 msgQueue_.pop_front();
                 if (!msgQueue_.empty()) {
@@ -277,6 +293,7 @@ namespace oCpt {
         }
 
         void gpio::setPinNumber(int pinNumber) {
+            //TODO change path, check if path is correct, set the Edge, Direction etc from the new pin number
             gpio::pinNumber_ = pinNumber;
         }
 
@@ -317,20 +334,20 @@ namespace oCpt {
             gpio::edge_ = edge;
         }
 
-        gpio::gpio(int pinNumber, gpio::Direction direction,  gpio::Value value, gpio::Edge edge)
+        gpio::gpio(int pinNumber, gpio::Direction direction, gpio::Value value, gpio::Edge edge)
                 : pinNumber_(pinNumber),
                   direction_(direction),
                   value_(value),
                   edge_(edge),
-                  threadRunning_(false){
+                  threadRunning_(false) {
             gpiopath_ = GPIO_BASE_PATH;
             gpiopath_.append("gpio" + std::to_string(pinNumber_));
             exportPin(pinNumber_);
             writePinValue<Direction>(gpiopath_, direction_);
             writePinValue<Edge>(gpiopath_, edge_);
             writePinValue<Value>(gpiopath_, value_);
-            cb_  = gpio::cb_func(boost::bind(&gpio::internalCbFunc, this));
-                    //= boost::bind(&gpio::internalCbFunc);
+            cb_ = gpio::cb_func(boost::bind(&gpio::internalCbFunc, this));
+            //= boost::bind(&gpio::internalCbFunc);
         }
 
         gpio::~gpio() {
@@ -346,14 +363,15 @@ namespace oCpt {
             boost::filesystem::directory_iterator end_itr;
             for (boost::filesystem::directory_iterator itr(p); itr != end_itr; ++itr) {
                 std::string path = itr->path().string();
-                if ((path.find("gpio", sizeOfBasePath) != std::string::npos) && (path.find("chip", sizeOfBasePath) == std::string::npos)) {
-                    const unsigned int loc = path.find("gpio",sizeOfBasePath) + 4;
+                if ((path.find("gpio", sizeOfBasePath) != std::string::npos) &&
+                    (path.find("chip", sizeOfBasePath) == std::string::npos)) {
+                    const unsigned int loc = path.find("gpio", sizeOfBasePath) + 4;
                     const std::string nr = path.substr(loc);
                     int pinnumber = std::atoi(nr.c_str());
                     Direction direction = readPinValue<Direction>(pinnumber);
                     Value value = readPinValue<Value>(pinnumber);
                     Edge edge = readPinValue<Edge>(pinnumber);
-                    gpio::ptr gpio_ptr( new gpio(pinnumber, direction, value, edge));
+                    gpio::ptr gpio_ptr(new gpio(pinnumber, direction, value, edge));
                     gpios.push_back(gpio_ptr);
                 }
             }
@@ -405,7 +423,7 @@ namespace oCpt {
             if (direction_ == Direction::OUTPUT) {
                 return;
             }
-            int fd, i, epollfd, count=0;
+            int fd, i, epollfd, count = 0;
             struct epoll_event ev;
             epollfd = epoll_create(1);
             if (epollfd == -1) {
@@ -417,13 +435,13 @@ namespace oCpt {
                 //TODO error handling
             }
             ev.events = EPOLLIN | EPOLLET | EPOLLPRI;
-            ev.data.fd =fd;
+            ev.data.fd = fd;
 
             if (epoll_ctl(epollfd, EPOLL_CTL_ADD, fd, &ev) == -1) {
                 //TODO errror handling
             }
 
-            while(count <= 1) {
+            while (count <= 1) {
                 i = epoll_wait(epollfd, &ev, 1, -1);
                 if (i == -1) {
                     count = 5;
