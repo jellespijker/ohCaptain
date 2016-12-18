@@ -9,6 +9,15 @@
 #include <boost/shared_ptr.hpp>
 #include <boost/chrono.hpp>
 #include <boost/geometry.hpp>
+#include <boost/units/io.hpp>
+#include <boost/units/systems/si/io.hpp>
+
+#include "constants.hpp"
+#include "literals.hpp"
+
+using namespace boost::units;
+using namespace boost::units::literals;
+using namespace boost::units::constants;
 
 namespace oCpt {
     /*!
