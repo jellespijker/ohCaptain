@@ -5,15 +5,18 @@
 
 #include "../Core/Sensor.h"
 
+#include <boost/units/systems/si/angular_velocity.hpp>
+#include <boost/units/systems/si/magnetic_flux_density.hpp>
+
 namespace oCpt {
     namespace components {
         namespace sensors {
             class Razor : public Sensor {
             public:
                 typedef struct ReturnValue {
-                    float gyro[3];
-                    float mag[3];
-                    float acc[3];
+                    quantity<si::angular_velocity, float> gyro[3];
+                    quantity<si::magnetic_flux_density, float> mag[3];
+                    quantity<si::acceleration, float> acc[3];
                 } ReturnValue_t;
 
                 enum Mode {

@@ -83,15 +83,15 @@ namespace oCpt {
 
             void Razor::fillReturnValue(Razor::ReturnValue_t &retVal,
                                         float *values) {
-                retVal.acc[0] = values[0];
-                retVal.acc[1] = values[1];
-                retVal.acc[2] = values[2];
-                retVal.mag[0] = values[3];
-                retVal.mag[1] = values[4];
-                retVal.mag[2] = values[5];
-                retVal.gyro[0] = values[6];
-                retVal.gyro[1] = values[7];
-                retVal.gyro[2] = values[8];
+                retVal.acc[0] = values[0] * si::meter_per_second_squared;
+                retVal.acc[1] = values[1] * si::meter_per_second_squared;
+                retVal.acc[2] = values[2] * si::meter_per_second_squared;
+                retVal.mag[0] = values[3] * si::tesla;
+                retVal.mag[1] = values[4] * si::tesla;
+                retVal.mag[2] = values[5] * si::tesla;
+                retVal.gyro[0] = values[6] * si::radian_per_second;
+                retVal.gyro[1] = values[7] * si::radian_per_second;
+                retVal.gyro[2] = values[8] * si::radian_per_second;
             }
 
             void Razor::msgHandler(const unsigned char *data, size_t size) {

@@ -137,15 +137,15 @@ TEST(Sensor, Razor) {
     r->run();
     r->getSig().connect([&] {
         Razor::ReturnValue_t retVal = CAST(r->getState().Value, Razor);
-        std::cout << std::to_string(retVal.acc[0]) << std::endl;
-        std::cout << std::to_string(retVal.acc[1]) << std::endl;
-        std::cout << std::to_string(retVal.acc[2]) << std::endl;
-        std::cout << std::to_string(retVal.mag[0]) << std::endl;
-        std::cout << std::to_string(retVal.mag[1]) << std::endl;
-        std::cout << std::to_string(retVal.mag[2]) << std::endl;
-        std::cout << std::to_string(retVal.gyro[0]) << std::endl;
-        std::cout << std::to_string(retVal.gyro[1]) << std::endl;
-        std::cout << std::to_string(retVal.gyro[2]) << std::endl;
+        std::cout << retVal.acc[0] << std::endl;
+        std::cout << retVal.acc[1] << std::endl;
+        std::cout << retVal.acc[2] << std::endl;
+        std::cout << retVal.mag[0] << std::endl;
+        std::cout << retVal.mag[1] << std::endl;
+        std::cout << retVal.mag[2] << std::endl;
+        std::cout << retVal.gyro[0] << std::endl;
+        std::cout << retVal.gyro[1] << std::endl;
+        std::cout << retVal.gyro[2] << std::endl;
     });
 
     //for (;;) {
