@@ -226,14 +226,21 @@
     "P9.33",		// AIN4
     "P9.36",		// AIN5
     "P9.35",		// AIN6
-    "P8.44",  /* Sonar front */
-    "P8.45",  /* Sonar SB */
-    "P8.46",  /* Sonar PS */
-    "P8.41",  /* Sonar front Step */
-    "P8.42",  /* Sonar front Dir */
+    "P8.7",         // Whisper engine SB Step
+    "P8.8",         // Whisper engine SB Dir
+    "P8.9",         // Whisper engine PS Step
+    "P8.10",        // Whisper engine PS Dir
+    "P9.13",        // uart4_txd
+    "P9.11",        // uart4_rxd
+    "P9.24",		// uart1_txd
+    "P9.26",		// uart1_rxd
+    "P9.21",		// uart2_txd
+    "P9.22",		// uart2_rxd
 
-    "tscadc",	// hardware ip used
-    "pruss";
+    "uart1",        // GPS Unit
+    "uart2",        // Sonar controller
+    "uart4",        // Razor IMU
+    "tscadc";	    // Available
 
 	fragment@0 {
 		target = <&tscadc>;
@@ -247,29 +254,84 @@
 				ti,chan-step-sampledelay = <0x0 0x0 0x0 0x0 0x0 0x0 0x0>;
 			};
 		};
-  };
-
-  fragment@1 {
-    target = <&pruss>;
-    __overlay__ {
-
-      status = "okay";
     };
-  };
 
-  fragment@2 {
-    target = <&am33xx_pinmux>;
-    __overlay__ {
+    fragment@1 {
+        target = <&am33xx_pinmux>;
+        __overlay__ {
+            bb_uart4_pins: pinmux_bb_uart4_pins {
+                pinctrl-single,pins = <
+                    BONE_P9_13 (PIN_OUTPUT | MUX_MODE6)	// gpmc_wpn.uart4_txd_mux2
+                    BONE_P9_11 (PIN_INPUT  | MUX_MODE6)	// gpmc_wait0.uart4_rxd_mux2
+                >;
+            };
+        };
+    };
 
-    pru_pru_pins: pinmux_pru_pru_pins {
-        pinctrl-single,pins = <
-            BONE_P8_41 (PIN_OUTPUT_PULLDOWN | MUX_MODE5) /* lcd_data5.pr1_pru1_pru_r30_4, MODE5 | OUTPUT | PRU, Sonar front Dir */
-            BONE_P8_42 (PIN_OUTPUT_PULLDOWN | MUX_MODE5) /* lcd_data4.pr1_pru1_pru_r30_5, MODE5 | OUTPUT | PRU, Sonar front Step */
-            BONE_P8_44 (PIN_INPUT_PULLDOWN | MUX_MODE6)	 /* lcd_data3.pr1_pru1_pru_r31_3, MODE6 | INPUT | PRU, Sonar front */
-            BONE_P8_45 (PIN_INPUT_PULLDOWN | MUX_MODE6)	 /* lcd_data1.pr1_pru1_pru_r31_0, MODE6 | INPUT | PRU, Sonar PS */
-            BONE_P8_46 (PIN_INPUT_PULLDOWN | MUX_MODE6)	 /* lcd_data0.pr1_pru1_pru_r31_1, MODE6 | INPUT | PRU, Sonar SB */
-        >;
+    fragment@2 {
+        target = <&uart4>;
+            __overlay__ {
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&bb_uart4_pins>;
+        };
     };
+
+    fragment@3 {
+        target = <&am33xx_pinmux>;
+        __overlay__ {
+            bb_uart1_pins: pinmux_bb_uart1_pins {
+                pinctrl-single,pins = <
+                BONE_P9_24 (PIN_OUTPUT | MUX_MODE0)	// uart1_txd.uart1_txd
+                BONE_P9_26 (PIN_INPUT | MUX_MODE0)	// uart1_rxd.uart1_rxd
+                >;
+            };
+        };
     };
-  };
+
+    fragment@4 {
+        target = <&uart1>;
+            __overlay__ {
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&bb_uart1_pins>;
+        };
+    };
+
+    fragment@5 {
+        target = <&am33xx_pinmux>;
+        __overlay__ {
+            bb_uart2_pins: pinmux_bb_uart2_pins {
+                pinctrl-single,pins = <
+                BONE_P9_21 (PIN_OUTPUT | MUX_MODE1)	// spi0_d0.uart2_txd
+                BONE_P9_22 (PIN_INPUT  | MUX_MODE1)	// spi0_sclk.uart2_rxd
+                >;
+            };
+        };
+    };
+
+    fragment@6 {
+        target = <&uart2>;
+            __overlay__ {
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&bb_uart2_pins>;
+        };
+    };
+
+    fragment@7 {
+        target = <&am33xx_pinmux>;
+        __overlay__ {
+            whisper_pins: pinmux_whisper_pins {
+                pinctrl-single,pins = <
+                BONE_P8_07 (PIN_OUTPUT | MUX_MODE7)   // Whisper engine SB Step
+                BONE_P8_08 (PIN_OUTPUT | MUX_MODE7)   // Whisper engine SB Dir
+                BONE_P8_09 (PIN_OUTPUT | MUX_MODE7)   // Whisper engine PS Step
+                BONE_P8_10 (PIN_OUTPUT | MUX_MODE7)   // Whisper engine PS Dir
+                >;
+            };
+        };
+    };
+
+
 };
