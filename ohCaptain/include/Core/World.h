@@ -29,7 +29,7 @@ namespace oCpt {
         typedef boost::shared_ptr<World> ptr; //!< Boost shared_ptr to a World class
 
         /*!
-         * The Time class all things time related, which allow for easy consite time manupulation trhough out the classes
+         * The Time class all things time related, which allow for easy consite time manupulation trhough out the classes TODO add elapsed time function with operator+ and operator- to return quantity<seconds>
          */
         class Time {
         public:
