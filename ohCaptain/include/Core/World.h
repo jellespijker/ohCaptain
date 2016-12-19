@@ -11,13 +11,14 @@
 #include <boost/geometry.hpp>
 #include <boost/units/io.hpp>
 #include <boost/units/systems/si/io.hpp>
+#include <boost/units/systems/angle/degrees.hpp>
 
-#include "constants.hpp"
-#include "literals.hpp"
+//#include "constants.h"
+//#include "literals.h"
 
 using namespace boost::units;
-using namespace boost::units::literals;
-using namespace boost::units::constants;
+//using namespace boost::units::literals;
+//using namespace boost::units::constants;
 
 namespace oCpt {
     /*!
@@ -120,6 +121,8 @@ namespace oCpt {
          */
         class Location {
         public:
+            typedef quantity<boost::units::degree::plane_angle, double> degree_t;
+
             enum cardinal_direction {
                 North = 110, /**< enum value North */
                 South = 115, /**< enum value South */
@@ -128,7 +131,7 @@ namespace oCpt {
             }; //<! The cardinal direction of a hemisphere
 
             typedef struct coordinate {
-                double value; //<! number of degrees
+                degree_t value; //<! number of degrees
                 cardinal_direction direction; //<! Direction
             } coordinate_t; //<! A coordinate value type, consiting of a number and a cardianal direction
 

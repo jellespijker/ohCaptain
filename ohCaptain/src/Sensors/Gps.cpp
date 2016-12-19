@@ -79,14 +79,14 @@ namespace oCpt {
 
                     switch (i++) {
                         case 0:
-                            ret.latitude.value = std::stod(it);
+                            ret.latitude.value = static_cast<World::Location::degree_t>(std::stod(it) * degree::degree);
                             ret.latitude.value /= 100;
                             break;
                         case 1:
                             ret.latitude.direction = World::Location::stocd(it);
                             break;
                         case 2:
-                            ret.longitude.value = std::stod(it);
+                            ret.longitude.value = static_cast<World::Location::degree_t>(std::stod(it)  * degree::degree);
                             ret.longitude.value /= 100;
                             break;
                         case 3:
