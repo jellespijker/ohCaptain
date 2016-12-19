@@ -1,0 +1,1 @@
+KERNEL=="bone_capemgr", SUBSYSTEM=="drivers", ACTION=="add", PROGRAM="/lib/udev/capemgr"
