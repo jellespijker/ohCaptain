@@ -22,15 +22,18 @@ namespace oCpt {
 
             void PT100::updateSensor() {
                 _analogeValue = controller_->getAdcVector()->at(_pinid)->getValue();
-                state_.Value = static_cast<ReturnValue_t >(_dy_dx * _analogeValue + _constant);
+                ReturnValue_t ret = _constant;
+                ret += _dy_dx * static_cast<double>(_analogeValue);
+                state_.Value = ret;
                 state_.Stamp = world_->now();
-                std::cout << _analogeValue << " timestamp " << state_.Stamp << std::endl;
             }
 
-            void PT100::setCalibrationTemperature(std::pair<double, double> temparature,
+            void PT100::setCalibrationTemperature(std::pair<ReturnValue_t, ReturnValue_t> temparature,
                                                   std::pair<uint16_t, uint16_t> analogeValue) {
-                _dy_dx = (temparature.second - temparature.first) / (analogeValue.second - analogeValue.first);
-                _constant = temparature.first - _dy_dx * analogeValue.first;
+                _dy_dx = (temparature.second - temparature.first);
+                _dy_dx /= static_cast<double>(analogeValue.second - analogeValue.first);
+                _constant = temparature.first - _dy_dx;
+                _constant *= static_cast<double>(analogeValue.first);
             }
 
             void PT100::run() {
