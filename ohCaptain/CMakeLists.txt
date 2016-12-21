@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-set(CMAKE_CXX_FLAGS             "${CMAKE_CXX_FLAGS} -std=c++14 -g")
+set(CMAKE_CXX_FLAGS             "${CMAKE_CXX_FLAGS} -std=c++14 -g -DEIGEN_NO_DEBUG")
 set(CMAKE_BUILD_TYPE Debug)
 project(ohCaptain)
 
@@ -9,6 +9,10 @@ set(Boost_USE_MULTITHREADED     ON)
 set(Boost_USE_STATIC_RUNTIME    OFF)
 find_package(Boost COMPONENTS filesystem system chrono REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
+
+#setup Eigen3
+find_package(Eigen3 REQUIRED)
+include_directories(${Eigen3_INCLUDE_DIR})
 
 #cross compile folders
 if (ARCH_CROSS_COMPILE)
