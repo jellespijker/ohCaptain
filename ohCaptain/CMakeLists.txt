@@ -3,6 +3,8 @@ set(CMAKE_CXX_FLAGS             "${CMAKE_CXX_FLAGS} -std=c++14 -g -DEIGEN_NO_DEB
 set(CMAKE_BUILD_TYPE Debug)
 project(ohCaptain)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
+
 #setup boost
 set(Boost_USE_STATIC_LIBS       OFF)
 set(Boost_USE_MULTITHREADED     ON)
@@ -39,6 +41,7 @@ endif(DOXYGEN_FOUND)
 #Build shared library
 add_library(ohCaptain SHARED ${ohCaptain_SRC_FILES} ${ohCaptain_INC_FILES})
 target_link_libraries(ohCaptain ${Boost_LIBRARIES})
+target_link_libraries(ohCaptain ${Kalman})
 target_link_libraries(ohCaptain pthread)
 
 install( TARGETS ohCaptain DESTINATION "${CMAKE_SOURCE_DIR}/binaries/lib" )

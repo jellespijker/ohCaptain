@@ -16,6 +16,10 @@ set(Boost_USE_STATIC_RUNTIME    OFF)
 find_package(Boost COMPONENTS system chrono REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
+#setup Eigen3
+find_package(Eigen3 REQUIRED)
+include_directories(${Eigen3_INCLUDE_DIR})
+
 #Cross compile folders
 if (ARCH_CROSS_COMPILE)
     include_directories("${ohCaptain_main_SOURCE_DIR}/build/arch_rootfs/usr/include/${CXX_COMPILER_ID}/")

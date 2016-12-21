@@ -11,5 +11,5 @@ add_subdirectory(thirdparty)
 #Deploy project
 add_custom_target(deploy_${PROJECT_NAME}
         make install
-        DEPENDS ${runTests} ${ohCaptain}
+        DEPENDS ${runTests} ${ohCaptain} ${Kalman}
         COMMENT "Installing ${PROJECT_NAME}")
