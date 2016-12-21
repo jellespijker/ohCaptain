@@ -1,3 +1,6 @@
 [submodule "unitTest/lib/googletest"]
 	path = unitTest/lib/googletest
 	url = https://github.com/google/googletest.git
+[submodule "thirdparty/kalman"]
+	path = thirdparty/kalman
+	url = https://github.com/peer23peer/kalman.git
