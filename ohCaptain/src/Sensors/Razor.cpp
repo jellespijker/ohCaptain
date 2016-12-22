@@ -39,7 +39,7 @@ namespace oCpt {
             }
 
             void Razor::updateSensor() {
-                if (mode_ == Mode::REQ) {
+                if (mode_ == Mode::REQ) { //TODO work with async timer
                     boost::chrono::milliseconds t = boost::chrono::duration_cast<boost::chrono::milliseconds>(
                             world_->now() - state_.Stamp);
                     if (t.count() >
@@ -76,9 +76,10 @@ namespace oCpt {
                 // TODO implement sensor continues mode
                 serial_->open();
                 serial_->start();
-                //serial_->write("#0");   // Disable continues mode
-                //serial_->write("#o1");   // Enable continues mode
                 serial_->setReadCallback(cb);
+                setFreq(freq_);
+                setMode(mode_);
+                serial_->write("#b");
             }
 
             void Razor::fillReturnValue(Razor::ReturnValue_t &retVal,

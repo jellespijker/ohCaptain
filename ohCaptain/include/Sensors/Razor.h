@@ -7,16 +7,21 @@
 
 #include <boost/units/systems/si/angular_velocity.hpp>
 #include <boost/units/systems/si/magnetic_flux_density.hpp>
+#include <boost/units/systems/si/prefixes.hpp>
 
 namespace oCpt {
     namespace components {
         namespace sensors {
             class Razor : public Sensor {
             public:
+                typedef quantity<si::magnetic_flux_density, float> Magnetic_flux_density_t;
+                typedef quantity<si::angular_velocity, float> Angular_velocity_t;
+                typedef quantity<si::acceleration, float> Acceleration_t;
+
                 typedef struct ReturnValue {
-                    quantity<si::angular_velocity, float> gyro[3];
-                    quantity<si::magnetic_flux_density, float> mag[3];
-                    quantity<si::acceleration, float> acc[3];
+                    Angular_velocity_t gyro[3];
+                    Magnetic_flux_density_t mag[3];
+                    Acceleration_t acc[3];
                 } ReturnValue_t;
 
                 enum Mode {
@@ -24,7 +29,8 @@ namespace oCpt {
                     REQ = 1
                 };
 
-                Razor(iController::ptr controller, World::ptr world, std::string id, std::string device, unsigned int baudrate, Mode mode = Mode::REQ, uint8_t freq = 50);
+                Razor(iController::ptr controller, World::ptr world, std::string id, std::string device,
+                      unsigned int baudrate, Mode mode = Mode::CONT, uint8_t freq = 50);
 
                 ~Razor();
 
