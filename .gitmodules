@@ -4,3 +4,6 @@
 [submodule "thirdparty/kalman"]
 	path = thirdparty/kalman
 	url = https://github.com/peer23peer/kalman.git
+[submodule "tools/RazorIMUFirmware"]
+	path = tools/RazorIMUFirmware
+	url = https://github.com/peer23peer/RazorIMUFirmware.git
