@@ -4,11 +4,14 @@
 
 #include "gtest/gtest.h"
 
+#include <unistd.h>
+
 #include "../../ohCaptain/include/Controllers/BeagleboneBlack.h"
 #include "../../ohCaptain/include/Vessels/Meetcatamaran.h"
 #include "../../ohCaptain/include/Communication/LoRa_RN2483.h"
 #include "../../ohCaptain/include/Sensors/Razor.h"
 #include "../../ohCaptain/include/Sensors/Gps.h"
+#include "../../ohCaptain/include/Sensors/KalmanIMU.h"
 
 #include <boost/filesystem.hpp>
 
@@ -91,38 +94,6 @@ TEST(Controller, gpio_poll) { //TODO implement assert
     //p.waitForEdgeAsync();
 }
 
-//TEST(Sensor, LoRaTest) {
-//    oCpt::components::comm::LoRa_RN2483 loRaRn2483("loRaRn2483", "/dev/ttyACM0");
-//    loRaRn2483.initialize();
-//    loRaRn2483.msgRecievedSig.connect([&] {
-//        std::cout << loRaRn2483.readFiFoMsg()->Payload << std::endl;
-//    });
-    //loRaRn2483.run();
-    //for(;;);
-    //loRaRn2483.stop();
-//}
-
-TEST(Sensor, Gps) {
-    using namespace oCpt::components::sensors;
-    using namespace oCpt::components::controller;
-    using namespace oCpt;
-
-    World::ptr w(new World());
-    BBB::ptr bbb(new BBB(w));
-
-    Gps::ptr gps(new Gps(bbb, w, "gps", "/dev/gps", 115200));
-    gps->getSig().connect([&]{
-       Gps::ReturnValue_t ret = CAST(gps->getState().Value, Gps);
-       std::cout << ret.toString() << std::endl;
-    });
-    gps->init();
-    gps->run();
-    for(;;) {
-        gps->updateSensor();
-    }
-
-}
-
 TEST(Sensor, Razor) {
     using namespace oCpt::components::sensors;
     using namespace oCpt::components::controller;
@@ -132,9 +103,10 @@ TEST(Sensor, Razor) {
     World::ptr w(new World());
     BBB::ptr bbb(new BBB(w));
 
-    Razor::ptr r(new Razor(bbb, w, "Razor", "/dev/ttyS4", 57600, Razor::Mode::CONT, 250));
+    Razor::ptr r(new Razor(bbb, w, "Razor", "/dev/ttyS1", 57600, Razor::Mode::CONT, 50));
     r->init();
     r->run();
+    int i = 0;
     r->getSig().connect([&] {
         Razor::ReturnValue_t retVal = CAST(r->getState().Value, Razor);
         std::cout << retVal.acc[0] << std::endl;
@@ -146,11 +118,14 @@ TEST(Sensor, Razor) {
         std::cout << retVal.gyro[0] << std::endl;
         std::cout << retVal.gyro[1] << std::endl;
         std::cout << retVal.gyro[2] << std::endl;
+        i++;
     });
 
-    //for (;;) {
-    //    r->updateSensor();
-    //}
+
+    for (;;) {
+        usleep(200);
+        if (i > 100) break;
+    }
 }
 //TEST(Meetcatamaran, SerielTest) {
 //    oCpt::protocol::Serial serial("/dev/ttyACM0", 57600);
@@ -169,9 +144,34 @@ TEST(Sensor, Razor) {
 //
 //    EXPECT_EQ(1,1);
 //}
+//TEST(Sensor, LoRaTest) {
+//    oCpt::components::comm::LoRa_RN2483 loRaRn2483("loRaRn2483", "/dev/ttyACM0");
+//    loRaRn2483.initialize();
+//    loRaRn2483.msgRecievedSig.connect([&] {
+//        std::cout << loRaRn2483.readFiFoMsg()->Payload << std::endl;
+//    });
+//loRaRn2483.run();
+//for(;;);
+//loRaRn2483.stop();
+//}
+
+//TEST(Sensor, Gps) {
+//    using namespace oCpt::components::sensors;
+//    using namespace oCpt::components::controller;
+//    using namespace oCpt;
 //
-
-/*
-
-
-*/
+//    World::ptr w(new World());
+//    BBB::ptr bbb(new BBB(w));
+//
+//    Gps::ptr gps(new Gps(bbb, w, "gps", "/dev/gps", 115200));
+//    gps->getSig().connect([&]{
+//       Gps::ReturnValue_t ret = CAST(gps->getState().Value, Gps);
+//       std::cout << ret.toString() << std::endl;
+//    });
+//    gps->init();
+//    gps->run();
+//    //for(int ;;) {
+//    //    gps->updateSensor();
+//    //}
+//
+//}
