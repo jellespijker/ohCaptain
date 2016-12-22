@@ -104,18 +104,17 @@ namespace oCpt {
                 for (size_t i = 0; i < size; i++) {
                     d.push_back(reinterpret_cast<char *>(const_cast<unsigned char *>(&data[i])));
                 }
-                if (checkLRC(d)) {
-                    ReturnValue_t retVal;
-                    float *val = new float[9];
-                    for (int i = 0; i < 9; i++) {
-                        val[i] = *(reinterpret_cast<const float *>((data + (i * 4))));
-                    }
-                    fillReturnValue(retVal, val);
-                    delete[] val;
-                    state_.Value = retVal;
-                    state_.Stamp = world_->now();
-                    sig_();
+                //TODO implement error checking LRC doesn't allows work, therefore removed
+                ReturnValue_t retVal;
+                float *val = new float[9];
+                for (int i = 0; i < 9; i++) {
+                    val[i] = *(reinterpret_cast<const float *>((data + (i * 4))));
                 }
+                fillReturnValue(retVal, val);
+                delete[] val;
+                state_.Value = retVal;
+                state_.Stamp = world_->now();
+                sig_();
             }
 
             bool Razor::checkLRC(std::vector<char *> data) {
