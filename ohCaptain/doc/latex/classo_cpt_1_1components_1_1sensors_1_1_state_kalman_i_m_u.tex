@@ -1,0 +1,989 @@
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{}\section{o\+Cpt\+:\+:components\+:\+:sensors\+:\+:State\+Kalman\+I\+MU$<$ T $>$ Class Template Reference}
+\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Kalman\+I\+M\+U.\+h$>$}
+
+
+
+Inheritance diagram for o\+Cpt\+:\+:components\+:\+:sensors\+:\+:State\+Kalman\+I\+MU$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for o\+Cpt\+:\+:components\+:\+:sensors\+:\+:State\+Kalman\+I\+MU$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Kalman\+::\+Vector$<$ T, 15 $>$ \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a47c8a24bf766e317c7c6374689467264}{Base}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a2877c1b6028be91d85c9fb4eef28c158}{State\+Kalman\+I\+MU} (void)
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a4ca7aad5fc5d4eb14f5bf07579392fe3}{State\+Kalman\+I\+MU} (const Eigen\+::\+Matrix\+Base$<$ Other\+Derived $>$ \&other)
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{State\+Kalman\+I\+MU} \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ad906bc0da83225aff73b765af99d5c5b}{operator=} (const Eigen\+::\+Matrix\+Base$<$ Other\+Derived $>$ \&other)
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ac0efd425529d4e3d6297e2a36c97ba54}{pos\+\_\+x} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_aadf3572aedab8c11db304bed654cf2b7}{pos\+\_\+y} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_aad071acb42796e2e8a1c2361c326a50d}{pos\+\_\+z} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_aa13bf50070ea8044635e336181778789}{vel\+\_\+x} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a50172396bd207a909ca324abd5b5d22d}{vel\+\_\+y} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a7ea8e9ee9550f68d3036865b9c6fa046}{vel\+\_\+z} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3d94faa4400f2fb4646140ee09590eca}{acc\+\_\+x} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_abe4adf42c8c10cfd93c64732746de174}{acc\+\_\+y} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a0f360ba5c223defb8fbd401b5d46d8df}{acc\+\_\+z} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ab12a6b15e2f34e35e02c35df79936011}{theta} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a4d11449f57cc20aa89f310e80660401a}{psi} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_abdcc72fa4577d598c0dfa587e3fd5c50}{phi} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a76f4d4c223a3544dc4212caf7ea8abc0}{theta\+Prime} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a33afe8c39e6296b28e4575e03214dc5c}{psi\+Prime} () const
+\item 
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ac98769f4896ac5b4f82e7cbf5ec153b4}{phi\+Prime} () const
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_add96951f74a6f0b172b1d28d410733e4}{pos\+\_\+x} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a24b3a38a7f3b409ed9dfeb9819ec5752}{pos\+\_\+y} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a26f78df972c9150a4b95dff4d64d746e}{pos\+\_\+z} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a63461190b792058a6bf1575712977020}{vel\+\_\+x} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a7183397c22bf7b2f78b9b980a8dd9159}{vel\+\_\+y} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a43c6fd528cc8acaf419c78ca7b98b9a4}{vel\+\_\+z} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3ef88a9cd5d04fa058e48ac059758510}{acc\+\_\+x} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_aad935e3d6f0d674b9eec1e11b65678eb}{acc\+\_\+y} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a145686ef802ee3cc69d055c5d2b88cc1}{acc\+\_\+z} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a752933a8138ba51f242f628c0d6b73b2}{theta} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a90666fa83a7d55b49eac4dc90e51c755}{psi} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_afb684e2c82297c65dc2566a1503ca496}{phi} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a4e86d8dbc6526e34a98507e38a47942d}{theta\+Prime} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a621bd8af367d41712fb05ce0728ae843}{psi\+Prime} ()
+\item 
+T \& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a647260f2a1427ac4f540355358c88828}{phi\+Prime} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3992946bc78f848a4e76bfa8e9bdbaf6}{posX} = 0
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a418da0a368af2e931c09211aac2451c2}{posY} = 1
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a5d55d2f9d87636f0b32cdfd1e9acef0a}{posZ} = 2
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a7236194c98fe1342621db5e1212a5c9c}{velX} = 3
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3a6ea2f74eae7f16a73c539deb0645ee}{velY} = 4
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_af7d5e8203d4a3278463d368dd07817e6}{velZ} = 5
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3453cb371171d6753dc93ab75b350c6c}{accX} = 6
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ab9e11bcdaaf94eab84207043e747bb25}{accY} = 7
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ab1f138c868f75b567c7edcae5dd43028}{accZ} = 8
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a9abd5adb833afbc4bc71690326d39161}{Theta} = 9
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a6534206c4f7f2c52b96a413e74026349}{Psi} = 10
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_af40d1e1e859f609bb91173084ac42483}{Phi} = 11
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a6b244cd9a4315e36b1872b30d1127810}{Theta\+Prime} = 12
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ae55de2c7760d25336426afe7512e3825}{Psi\+Prime} = 13
+\item 
+static constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ac4bdc3ef893341800a199f0072523d1f}{Phi\+Prime} = 14
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$}
+
+
+
+Definition at line 18 of file Kalman\+I\+M\+U.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a47c8a24bf766e317c7c6374689467264}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a47c8a24bf766e317c7c6374689467264} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!Base@{Base}}
+\index{Base@{Base}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef Kalman\+::\+Vector$<$ T , 15 $>$ \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a47c8a24bf766e317c7c6374689467264}{Base}}
+
+
+
+Definition at line 20 of file Kalman\+I\+M\+U.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a2877c1b6028be91d85c9fb4eef28c158}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a2877c1b6028be91d85c9fb4eef28c158} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!State\+Kalman\+I\+MU@{State\+Kalman\+I\+MU}}
+\index{State\+Kalman\+I\+MU@{State\+Kalman\+I\+MU}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{State\+Kalman\+I\+M\+U()}{StateKalmanIMU()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{State\+Kalman\+I\+MU} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 20 of file Kalman\+I\+M\+U.\+h.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a4ca7aad5fc5d4eb14f5bf07579392fe3}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a4ca7aad5fc5d4eb14f5bf07579392fe3} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!State\+Kalman\+I\+MU@{State\+Kalman\+I\+MU}}
+\index{State\+Kalman\+I\+MU@{State\+Kalman\+I\+MU}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{State\+Kalman\+I\+M\+U()}{StateKalmanIMU()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename Other\+Derived $>$ \\
+\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{State\+Kalman\+I\+MU} (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Base$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 20 of file Kalman\+I\+M\+U.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3d94faa4400f2fb4646140ee09590eca}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3d94faa4400f2fb4646140ee09590eca} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!acc\+\_\+x@{acc\+\_\+x}}
+\index{acc\+\_\+x@{acc\+\_\+x}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{acc\+\_\+x()}{acc\_x()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::acc\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 50 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::accX.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+Position\+Measurement\+Model\+Kalman\+I\+M\+U$<$ T, Covariance\+Base $>$\+::h().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3d94faa4400f2fb4646140ee09590eca_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3ef88a9cd5d04fa058e48ac059758510}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3ef88a9cd5d04fa058e48ac059758510} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!acc\+\_\+x@{acc\+\_\+x}}
+\index{acc\+\_\+x@{acc\+\_\+x}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{acc\+\_\+x()}{acc\_x()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::acc\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 80 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::accX.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_abe4adf42c8c10cfd93c64732746de174}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_abe4adf42c8c10cfd93c64732746de174} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!acc\+\_\+y@{acc\+\_\+y}}
+\index{acc\+\_\+y@{acc\+\_\+y}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{acc\+\_\+y()}{acc\_y()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::acc\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 52 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::accY.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+Position\+Measurement\+Model\+Kalman\+I\+M\+U$<$ T, Covariance\+Base $>$\+::h().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_abe4adf42c8c10cfd93c64732746de174_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_aad935e3d6f0d674b9eec1e11b65678eb}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_aad935e3d6f0d674b9eec1e11b65678eb} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!acc\+\_\+y@{acc\+\_\+y}}
+\index{acc\+\_\+y@{acc\+\_\+y}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{acc\+\_\+y()}{acc\_y()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::acc\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 82 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::accY.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a0f360ba5c223defb8fbd401b5d46d8df}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a0f360ba5c223defb8fbd401b5d46d8df} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!acc\+\_\+z@{acc\+\_\+z}}
+\index{acc\+\_\+z@{acc\+\_\+z}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{acc\+\_\+z()}{acc\_z()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::acc\+\_\+z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 54 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::accZ.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+Position\+Measurement\+Model\+Kalman\+I\+M\+U$<$ T, Covariance\+Base $>$\+::h().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a0f360ba5c223defb8fbd401b5d46d8df_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a145686ef802ee3cc69d055c5d2b88cc1}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a145686ef802ee3cc69d055c5d2b88cc1} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!acc\+\_\+z@{acc\+\_\+z}}
+\index{acc\+\_\+z@{acc\+\_\+z}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{acc\+\_\+z()}{acc\_z()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::acc\+\_\+z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 84 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::accZ.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ad906bc0da83225aff73b765af99d5c5b}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ad906bc0da83225aff73b765af99d5c5b} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!operator=@{operator=}}
+\index{operator=@{operator=}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename Other\+Derived $>$ \\
+\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{State\+Kalman\+I\+MU}\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Base$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 20 of file Kalman\+I\+M\+U.\+h.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_abdcc72fa4577d598c0dfa587e3fd5c50}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_abdcc72fa4577d598c0dfa587e3fd5c50} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!phi@{phi}}
+\index{phi@{phi}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{phi()}{phi()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::phi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 60 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::\+Phi.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+Orientation\+Measurement\+Model\+Kalman\+I\+M\+U$<$ T, Covariance\+Base $>$\+::h().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_abdcc72fa4577d598c0dfa587e3fd5c50_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_afb684e2c82297c65dc2566a1503ca496}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_afb684e2c82297c65dc2566a1503ca496} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!phi@{phi}}
+\index{phi@{phi}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{phi()}{phi()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::phi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 90 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::\+Phi.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ac98769f4896ac5b4f82e7cbf5ec153b4}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ac98769f4896ac5b4f82e7cbf5ec153b4} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!phi\+Prime@{phi\+Prime}}
+\index{phi\+Prime@{phi\+Prime}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{phi\+Prime()}{phiPrime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::phi\+Prime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 66 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::\+Phi\+Prime.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+Orientation\+Measurement\+Model\+Kalman\+I\+M\+U$<$ T, Covariance\+Base $>$\+::h().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ac98769f4896ac5b4f82e7cbf5ec153b4_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a647260f2a1427ac4f540355358c88828}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a647260f2a1427ac4f540355358c88828} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!phi\+Prime@{phi\+Prime}}
+\index{phi\+Prime@{phi\+Prime}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{phi\+Prime()}{phiPrime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::phi\+Prime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 96 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::\+Phi\+Prime.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ac0efd425529d4e3d6297e2a36c97ba54}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ac0efd425529d4e3d6297e2a36c97ba54} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!pos\+\_\+x@{pos\+\_\+x}}
+\index{pos\+\_\+x@{pos\+\_\+x}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{pos\+\_\+x()}{pos\_x()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::pos\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 38 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::posX.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_add96951f74a6f0b172b1d28d410733e4}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_add96951f74a6f0b172b1d28d410733e4} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!pos\+\_\+x@{pos\+\_\+x}}
+\index{pos\+\_\+x@{pos\+\_\+x}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{pos\+\_\+x()}{pos\_x()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::pos\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 68 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::posX.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_aadf3572aedab8c11db304bed654cf2b7}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_aadf3572aedab8c11db304bed654cf2b7} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!pos\+\_\+y@{pos\+\_\+y}}
+\index{pos\+\_\+y@{pos\+\_\+y}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{pos\+\_\+y()}{pos\_y()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::pos\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 40 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::posY.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a24b3a38a7f3b409ed9dfeb9819ec5752}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a24b3a38a7f3b409ed9dfeb9819ec5752} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!pos\+\_\+y@{pos\+\_\+y}}
+\index{pos\+\_\+y@{pos\+\_\+y}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{pos\+\_\+y()}{pos\_y()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::pos\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 70 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::posY.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_aad071acb42796e2e8a1c2361c326a50d}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_aad071acb42796e2e8a1c2361c326a50d} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!pos\+\_\+z@{pos\+\_\+z}}
+\index{pos\+\_\+z@{pos\+\_\+z}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{pos\+\_\+z()}{pos\_z()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::pos\+\_\+z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 42 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::posZ.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a26f78df972c9150a4b95dff4d64d746e}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a26f78df972c9150a4b95dff4d64d746e} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!pos\+\_\+z@{pos\+\_\+z}}
+\index{pos\+\_\+z@{pos\+\_\+z}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{pos\+\_\+z()}{pos\_z()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::pos\+\_\+z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 72 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::posZ.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a4d11449f57cc20aa89f310e80660401a}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a4d11449f57cc20aa89f310e80660401a} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!psi@{psi}}
+\index{psi@{psi}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{psi()}{psi()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::psi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 58 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::\+Psi.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+Orientation\+Measurement\+Model\+Kalman\+I\+M\+U$<$ T, Covariance\+Base $>$\+::h().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a4d11449f57cc20aa89f310e80660401a_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a90666fa83a7d55b49eac4dc90e51c755}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a90666fa83a7d55b49eac4dc90e51c755} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!psi@{psi}}
+\index{psi@{psi}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{psi()}{psi()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::psi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 88 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::\+Psi.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a33afe8c39e6296b28e4575e03214dc5c}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a33afe8c39e6296b28e4575e03214dc5c} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!psi\+Prime@{psi\+Prime}}
+\index{psi\+Prime@{psi\+Prime}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{psi\+Prime()}{psiPrime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::psi\+Prime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 64 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::\+Psi\+Prime.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+Orientation\+Measurement\+Model\+Kalman\+I\+M\+U$<$ T, Covariance\+Base $>$\+::h().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a33afe8c39e6296b28e4575e03214dc5c_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a621bd8af367d41712fb05ce0728ae843}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a621bd8af367d41712fb05ce0728ae843} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!psi\+Prime@{psi\+Prime}}
+\index{psi\+Prime@{psi\+Prime}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{psi\+Prime()}{psiPrime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::psi\+Prime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 94 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::\+Psi\+Prime.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ab12a6b15e2f34e35e02c35df79936011}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ab12a6b15e2f34e35e02c35df79936011} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!theta@{theta}}
+\index{theta@{theta}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{theta()}{theta()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::theta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 56 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::\+Theta.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+Orientation\+Measurement\+Model\+Kalman\+I\+M\+U$<$ T, Covariance\+Base $>$\+::h().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ab12a6b15e2f34e35e02c35df79936011_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a752933a8138ba51f242f628c0d6b73b2}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a752933a8138ba51f242f628c0d6b73b2} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!theta@{theta}}
+\index{theta@{theta}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{theta()}{theta()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::theta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 86 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::\+Theta.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a76f4d4c223a3544dc4212caf7ea8abc0}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a76f4d4c223a3544dc4212caf7ea8abc0} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!theta\+Prime@{theta\+Prime}}
+\index{theta\+Prime@{theta\+Prime}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{theta\+Prime()}{thetaPrime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::theta\+Prime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 62 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::\+Theta\+Prime.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+Orientation\+Measurement\+Model\+Kalman\+I\+M\+U$<$ T, Covariance\+Base $>$\+::h().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a76f4d4c223a3544dc4212caf7ea8abc0_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a4e86d8dbc6526e34a98507e38a47942d}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a4e86d8dbc6526e34a98507e38a47942d} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!theta\+Prime@{theta\+Prime}}
+\index{theta\+Prime@{theta\+Prime}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{theta\+Prime()}{thetaPrime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::theta\+Prime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 92 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::\+Theta\+Prime.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_aa13bf50070ea8044635e336181778789}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_aa13bf50070ea8044635e336181778789} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!vel\+\_\+x@{vel\+\_\+x}}
+\index{vel\+\_\+x@{vel\+\_\+x}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{vel\+\_\+x()}{vel\_x()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::vel\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 44 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::velX.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a63461190b792058a6bf1575712977020}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a63461190b792058a6bf1575712977020} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!vel\+\_\+x@{vel\+\_\+x}}
+\index{vel\+\_\+x@{vel\+\_\+x}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{vel\+\_\+x()}{vel\_x()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::vel\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 74 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::velX.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a50172396bd207a909ca324abd5b5d22d}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a50172396bd207a909ca324abd5b5d22d} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!vel\+\_\+y@{vel\+\_\+y}}
+\index{vel\+\_\+y@{vel\+\_\+y}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{vel\+\_\+y()}{vel\_y()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::vel\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 46 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::velY.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a7183397c22bf7b2f78b9b980a8dd9159}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a7183397c22bf7b2f78b9b980a8dd9159} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!vel\+\_\+y@{vel\+\_\+y}}
+\index{vel\+\_\+y@{vel\+\_\+y}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{vel\+\_\+y()}{vel\_y()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::vel\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 76 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::velY.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a7ea8e9ee9550f68d3036865b9c6fa046}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a7ea8e9ee9550f68d3036865b9c6fa046} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!vel\+\_\+z@{vel\+\_\+z}}
+\index{vel\+\_\+z@{vel\+\_\+z}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{vel\+\_\+z()}{vel\_z()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::vel\+\_\+z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 48 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::velZ.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a43c6fd528cc8acaf419c78ca7b98b9a4}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a43c6fd528cc8acaf419c78ca7b98b9a4} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!vel\+\_\+z@{vel\+\_\+z}}
+\index{vel\+\_\+z@{vel\+\_\+z}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{vel\+\_\+z()}{vel\_z()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::vel\+\_\+z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 78 of file Kalman\+I\+M\+U.\+h.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::velZ.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3453cb371171d6753dc93ab75b350c6c}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3453cb371171d6753dc93ab75b350c6c} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!accX@{accX}}
+\index{accX@{accX}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{accX}{accX}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::accX = 6\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 28 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::acc\+\_\+x(), and o\+Cpt\+::components\+::sensors\+::\+Position\+Measurement\+Kalman\+I\+M\+U$<$ T $>$\+::acc\+\_\+x().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ab9e11bcdaaf94eab84207043e747bb25}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ab9e11bcdaaf94eab84207043e747bb25} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!accY@{accY}}
+\index{accY@{accY}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{accY}{accY}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::accY = 7\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 29 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::acc\+\_\+y(), and o\+Cpt\+::components\+::sensors\+::\+Position\+Measurement\+Kalman\+I\+M\+U$<$ T $>$\+::acc\+\_\+y().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ab1f138c868f75b567c7edcae5dd43028}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ab1f138c868f75b567c7edcae5dd43028} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!accZ@{accZ}}
+\index{accZ@{accZ}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{accZ}{accZ}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::accZ = 8\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 30 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::acc\+\_\+z(), and o\+Cpt\+::components\+::sensors\+::\+Position\+Measurement\+Kalman\+I\+M\+U$<$ T $>$\+::acc\+\_\+z().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_af40d1e1e859f609bb91173084ac42483}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_af40d1e1e859f609bb91173084ac42483} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!Phi@{Phi}}
+\index{Phi@{Phi}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{Phi}{Phi}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::Phi = 11\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 33 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::phi(), and o\+Cpt\+::components\+::sensors\+::\+Orientation\+Measurement\+Kalman\+I\+M\+U$<$ T $>$\+::phi().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ac4bdc3ef893341800a199f0072523d1f}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ac4bdc3ef893341800a199f0072523d1f} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!Phi\+Prime@{Phi\+Prime}}
+\index{Phi\+Prime@{Phi\+Prime}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{Phi\+Prime}{PhiPrime}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::Phi\+Prime = 14\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 36 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::phi\+Prime(), and o\+Cpt\+::components\+::sensors\+::\+Orientation\+Measurement\+Kalman\+I\+M\+U$<$ T $>$\+::phi\+Prime().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3992946bc78f848a4e76bfa8e9bdbaf6}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3992946bc78f848a4e76bfa8e9bdbaf6} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!posX@{posX}}
+\index{posX@{posX}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{posX}{posX}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::posX = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 22 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::pos\+\_\+x().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a418da0a368af2e931c09211aac2451c2}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a418da0a368af2e931c09211aac2451c2} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!posY@{posY}}
+\index{posY@{posY}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{posY}{posY}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::posY = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 23 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::pos\+\_\+y().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a5d55d2f9d87636f0b32cdfd1e9acef0a}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a5d55d2f9d87636f0b32cdfd1e9acef0a} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!posZ@{posZ}}
+\index{posZ@{posZ}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{posZ}{posZ}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::posZ = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 24 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::pos\+\_\+z().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a6534206c4f7f2c52b96a413e74026349}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a6534206c4f7f2c52b96a413e74026349} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!Psi@{Psi}}
+\index{Psi@{Psi}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{Psi}{Psi}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::Psi = 10\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 32 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::psi(), and o\+Cpt\+::components\+::sensors\+::\+Orientation\+Measurement\+Kalman\+I\+M\+U$<$ T $>$\+::psi().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ae55de2c7760d25336426afe7512e3825}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_ae55de2c7760d25336426afe7512e3825} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!Psi\+Prime@{Psi\+Prime}}
+\index{Psi\+Prime@{Psi\+Prime}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{Psi\+Prime}{PsiPrime}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::Psi\+Prime = 13\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 35 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::psi\+Prime(), and o\+Cpt\+::components\+::sensors\+::\+Orientation\+Measurement\+Kalman\+I\+M\+U$<$ T $>$\+::psi\+Prime().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a9abd5adb833afbc4bc71690326d39161}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a9abd5adb833afbc4bc71690326d39161} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!Theta@{Theta}}
+\index{Theta@{Theta}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{Theta}{Theta}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::Theta = 9\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 31 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::theta(), and o\+Cpt\+::components\+::sensors\+::\+Orientation\+Measurement\+Kalman\+I\+M\+U$<$ T $>$\+::theta().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a6b244cd9a4315e36b1872b30d1127810}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a6b244cd9a4315e36b1872b30d1127810} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!Theta\+Prime@{Theta\+Prime}}
+\index{Theta\+Prime@{Theta\+Prime}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{Theta\+Prime}{ThetaPrime}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::Theta\+Prime = 12\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 34 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::theta\+Prime(), and o\+Cpt\+::components\+::sensors\+::\+Orientation\+Measurement\+Kalman\+I\+M\+U$<$ T $>$\+::theta\+Prime().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a7236194c98fe1342621db5e1212a5c9c}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a7236194c98fe1342621db5e1212a5c9c} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!velX@{velX}}
+\index{velX@{velX}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{velX}{velX}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::velX = 3\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 25 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::vel\+\_\+x().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3a6ea2f74eae7f16a73c539deb0645ee}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_a3a6ea2f74eae7f16a73c539deb0645ee} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!velY@{velY}}
+\index{velY@{velY}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{velY}{velY}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::velY = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 26 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::vel\+\_\+y().
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_af7d5e8203d4a3278463d368dd07817e6}{}\label{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u_af7d5e8203d4a3278463d368dd07817e6} 
+\index{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}!velZ@{velZ}}
+\index{velZ@{velZ}!o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{velZ}{velZ}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_state_kalman_i_m_u}{o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+MU}$<$ T $>$\+::velZ = 5\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 27 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+State\+Kalman\+I\+M\+U$<$ T $>$\+::vel\+\_\+z().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/projects/mti/oh\+Captain/oh\+Captain/include/\+Sensors/\hyperlink{_kalman_i_m_u_8h}{Kalman\+I\+M\+U.\+h}\end{DoxyCompactItemize}

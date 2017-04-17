@@ -34,12 +34,18 @@ enum \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_afed258e485aaaf919
 \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_afed258e485aaaf9193a57d649ccb159ba44c61c0088038c1222adbddd1664555b}{R\+EQ} = 1
  \}
 \item 
+typedef quantity$<$ si\+::magnetic\+\_\+flux\+\_\+density, float $>$ \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_ae8fa7bff60dd03d8603e7c7d757ae061}{Magnetic\+\_\+flux\+\_\+density\+\_\+t}
+\item 
+typedef quantity$<$ si\+::angular\+\_\+velocity, float $>$ \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_a2667055c5eda244f9dd5235159d86184}{Angular\+\_\+velocity\+\_\+t}
+\item 
+typedef quantity$<$ si\+::acceleration, float $>$ \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_a4ebbe9ca2661c07f9665a32a7dd38e0c}{Acceleration\+\_\+t}
+\item 
 typedef struct \hyperlink{structo_cpt_1_1components_1_1sensors_1_1_razor_1_1_return_value}{o\+Cpt\+::components\+::sensors\+::\+Razor\+::\+Return\+Value} \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_aab55c5b1a96ce97421e4696599549954}{Return\+Value\+\_\+t}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_aad2e22f7bc7227be565cab124d471a40}{Razor} (\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr} controller, \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} world, std\+::string id, std\+::string device, unsigned int baudrate, \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_afed258e485aaaf9193a57d649ccb159b}{Mode} mode=Mode\+::\+R\+EQ, uint8\+\_\+t freq=50)
+\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_a0434b265af592450a1acef4a95765575}{Razor} (\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr} controller, \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} world, std\+::string id, std\+::string device, unsigned int baudrate, \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_afed258e485aaaf9193a57d649ccb159b}{Mode} mode=Mode\+::\+C\+O\+NT, uint8\+\_\+t freq=50)
 \item 
 \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_ae77b23479f6e7b52ed25c9989a0f1903}{$\sim$\+Razor} ()
 \item 
@@ -89,11 +95,41 @@ uint8\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_a7b71014d6
 \subsection{Detailed Description}
 
 
-Definition at line 11 of file Razor.\+h.
+Definition at line 15 of file Razor.\+h.
 
 
 
 \subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_a4ebbe9ca2661c07f9665a32a7dd38e0c}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_a4ebbe9ca2661c07f9665a32a7dd38e0c} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}!Acceleration\+\_\+t@{Acceleration\+\_\+t}}
+\index{Acceleration\+\_\+t@{Acceleration\+\_\+t}!o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}}
+\subsubsection{\texorpdfstring{Acceleration\+\_\+t}{Acceleration\_t}}
+{\footnotesize\ttfamily typedef quantity$<$si\+::acceleration, float$>$ \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_a4ebbe9ca2661c07f9665a32a7dd38e0c}{o\+Cpt\+::components\+::sensors\+::\+Razor\+::\+Acceleration\+\_\+t}}
+
+
+
+Definition at line 19 of file Razor.\+h.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_a2667055c5eda244f9dd5235159d86184}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_a2667055c5eda244f9dd5235159d86184} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}!Angular\+\_\+velocity\+\_\+t@{Angular\+\_\+velocity\+\_\+t}}
+\index{Angular\+\_\+velocity\+\_\+t@{Angular\+\_\+velocity\+\_\+t}!o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}}
+\subsubsection{\texorpdfstring{Angular\+\_\+velocity\+\_\+t}{Angular\_velocity\_t}}
+{\footnotesize\ttfamily typedef quantity$<$si\+::angular\+\_\+velocity, float$>$ \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_a2667055c5eda244f9dd5235159d86184}{o\+Cpt\+::components\+::sensors\+::\+Razor\+::\+Angular\+\_\+velocity\+\_\+t}}
+
+
+
+Definition at line 18 of file Razor.\+h.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_ae8fa7bff60dd03d8603e7c7d757ae061}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_ae8fa7bff60dd03d8603e7c7d757ae061} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}!Magnetic\+\_\+flux\+\_\+density\+\_\+t@{Magnetic\+\_\+flux\+\_\+density\+\_\+t}}
+\index{Magnetic\+\_\+flux\+\_\+density\+\_\+t@{Magnetic\+\_\+flux\+\_\+density\+\_\+t}!o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}}
+\subsubsection{\texorpdfstring{Magnetic\+\_\+flux\+\_\+density\+\_\+t}{Magnetic\_flux\_density\_t}}
+{\footnotesize\ttfamily typedef quantity$<$si\+::magnetic\+\_\+flux\+\_\+density, float$>$ \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_ae8fa7bff60dd03d8603e7c7d757ae061}{o\+Cpt\+::components\+::sensors\+::\+Razor\+::\+Magnetic\+\_\+flux\+\_\+density\+\_\+t}}
+
+
+
+Definition at line 17 of file Razor.\+h.
+
 \hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_aab55c5b1a96ce97421e4696599549954}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_aab55c5b1a96ce97421e4696599549954} 
 \index{o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}!Return\+Value\+\_\+t@{Return\+Value\+\_\+t}}
 \index{Return\+Value\+\_\+t@{Return\+Value\+\_\+t}!o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}}
@@ -121,16 +157,16 @@ R\+EQ&\\
 \end{DoxyEnumFields}
 
 
-Definition at line 19 of file Razor.\+h.
+Definition at line 27 of file Razor.\+h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_aad2e22f7bc7227be565cab124d471a40}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_aad2e22f7bc7227be565cab124d471a40} 
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_a0434b265af592450a1acef4a95765575}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_a0434b265af592450a1acef4a95765575} 
 \index{o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}!Razor@{Razor}}
 \index{Razor@{Razor}!o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}}
 \subsubsection{\texorpdfstring{Razor()}{Razor()}}
-{\footnotesize\ttfamily o\+Cpt\+::components\+::sensors\+::\+Razor\+::\+Razor (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr}}]{controller,  }\item[{\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}}]{world,  }\item[{std\+::string}]{id,  }\item[{std\+::string}]{device,  }\item[{unsigned int}]{baudrate,  }\item[{\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_afed258e485aaaf9193a57d649ccb159b}{Mode}}]{mode = {\ttfamily Mode\+:\+:REQ},  }\item[{uint8\+\_\+t}]{freq = {\ttfamily 50} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily o\+Cpt\+::components\+::sensors\+::\+Razor\+::\+Razor (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr}}]{controller,  }\item[{\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}}]{world,  }\item[{std\+::string}]{id,  }\item[{std\+::string}]{device,  }\item[{unsigned int}]{baudrate,  }\item[{\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_afed258e485aaaf9193a57d649ccb159b}{Mode}}]{mode = {\ttfamily Mode\+:\+:CONT},  }\item[{uint8\+\_\+t}]{freq = {\ttfamily 50} }\end{DoxyParamCaption})}
 
 
 
@@ -140,11 +176,12 @@ Definition at line 13 of file Razor.\+cpp.
 
 References fill\+Return\+Value(), serial\+\_\+, o\+Cpt\+::i\+Sensor\+::\+State\+::\+Stamp, o\+Cpt\+::i\+Sensor\+::state\+\_\+, o\+Cpt\+::i\+Sensor\+::\+State\+::\+Value, and o\+Cpt\+::i\+Sensor\+::world\+\_\+.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_razor_aad2e22f7bc7227be565cab124d471a40_cgraph}
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_razor_a0434b265af592450a1acef4a95765575_cgraph}
 \end{center}
 \end{figure}
 \hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_ae77b23479f6e7b52ed25c9989a0f1903}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_ae77b23479f6e7b52ed25c9989a0f1903} 
@@ -174,17 +211,6 @@ References serial\+\_\+.
 
 Definition at line 120 of file Razor.\+cpp.
 
-
-
-Referenced by msg\+Handler().
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_razor_a0905dcac63406a3885fa8c2d0e952a39_icgraph}
-\end{center}
-\end{figure}
 \hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_a1c058bfc9483cfcf94456d498bff380e}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_a1c058bfc9483cfcf94456d498bff380e} 
 \index{o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}!fill\+Return\+Value@{fill\+Return\+Value}}
 \index{fill\+Return\+Value@{fill\+Return\+Value}!o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}}
@@ -193,7 +219,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 84 of file Razor.\+cpp.
+Definition at line 85 of file Razor.\+cpp.
 
 
 
@@ -203,7 +229,8 @@ References o\+Cpt\+::components\+::sensors\+::\+Razor\+::\+Return\+Value\+::acc,
 
 Referenced by msg\+Handler(), and Razor().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -254,8 +281,16 @@ Definition at line 75 of file Razor.\+cpp.
 
 
 
-References cb, and serial\+\_\+.
+References cb, freq\+\_\+, mode\+\_\+, serial\+\_\+, set\+Freq(), and set\+Mode().
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_razor_a1dd2b5a9fbac3c9510e2d3771abf358b_cgraph}
+\end{center}
+\end{figure}
 \hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_a8d8e051113a86789851faca74d3da303}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_a8d8e051113a86789851faca74d3da303} 
 \index{o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}!msg\+Handler@{msg\+Handler}}
 \index{msg\+Handler@{msg\+Handler}!o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}}
@@ -264,13 +299,14 @@ References cb, and serial\+\_\+.
 
 
 
-Definition at line 97 of file Razor.\+cpp.
+Definition at line 98 of file Razor.\+cpp.
 
 
 
-References check\+L\+R\+C(), fill\+Return\+Value(), o\+Cpt\+::i\+Sensor\+::sig\+\_\+, o\+Cpt\+::i\+Sensor\+::\+State\+::\+Stamp, o\+Cpt\+::i\+Sensor\+::state\+\_\+, o\+Cpt\+::i\+Sensor\+::\+State\+::\+Value, and o\+Cpt\+::i\+Sensor\+::world\+\_\+.
+References fill\+Return\+Value(), o\+Cpt\+::i\+Sensor\+::sig\+\_\+, o\+Cpt\+::i\+Sensor\+::\+State\+::\+Stamp, o\+Cpt\+::i\+Sensor\+::state\+\_\+, o\+Cpt\+::i\+Sensor\+::\+State\+::\+Value, and o\+Cpt\+::i\+Sensor\+::world\+\_\+.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -316,6 +352,18 @@ Definition at line 148 of file Razor.\+cpp.
 
 References freq\+\_\+, and serial\+\_\+.
 
+
+
+Referenced by init().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_razor_a77cdeb877826fce3a12fec0ed3035478_icgraph}
+\end{center}
+\end{figure}
 \hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_a0f251fe3b51bf1a96b5d1e14e69a6d57}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_a0f251fe3b51bf1a96b5d1e14e69a6d57} 
 \index{o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}!set\+I\+Oservice@{set\+I\+Oservice}}
 \index{set\+I\+Oservice@{set\+I\+Oservice}!o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}}
@@ -339,7 +387,8 @@ Definition at line 70 of file Razor.\+cpp.
 
 References serial\+\_\+, and o\+Cpt\+::\+Sensor\+::set\+I\+Oservice().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -360,6 +409,18 @@ Definition at line 135 of file Razor.\+cpp.
 
 References mode\+\_\+, and serial\+\_\+.
 
+
+
+Referenced by init().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_razor_a25a3159510e0b725eaf817b8775420ac_icgraph}
+\end{center}
+\end{figure}
 \hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_a807441c137892ee3c1b612c284893fa1}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_a807441c137892ee3c1b612c284893fa1} 
 \index{o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}!stop@{stop}}
 \index{stop@{stop}!o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}}
@@ -378,7 +439,8 @@ Definition at line 60 of file Razor.\+cpp.
 
 References o\+Cpt\+::i\+Sensor\+::sensor\+Running\+\_\+, serial\+\_\+, and o\+Cpt\+::\+Sensor\+::stop().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -403,7 +465,8 @@ Definition at line 41 of file Razor.\+cpp.
 
 References mode\+\_\+, serial\+\_\+, o\+Cpt\+::i\+Sensor\+::\+State\+::\+Stamp, o\+Cpt\+::i\+Sensor\+::state\+\_\+, o\+Cpt\+::\+Sensor\+::update\+Sensor(), and o\+Cpt\+::i\+Sensor\+::world\+\_\+.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -421,7 +484,7 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Definition at line 41 of file Razor.\+h.
+Definition at line 50 of file Razor.\+h.
 
 
 
@@ -435,7 +498,7 @@ Referenced by init().
 
 
 
-Definition at line 39 of file Razor.\+h.
+Definition at line 48 of file Razor.\+h.
 
 \hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_a7b71014d6a35c9b9f24b636bd3f6471c}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_a7b71014d6a35c9b9f24b636bd3f6471c} 
 \index{o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}!freq\+\_\+@{freq\+\_\+}}
@@ -445,11 +508,11 @@ Definition at line 39 of file Razor.\+h.
 
 
 
-Definition at line 53 of file Razor.\+h.
+Definition at line 62 of file Razor.\+h.
 
 
 
-Referenced by get\+Freq(), and set\+Freq().
+Referenced by get\+Freq(), init(), and set\+Freq().
 
 \hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_aa6610c4127d6fa300a5e2b5fa3eca461}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_aa6610c4127d6fa300a5e2b5fa3eca461} 
 \index{o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}!mode\+\_\+@{mode\+\_\+}}
@@ -459,11 +522,11 @@ Referenced by get\+Freq(), and set\+Freq().
 
 
 
-Definition at line 42 of file Razor.\+h.
+Definition at line 51 of file Razor.\+h.
 
 
 
-Referenced by get\+Mode(), set\+Mode(), and update\+Sensor().
+Referenced by get\+Mode(), init(), set\+Mode(), and update\+Sensor().
 
 \hypertarget{classo_cpt_1_1components_1_1sensors_1_1_razor_af9d445b2a06bbe42bb965c0e42b711df}{}\label{classo_cpt_1_1components_1_1sensors_1_1_razor_af9d445b2a06bbe42bb965c0e42b711df} 
 \index{o\+Cpt\+::components\+::sensors\+::\+Razor@{o\+Cpt\+::components\+::sensors\+::\+Razor}!serial\+\_\+@{serial\+\_\+}}
@@ -473,7 +536,7 @@ Referenced by get\+Mode(), set\+Mode(), and update\+Sensor().
 
 
 
-Definition at line 40 of file Razor.\+h.
+Definition at line 49 of file Razor.\+h.
 
 
 
@@ -483,5 +546,5 @@ Referenced by init(), Razor(), run(), set\+Freq(), set\+I\+Oservice(), set\+Mode
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\+Sensors/\hyperlink{_razor_8h}{Razor.\+h}\item 
-src/\+Sensors/\hyperlink{_razor_8cpp}{Razor.\+cpp}\end{DoxyCompactItemize}
+/projects/mti/oh\+Captain/oh\+Captain/include/\+Sensors/\hyperlink{_razor_8h}{Razor.\+h}\item 
+/projects/mti/oh\+Captain/oh\+Captain/src/\+Sensors/\hyperlink{_razor_8cpp}{Razor.\+cpp}\end{DoxyCompactItemize}

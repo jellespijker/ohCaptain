@@ -1,0 +1,286 @@
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u}{}\section{o\+Cpt\+:\+:components\+:\+:sensors\+:\+:Kalman\+I\+MU Class Reference}
+\label{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u}\index{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}}
+
+
+{\ttfamily \#include $<$Kalman\+I\+M\+U.\+h$>$}
+
+
+
+Inheritance diagram for o\+Cpt\+:\+:components\+:\+:sensors\+:\+:Kalman\+I\+MU\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for o\+Cpt\+:\+:components\+:\+:sensors\+:\+:Kalman\+I\+MU\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_1_1_return_value}{Return\+Value}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_1_1_return_value}{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+M\+U\+::\+Return\+Value} \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_aa6de0f4077440823dc976d8e4bb63add}{Return\+Value\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a4f57989596976ac685dde219cc951ad8}{Kalman\+I\+MU} (\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr} controller, \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} world, std\+::string id, \hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{Razor\+::ptr} Razor\+Sensor)
+\item 
+\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_af2b2dfb55ebe25288b84764acca55dfa}{$\sim$\+Kalman\+I\+MU} ()
+\item 
+void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_acc4f666db05d6355772a67ae2f06faef}{update\+Sensor} ()
+\item 
+void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_abd725cf96ffa29379c496bed243a520a}{run} ()
+\item 
+void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a0d2dfbc9cc468e32f9c58f0a8c92c3ca}{init} ()
+\item 
+void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a21cf83dfed3bd1c5a164bb847d25f426}{set\+I\+Oservice} (boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$ ioservice)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a99b62a459b69b3b877d98dcb34b286d7}{Razor\+Update} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a483d7e4a39dce51d4bbd826fef6a9870}{device\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{Razor\+::ptr} \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a65e72cc0e903c472b2ddca84d227c50c}{razor\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 229 of file Kalman\+I\+M\+U.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_aa6de0f4077440823dc976d8e4bb63add}{}\label{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_aa6de0f4077440823dc976d8e4bb63add} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}!Return\+Value\+\_\+t@{Return\+Value\+\_\+t}}
+\index{Return\+Value\+\_\+t@{Return\+Value\+\_\+t}!o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{Return\+Value\+\_\+t}{ReturnValue\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_1_1_return_value}{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+M\+U\+::\+Return\+Value}  \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_aa6de0f4077440823dc976d8e4bb63add}{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+M\+U\+::\+Return\+Value\+\_\+t}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a4f57989596976ac685dde219cc951ad8}{}\label{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a4f57989596976ac685dde219cc951ad8} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}!Kalman\+I\+MU@{Kalman\+I\+MU}}
+\index{Kalman\+I\+MU@{Kalman\+I\+MU}!o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{Kalman\+I\+M\+U()}{KalmanIMU()}}
+{\footnotesize\ttfamily o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+M\+U\+::\+Kalman\+I\+MU (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr}}]{controller,  }\item[{\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}}]{world,  }\item[{std\+::string}]{id,  }\item[{\hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{Razor\+::ptr}}]{Razor\+Sensor }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file Kalman\+I\+M\+U.\+cpp.
+
+
+
+References razor\+\_\+, and Razor\+Update().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a4f57989596976ac685dde219cc951ad8_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_af2b2dfb55ebe25288b84764acca55dfa}{}\label{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_af2b2dfb55ebe25288b84764acca55dfa} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}!````~Kalman\+I\+MU@{$\sim$\+Kalman\+I\+MU}}
+\index{````~Kalman\+I\+MU@{$\sim$\+Kalman\+I\+MU}!o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{$\sim$\+Kalman\+I\+M\+U()}{~KalmanIMU()}}
+{\footnotesize\ttfamily o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+M\+U\+::$\sim$\+Kalman\+I\+MU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file Kalman\+I\+M\+U.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a0d2dfbc9cc468e32f9c58f0a8c92c3ca}{}\label{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a0d2dfbc9cc468e32f9c58f0a8c92c3ca} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}!init@{init}}
+\index{init@{init}!o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+M\+U\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize the sensor 
+
+Reimplemented from \hyperlink{classo_cpt_1_1_sensor_aa612a305a9a3091dd62cd1afb9d4dd7d}{o\+Cpt\+::\+Sensor}.
+
+
+
+Definition at line 26 of file Kalman\+I\+M\+U.\+cpp.
+
+
+
+References o\+Cpt\+::\+Sensor\+::init().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a0d2dfbc9cc468e32f9c58f0a8c92c3ca_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a99b62a459b69b3b877d98dcb34b286d7}{}\label{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a99b62a459b69b3b877d98dcb34b286d7} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}!Razor\+Update@{Razor\+Update}}
+\index{Razor\+Update@{Razor\+Update}!o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{Razor\+Update()}{RazorUpdate()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+M\+U\+::\+Razor\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 34 of file Kalman\+I\+M\+U.\+cpp.
+
+
+
+References o\+Cpt\+::components\+::sensors\+::\+Razor\+::\+Return\+Value\+::acc, C\+A\+ST, and razor\+\_\+.
+
+
+
+Referenced by Kalman\+I\+M\+U().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a99b62a459b69b3b877d98dcb34b286d7_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_abd725cf96ffa29379c496bed243a520a}{}\label{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_abd725cf96ffa29379c496bed243a520a} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}!run@{run}}
+\index{run@{run}!o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+M\+U\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+virtual function starting the run service for the IO 
+
+Reimplemented from \hyperlink{classo_cpt_1_1_sensor_aef25b0e5f3a8358ee81c97c73909fbe6}{o\+Cpt\+::\+Sensor}.
+
+
+
+Definition at line 22 of file Kalman\+I\+M\+U.\+cpp.
+
+
+
+References o\+Cpt\+::\+Sensor\+::run().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_abd725cf96ffa29379c496bed243a520a_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a21cf83dfed3bd1c5a164bb847d25f426}{}\label{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a21cf83dfed3bd1c5a164bb847d25f426} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}!set\+I\+Oservice@{set\+I\+Oservice}}
+\index{set\+I\+Oservice@{set\+I\+Oservice}!o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{set\+I\+Oservice()}{setIOservice()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+M\+U\+::set\+I\+Oservice (\begin{DoxyParamCaption}\item[{boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$}]{ioservice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Setting the used Asynchronous Input Output service 
+\begin{DoxyParams}{Parameters}
+{\em ioservice} & A\+S\+IO IO service, which handles the async calls from multiple sensors \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classo_cpt_1_1_sensor_ae7d47e18df5eb7854bf71fbbee9568df}{o\+Cpt\+::\+Sensor}.
+
+
+
+Definition at line 30 of file Kalman\+I\+M\+U.\+cpp.
+
+
+
+References o\+Cpt\+::\+Sensor\+::set\+I\+Oservice().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a21cf83dfed3bd1c5a164bb847d25f426_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_acc4f666db05d6355772a67ae2f06faef}{}\label{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_acc4f666db05d6355772a67ae2f06faef} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}!update\+Sensor@{update\+Sensor}}
+\index{update\+Sensor@{update\+Sensor}!o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{update\+Sensor()}{updateSensor()}}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+M\+U\+::update\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+virtual function which performs a sensor update, obtaining a new value and sending a signal afterwards 
+
+Reimplemented from \hyperlink{classo_cpt_1_1_sensor_ab4b0dedb06f11bcf2368852035beb2b2}{o\+Cpt\+::\+Sensor}.
+
+
+
+Definition at line 18 of file Kalman\+I\+M\+U.\+cpp.
+
+
+
+References o\+Cpt\+::\+Sensor\+::update\+Sensor().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_acc4f666db05d6355772a67ae2f06faef_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a483d7e4a39dce51d4bbd826fef6a9870}{}\label{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a483d7e4a39dce51d4bbd826fef6a9870} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}!device\+\_\+@{device\+\_\+}}
+\index{device\+\_\+@{device\+\_\+}!o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{device\+\_\+}{device\_}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+M\+U\+::device\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 252 of file Kalman\+I\+M\+U.\+h.
+
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a65e72cc0e903c472b2ddca84d227c50c}{}\label{classo_cpt_1_1components_1_1sensors_1_1_kalman_i_m_u_a65e72cc0e903c472b2ddca84d227c50c} 
+\index{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}!razor\+\_\+@{razor\+\_\+}}
+\index{razor\+\_\+@{razor\+\_\+}!o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU@{o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+MU}}
+\subsubsection{\texorpdfstring{razor\+\_\+}{razor\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{Razor\+::ptr} o\+Cpt\+::components\+::sensors\+::\+Kalman\+I\+M\+U\+::razor\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 253 of file Kalman\+I\+M\+U.\+h.
+
+
+
+Referenced by Kalman\+I\+M\+U(), and Razor\+Update().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/projects/mti/oh\+Captain/oh\+Captain/include/\+Sensors/\hyperlink{_kalman_i_m_u_8h}{Kalman\+I\+M\+U.\+h}\item 
+/projects/mti/oh\+Captain/oh\+Captain/src/\+Sensors/\hyperlink{_kalman_i_m_u_8cpp}{Kalman\+I\+M\+U.\+cpp}\end{DoxyCompactItemize}

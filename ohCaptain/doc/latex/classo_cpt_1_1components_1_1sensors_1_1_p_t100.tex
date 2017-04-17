@@ -25,7 +25,7 @@ Collaboration diagram for o\+Cpt\+:\+:components\+:\+:sensors\+:\+:P\+T100\+:\no
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef double \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a385f85603cfd23bf76488f6b67e9fe2d}{Return\+Value\+\_\+t}
+typedef quantity$<$ celsius\+::temperature, double $>$ \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a46c281d97bd4bd34e16f486a6aeda82e}{Return\+Value\+\_\+t}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -42,7 +42,7 @@ void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a6d80e18a58cf4e1b
 \item 
 void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a296d0c3c2a55df465e127462c8c30215}{init} ()
 \item 
-void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a77e36b92c5eb4b6594fa89114d0fb357}{set\+Calibration\+Temperature} (std\+::pair$<$ double, double $>$ temparature, std\+::pair$<$ uint16\+\_\+t, uint16\+\_\+t $>$ analoge\+Value)
+void \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aa809a235b76c237c3a1f66cf9dd7e381}{set\+Calibration\+Temperature} (std\+::pair$<$ \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a46c281d97bd4bd34e16f486a6aeda82e}{Return\+Value\+\_\+t}, \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a46c281d97bd4bd34e16f486a6aeda82e}{Return\+Value\+\_\+t} $>$ temparature, std\+::pair$<$ uint16\+\_\+t, uint16\+\_\+t $>$ analoge\+Value)
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -53,30 +53,30 @@ uint8\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_af67b953b
 \item 
 uint8\+\_\+t \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_ac49f21dd8a8f2c7cd7e377512f5e9b25}{\+\_\+pinid} = 0
 \item 
-double \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a3576ceab93d9cedce804469f72087155}{\+\_\+dy\+\_\+dx} = 1.\+0
+\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a46c281d97bd4bd34e16f486a6aeda82e}{Return\+Value\+\_\+t} \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a2789fca642c8948774378dc157599335}{\+\_\+dy\+\_\+dx} = 1.\+0 $\ast$ celsius\+::degree
 \item 
-double \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a9a38493994b9ec216a5a0d29f3c31cc3}{\+\_\+constant} = 0.\+0
+\hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a46c281d97bd4bd34e16f486a6aeda82e}{Return\+Value\+\_\+t} \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_ab4c73209cb0b9daf21a8f8af2db17165}{\+\_\+constant} = 0.\+0 $\ast$ celsius\+::degree
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
+A standard \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100}{P\+T100} sensors 
 
-
-Definition at line 14 of file P\+T100.\+h.
+Definition at line 19 of file P\+T100.\+h.
 
 
 
 \subsection{Member Typedef Documentation}
-\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a385f85603cfd23bf76488f6b67e9fe2d}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a385f85603cfd23bf76488f6b67e9fe2d} 
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a46c281d97bd4bd34e16f486a6aeda82e}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a46c281d97bd4bd34e16f486a6aeda82e} 
 \index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!Return\+Value\+\_\+t@{Return\+Value\+\_\+t}}
 \index{Return\+Value\+\_\+t@{Return\+Value\+\_\+t}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
 \subsubsection{\texorpdfstring{Return\+Value\+\_\+t}{ReturnValue\_t}}
-{\footnotesize\ttfamily typedef double \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a385f85603cfd23bf76488f6b67e9fe2d}{o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+Return\+Value\+\_\+t}}
+{\footnotesize\ttfamily typedef quantity$<$celsius\+::temperature, double$>$ \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a46c281d97bd4bd34e16f486a6aeda82e}{o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+Return\+Value\+\_\+t}}
 
 
 
-Definition at line 16 of file P\+T100.\+h.
+Definition at line 21 of file P\+T100.\+h.
 
 
 
@@ -116,7 +116,7 @@ Reimplemented from \hyperlink{classo_cpt_1_1_sensor_aa612a305a9a3091dd62cd1afb9d
 
 
 
-Definition at line 45 of file P\+T100.\+cpp.
+Definition at line 48 of file P\+T100.\+cpp.
 
 
 
@@ -141,7 +141,7 @@ Reimplemented from \hyperlink{classo_cpt_1_1_sensor_aef25b0e5f3a8358ee81c97c7390
 
 
 
-Definition at line 36 of file P\+T100.\+cpp.
+Definition at line 39 of file P\+T100.\+cpp.
 
 
 
@@ -154,15 +154,15 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a41dfc55a4be7993949feeb5ac013690d_cgraph}
 \end{center}
 \end{figure}
-\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a77e36b92c5eb4b6594fa89114d0fb357}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a77e36b92c5eb4b6594fa89114d0fb357} 
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aa809a235b76c237c3a1f66cf9dd7e381}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_aa809a235b76c237c3a1f66cf9dd7e381} 
 \index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!set\+Calibration\+Temperature@{set\+Calibration\+Temperature}}
 \index{set\+Calibration\+Temperature@{set\+Calibration\+Temperature}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
 \subsubsection{\texorpdfstring{set\+Calibration\+Temperature()}{setCalibrationTemperature()}}
-{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::set\+Calibration\+Temperature (\begin{DoxyParamCaption}\item[{std\+::pair$<$ double, double $>$}]{temparature,  }\item[{std\+::pair$<$ uint16\+\_\+t, uint16\+\_\+t $>$}]{analoge\+Value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::set\+Calibration\+Temperature (\begin{DoxyParamCaption}\item[{std\+::pair$<$ \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a46c281d97bd4bd34e16f486a6aeda82e}{Return\+Value\+\_\+t}, \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a46c281d97bd4bd34e16f486a6aeda82e}{Return\+Value\+\_\+t} $>$}]{temparature,  }\item[{std\+::pair$<$ uint16\+\_\+t, uint16\+\_\+t $>$}]{analoge\+Value }\end{DoxyParamCaption})}
 
 
 
-Definition at line 30 of file P\+T100.\+cpp.
+Definition at line 31 of file P\+T100.\+cpp.
 
 
 
@@ -180,7 +180,7 @@ Reimplemented from \hyperlink{classo_cpt_1_1_sensor_a44ad78c2c091ca9cf72295293f8
 
 
 
-Definition at line 41 of file P\+T100.\+cpp.
+Definition at line 44 of file P\+T100.\+cpp.
 
 
 
@@ -233,21 +233,21 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 34 of file P\+T100.\+h.
+Definition at line 39 of file P\+T100.\+h.
 
 
 
 Referenced by update\+Sensor().
 
-\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a9a38493994b9ec216a5a0d29f3c31cc3}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a9a38493994b9ec216a5a0d29f3c31cc3} 
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_ab4c73209cb0b9daf21a8f8af2db17165}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_ab4c73209cb0b9daf21a8f8af2db17165} 
 \index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!\+\_\+constant@{\+\_\+constant}}
 \index{\+\_\+constant@{\+\_\+constant}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
 \subsubsection{\texorpdfstring{\+\_\+constant}{\_constant}}
-{\footnotesize\ttfamily double o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+\_\+constant = 0.\+0\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a46c281d97bd4bd34e16f486a6aeda82e}{Return\+Value\+\_\+t} o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+\_\+constant = 0.\+0 $\ast$ celsius\+::degree\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line 38 of file P\+T100.\+h.
+Definition at line 43 of file P\+T100.\+h.
 
 
 
@@ -261,17 +261,17 @@ Referenced by set\+Calibration\+Temperature(), and update\+Sensor().
 
 
 
-Definition at line 35 of file P\+T100.\+h.
+Definition at line 40 of file P\+T100.\+h.
 
-\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a3576ceab93d9cedce804469f72087155}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a3576ceab93d9cedce804469f72087155} 
+\hypertarget{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a2789fca642c8948774378dc157599335}{}\label{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a2789fca642c8948774378dc157599335} 
 \index{o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}!\+\_\+dy\+\_\+dx@{\+\_\+dy\+\_\+dx}}
 \index{\+\_\+dy\+\_\+dx@{\+\_\+dy\+\_\+dx}!o\+Cpt\+::components\+::sensors\+::\+P\+T100@{o\+Cpt\+::components\+::sensors\+::\+P\+T100}}
 \subsubsection{\texorpdfstring{\+\_\+dy\+\_\+dx}{\_dy\_dx}}
-{\footnotesize\ttfamily double o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+\_\+dy\+\_\+dx = 1.\+0\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a46c281d97bd4bd34e16f486a6aeda82e}{Return\+Value\+\_\+t} o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::\+\_\+dy\+\_\+dx = 1.\+0 $\ast$ celsius\+::degree\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line 37 of file P\+T100.\+h.
+Definition at line 42 of file P\+T100.\+h.
 
 
 
@@ -285,7 +285,7 @@ Referenced by set\+Calibration\+Temperature(), and update\+Sensor().
 
 
 
-Definition at line 36 of file P\+T100.\+h.
+Definition at line 41 of file P\+T100.\+h.
 
 
 
@@ -295,5 +295,5 @@ Referenced by update\+Sensor().
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\+Sensors/\hyperlink{_p_t100_8h}{P\+T100.\+h}\item 
-src/\+Sensors/\hyperlink{_p_t100_8cpp}{P\+T100.\+cpp}\end{DoxyCompactItemize}
+/projects/mti/oh\+Captain/oh\+Captain/include/\+Sensors/\hyperlink{_p_t100_8h}{P\+T100.\+h}\item 
+/projects/mti/oh\+Captain/oh\+Captain/src/\+Sensors/\hyperlink{_p_t100_8cpp}{P\+T100.\+cpp}\end{DoxyCompactItemize}
