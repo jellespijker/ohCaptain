@@ -1,0 +1,180 @@
+\hypertarget{classo_cpt_1_1_world_1_1_time_1_1_log}{}\section{o\+Cpt\+:\+:World\+:\+:Time\+:\+:Log$<$ T $>$ Class Template Reference}
+\label{classo_cpt_1_1_world_1_1_time_1_1_log}\index{o\+Cpt\+::\+World\+::\+Time\+::\+Log$<$ T $>$@{o\+Cpt\+::\+World\+::\+Time\+::\+Log$<$ T $>$}}
+
+
+{\ttfamily \#include $<$World.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{Log} $>$ \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log_ac60728a183e1d17aa602cdc78fe2a6f5}{ptr}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log_ac4bd19f2963c6f708a7578e4c23bf1d4}{Log} ()
+\item 
+\hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log_aa404e83afcd8ab1f52d58cf4fb8c8972}{Log} (const T \&value, const \hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{timepoint\+\_\+t} \&epoch=clock\+\_\+t\+::now())
+\item 
+virtual \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log_a842b91ce3d76d1a4e0a95831944baca5}{$\sim$\+Log} ()
+\item 
+const \hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{timepoint\+\_\+t} \& \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log_abf0caaa0f48e2316200cad9d3dff46bc}{get\+Epoch} () const
+\item 
+const T \& \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log_a6ac8d303676d960e53c3ff2e39811cc3}{get\+Value} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{timepoint\+\_\+t} \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log_a122e3702f277b998131f433829d1b67b}{\+\_\+epoch}
+\item 
+T \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log_a63eb942576004d0b6ff7b1cbea7deb9c}{\+\_\+value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class o\+Cpt\+::\+World\+::\+Time\+::\+Log$<$ T $>$}
+
+A template class to \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{Log} generic values at an certain epoch in time 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of value to log \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 48 of file World.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_time_1_1_log_ac60728a183e1d17aa602cdc78fe2a6f5}{}\label{classo_cpt_1_1_world_1_1_time_1_1_log_ac60728a183e1d17aa602cdc78fe2a6f5} 
+\index{o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}!ptr@{ptr}}
+\index{ptr@{ptr}!o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef boost\+::shared\+\_\+ptr$<$\hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{Log}$>$ \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{o\+Cpt\+::\+World\+::\+Time\+::\+Log}$<$ T $>$\+::\hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log_ac60728a183e1d17aa602cdc78fe2a6f5}{ptr}}
+
+
+
+Definition at line 50 of file World.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_time_1_1_log_ac4bd19f2963c6f708a7578e4c23bf1d4}{}\label{classo_cpt_1_1_world_1_1_time_1_1_log_ac4bd19f2963c6f708a7578e4c23bf1d4} 
+\index{o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}!Log@{Log}}
+\index{Log@{Log}!o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}}
+\subsubsection{\texorpdfstring{Log()}{Log()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{o\+Cpt\+::\+World\+::\+Time\+::\+Log}$<$ T $>$\+::\hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{Log} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of the \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{Log} class 
+
+Definition at line 59 of file World.\+h.
+
+\hypertarget{classo_cpt_1_1_world_1_1_time_1_1_log_aa404e83afcd8ab1f52d58cf4fb8c8972}{}\label{classo_cpt_1_1_world_1_1_time_1_1_log_aa404e83afcd8ab1f52d58cf4fb8c8972} 
+\index{o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}!Log@{Log}}
+\index{Log@{Log}!o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}}
+\subsubsection{\texorpdfstring{Log()}{Log()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{o\+Cpt\+::\+World\+::\+Time\+::\+Log}$<$ T $>$\+::\hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{Log} (\begin{DoxyParamCaption}\item[{const T \&}]{value,  }\item[{const \hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{timepoint\+\_\+t} \&}]{epoch = {\ttfamily clock\+\_\+t\+:\+:now()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of the \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{Log} class 
+\begin{DoxyParams}{Parameters}
+{\em value} & The Value to store \\
+\hline
+{\em epoch} & the \hyperlink{classo_cpt_1_1_world_1_1_time}{Time} point, with a default to the now moment \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file World.\+h.
+
+\hypertarget{classo_cpt_1_1_world_1_1_time_1_1_log_a842b91ce3d76d1a4e0a95831944baca5}{}\label{classo_cpt_1_1_world_1_1_time_1_1_log_a842b91ce3d76d1a4e0a95831944baca5} 
+\index{o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}!````~Log@{$\sim$\+Log}}
+\index{````~Log@{$\sim$\+Log}!o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}}
+\subsubsection{\texorpdfstring{$\sim$\+Log()}{~Log()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{o\+Cpt\+::\+World\+::\+Time\+::\+Log}$<$ T $>$\+::$\sim$\hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{Log} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Deconstructor of the \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{Log} class 
+
+Definition at line 74 of file World.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_time_1_1_log_abf0caaa0f48e2316200cad9d3dff46bc}{}\label{classo_cpt_1_1_world_1_1_time_1_1_log_abf0caaa0f48e2316200cad9d3dff46bc} 
+\index{o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}!get\+Epoch@{get\+Epoch}}
+\index{get\+Epoch@{get\+Epoch}!o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}}
+\subsubsection{\texorpdfstring{get\+Epoch()}{getEpoch()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const \hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{timepoint\+\_\+t}\& \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{o\+Cpt\+::\+World\+::\+Time\+::\+Log}$<$ T $>$\+::get\+Epoch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the current Epoch \begin{DoxyReturn}{Returns}
+returns a time point when the \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{Log} has taken place 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file World.\+h.
+
+
+
+References o\+Cpt\+::\+World\+::\+Time\+::\+Log$<$ T $>$\+::\+\_\+epoch.
+
+\hypertarget{classo_cpt_1_1_world_1_1_time_1_1_log_a6ac8d303676d960e53c3ff2e39811cc3}{}\label{classo_cpt_1_1_world_1_1_time_1_1_log_a6ac8d303676d960e53c3ff2e39811cc3} 
+\index{o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T\& \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{o\+Cpt\+::\+World\+::\+Time\+::\+Log}$<$ T $>$\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the current value \begin{DoxyReturn}{Returns}
+returns the value at an certain time 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file World.\+h.
+
+
+
+References o\+Cpt\+::\+World\+::\+Time\+::\+Log$<$ T $>$\+::\+\_\+value.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1_world_1_1_time_1_1_log_a122e3702f277b998131f433829d1b67b}{}\label{classo_cpt_1_1_world_1_1_time_1_1_log_a122e3702f277b998131f433829d1b67b} 
+\index{o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}!\+\_\+epoch@{\+\_\+epoch}}
+\index{\+\_\+epoch@{\+\_\+epoch}!o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}}
+\subsubsection{\texorpdfstring{\+\_\+epoch}{\_epoch}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{timepoint\+\_\+t} \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{o\+Cpt\+::\+World\+::\+Time\+::\+Log}$<$ T $>$\+::\+\_\+epoch\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 52 of file World.\+h.
+
+
+
+Referenced by o\+Cpt\+::\+World\+::\+Time\+::\+Log$<$ T $>$\+::get\+Epoch().
+
+\hypertarget{classo_cpt_1_1_world_1_1_time_1_1_log_a63eb942576004d0b6ff7b1cbea7deb9c}{}\label{classo_cpt_1_1_world_1_1_time_1_1_log_a63eb942576004d0b6ff7b1cbea7deb9c} 
+\index{o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}!\+\_\+value@{\+\_\+value}}
+\index{\+\_\+value@{\+\_\+value}!o\+Cpt\+::\+World\+::\+Time\+::\+Log@{o\+Cpt\+::\+World\+::\+Time\+::\+Log}}
+\subsubsection{\texorpdfstring{\+\_\+value}{\_value}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \hyperlink{classo_cpt_1_1_world_1_1_time_1_1_log}{o\+Cpt\+::\+World\+::\+Time\+::\+Log}$<$ T $>$\+::\+\_\+value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 53 of file World.\+h.
+
+
+
+Referenced by o\+Cpt\+::\+World\+::\+Time\+::\+Log$<$ T $>$\+::get\+Value().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\hyperlink{_world_8h}{World.\+h}\end{DoxyCompactItemize}

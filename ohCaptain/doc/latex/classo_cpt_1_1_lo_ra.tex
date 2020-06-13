@@ -1,0 +1,1361 @@
+\hypertarget{classo_cpt_1_1_lo_ra}{}\section{o\+Cpt\+:\+:Lo\+Ra Class Reference}
+\label{classo_cpt_1_1_lo_ra}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+
+
+{\ttfamily \#include $<$Communication.\+h$>$}
+
+
+
+Inheritance diagram for o\+Cpt\+:\+:Lo\+Ra\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classo_cpt_1_1_lo_ra__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for o\+Cpt\+:\+:Lo\+Ra\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classo_cpt_1_1_lo_ra__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classo_cpt_1_1_lo_ra_a9791fe69244f3c8af2fd592d2573f939}{Modulation\+Mode} \{ \hyperlink{classo_cpt_1_1_lo_ra_a9791fe69244f3c8af2fd592d2573f939abc752762fd91c9fec7ba7a70f228b647}{L\+O\+RA} = 1, 
+\hyperlink{classo_cpt_1_1_lo_ra_a9791fe69244f3c8af2fd592d2573f939adf58f9374751649cb74ac905e3306a82}{F\+SK} = 2
+ \}
+\item 
+enum \hyperlink{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1}{Spreading\+Factor} \{ \newline
+\hyperlink{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1a792baf09b73405f44a05d868bcd7eb3e}{S\+F7} = 7, 
+\hyperlink{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1ae92c620a8a178fc83b3fb789114f5152}{S\+F8} = 8, 
+\hyperlink{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1a69281bbc4f98db411d7ca1ed728d7e4d}{S\+F9} = 9, 
+\hyperlink{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1a636a12da3fcb8ef13489c3f4d84e47ff}{S\+F10} = 10, 
+\newline
+\hyperlink{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1a2b72871691634451599ac0769d8b0596}{S\+F11} = 11, 
+\hyperlink{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1aab535691c4a915debf6a024b3a5ea2b6}{S\+F12} = 12
+ \}
+\item 
+enum \hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031d}{Band\+Width} \{ \newline
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da4cfced47d020ac84a5007692a58d3646}{B\+W250} = 1, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da5dada867c18409fad00afc4d7c9e8183}{B\+W200} = 2, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da8ff12c321b807588b6bbafbea12c7ebd}{B\+W166\+\_\+7} = 3, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da30fe6a53728133dbd00cbf449eba7751}{B\+W125} = 4, 
+\newline
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da788e054aa91313f562f266b4c8118c69}{B\+W100} = 5, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da77bb5ee2d33af2efcdd6a278d8b1cf9b}{B\+W83\+\_\+3} = 6, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da5a5f393d50eadefdde76e078d37f3a0b}{B\+W62\+\_\+5} = 7, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dab0ac9a3a651446b47f521aa97c01b5e8}{B\+W50} = 8, 
+\newline
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da8a64ebf4bc519f41401e71f8cc1a27f2}{B\+W41\+\_\+7} = 9, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dab96939f3c36e4bdab229f692f3b593e6}{B\+W31\+\_\+3} = 10, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da601cd10cac6357a1cf8f6f30d9c3d7fd}{B\+W25} = 11, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da48b50745a58fe416f46e60a01c1e4756}{B\+W20\+\_\+8} = 12, 
+\newline
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da938c09a3a400478afe6bdbe95e55b24f}{B\+W15\+\_\+6} = 13, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dabaa5cd08e934efc437997785fbaaddb0}{B\+W12\+\_\+5} = 14, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da80e1844079ca52446113d5a89d194547}{B\+W10\+\_\+4} = 15, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dac742481b4d33c4e5bd94e3f796e17c69}{B\+W7\+\_\+8} = 16, 
+\newline
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da5eb56b4d0c2220bf184ba678a6bce0bf}{B\+W6\+\_\+3} = 17, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da27c8e59ae424474bddbb99075c1a0c0c}{B\+W5\+\_\+2} = 18, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dac62f8910da454d43dde90f83dd9c3d40}{B\+W3\+\_\+9} = 19, 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da5e8218d6094718ec53dd1ffd9200aa10}{B\+W3\+\_\+1} = 20, 
+\newline
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da447a4a9de1b50a4db7d9b035c685563f}{B\+W2\+\_\+6} = 21
+ \}
+\item 
+enum \hyperlink{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7a}{Coding\+Rate} \{ \hyperlink{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7aad3afd3345b388071f163ef11295836ae}{C\+R4\+\_\+5} = 4, 
+\hyperlink{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7aa26e90af9a3cd908c34fe97fae2fbf88a}{C\+R4\+\_\+6} = 3, 
+\hyperlink{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7aafc157fe37024f1fd6ff415bbb6667365}{C\+R4\+\_\+7} = 2, 
+\hyperlink{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7aa6e4db5bcc4a4dbfa03c28ace41a8a176}{C\+R4\+\_\+8} = 1
+ \}
+\item 
+enum \hyperlink{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4c}{Radio\+Band\+Width} \{ \hyperlink{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4cad821d66e711dc2b435edd0af4f902d75}{R\+B\+W500} = 500, 
+\hyperlink{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4cacb44e6b956474a94bd970fc59433dde7}{R\+B\+W250} = 250, 
+\hyperlink{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4caa2ce0cf39c7ff204c55d817fdcb7ac6f}{R\+B\+W125} = 125
+ \}
+\item 
+enum \hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91a}{Get\+Set} \{ \hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aaf35a5ff11ad8bd218a3ca457a984f529}{G\+ET}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aa6f1ce6bf9072aeeb8a1296caa25ea324}{S\+ET}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aac7c88dab7b4d0b1729148c5fb3ead0a3}{N\+O\+NE}
+ \}
+\item 
+enum \hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74}{Radio\+Command} \{ \newline
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a017864c2c87a6f4e3905e26d314d70af}{M\+OD}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a34d013839fd9f750e8a3b9f35fdd5133}{F\+R\+EQ}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a99e3d50ccb97ed4d2eb5fa9c908c7bb5}{P\+WR}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74ad55ef306c79eb88cc306444381ca72c0}{SF}, 
+\newline
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a159215eda076d56d2cad85ea947c20fd}{A\+F\+C\+BW}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a72abd84b7cac8f64e245cc6e1e75f779}{R\+X\+BW}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a67793e550afe588d44c1c54e376cade2}{F\+S\+K\+B\+I\+T\+R\+A\+TE}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74ae694b8f32a80e5a22a2b78026efacfd5}{F\+D\+EV}, 
+\newline
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a935d601e291d22acfc80da0600640cdb}{P\+R\+L\+EN}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a64dcffc9d524805a2fdabd254dc89be3}{C\+RC}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a90a920c3ff6725ebc34523355247557c}{CR}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74ac21b0fb45e10096f854149e557bd1555}{W\+DT}, 
+\newline
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74acc08f14a148b28e2db4808a0e0a035a1}{S\+Y\+NC}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74aeb3399793789b1c7d7f3489206d49b33}{BW}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a35f179de0230565cbf868697fa52a270}{r\+RX}, 
+\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a62d9741cc2ef378367ba701f283723ca}{r\+TX}
+ \}
+\item 
+enum \hyperlink{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878}{Mac\+Command} \{ \newline
+\hyperlink{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878aef6d8f25c6dd61d153e188c5de18fbba}{P\+A\+U\+SE}, 
+\hyperlink{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a04260fa81e9e23c51be28c46383a8d4c}{R\+E\+S\+ET}, 
+\hyperlink{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a5f9372da4e6223816df44e892bf1b0c2}{m\+TX}, 
+\hyperlink{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a31983ca87dc584e3c8dfc4c976aa4628}{J\+O\+IN}, 
+\newline
+\hyperlink{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a583f6a279310634078b8554764e39001}{S\+A\+VE}, 
+\hyperlink{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a0326db33de2eb04acedafb3470fb11b2}{F\+O\+R\+C\+E\+E\+N\+A\+B\+LE}, 
+\hyperlink{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a58daa060689afbba30b27c0a66e2722e}{R\+E\+S\+U\+ME}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1_lo_ra_ad793d1628f429e79babc356d2f64a6c9}{Lo\+Ra} (const std\+::string \&id, const std\+::string \&device, \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} world=\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}(new \hyperlink{classo_cpt_1_1_world}{World}()), \hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{i\+Controller\+::io\+\_\+t} ioservice=\hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{i\+Controller\+::io\+\_\+t}(new boost\+::asio\+::io\+\_\+service()))
+\item 
+virtual \hyperlink{classo_cpt_1_1_lo_ra_a203df2d51c12d24731241f89bec20200}{$\sim$\+Lo\+Ra} ()
+\item 
+virtual void \hyperlink{classo_cpt_1_1_lo_ra_aacbca715826b810736e9bf5c3a9ce338}{run} () override
+\item 
+virtual void \hyperlink{classo_cpt_1_1_lo_ra_a8300de2590a7ce8b56863eb4059f14ad}{stop} () override
+\item 
+virtual void \hyperlink{classo_cpt_1_1_lo_ra_aa0646143f843d43fcd680344dfcb2a14}{initialize} () override
+\item 
+virtual void \hyperlink{classo_cpt_1_1_lo_ra_a053e29e992490cffb90741c009664272}{send\+Message} (\hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message} msg) override
+\item 
+virtual \hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{Message\+::ptr} \hyperlink{classo_cpt_1_1_lo_ra_a191e265a569a80c53e6829d57d402969}{recieve\+Message} () override
+\item 
+virtual void \hyperlink{classo_cpt_1_1_lo_ra_a6d4aa003a6ad9277998f34ee858b6264}{recieve\+Async\+Message} () override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classo_cpt_1_1_lo_ra_a606eeaec7fb73b483f958005444246b4}{message\+Recieved} ()
+\item 
+std\+::string \hyperlink{classo_cpt_1_1_lo_ra_a225b527e6f098ae6b481ed56edb0744c}{band\+Width\+To\+String} (const \hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031d}{Band\+Width} \&value)
+\item 
+std\+::string \hyperlink{classo_cpt_1_1_lo_ra_a404a9de4e173c0f17c7ca6a915a7fa4b}{coding\+Rate\+To\+String} (const \hyperlink{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7a}{Coding\+Rate} \&value)
+\item 
+void \hyperlink{classo_cpt_1_1_lo_ra_a3671543fd5f0297ca7e7fb533020bea9}{string\+To\+Hex} (const std\+::string str, std\+::string \&hex\+Str, const bool capital=true)
+\item 
+void \hyperlink{classo_cpt_1_1_lo_ra_a9a85cc1457a2e791c4eb4d1805b416fc}{hex\+To\+String} (const std\+::string hex\+Str, std\+::string \&str)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \hyperlink{classo_cpt_1_1_lo_ra_a49199ac50e2771b874331e2dffaa8b2c}{encode\+Type\+To\+Hex} (T value, bool capital=true)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \hyperlink{classo_cpt_1_1_lo_ra_a2e9c8a00010caa88fb917586a7f79195}{build\+Mac\+Cmd\+String} (\hyperlink{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878}{Mac\+Command} cmd, T value=0, \hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91a}{Get\+Set} prop=\hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aac7c88dab7b4d0b1729148c5fb3ead0a3}{N\+O\+NE})
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \hyperlink{classo_cpt_1_1_lo_ra_a936158f0266e734786ed323f7b7f7a82}{build\+Radio\+Cmd\+String} (\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74}{Radio\+Command} cmd, T value=0, \hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91a}{Get\+Set} prop=\hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aa6f1ce6bf9072aeeb8a1296caa25ea324}{S\+ET})
+\item 
+std\+::string \hyperlink{classo_cpt_1_1_lo_ra_a9fadd1ae0e020c59c5a0048f8a2878c7}{build\+Radio\+Cmd\+String} (\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74}{Radio\+Command} cmd, std\+::string value, \hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91a}{Get\+Set} prop=\hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aa6f1ce6bf9072aeeb8a1296caa25ea324}{S\+ET})
+\item 
+unsigned long \hyperlink{classo_cpt_1_1_lo_ra_a36aa990d9ce4981d60ef637cc26d0926}{calculate\+Down\+Time} (unsigned int payload)
+\item 
+void \hyperlink{classo_cpt_1_1_lo_ra_aa96080e6911f8355be8c59da33bfa9d1}{write} (const std\+::string \&value)
+\item 
+void \hyperlink{classo_cpt_1_1_lo_ra_aa9051cc9d611edc2b5e1f36124d4e972}{rx} ()
+\item 
+void \hyperlink{classo_cpt_1_1_lo_ra_ac1042fa7b446ce798317a529b6425a4f}{macpause} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classo_cpt_1_1_lo_ra_a63fc8aa4abe5d2df5cdee3757fc7cdf9}{proceed\+\_\+}
+\item 
+bool \hyperlink{classo_cpt_1_1_lo_ra_af293c469e9badc01ef82415211f729da}{ignore\+Warn\+\_\+}
+\item 
+bool \hyperlink{classo_cpt_1_1_lo_ra_a03b9303cbe41d8ad542054359109abd5}{listen\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1_serial}{protocol\+::\+Serial} \hyperlink{classo_cpt_1_1_lo_ra_ab349fec280811fd5172f91652abe2775}{serial\+\_\+}
+\begin{DoxyCompactList}\small\item\em Serial\+Port for U\+A\+RT communication with the chip. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classo_cpt_1_1_lo_ra_a076f477e2096b2a49c8d4c25b79b1143}{baudrate\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1_lo_ra_a9791fe69244f3c8af2fd592d2573f939}{Modulation\+Mode} \hyperlink{classo_cpt_1_1_lo_ra_a98e0dc05a9e45a08afa36beddfe27072}{mod\+\_\+}
+\begin{DoxyCompactList}\small\item\em Modulation mode. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classo_cpt_1_1_lo_ra_ab57a9c27d2f5744eaf07bdee11a24aba}{freq\+\_\+}
+\begin{DoxyCompactList}\small\item\em Frequency between 433050000..4347900000 or 863000000...870000000. \end{DoxyCompactList}\item 
+int8\+\_\+t \hyperlink{classo_cpt_1_1_lo_ra_a26a74b857c4fe90af4217f38dc735220}{pwr\+\_\+}
+\begin{DoxyCompactList}\small\item\em Power of transmission between -\/3...15. \end{DoxyCompactList}\item 
+\hyperlink{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1}{Spreading\+Factor} \hyperlink{classo_cpt_1_1_lo_ra_acebd51c3b66932357035150f21e88d38}{sf\+\_\+}
+\begin{DoxyCompactList}\small\item\em Spreading factor of the signal. \end{DoxyCompactList}\item 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031d}{Band\+Width} \hyperlink{classo_cpt_1_1_lo_ra_a776e20c9dbac73ba02dca35c63ee4807}{afcbw\+\_\+}
+\begin{DoxyCompactList}\small\item\em Automatic frequency correction in k\+Hz. \end{DoxyCompactList}\item 
+\hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031d}{Band\+Width} \hyperlink{classo_cpt_1_1_lo_ra_ad82916e0708ce81df40be3a264446c94}{rxbw\+\_\+}
+\begin{DoxyCompactList}\small\item\em Signal bandwidth in k\+Hz. \end{DoxyCompactList}\item 
+uint \hyperlink{classo_cpt_1_1_lo_ra_ae8fc701f0418461263bc0049e95ab01e}{fsk\+Bit\+Rate\+\_\+}
+\begin{DoxyCompactList}\small\item\em F\+SK bitrate between 1...300000. \end{DoxyCompactList}\item 
+uint \hyperlink{classo_cpt_1_1_lo_ra_ac0a2434f4fd5275771f56c810aa3fbed}{fdev\+\_\+}
+\begin{DoxyCompactList}\small\item\em Frequency deviation between 0...200000. \end{DoxyCompactList}\item 
+uint \hyperlink{classo_cpt_1_1_lo_ra_a93c4923a8c79b33788d998cca5b764f8}{prlen\+\_\+}
+\begin{DoxyCompactList}\small\item\em Preamble length between 0...65535. \end{DoxyCompactList}\item 
+bool \hyperlink{classo_cpt_1_1_lo_ra_af6a4412b761252d2ef9b55c22ad2ef8e}{crc\+\_\+}
+\begin{DoxyCompactList}\small\item\em C\+RC Header on or off. \end{DoxyCompactList}\item 
+\hyperlink{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7a}{Coding\+Rate} \hyperlink{classo_cpt_1_1_lo_ra_a61d7ff909c4e40b48a8722ec0e608b2a}{cr\+\_\+}
+\begin{DoxyCompactList}\small\item\em The coding rate. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classo_cpt_1_1_lo_ra_aef791d801da3a184f574bb5dcf465bd3}{wdt\+\_\+}
+\begin{DoxyCompactList}\small\item\em Watch\+Dog 0...4294967295. Set to 0 to disable. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classo_cpt_1_1_lo_ra_a42f093f868ce1b8d4525031569b77c19}{sync\+\_\+}
+\begin{DoxyCompactList}\small\item\em Sync word. \end{DoxyCompactList}\item 
+\hyperlink{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4c}{Radio\+Band\+Width} \hyperlink{classo_cpt_1_1_lo_ra_a687ca4712f0976534dcdaec0b068d9e5}{bw\+\_\+}
+\begin{DoxyCompactList}\small\item\em Radio\+Band\+Width in k\+Hz. \end{DoxyCompactList}\item 
+bool \hyperlink{classo_cpt_1_1_lo_ra_a40be67af15ddcf86fe017fa356084293}{send\+Allowed\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Communication class for the \hyperlink{classo_cpt_1_1_lo_ra}{Lo\+Ra} protocol. The current class is mostly based on node 2 node communication T\+O\+DO rewrite sho it will allow mesh network communication. Most of the commands are taken from \href{http://ww1.microchip.com/downloads/en/DeviceDoc/40001784B.pdf}{\tt http\+://ww1.\+microchip.\+com/downloads/en/\+Device\+Doc/40001784\+B.\+pdf} 
+
+Definition at line 160 of file Communication.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031d}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031d} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!Band\+Width@{Band\+Width}}
+\index{Band\+Width@{Band\+Width}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{Band\+Width}{BandWidth}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031d}{o\+Cpt\+::\+Lo\+Ra\+::\+Band\+Width}}
+
+The bandwidth \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W250@{B\+W250}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W250@{B\+W250}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da4cfced47d020ac84a5007692a58d3646}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da4cfced47d020ac84a5007692a58d3646} 
+B\+W250&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W200@{B\+W200}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W200@{B\+W200}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da5dada867c18409fad00afc4d7c9e8183}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da5dada867c18409fad00afc4d7c9e8183} 
+B\+W200&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W166\+\_\+7@{B\+W166\+\_\+7}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W166\+\_\+7@{B\+W166\+\_\+7}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da8ff12c321b807588b6bbafbea12c7ebd}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da8ff12c321b807588b6bbafbea12c7ebd} 
+B\+W166\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W125@{B\+W125}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W125@{B\+W125}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da30fe6a53728133dbd00cbf449eba7751}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da30fe6a53728133dbd00cbf449eba7751} 
+B\+W125&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W100@{B\+W100}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W100@{B\+W100}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da788e054aa91313f562f266b4c8118c69}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da788e054aa91313f562f266b4c8118c69} 
+B\+W100&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W83\+\_\+3@{B\+W83\+\_\+3}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W83\+\_\+3@{B\+W83\+\_\+3}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da77bb5ee2d33af2efcdd6a278d8b1cf9b}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da77bb5ee2d33af2efcdd6a278d8b1cf9b} 
+B\+W83\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W62\+\_\+5@{B\+W62\+\_\+5}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W62\+\_\+5@{B\+W62\+\_\+5}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da5a5f393d50eadefdde76e078d37f3a0b}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da5a5f393d50eadefdde76e078d37f3a0b} 
+B\+W62\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W50@{B\+W50}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W50@{B\+W50}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dab0ac9a3a651446b47f521aa97c01b5e8}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dab0ac9a3a651446b47f521aa97c01b5e8} 
+B\+W50&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W41\+\_\+7@{B\+W41\+\_\+7}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W41\+\_\+7@{B\+W41\+\_\+7}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da8a64ebf4bc519f41401e71f8cc1a27f2}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da8a64ebf4bc519f41401e71f8cc1a27f2} 
+B\+W41\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W31\+\_\+3@{B\+W31\+\_\+3}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W31\+\_\+3@{B\+W31\+\_\+3}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dab96939f3c36e4bdab229f692f3b593e6}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dab96939f3c36e4bdab229f692f3b593e6} 
+B\+W31\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W25@{B\+W25}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W25@{B\+W25}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da601cd10cac6357a1cf8f6f30d9c3d7fd}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da601cd10cac6357a1cf8f6f30d9c3d7fd} 
+B\+W25&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W20\+\_\+8@{B\+W20\+\_\+8}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W20\+\_\+8@{B\+W20\+\_\+8}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da48b50745a58fe416f46e60a01c1e4756}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da48b50745a58fe416f46e60a01c1e4756} 
+B\+W20\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W15\+\_\+6@{B\+W15\+\_\+6}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W15\+\_\+6@{B\+W15\+\_\+6}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da938c09a3a400478afe6bdbe95e55b24f}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da938c09a3a400478afe6bdbe95e55b24f} 
+B\+W15\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W12\+\_\+5@{B\+W12\+\_\+5}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W12\+\_\+5@{B\+W12\+\_\+5}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dabaa5cd08e934efc437997785fbaaddb0}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dabaa5cd08e934efc437997785fbaaddb0} 
+B\+W12\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W10\+\_\+4@{B\+W10\+\_\+4}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W10\+\_\+4@{B\+W10\+\_\+4}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da80e1844079ca52446113d5a89d194547}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da80e1844079ca52446113d5a89d194547} 
+B\+W10\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W7\+\_\+8@{B\+W7\+\_\+8}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W7\+\_\+8@{B\+W7\+\_\+8}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dac742481b4d33c4e5bd94e3f796e17c69}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dac742481b4d33c4e5bd94e3f796e17c69} 
+B\+W7\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W6\+\_\+3@{B\+W6\+\_\+3}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W6\+\_\+3@{B\+W6\+\_\+3}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da5eb56b4d0c2220bf184ba678a6bce0bf}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da5eb56b4d0c2220bf184ba678a6bce0bf} 
+B\+W6\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W5\+\_\+2@{B\+W5\+\_\+2}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W5\+\_\+2@{B\+W5\+\_\+2}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da27c8e59ae424474bddbb99075c1a0c0c}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da27c8e59ae424474bddbb99075c1a0c0c} 
+B\+W5\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W3\+\_\+9@{B\+W3\+\_\+9}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W3\+\_\+9@{B\+W3\+\_\+9}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dac62f8910da454d43dde90f83dd9c3d40}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031dac62f8910da454d43dde90f83dd9c3d40} 
+B\+W3\+\_\+9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W3\+\_\+1@{B\+W3\+\_\+1}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W3\+\_\+1@{B\+W3\+\_\+1}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da5e8218d6094718ec53dd1ffd9200aa10}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da5e8218d6094718ec53dd1ffd9200aa10} 
+B\+W3\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+W2\+\_\+6@{B\+W2\+\_\+6}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!B\+W2\+\_\+6@{B\+W2\+\_\+6}}}\hypertarget{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da447a4a9de1b50a4db7d9b035c685563f}{}\label{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031da447a4a9de1b50a4db7d9b035c685563f} 
+B\+W2\+\_\+6&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 186 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7a}{}\label{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7a} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!Coding\+Rate@{Coding\+Rate}}
+\index{Coding\+Rate@{Coding\+Rate}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{Coding\+Rate}{CodingRate}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7a}{o\+Cpt\+::\+Lo\+Ra\+::\+Coding\+Rate}}
+
+The Coding rate of the signal \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+R4\+\_\+5@{C\+R4\+\_\+5}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!C\+R4\+\_\+5@{C\+R4\+\_\+5}}}\hypertarget{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7aad3afd3345b388071f163ef11295836ae}{}\label{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7aad3afd3345b388071f163ef11295836ae} 
+C\+R4\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+R4\+\_\+6@{C\+R4\+\_\+6}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!C\+R4\+\_\+6@{C\+R4\+\_\+6}}}\hypertarget{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7aa26e90af9a3cd908c34fe97fae2fbf88a}{}\label{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7aa26e90af9a3cd908c34fe97fae2fbf88a} 
+C\+R4\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+R4\+\_\+7@{C\+R4\+\_\+7}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!C\+R4\+\_\+7@{C\+R4\+\_\+7}}}\hypertarget{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7aafc157fe37024f1fd6ff415bbb6667365}{}\label{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7aafc157fe37024f1fd6ff415bbb6667365} 
+C\+R4\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+R4\+\_\+8@{C\+R4\+\_\+8}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!C\+R4\+\_\+8@{C\+R4\+\_\+8}}}\hypertarget{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7aa6e4db5bcc4a4dbfa03c28ace41a8a176}{}\label{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7aa6e4db5bcc4a4dbfa03c28ace41a8a176} 
+C\+R4\+\_\+8&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 213 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91a}{}\label{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91a} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!Get\+Set@{Get\+Set}}
+\index{Get\+Set@{Get\+Set}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{Get\+Set}{GetSet}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91a}{o\+Cpt\+::\+Lo\+Ra\+::\+Get\+Set}}
+
+Perform a get or a set command or otherwise none \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+ET@{G\+ET}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!G\+ET@{G\+ET}}}\hypertarget{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aaf35a5ff11ad8bd218a3ca457a984f529}{}\label{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aaf35a5ff11ad8bd218a3ca457a984f529} 
+G\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+ET@{S\+ET}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!S\+ET@{S\+ET}}}\hypertarget{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aa6f1ce6bf9072aeeb8a1296caa25ea324}{}\label{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aa6f1ce6bf9072aeeb8a1296caa25ea324} 
+S\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!N\+O\+NE@{N\+O\+NE}}}\hypertarget{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aac7c88dab7b4d0b1729148c5fb3ead0a3}{}\label{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aac7c88dab7b4d0b1729148c5fb3ead0a3} 
+N\+O\+NE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 232 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878}{}\label{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!Mac\+Command@{Mac\+Command}}
+\index{Mac\+Command@{Mac\+Command}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{Mac\+Command}{MacCommand}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878}{o\+Cpt\+::\+Lo\+Ra\+::\+Mac\+Command}}
+
+Type to control the M\+AC layer, currently only pause is used, because node 2 node communication doesn\textquotesingle{}t use M\+AC \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+U\+SE@{P\+A\+U\+SE}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!P\+A\+U\+SE@{P\+A\+U\+SE}}}\hypertarget{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878aef6d8f25c6dd61d153e188c5de18fbba}{}\label{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878aef6d8f25c6dd61d153e188c5de18fbba} 
+P\+A\+U\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+S\+ET@{R\+E\+S\+ET}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!R\+E\+S\+ET@{R\+E\+S\+ET}}}\hypertarget{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a04260fa81e9e23c51be28c46383a8d4c}{}\label{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a04260fa81e9e23c51be28c46383a8d4c} 
+R\+E\+S\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+TX@{m\+TX}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!m\+TX@{m\+TX}}}\hypertarget{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a5f9372da4e6223816df44e892bf1b0c2}{}\label{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a5f9372da4e6223816df44e892bf1b0c2} 
+m\+TX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{J\+O\+IN@{J\+O\+IN}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!J\+O\+IN@{J\+O\+IN}}}\hypertarget{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a31983ca87dc584e3c8dfc4c976aa4628}{}\label{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a31983ca87dc584e3c8dfc4c976aa4628} 
+J\+O\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+A\+VE@{S\+A\+VE}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!S\+A\+VE@{S\+A\+VE}}}\hypertarget{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a583f6a279310634078b8554764e39001}{}\label{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a583f6a279310634078b8554764e39001} 
+S\+A\+VE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+O\+R\+C\+E\+E\+N\+A\+B\+LE@{F\+O\+R\+C\+E\+E\+N\+A\+B\+LE}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!F\+O\+R\+C\+E\+E\+N\+A\+B\+LE@{F\+O\+R\+C\+E\+E\+N\+A\+B\+LE}}}\hypertarget{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a0326db33de2eb04acedafb3470fb11b2}{}\label{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a0326db33de2eb04acedafb3470fb11b2} 
+F\+O\+R\+C\+E\+E\+N\+A\+B\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+S\+U\+ME@{R\+E\+S\+U\+ME}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!R\+E\+S\+U\+ME@{R\+E\+S\+U\+ME}}}\hypertarget{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a58daa060689afbba30b27c0a66e2722e}{}\label{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878a58daa060689afbba30b27c0a66e2722e} 
+R\+E\+S\+U\+ME&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 263 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a9791fe69244f3c8af2fd592d2573f939}{}\label{classo_cpt_1_1_lo_ra_a9791fe69244f3c8af2fd592d2573f939} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!Modulation\+Mode@{Modulation\+Mode}}
+\index{Modulation\+Mode@{Modulation\+Mode}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{Modulation\+Mode}{ModulationMode}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1_lo_ra_a9791fe69244f3c8af2fd592d2573f939}{o\+Cpt\+::\+Lo\+Ra\+::\+Modulation\+Mode}}
+
+The modulation mode of the \hyperlink{classo_cpt_1_1_lo_ra}{Lo\+Ra} module \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+O\+RA@{L\+O\+RA}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!L\+O\+RA@{L\+O\+RA}}}\hypertarget{classo_cpt_1_1_lo_ra_a9791fe69244f3c8af2fd592d2573f939abc752762fd91c9fec7ba7a70f228b647}{}\label{classo_cpt_1_1_lo_ra_a9791fe69244f3c8af2fd592d2573f939abc752762fd91c9fec7ba7a70f228b647} 
+L\+O\+RA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+SK@{F\+SK}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!F\+SK@{F\+SK}}}\hypertarget{classo_cpt_1_1_lo_ra_a9791fe69244f3c8af2fd592d2573f939adf58f9374751649cb74ac905e3306a82}{}\label{classo_cpt_1_1_lo_ra_a9791fe69244f3c8af2fd592d2573f939adf58f9374751649cb74ac905e3306a82} 
+F\+SK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 166 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4c}{}\label{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4c} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!Radio\+Band\+Width@{Radio\+Band\+Width}}
+\index{Radio\+Band\+Width@{Radio\+Band\+Width}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{Radio\+Band\+Width}{RadioBandWidth}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4c}{o\+Cpt\+::\+Lo\+Ra\+::\+Radio\+Band\+Width}}
+
+The radio bandwidth \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+B\+W500@{R\+B\+W500}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!R\+B\+W500@{R\+B\+W500}}}\hypertarget{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4cad821d66e711dc2b435edd0af4f902d75}{}\label{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4cad821d66e711dc2b435edd0af4f902d75} 
+R\+B\+W500&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+B\+W250@{R\+B\+W250}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!R\+B\+W250@{R\+B\+W250}}}\hypertarget{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4cacb44e6b956474a94bd970fc59433dde7}{}\label{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4cacb44e6b956474a94bd970fc59433dde7} 
+R\+B\+W250&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+B\+W125@{R\+B\+W125}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!R\+B\+W125@{R\+B\+W125}}}\hypertarget{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4caa2ce0cf39c7ff204c55d817fdcb7ac6f}{}\label{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4caa2ce0cf39c7ff204c55d817fdcb7ac6f} 
+R\+B\+W125&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 223 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!Radio\+Command@{Radio\+Command}}
+\index{Radio\+Command@{Radio\+Command}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{Radio\+Command}{RadioCommand}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74}{o\+Cpt\+::\+Lo\+Ra\+::\+Radio\+Command}}
+
+Types of radio commands \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+OD@{M\+OD}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!M\+OD@{M\+OD}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a017864c2c87a6f4e3905e26d314d70af}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a017864c2c87a6f4e3905e26d314d70af} 
+M\+OD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+R\+EQ@{F\+R\+EQ}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!F\+R\+EQ@{F\+R\+EQ}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a34d013839fd9f750e8a3b9f35fdd5133}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a34d013839fd9f750e8a3b9f35fdd5133} 
+F\+R\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+WR@{P\+WR}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!P\+WR@{P\+WR}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a99e3d50ccb97ed4d2eb5fa9c908c7bb5}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a99e3d50ccb97ed4d2eb5fa9c908c7bb5} 
+P\+WR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SF@{SF}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!SF@{SF}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74ad55ef306c79eb88cc306444381ca72c0}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74ad55ef306c79eb88cc306444381ca72c0} 
+SF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+F\+C\+BW@{A\+F\+C\+BW}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!A\+F\+C\+BW@{A\+F\+C\+BW}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a159215eda076d56d2cad85ea947c20fd}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a159215eda076d56d2cad85ea947c20fd} 
+A\+F\+C\+BW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+X\+BW@{R\+X\+BW}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!R\+X\+BW@{R\+X\+BW}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a72abd84b7cac8f64e245cc6e1e75f779}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a72abd84b7cac8f64e245cc6e1e75f779} 
+R\+X\+BW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+S\+K\+B\+I\+T\+R\+A\+TE@{F\+S\+K\+B\+I\+T\+R\+A\+TE}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!F\+S\+K\+B\+I\+T\+R\+A\+TE@{F\+S\+K\+B\+I\+T\+R\+A\+TE}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a67793e550afe588d44c1c54e376cade2}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a67793e550afe588d44c1c54e376cade2} 
+F\+S\+K\+B\+I\+T\+R\+A\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+D\+EV@{F\+D\+EV}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!F\+D\+EV@{F\+D\+EV}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74ae694b8f32a80e5a22a2b78026efacfd5}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74ae694b8f32a80e5a22a2b78026efacfd5} 
+F\+D\+EV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+R\+L\+EN@{P\+R\+L\+EN}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!P\+R\+L\+EN@{P\+R\+L\+EN}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a935d601e291d22acfc80da0600640cdb}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a935d601e291d22acfc80da0600640cdb} 
+P\+R\+L\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+RC@{C\+RC}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!C\+RC@{C\+RC}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a64dcffc9d524805a2fdabd254dc89be3}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a64dcffc9d524805a2fdabd254dc89be3} 
+C\+RC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CR@{CR}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!CR@{CR}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a90a920c3ff6725ebc34523355247557c}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a90a920c3ff6725ebc34523355247557c} 
+CR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+DT@{W\+DT}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!W\+DT@{W\+DT}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74ac21b0fb45e10096f854149e557bd1555}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74ac21b0fb45e10096f854149e557bd1555} 
+W\+DT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+NC@{S\+Y\+NC}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!S\+Y\+NC@{S\+Y\+NC}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74acc08f14a148b28e2db4808a0e0a035a1}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74acc08f14a148b28e2db4808a0e0a035a1} 
+S\+Y\+NC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BW@{BW}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!BW@{BW}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74aeb3399793789b1c7d7f3489206d49b33}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74aeb3399793789b1c7d7f3489206d49b33} 
+BW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{r\+RX@{r\+RX}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!r\+RX@{r\+RX}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a35f179de0230565cbf868697fa52a270}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a35f179de0230565cbf868697fa52a270} 
+r\+RX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{r\+TX@{r\+TX}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!r\+TX@{r\+TX}}}\hypertarget{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a62d9741cc2ef378367ba701f283723ca}{}\label{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74a62d9741cc2ef378367ba701f283723ca} 
+r\+TX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 241 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1}{}\label{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!Spreading\+Factor@{Spreading\+Factor}}
+\index{Spreading\+Factor@{Spreading\+Factor}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{Spreading\+Factor}{SpreadingFactor}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1}{o\+Cpt\+::\+Lo\+Ra\+::\+Spreading\+Factor}}
+
+The Spreading factor \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+F7@{S\+F7}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!S\+F7@{S\+F7}}}\hypertarget{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1a792baf09b73405f44a05d868bcd7eb3e}{}\label{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1a792baf09b73405f44a05d868bcd7eb3e} 
+S\+F7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+F8@{S\+F8}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!S\+F8@{S\+F8}}}\hypertarget{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1ae92c620a8a178fc83b3fb789114f5152}{}\label{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1ae92c620a8a178fc83b3fb789114f5152} 
+S\+F8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+F9@{S\+F9}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!S\+F9@{S\+F9}}}\hypertarget{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1a69281bbc4f98db411d7ca1ed728d7e4d}{}\label{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1a69281bbc4f98db411d7ca1ed728d7e4d} 
+S\+F9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+F10@{S\+F10}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!S\+F10@{S\+F10}}}\hypertarget{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1a636a12da3fcb8ef13489c3f4d84e47ff}{}\label{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1a636a12da3fcb8ef13489c3f4d84e47ff} 
+S\+F10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+F11@{S\+F11}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!S\+F11@{S\+F11}}}\hypertarget{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1a2b72871691634451599ac0769d8b0596}{}\label{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1a2b72871691634451599ac0769d8b0596} 
+S\+F11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+F12@{S\+F12}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!S\+F12@{S\+F12}}}\hypertarget{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1aab535691c4a915debf6a024b3a5ea2b6}{}\label{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1aab535691c4a915debf6a024b3a5ea2b6} 
+S\+F12&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 174 of file Communication.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1_lo_ra_ad793d1628f429e79babc356d2f64a6c9}{}\label{classo_cpt_1_1_lo_ra_ad793d1628f429e79babc356d2f64a6c9} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!Lo\+Ra@{Lo\+Ra}}
+\index{Lo\+Ra@{Lo\+Ra}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{Lo\+Ra()}{LoRa()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+Lo\+Ra\+::\+Lo\+Ra (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{const std\+::string \&}]{device,  }\item[{\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}}]{world = {\ttfamily \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}(new~\hyperlink{classo_cpt_1_1_world}{World}())},  }\item[{\hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{i\+Controller\+::io\+\_\+t}}]{ioservice = {\ttfamily \hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{i\+Controller\+::io\+\_\+t}(new~boost\+:\+:asio\+:\+:io\+\_\+service())} }\end{DoxyParamCaption})}
+
+\hyperlink{classo_cpt_1_1_lo_ra}{Lo\+Ra} device constructor 
+\begin{DoxyParams}{Parameters}
+{\em id} & the ID of the device as an string \\
+\hline
+{\em device} & the device path eq. /dev/tty\+S0 \\
+\hline
+{\em world} & shared\+\_\+ptr to the \hyperlink{classo_cpt_1_1_world}{World} default = a newly created \hyperlink{classo_cpt_1_1_world}{World} \\
+\hline
+{\em ioservice} & shared\+\_\+ptr to an IO service, default is a newly created IO service \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file Communication.\+cpp.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a203df2d51c12d24731241f89bec20200}{}\label{classo_cpt_1_1_lo_ra_a203df2d51c12d24731241f89bec20200} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!````~Lo\+Ra@{$\sim$\+Lo\+Ra}}
+\index{````~Lo\+Ra@{$\sim$\+Lo\+Ra}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{$\sim$\+Lo\+Ra()}{~LoRa()}}
+{\footnotesize\ttfamily o\+Cpt\+::\+Lo\+Ra\+::$\sim$\+Lo\+Ra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 81 of file Communication.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1_lo_ra_a225b527e6f098ae6b481ed56edb0744c}{}\label{classo_cpt_1_1_lo_ra_a225b527e6f098ae6b481ed56edb0744c} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!band\+Width\+To\+String@{band\+Width\+To\+String}}
+\index{band\+Width\+To\+String@{band\+Width\+To\+String}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{band\+Width\+To\+String()}{bandWidthToString()}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::\+Lo\+Ra\+::band\+Width\+To\+String (\begin{DoxyParamCaption}\item[{const \hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031d}{Band\+Width} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 101 of file Communication.\+cpp.
+
+
+
+References B\+W100, B\+W10\+\_\+4, B\+W125, B\+W12\+\_\+5, B\+W15\+\_\+6, B\+W166\+\_\+7, B\+W200, B\+W20\+\_\+8, B\+W25, B\+W250, B\+W31\+\_\+3, B\+W3\+\_\+1, B\+W3\+\_\+9, B\+W41\+\_\+7, B\+W50, B\+W5\+\_\+2, B\+W62\+\_\+5, B\+W6\+\_\+3, B\+W7\+\_\+8, and B\+W83\+\_\+3.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a2e9c8a00010caa88fb917586a7f79195}{}\label{classo_cpt_1_1_lo_ra_a2e9c8a00010caa88fb917586a7f79195} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!build\+Mac\+Cmd\+String@{build\+Mac\+Cmd\+String}}
+\index{build\+Mac\+Cmd\+String@{build\+Mac\+Cmd\+String}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{build\+Mac\+Cmd\+String()}{buildMacCmdString()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string o\+Cpt\+::\+Lo\+Ra\+::build\+Mac\+Cmd\+String (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1_lo_ra_a25bdbc01f200d6acca984a06e05fb878}{Mac\+Command}}]{cmd,  }\item[{T}]{value = {\ttfamily 0},  }\item[{\hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91a}{Get\+Set}}]{prop = {\ttfamily \hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aac7c88dab7b4d0b1729148c5fb3ead0a3}{N\+O\+NE}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+A command string builder for M\+AC commands currently onlu P\+A\+U\+SE implemented 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of M\+AC command eq. Mac\+Command\+::\+P\+A\+U\+SE \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & the Mac\+Command to be performed \\
+\hline
+{\em value} & the Value to be send \\
+\hline
+{\em prop} & Additional properties \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string which can be send to the \hyperlink{classo_cpt_1_1_lo_ra}{Lo\+Ra} module eq. \char`\"{}mac set pause\char`\"{} 
+\end{DoxyReturn}
+
+
+Definition at line 339 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a936158f0266e734786ed323f7b7f7a82}{}\label{classo_cpt_1_1_lo_ra_a936158f0266e734786ed323f7b7f7a82} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!build\+Radio\+Cmd\+String@{build\+Radio\+Cmd\+String}}
+\index{build\+Radio\+Cmd\+String@{build\+Radio\+Cmd\+String}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{build\+Radio\+Cmd\+String()}{buildRadioCmdString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string o\+Cpt\+::\+Lo\+Ra\+::build\+Radio\+Cmd\+String (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74}{Radio\+Command}}]{cmd,  }\item[{T}]{value = {\ttfamily 0},  }\item[{\hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91a}{Get\+Set}}]{prop = {\ttfamily \hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aa6f1ce6bf9072aeeb8a1296caa25ea324}{S\+ET}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+A command string builder for radio commands 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & \\
+\hline
+{\em value} & \\
+\hline
+{\em prop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 367 of file Communication.\+h.
+
+
+
+Referenced by send\+Message().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1_lo_ra_a936158f0266e734786ed323f7b7f7a82_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1_lo_ra_a9fadd1ae0e020c59c5a0048f8a2878c7}{}\label{classo_cpt_1_1_lo_ra_a9fadd1ae0e020c59c5a0048f8a2878c7} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!build\+Radio\+Cmd\+String@{build\+Radio\+Cmd\+String}}
+\index{build\+Radio\+Cmd\+String@{build\+Radio\+Cmd\+String}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{build\+Radio\+Cmd\+String()}{buildRadioCmdString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::\+Lo\+Ra\+::build\+Radio\+Cmd\+String (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1_lo_ra_ae987280d2d608bf474dc3f490790bc74}{Radio\+Command}}]{cmd,  }\item[{std\+::string}]{value,  }\item[{\hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91a}{Get\+Set}}]{prop = {\ttfamily \hyperlink{classo_cpt_1_1_lo_ra_ab2678032cac766b630fb06002f0db91aa6f1ce6bf9072aeeb8a1296caa25ea324}{S\+ET}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 437 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a36aa990d9ce4981d60ef637cc26d0926}{}\label{classo_cpt_1_1_lo_ra_a36aa990d9ce4981d60ef637cc26d0926} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!calculate\+Down\+Time@{calculate\+Down\+Time}}
+\index{calculate\+Down\+Time@{calculate\+Down\+Time}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{calculate\+Down\+Time()}{calculateDownTime()}}
+{\footnotesize\ttfamily unsigned long o\+Cpt\+::\+Lo\+Ra\+::calculate\+Down\+Time (\begin{DoxyParamCaption}\item[{unsigned int}]{payload }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 85 of file Communication.\+cpp.
+
+
+
+References bw\+\_\+, cr\+\_\+, crc\+\_\+, prlen\+\_\+, and sf\+\_\+.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a404a9de4e173c0f17c7ca6a915a7fa4b}{}\label{classo_cpt_1_1_lo_ra_a404a9de4e173c0f17c7ca6a915a7fa4b} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!coding\+Rate\+To\+String@{coding\+Rate\+To\+String}}
+\index{coding\+Rate\+To\+String@{coding\+Rate\+To\+String}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{coding\+Rate\+To\+String()}{codingRateToString()}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::\+Lo\+Ra\+::coding\+Rate\+To\+String (\begin{DoxyParamCaption}\item[{const \hyperlink{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7a}{Coding\+Rate} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 148 of file Communication.\+cpp.
+
+
+
+References C\+R4\+\_\+5, C\+R4\+\_\+6, and C\+R4\+\_\+7.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a49199ac50e2771b874331e2dffaa8b2c}{}\label{classo_cpt_1_1_lo_ra_a49199ac50e2771b874331e2dffaa8b2c} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!encode\+Type\+To\+Hex@{encode\+Type\+To\+Hex}}
+\index{encode\+Type\+To\+Hex@{encode\+Type\+To\+Hex}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{encode\+Type\+To\+Hex()}{encodeTypeToHex()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string o\+Cpt\+::\+Lo\+Ra\+::encode\+Type\+To\+Hex (\begin{DoxyParamCaption}\item[{T}]{value,  }\item[{bool}]{capital = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Convert the value of a Type T to a hexidecimal string, which can be send to a \hyperlink{classo_cpt_1_1_lo_ra}{Lo\+Ra} device, such that it can be transmitted 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type of value, to be converted \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the to be converted value \\
+\hline
+{\em capital} & boolean indicating if the hexidecimal string should consist of capital letters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string with the value as hexidecimal values 
+\end{DoxyReturn}
+
+
+Definition at line 316 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a9a85cc1457a2e791c4eb4d1805b416fc}{}\label{classo_cpt_1_1_lo_ra_a9a85cc1457a2e791c4eb4d1805b416fc} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!hex\+To\+String@{hex\+To\+String}}
+\index{hex\+To\+String@{hex\+To\+String}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{hex\+To\+String()}{hexToString()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Lo\+Ra\+::hex\+To\+String (\begin{DoxyParamCaption}\item[{const std\+::string}]{hex\+Str,  }\item[{std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 280 of file Communication.\+cpp.
+
+
+
+Referenced by message\+Recieved().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1_lo_ra_a9a85cc1457a2e791c4eb4d1805b416fc_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1_lo_ra_aa0646143f843d43fcd680344dfcb2a14}{}\label{classo_cpt_1_1_lo_ra_aa0646143f843d43fcd680344dfcb2a14} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!initialize@{initialize}}
+\index{initialize@{initialize}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Lo\+Ra\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A pure virtual function which initializes the communication device 
+
+Implements \hyperlink{classo_cpt_1_1i_comm_aeba385b1daaec5e64c5c573424ab8d24}{o\+Cpt\+::i\+Comm}.
+
+
+
+Definition at line 189 of file Communication.\+cpp.
+
+
+
+References A\+F\+C\+BW, afcbw\+\_\+, BW, bw\+\_\+, CR, cr\+\_\+, C\+RC, crc\+\_\+, F\+D\+EV, fdev\+\_\+, F\+R\+EQ, freq\+\_\+, ignore\+Warn\+\_\+, listen\+\_\+, macpause(), message\+Recieved(), M\+OD, mod\+\_\+, o\+Cpt\+::protocol\+::\+Serial\+::msg\+Recieved\+Sig, o\+Cpt\+::protocol\+::\+Serial\+::open(), P\+R\+L\+EN, prlen\+\_\+, P\+WR, pwr\+\_\+, rx(), R\+X\+BW, rxbw\+\_\+, serial\+\_\+, SF, sf\+\_\+, o\+Cpt\+::protocol\+::\+Serial\+::start(), S\+Y\+NC, sync\+\_\+, W\+DT, wdt\+\_\+, and write().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1_lo_ra_aa0646143f843d43fcd680344dfcb2a14_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1_lo_ra_ac1042fa7b446ce798317a529b6425a4f}{}\label{classo_cpt_1_1_lo_ra_ac1042fa7b446ce798317a529b6425a4f} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!macpause@{macpause}}
+\index{macpause@{macpause}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{macpause()}{macpause()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Lo\+Ra\+::macpause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 275 of file Communication.\+cpp.
+
+
+
+References P\+A\+U\+SE, serial\+\_\+, and o\+Cpt\+::protocol\+::\+Serial\+::write().
+
+
+
+Referenced by initialize().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classo_cpt_1_1_lo_ra_ac1042fa7b446ce798317a529b6425a4f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classo_cpt_1_1_lo_ra_ac1042fa7b446ce798317a529b6425a4f_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1_lo_ra_a606eeaec7fb73b483f958005444246b4}{}\label{classo_cpt_1_1_lo_ra_a606eeaec7fb73b483f958005444246b4} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!message\+Recieved@{message\+Recieved}}
+\index{message\+Recieved@{message\+Recieved}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{message\+Recieved()}{messageRecieved()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Lo\+Ra\+::message\+Recieved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 161 of file Communication.\+cpp.
+
+
+
+References hex\+To\+String(), ignore\+Warn\+\_\+, listen\+\_\+, o\+Cpt\+::i\+Comm\+::msg\+Queue\+\_\+, o\+Cpt\+::i\+Comm\+::msg\+Recieved\+Sig, proceed\+\_\+, o\+Cpt\+::protocol\+::\+Serial\+::read\+Fi\+Fo\+Msg(), rx(), serial\+\_\+, and o\+Cpt\+::i\+Comm\+::world\+\_\+.
+
+
+
+Referenced by initialize().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1_lo_ra_a606eeaec7fb73b483f958005444246b4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1_lo_ra_a606eeaec7fb73b483f958005444246b4_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1_lo_ra_a6d4aa003a6ad9277998f34ee858b6264}{}\label{classo_cpt_1_1_lo_ra_a6d4aa003a6ad9277998f34ee858b6264} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!recieve\+Async\+Message@{recieve\+Async\+Message}}
+\index{recieve\+Async\+Message@{recieve\+Async\+Message}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{recieve\+Async\+Message()}{recieveAsyncMessage()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Lo\+Ra\+::recieve\+Async\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A pure virtual function which performs the polling for a new message on a seperate threads, so it won\textquotesingle{}t block the current one, it needs to send a signal when the message is received 
+
+Implements \hyperlink{classo_cpt_1_1i_comm_a27a57fb90cfc9cce21552e8539f08dd7}{o\+Cpt\+::i\+Comm}.
+
+
+
+Definition at line 241 of file Communication.\+cpp.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a191e265a569a80c53e6829d57d402969}{}\label{classo_cpt_1_1_lo_ra_a191e265a569a80c53e6829d57d402969} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!recieve\+Message@{recieve\+Message}}
+\index{recieve\+Message@{recieve\+Message}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{recieve\+Message()}{recieveMessage()}}
+{\footnotesize\ttfamily \hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{i\+Comm\+::\+Message\+::ptr} o\+Cpt\+::\+Lo\+Ra\+::recieve\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A pure virtual function with a shared\+\_\+ptr to the first in queue received message, this function will hold the current thread \begin{DoxyReturn}{Returns}
+a shared\+\_\+ptr pointing towards the queued Message 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classo_cpt_1_1i_comm_a054ee0448f0d2773abce97c424c5c20c}{o\+Cpt\+::i\+Comm}.
+
+
+
+Definition at line 237 of file Communication.\+cpp.
+
+\hypertarget{classo_cpt_1_1_lo_ra_aacbca715826b810736e9bf5c3a9ce338}{}\label{classo_cpt_1_1_lo_ra_aacbca715826b810736e9bf5c3a9ce338} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!run@{run}}
+\index{run@{run}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Lo\+Ra\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+a pure virtual function which runs the communication device 
+
+Implements \hyperlink{classo_cpt_1_1i_comm_a0d15a29fb59dd6a74b56a126d03b9170}{o\+Cpt\+::i\+Comm}.
+
+
+
+Definition at line 181 of file Communication.\+cpp.
+
+\hypertarget{classo_cpt_1_1_lo_ra_aa9051cc9d611edc2b5e1f36124d4e972}{}\label{classo_cpt_1_1_lo_ra_aa9051cc9d611edc2b5e1f36124d4e972} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!rx@{rx}}
+\index{rx@{rx}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{rx()}{rx()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Lo\+Ra\+::rx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 270 of file Communication.\+cpp.
+
+
+
+References N\+O\+NE, r\+RX, serial\+\_\+, and o\+Cpt\+::protocol\+::\+Serial\+::write().
+
+
+
+Referenced by initialize(), message\+Recieved(), and send\+Message().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classo_cpt_1_1_lo_ra_aa9051cc9d611edc2b5e1f36124d4e972_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1_lo_ra_aa9051cc9d611edc2b5e1f36124d4e972_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1_lo_ra_a053e29e992490cffb90741c009664272}{}\label{classo_cpt_1_1_lo_ra_a053e29e992490cffb90741c009664272} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!send\+Message@{send\+Message}}
+\index{send\+Message@{send\+Message}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{send\+Message()}{sendMessage()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Lo\+Ra\+::send\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message}}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A pure virtual function which sends the message 
+\begin{DoxyParams}{Parameters}
+{\em msg} & the Message, consisting of a payload and a time stamp \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classo_cpt_1_1i_comm_aed3d4364175d17efc0347b6e954f5aef}{o\+Cpt\+::i\+Comm}.
+
+
+
+Definition at line 222 of file Communication.\+cpp.
+
+
+
+References build\+Radio\+Cmd\+String(), N\+O\+NE, P\+A\+U\+SE, o\+Cpt\+::i\+Comm\+::\+Message\+::\+Payload, r\+TX, rx(), send\+Allowed\+\_\+, serial\+\_\+, o\+Cpt\+::i\+Comm\+::\+Message\+::\+Stamp, o\+Cpt\+::i\+Comm\+::world\+\_\+, and o\+Cpt\+::protocol\+::\+Serial\+::write().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1_lo_ra_a053e29e992490cffb90741c009664272_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1_lo_ra_a8300de2590a7ce8b56863eb4059f14ad}{}\label{classo_cpt_1_1_lo_ra_a8300de2590a7ce8b56863eb4059f14ad} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!stop@{stop}}
+\index{stop@{stop}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Lo\+Ra\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A pure virtual function which stops the communication device 
+
+Implements \hyperlink{classo_cpt_1_1i_comm_ad73564bd03146a576aaa37db1a38379f}{o\+Cpt\+::i\+Comm}.
+
+
+
+Definition at line 185 of file Communication.\+cpp.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a3671543fd5f0297ca7e7fb533020bea9}{}\label{classo_cpt_1_1_lo_ra_a3671543fd5f0297ca7e7fb533020bea9} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!string\+To\+Hex@{string\+To\+Hex}}
+\index{string\+To\+Hex@{string\+To\+Hex}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{string\+To\+Hex()}{stringToHex()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Lo\+Ra\+::string\+To\+Hex (\begin{DoxyParamCaption}\item[{const std\+::string}]{str,  }\item[{std\+::string \&}]{hex\+Str,  }\item[{const bool}]{capital = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 245 of file Communication.\+cpp.
+
+\hypertarget{classo_cpt_1_1_lo_ra_aa96080e6911f8355be8c59da33bfa9d1}{}\label{classo_cpt_1_1_lo_ra_aa96080e6911f8355be8c59da33bfa9d1} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!write@{write}}
+\index{write@{write}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void o\+Cpt\+::\+Lo\+Ra\+::write (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 262 of file Communication.\+cpp.
+
+
+
+References proceed\+\_\+, serial\+\_\+, and o\+Cpt\+::protocol\+::\+Serial\+::write().
+
+
+
+Referenced by initialize().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classo_cpt_1_1_lo_ra_aa96080e6911f8355be8c59da33bfa9d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classo_cpt_1_1_lo_ra_aa96080e6911f8355be8c59da33bfa9d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1_lo_ra_a776e20c9dbac73ba02dca35c63ee4807}{}\label{classo_cpt_1_1_lo_ra_a776e20c9dbac73ba02dca35c63ee4807} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!afcbw\+\_\+@{afcbw\+\_\+}}
+\index{afcbw\+\_\+@{afcbw\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{afcbw\+\_\+}{afcbw\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031d}{Band\+Width} o\+Cpt\+::\+Lo\+Ra\+::afcbw\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Automatic frequency correction in k\+Hz. 
+
+
+
+Definition at line 470 of file Communication.\+h.
+
+
+
+Referenced by initialize().
+
+\hypertarget{classo_cpt_1_1_lo_ra_a076f477e2096b2a49c8d4c25b79b1143}{}\label{classo_cpt_1_1_lo_ra_a076f477e2096b2a49c8d4c25b79b1143} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!baudrate\+\_\+@{baudrate\+\_\+}}
+\index{baudrate\+\_\+@{baudrate\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{baudrate\+\_\+}{baudrate\_}}
+{\footnotesize\ttfamily unsigned int o\+Cpt\+::\+Lo\+Ra\+::baudrate\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 465 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1_lo_ra_a687ca4712f0976534dcdaec0b068d9e5}{}\label{classo_cpt_1_1_lo_ra_a687ca4712f0976534dcdaec0b068d9e5} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!bw\+\_\+@{bw\+\_\+}}
+\index{bw\+\_\+@{bw\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{bw\+\_\+}{bw\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_lo_ra_a37ef012dc7d97a8825917dc84ddc6f4c}{Radio\+Band\+Width} o\+Cpt\+::\+Lo\+Ra\+::bw\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Radio\+Band\+Width in k\+Hz. 
+
+
+
+Definition at line 479 of file Communication.\+h.
+
+
+
+Referenced by calculate\+Down\+Time(), and initialize().
+
+\hypertarget{classo_cpt_1_1_lo_ra_a61d7ff909c4e40b48a8722ec0e608b2a}{}\label{classo_cpt_1_1_lo_ra_a61d7ff909c4e40b48a8722ec0e608b2a} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!cr\+\_\+@{cr\+\_\+}}
+\index{cr\+\_\+@{cr\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{cr\+\_\+}{cr\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_lo_ra_a9bbdbc3b6fefdabd52bbb3ebbebcee7a}{Coding\+Rate} o\+Cpt\+::\+Lo\+Ra\+::cr\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The coding rate. 
+
+
+
+Definition at line 476 of file Communication.\+h.
+
+
+
+Referenced by calculate\+Down\+Time(), and initialize().
+
+\hypertarget{classo_cpt_1_1_lo_ra_af6a4412b761252d2ef9b55c22ad2ef8e}{}\label{classo_cpt_1_1_lo_ra_af6a4412b761252d2ef9b55c22ad2ef8e} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!crc\+\_\+@{crc\+\_\+}}
+\index{crc\+\_\+@{crc\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{crc\+\_\+}{crc\_}}
+{\footnotesize\ttfamily bool o\+Cpt\+::\+Lo\+Ra\+::crc\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+C\+RC Header on or off. 
+
+
+
+Definition at line 475 of file Communication.\+h.
+
+
+
+Referenced by calculate\+Down\+Time(), and initialize().
+
+\hypertarget{classo_cpt_1_1_lo_ra_ac0a2434f4fd5275771f56c810aa3fbed}{}\label{classo_cpt_1_1_lo_ra_ac0a2434f4fd5275771f56c810aa3fbed} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!fdev\+\_\+@{fdev\+\_\+}}
+\index{fdev\+\_\+@{fdev\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{fdev\+\_\+}{fdev\_}}
+{\footnotesize\ttfamily uint o\+Cpt\+::\+Lo\+Ra\+::fdev\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Frequency deviation between 0...200000. 
+
+
+
+Definition at line 473 of file Communication.\+h.
+
+
+
+Referenced by initialize().
+
+\hypertarget{classo_cpt_1_1_lo_ra_ab57a9c27d2f5744eaf07bdee11a24aba}{}\label{classo_cpt_1_1_lo_ra_ab57a9c27d2f5744eaf07bdee11a24aba} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!freq\+\_\+@{freq\+\_\+}}
+\index{freq\+\_\+@{freq\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{freq\+\_\+}{freq\_}}
+{\footnotesize\ttfamily unsigned long o\+Cpt\+::\+Lo\+Ra\+::freq\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Frequency between 433050000..4347900000 or 863000000...870000000. 
+
+
+
+Definition at line 467 of file Communication.\+h.
+
+
+
+Referenced by initialize().
+
+\hypertarget{classo_cpt_1_1_lo_ra_ae8fc701f0418461263bc0049e95ab01e}{}\label{classo_cpt_1_1_lo_ra_ae8fc701f0418461263bc0049e95ab01e} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!fsk\+Bit\+Rate\+\_\+@{fsk\+Bit\+Rate\+\_\+}}
+\index{fsk\+Bit\+Rate\+\_\+@{fsk\+Bit\+Rate\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{fsk\+Bit\+Rate\+\_\+}{fskBitRate\_}}
+{\footnotesize\ttfamily uint o\+Cpt\+::\+Lo\+Ra\+::fsk\+Bit\+Rate\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+F\+SK bitrate between 1...300000. 
+
+
+
+Definition at line 472 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1_lo_ra_af293c469e9badc01ef82415211f729da}{}\label{classo_cpt_1_1_lo_ra_af293c469e9badc01ef82415211f729da} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!ignore\+Warn\+\_\+@{ignore\+Warn\+\_\+}}
+\index{ignore\+Warn\+\_\+@{ignore\+Warn\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{ignore\+Warn\+\_\+}{ignoreWarn\_}}
+{\footnotesize\ttfamily bool o\+Cpt\+::\+Lo\+Ra\+::ignore\+Warn\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 462 of file Communication.\+h.
+
+
+
+Referenced by initialize(), and message\+Recieved().
+
+\hypertarget{classo_cpt_1_1_lo_ra_a03b9303cbe41d8ad542054359109abd5}{}\label{classo_cpt_1_1_lo_ra_a03b9303cbe41d8ad542054359109abd5} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!listen\+\_\+@{listen\+\_\+}}
+\index{listen\+\_\+@{listen\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{listen\+\_\+}{listen\_}}
+{\footnotesize\ttfamily bool o\+Cpt\+::\+Lo\+Ra\+::listen\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 463 of file Communication.\+h.
+
+
+
+Referenced by initialize(), and message\+Recieved().
+
+\hypertarget{classo_cpt_1_1_lo_ra_a98e0dc05a9e45a08afa36beddfe27072}{}\label{classo_cpt_1_1_lo_ra_a98e0dc05a9e45a08afa36beddfe27072} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!mod\+\_\+@{mod\+\_\+}}
+\index{mod\+\_\+@{mod\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{mod\+\_\+}{mod\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_lo_ra_a9791fe69244f3c8af2fd592d2573f939}{Modulation\+Mode} o\+Cpt\+::\+Lo\+Ra\+::mod\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Modulation mode. 
+
+
+
+Definition at line 466 of file Communication.\+h.
+
+
+
+Referenced by initialize().
+
+\hypertarget{classo_cpt_1_1_lo_ra_a93c4923a8c79b33788d998cca5b764f8}{}\label{classo_cpt_1_1_lo_ra_a93c4923a8c79b33788d998cca5b764f8} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!prlen\+\_\+@{prlen\+\_\+}}
+\index{prlen\+\_\+@{prlen\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{prlen\+\_\+}{prlen\_}}
+{\footnotesize\ttfamily uint o\+Cpt\+::\+Lo\+Ra\+::prlen\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Preamble length between 0...65535. 
+
+
+
+Definition at line 474 of file Communication.\+h.
+
+
+
+Referenced by calculate\+Down\+Time(), and initialize().
+
+\hypertarget{classo_cpt_1_1_lo_ra_a63fc8aa4abe5d2df5cdee3757fc7cdf9}{}\label{classo_cpt_1_1_lo_ra_a63fc8aa4abe5d2df5cdee3757fc7cdf9} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!proceed\+\_\+@{proceed\+\_\+}}
+\index{proceed\+\_\+@{proceed\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{proceed\+\_\+}{proceed\_}}
+{\footnotesize\ttfamily bool o\+Cpt\+::\+Lo\+Ra\+::proceed\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 461 of file Communication.\+h.
+
+
+
+Referenced by message\+Recieved(), and write().
+
+\hypertarget{classo_cpt_1_1_lo_ra_a26a74b857c4fe90af4217f38dc735220}{}\label{classo_cpt_1_1_lo_ra_a26a74b857c4fe90af4217f38dc735220} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!pwr\+\_\+@{pwr\+\_\+}}
+\index{pwr\+\_\+@{pwr\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{pwr\+\_\+}{pwr\_}}
+{\footnotesize\ttfamily int8\+\_\+t o\+Cpt\+::\+Lo\+Ra\+::pwr\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Power of transmission between -\/3...15. 
+
+
+
+Definition at line 468 of file Communication.\+h.
+
+
+
+Referenced by initialize().
+
+\hypertarget{classo_cpt_1_1_lo_ra_ad82916e0708ce81df40be3a264446c94}{}\label{classo_cpt_1_1_lo_ra_ad82916e0708ce81df40be3a264446c94} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!rxbw\+\_\+@{rxbw\+\_\+}}
+\index{rxbw\+\_\+@{rxbw\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{rxbw\+\_\+}{rxbw\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_lo_ra_abb27d22a584625eea0339906152c031d}{Band\+Width} o\+Cpt\+::\+Lo\+Ra\+::rxbw\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Signal bandwidth in k\+Hz. 
+
+
+
+Definition at line 471 of file Communication.\+h.
+
+
+
+Referenced by initialize().
+
+\hypertarget{classo_cpt_1_1_lo_ra_a40be67af15ddcf86fe017fa356084293}{}\label{classo_cpt_1_1_lo_ra_a40be67af15ddcf86fe017fa356084293} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!send\+Allowed\+\_\+@{send\+Allowed\+\_\+}}
+\index{send\+Allowed\+\_\+@{send\+Allowed\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{send\+Allowed\+\_\+}{sendAllowed\_}}
+{\footnotesize\ttfamily bool o\+Cpt\+::\+Lo\+Ra\+::send\+Allowed\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 480 of file Communication.\+h.
+
+
+
+Referenced by send\+Message().
+
+\hypertarget{classo_cpt_1_1_lo_ra_ab349fec280811fd5172f91652abe2775}{}\label{classo_cpt_1_1_lo_ra_ab349fec280811fd5172f91652abe2775} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!serial\+\_\+@{serial\+\_\+}}
+\index{serial\+\_\+@{serial\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{serial\+\_\+}{serial\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1_serial}{protocol\+::\+Serial} o\+Cpt\+::\+Lo\+Ra\+::serial\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Serial\+Port for U\+A\+RT communication with the chip. 
+
+
+
+Definition at line 464 of file Communication.\+h.
+
+
+
+Referenced by initialize(), macpause(), message\+Recieved(), rx(), send\+Message(), and write().
+
+\hypertarget{classo_cpt_1_1_lo_ra_acebd51c3b66932357035150f21e88d38}{}\label{classo_cpt_1_1_lo_ra_acebd51c3b66932357035150f21e88d38} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!sf\+\_\+@{sf\+\_\+}}
+\index{sf\+\_\+@{sf\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{sf\+\_\+}{sf\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_lo_ra_a8a682cc4db78b2afb14ad5cdb713b1e1}{Spreading\+Factor} o\+Cpt\+::\+Lo\+Ra\+::sf\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Spreading factor of the signal. 
+
+
+
+Definition at line 469 of file Communication.\+h.
+
+
+
+Referenced by calculate\+Down\+Time(), and initialize().
+
+\hypertarget{classo_cpt_1_1_lo_ra_a42f093f868ce1b8d4525031569b77c19}{}\label{classo_cpt_1_1_lo_ra_a42f093f868ce1b8d4525031569b77c19} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!sync\+\_\+@{sync\+\_\+}}
+\index{sync\+\_\+@{sync\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{sync\+\_\+}{sync\_}}
+{\footnotesize\ttfamily unsigned int o\+Cpt\+::\+Lo\+Ra\+::sync\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sync word. 
+
+
+
+Definition at line 478 of file Communication.\+h.
+
+
+
+Referenced by initialize().
+
+\hypertarget{classo_cpt_1_1_lo_ra_aef791d801da3a184f574bb5dcf465bd3}{}\label{classo_cpt_1_1_lo_ra_aef791d801da3a184f574bb5dcf465bd3} 
+\index{o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}!wdt\+\_\+@{wdt\+\_\+}}
+\index{wdt\+\_\+@{wdt\+\_\+}!o\+Cpt\+::\+Lo\+Ra@{o\+Cpt\+::\+Lo\+Ra}}
+\subsubsection{\texorpdfstring{wdt\+\_\+}{wdt\_}}
+{\footnotesize\ttfamily unsigned long o\+Cpt\+::\+Lo\+Ra\+::wdt\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Watch\+Dog 0...4294967295. Set to 0 to disable. 
+
+
+
+Definition at line 477 of file Communication.\+h.
+
+
+
+Referenced by initialize().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\hyperlink{_communication_8h}{Communication.\+h}\item 
+src/\+Core/\hyperlink{_communication_8cpp}{Communication.\+cpp}\end{DoxyCompactItemize}

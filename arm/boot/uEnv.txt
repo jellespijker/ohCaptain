@@ -1,0 +1,2 @@
+#optargs=coherent_pool=1M fdtfile=am335x-boneblack-nhdmi-overlay.dtb bone_capemgr.enable_partno=cape-universaln,BB-ADC
+optargs=coherent_pool=1M fdtfile=am335x-boneblack-nhdmi-overlay.dtb bone_capemgr.enable_partno=MTI-CATAMARAN

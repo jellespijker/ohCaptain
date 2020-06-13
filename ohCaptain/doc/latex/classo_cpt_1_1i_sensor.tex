@@ -1,0 +1,540 @@
+\hypertarget{classo_cpt_1_1i_sensor}{}\section{o\+Cpt\+:\+:i\+Sensor Class Reference}
+\label{classo_cpt_1_1i_sensor}\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+
+
+{\ttfamily \#include $<$Sensor.\+h$>$}
+
+
+
+Inheritance diagram for o\+Cpt\+:\+:i\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1i_sensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for o\+Cpt\+:\+:i\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classo_cpt_1_1i_sensor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structo_cpt_1_1i_sensor_1_1_state}{State}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classo_cpt_1_1i_sensor}{i\+Sensor} $>$ \hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{ptr}
+\item 
+typedef boost\+::signals2\+::signal$<$ void()$>$ \hyperlink{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d}{signal\+\_\+t}
+\item 
+typedef boost\+::any \hyperlink{classo_cpt_1_1i_sensor_a8c83eafe5bdc0074a8c2c405023ee204}{generic\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1i_sensor_a548ca1dbeea64980181c434518659d3e}{i\+Sensor} (\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr} controller, \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} world, std\+::string id, std\+::string type\+Of\+Sensor=\char`\"{}\char`\"{})
+\item 
+virtual \hyperlink{classo_cpt_1_1i_sensor_a47eeead807cf3dc127fe55df4bc68c47}{$\sim$i\+Sensor} ()
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_sensor_aa55bc04979e4852989af2bd4f64e70bc}{update\+Sensor} ()=0
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_sensor_abbface05a16b17354c23389d9747bf7c}{run} ()=0
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_sensor_aa85c22a8c8f7c2445379e1f82835f8dc}{stop} ()=0
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_sensor_aa8def4a41b8280f7e4e02285cd7bd734}{init} ()=0
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_sensor_a83b62cc63498ca4c335f85639e39656d}{set\+I\+Oservice} (boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$ ioservice)=0
+\item 
+virtual bool \hyperlink{classo_cpt_1_1i_sensor_affc8319846828aac6cab641f294a04aa}{operator==} (\hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{i\+Sensor\+::ptr} rhs)
+\item 
+const boost\+::posix\+\_\+time\+::milliseconds \& \hyperlink{classo_cpt_1_1i_sensor_ad1651243755d72d5fd69668444555c77}{get\+Timer} () const
+\item 
+void \hyperlink{classo_cpt_1_1i_sensor_a4c956646ebf60201b5b23e0f5ad288ce}{set\+Timer} (const boost\+::posix\+\_\+time\+::milliseconds \&timer)
+\item 
+\hyperlink{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d}{signal\+\_\+t} \& \hyperlink{classo_cpt_1_1i_sensor_ad63e4d791b76f8328d652c4ed79eaec3}{get\+Sig} ()
+\item 
+const \hyperlink{structo_cpt_1_1i_sensor_1_1_state}{State} \& \hyperlink{classo_cpt_1_1i_sensor_a9ab760449e01c754c30374641c51ac66}{get\+State} () const
+\item 
+const std\+::string \& \hyperlink{classo_cpt_1_1i_sensor_aba86d11b74b8393c5ed0dfb2ec3b93d7}{get\+ID} () const
+\item 
+void \hyperlink{classo_cpt_1_1i_sensor_a2dec47e27c1e0843a1f874e28a522abd}{set\+ID} (const std\+::string \&id)
+\item 
+const std\+::string \& \hyperlink{classo_cpt_1_1i_sensor_aa356e53521301d555a7cbcee84bf54ea}{get\+Type\+Of\+Sensor} () const
+\item 
+void \hyperlink{classo_cpt_1_1i_sensor_ad1927865eb4ebfebc3dd840f66d98c1f}{set\+Type\+Of\+Sensor} (const std\+::string \&type\+Of\+Sensor)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classo_cpt_1_1i_sensor_a4c9bd54d193ec8f2cc01eede5eadacdc}{id\+\_\+}
+\item 
+std\+::string \hyperlink{classo_cpt_1_1i_sensor_a37396b5c63f5e99cb6e80c266f85dbfa}{type\+Of\+Sensor\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr} \hyperlink{classo_cpt_1_1i_sensor_a65e41d8be53d71b1db21bac89c5c3c0d}{controller\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} \hyperlink{classo_cpt_1_1i_sensor_aab033b6462d7e8710c006f19c51e033e}{world\+\_\+}
+\item 
+boost\+::posix\+\_\+time\+::milliseconds \hyperlink{classo_cpt_1_1i_sensor_ac2a089853910118f6b490c00fc354d77}{timer\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d}{signal\+\_\+t} \hyperlink{classo_cpt_1_1i_sensor_a4f4943cf2af0b1a06bf5f0d8c46d1cb8}{sig\+\_\+}
+\item 
+\hyperlink{structo_cpt_1_1i_sensor_1_1_state}{State} \hyperlink{classo_cpt_1_1i_sensor_ad27fe02a89f013951a05f296ec457a08}{state\+\_\+}
+\item 
+bool \hyperlink{classo_cpt_1_1i_sensor_acc8826907fbe0c20c38a1e478e6a7c05}{sensor\+Running\+\_\+}
+\item 
+boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$ \hyperlink{classo_cpt_1_1i_sensor_a7aa3b0cea67ca97dae2495a20f5f6a04}{ioservice\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Each sensor that is used should adhere to the sensor interface. A sensor consits of an connection to a controller, such as a \hyperlink{classo_cpt_1_1_a_r_m}{A\+RM} device and the world. The sensor needs to be initiated with the construct, where afterwards the init fucntion is called. The sensor should then be registerd by the \hyperlink{classo_cpt_1_1_boatswain}{Boatswain}, using \hyperlink{classo_cpt_1_1_boatswain_ab36071db5e3f8a0db0053b5553e508f0}{Boatswain\+::register\+Sensor()}. This ensures that the boatswain can run the sensors. Some sensors are automatically update, whilst other need a manual action, such it is common practice to call the \hyperlink{classo_cpt_1_1i_sensor_aa55bc04979e4852989af2bd4f64e70bc}{i\+Sensor\+::update\+Sensor()}. Once the value is update, a new Boost\+::\+Signal2 is fired, which allow for the main function to obtain the \hyperlink{structo_cpt_1_1i_sensor_1_1_state}{State} of the sensor. Via \hyperlink{classo_cpt_1_1i_sensor_a9ab760449e01c754c30374641c51ac66}{i\+Sensor\+::get\+State()}. Since the return value of a sensor can vary, it is important to note that the final sensor should include a typedef with the return type named Return\+Value\+\_\+t. After a sensor update is given or a signal is recieved, the return value can be C\+A\+ST using the macro \hyperlink{_sensor_8h_a1edee5ac6b15c590def9ae3e0bfa8d48}{C\+A\+S\+T(x,t)} 
+
+Definition at line 29 of file Sensor.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1i_sensor_a8c83eafe5bdc0074a8c2c405023ee204}{}\label{classo_cpt_1_1i_sensor_a8c83eafe5bdc0074a8c2c405023ee204} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!generic\+\_\+t@{generic\+\_\+t}}
+\index{generic\+\_\+t@{generic\+\_\+t}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{generic\+\_\+t}{generic\_t}}
+{\footnotesize\ttfamily typedef boost\+::any \hyperlink{classo_cpt_1_1i_sensor_a8c83eafe5bdc0074a8c2c405023ee204}{o\+Cpt\+::i\+Sensor\+::generic\+\_\+t}}
+
+
+
+Definition at line 33 of file Sensor.\+h.
+
+\hypertarget{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{}\label{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!ptr@{ptr}}
+\index{ptr@{ptr}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$\hyperlink{classo_cpt_1_1i_sensor}{i\+Sensor}$>$ \hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{o\+Cpt\+::i\+Sensor\+::ptr}}
+
+
+
+Definition at line 31 of file Sensor.\+h.
+
+\hypertarget{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d}{}\label{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!signal\+\_\+t@{signal\+\_\+t}}
+\index{signal\+\_\+t@{signal\+\_\+t}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{signal\+\_\+t}{signal\_t}}
+{\footnotesize\ttfamily typedef boost\+::signals2\+::signal$<$void()$>$ \hyperlink{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d}{o\+Cpt\+::i\+Sensor\+::signal\+\_\+t}}
+
+
+
+Definition at line 32 of file Sensor.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1i_sensor_a548ca1dbeea64980181c434518659d3e}{}\label{classo_cpt_1_1i_sensor_a548ca1dbeea64980181c434518659d3e} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!i\+Sensor@{i\+Sensor}}
+\index{i\+Sensor@{i\+Sensor}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{i\+Sensor()}{iSensor()}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Sensor\+::i\+Sensor (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr}}]{controller,  }\item[{\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}}]{world,  }\item[{std\+::string}]{id,  }\item[{std\+::string}]{type\+Of\+Sensor = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Constructor of \hyperlink{classo_cpt_1_1i_sensor}{i\+Sensor} 
+\begin{DoxyParams}{Parameters}
+{\em controller} & a shared\+\_\+ptr of the controller where the sensor is hooked to \\
+\hline
+{\em world} & a shared\+\_\+ptr of the world in which the vessel operates \\
+\hline
+{\em id} & a identifying name of the sensor \\
+\hline
+{\em type\+Of\+Sensor} & a identifying category for the sensor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file Sensor.\+cpp.
+
+
+
+References state\+\_\+, and o\+Cpt\+::i\+Sensor\+::\+State\+::\+Value.
+
+\hypertarget{classo_cpt_1_1i_sensor_a47eeead807cf3dc127fe55df4bc68c47}{}\label{classo_cpt_1_1i_sensor_a47eeead807cf3dc127fe55df4bc68c47} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!````~i\+Sensor@{$\sim$i\+Sensor}}
+\index{````~i\+Sensor@{$\sim$i\+Sensor}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{$\sim$i\+Sensor()}{~iSensor()}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Sensor\+::$\sim$i\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Deconstructor of the sensor 
+
+Definition at line 18 of file Sensor.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1i_sensor_aba86d11b74b8393c5ed0dfb2ec3b93d7}{}\label{classo_cpt_1_1i_sensor_aba86d11b74b8393c5ed0dfb2ec3b93d7} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!get\+ID@{get\+ID}}
+\index{get\+ID@{get\+ID}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{get\+I\+D()}{getID()}}
+{\footnotesize\ttfamily const std\+::string \& o\+Cpt\+::i\+Sensor\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get the current ID \begin{DoxyReturn}{Returns}
+returns the ID as string 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Sensor.\+cpp.
+
+
+
+References id\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_sensor_ad63e4d791b76f8328d652c4ed79eaec3}{}\label{classo_cpt_1_1i_sensor_ad63e4d791b76f8328d652c4ed79eaec3} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!get\+Sig@{get\+Sig}}
+\index{get\+Sig@{get\+Sig}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{get\+Sig()}{getSig()}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d}{i\+Sensor\+::signal\+\_\+t} \& o\+Cpt\+::i\+Sensor\+::get\+Sig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the signal that is to be fired when the state is updated \begin{DoxyReturn}{Returns}
+the signal\+\_\+t 
+\end{DoxyReturn}
+
+
+Definition at line 28 of file Sensor.\+cpp.
+
+
+
+References sig\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_sensor_a9ab760449e01c754c30374641c51ac66}{}\label{classo_cpt_1_1i_sensor_a9ab760449e01c754c30374641c51ac66} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{get\+State()}{getState()}}
+{\footnotesize\ttfamily const \hyperlink{structo_cpt_1_1i_sensor_1_1_state}{i\+Sensor\+::\+State} \& o\+Cpt\+::i\+Sensor\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+gets the last \hyperlink{structo_cpt_1_1i_sensor_1_1_state}{State} of the sensor \begin{DoxyReturn}{Returns}
+the \hyperlink{structo_cpt_1_1i_sensor_1_1_state}{State} object. Remember to C\+A\+ST the value like such $<$sensor\+Class$>$\+::\+Return\+Value\+\_\+t ret = C\+A\+ST($<$sensorname$>$-\/$>$\hyperlink{classo_cpt_1_1i_sensor_a9ab760449e01c754c30374641c51ac66}{get\+State()}.Value, $<$sensor\+Class$>$); 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file Sensor.\+cpp.
+
+
+
+References state\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_sensor_ad1651243755d72d5fd69668444555c77}{}\label{classo_cpt_1_1i_sensor_ad1651243755d72d5fd69668444555c77} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!get\+Timer@{get\+Timer}}
+\index{get\+Timer@{get\+Timer}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{get\+Timer()}{getTimer()}}
+{\footnotesize\ttfamily const boost\+::posix\+\_\+time\+::milliseconds \& o\+Cpt\+::i\+Sensor\+::get\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of milliseconds when this sensor should be updated \begin{DoxyReturn}{Returns}
+returns a boost\+::posix\+\_\+time\+::milliseconds type 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file Sensor.\+cpp.
+
+
+
+References timer\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_sensor_aa356e53521301d555a7cbcee84bf54ea}{}\label{classo_cpt_1_1i_sensor_aa356e53521301d555a7cbcee84bf54ea} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!get\+Type\+Of\+Sensor@{get\+Type\+Of\+Sensor}}
+\index{get\+Type\+Of\+Sensor@{get\+Type\+Of\+Sensor}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{get\+Type\+Of\+Sensor()}{getTypeOfSensor()}}
+{\footnotesize\ttfamily const std\+::string \& o\+Cpt\+::i\+Sensor\+::get\+Type\+Of\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get the type of sensor \begin{DoxyReturn}{Returns}
+category identifying string 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file Sensor.\+cpp.
+
+
+
+References type\+Of\+Sensor\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_sensor_aa8def4a41b8280f7e4e02285cd7bd734}{}\label{classo_cpt_1_1i_sensor_aa8def4a41b8280f7e4e02285cd7bd734} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!init@{init}}
+\index{init@{init}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Sensor\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+pure virtual function for initializing the sensor 
+
+Implemented in \hyperlink{classo_cpt_1_1_sensor_aa612a305a9a3091dd62cd1afb9d4dd7d}{o\+Cpt\+::\+Sensor}, \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_a1dd2b5a9fbac3c9510e2d3771abf358b}{o\+Cpt\+::components\+::sensors\+::\+Razor}, and \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a296d0c3c2a55df465e127462c8c30215}{o\+Cpt\+::components\+::sensors\+::\+P\+T100}.
+
+\hypertarget{classo_cpt_1_1i_sensor_affc8319846828aac6cab641f294a04aa}{}\label{classo_cpt_1_1i_sensor_affc8319846828aac6cab641f294a04aa} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!operator==@{operator==}}
+\index{operator==@{operator==}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool o\+Cpt\+::i\+Sensor\+::operator== (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1i_sensor_a03533d2c5dc66e332d70dbb3b5e3006a}{i\+Sensor\+::ptr}}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Equal operator determining if this sensor is equal with the pointer 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & shared\+\_\+ptr with the other sensor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns either true or false 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file Sensor.\+cpp.
+
+
+
+References controller\+\_\+, id\+\_\+, and type\+Of\+Sensor\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_sensor_abbface05a16b17354c23389d9747bf7c}{}\label{classo_cpt_1_1i_sensor_abbface05a16b17354c23389d9747bf7c} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!run@{run}}
+\index{run@{run}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Sensor\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+pure virtual function for running of the sensor 
+
+Implemented in \hyperlink{classo_cpt_1_1_sensor_aef25b0e5f3a8358ee81c97c73909fbe6}{o\+Cpt\+::\+Sensor}, \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_ad93891ffb2d47e56d1417f0a40026c6e}{o\+Cpt\+::components\+::sensors\+::\+Razor}, \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_af703c48b8b7220a1909570f46edae932}{o\+Cpt\+::components\+::sensors\+::\+Gps}, and \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a41dfc55a4be7993949feeb5ac013690d}{o\+Cpt\+::components\+::sensors\+::\+P\+T100}.
+
+
+
+Referenced by o\+Cpt\+::\+Boatswain\+::register\+Sensor(), and o\+Cpt\+::\+Boatswain\+::reset\+Timer().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1i_sensor_abbface05a16b17354c23389d9747bf7c_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1i_sensor_a2dec47e27c1e0843a1f874e28a522abd}{}\label{classo_cpt_1_1i_sensor_a2dec47e27c1e0843a1f874e28a522abd} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!set\+ID@{set\+ID}}
+\index{set\+ID@{set\+ID}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{set\+I\+D()}{setID()}}
+{\footnotesize\ttfamily void o\+Cpt\+::i\+Sensor\+::set\+ID (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})}
+
+sets the ID of the sensor 
+\begin{DoxyParams}{Parameters}
+{\em id} & identifying string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file Sensor.\+cpp.
+
+
+
+References id\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_sensor_a83b62cc63498ca4c335f85639e39656d}{}\label{classo_cpt_1_1i_sensor_a83b62cc63498ca4c335f85639e39656d} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!set\+I\+Oservice@{set\+I\+Oservice}}
+\index{set\+I\+Oservice@{set\+I\+Oservice}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{set\+I\+Oservice()}{setIOservice()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Sensor\+::set\+I\+Oservice (\begin{DoxyParamCaption}\item[{boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$}]{ioservice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+pure virtual function for registering the Input Output service 
+\begin{DoxyParams}{Parameters}
+{\em ioservice} & teh Input Output service used by Boost A\+S\+IO \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classo_cpt_1_1_sensor_ae7d47e18df5eb7854bf71fbbee9568df}{o\+Cpt\+::\+Sensor}, \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_a0f251fe3b51bf1a96b5d1e14e69a6d57}{o\+Cpt\+::components\+::sensors\+::\+Razor}, and \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_ad613b81625402daa6fdae80022fde18c}{o\+Cpt\+::components\+::sensors\+::\+Gps}.
+
+\hypertarget{classo_cpt_1_1i_sensor_a4c956646ebf60201b5b23e0f5ad288ce}{}\label{classo_cpt_1_1i_sensor_a4c956646ebf60201b5b23e0f5ad288ce} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!set\+Timer@{set\+Timer}}
+\index{set\+Timer@{set\+Timer}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{set\+Timer()}{setTimer()}}
+{\footnotesize\ttfamily void o\+Cpt\+::i\+Sensor\+::set\+Timer (\begin{DoxyParamCaption}\item[{const boost\+::posix\+\_\+time\+::milliseconds \&}]{timer }\end{DoxyParamCaption})}
+
+set the number of milliseconds when this sensor should be updated 
+\begin{DoxyParams}{Parameters}
+{\em timer} & the number of milliseconds as an boost\+::posix\+\_\+time\+::milliseconds type \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Sensor.\+cpp.
+
+
+
+References timer\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_sensor_ad1927865eb4ebfebc3dd840f66d98c1f}{}\label{classo_cpt_1_1i_sensor_ad1927865eb4ebfebc3dd840f66d98c1f} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!set\+Type\+Of\+Sensor@{set\+Type\+Of\+Sensor}}
+\index{set\+Type\+Of\+Sensor@{set\+Type\+Of\+Sensor}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{set\+Type\+Of\+Sensor()}{setTypeOfSensor()}}
+{\footnotesize\ttfamily void o\+Cpt\+::i\+Sensor\+::set\+Type\+Of\+Sensor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type\+Of\+Sensor }\end{DoxyParamCaption})}
+
+sets the category of the sensor, suchs as G\+PS, temperature 
+\begin{DoxyParams}{Parameters}
+{\em type\+Of\+Sensor} & category identifying string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file Sensor.\+cpp.
+
+
+
+References type\+Of\+Sensor\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_sensor_aa85c22a8c8f7c2445379e1f82835f8dc}{}\label{classo_cpt_1_1i_sensor_aa85c22a8c8f7c2445379e1f82835f8dc} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!stop@{stop}}
+\index{stop@{stop}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Sensor\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+pure virtual function for stopping the sensor 
+
+Implemented in \hyperlink{classo_cpt_1_1_sensor_a44ad78c2c091ca9cf72295293f8c5b74}{o\+Cpt\+::\+Sensor}, \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_a807441c137892ee3c1b612c284893fa1}{o\+Cpt\+::components\+::sensors\+::\+Razor}, \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_a9206c32fa91311740ae920c01eed6094}{o\+Cpt\+::components\+::sensors\+::\+Gps}, and \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a6d80e18a58cf4e1b9b6ce82b441209e2}{o\+Cpt\+::components\+::sensors\+::\+P\+T100}.
+
+\hypertarget{classo_cpt_1_1i_sensor_aa55bc04979e4852989af2bd4f64e70bc}{}\label{classo_cpt_1_1i_sensor_aa55bc04979e4852989af2bd4f64e70bc} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!update\+Sensor@{update\+Sensor}}
+\index{update\+Sensor@{update\+Sensor}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{update\+Sensor()}{updateSensor()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Sensor\+::update\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+pure virtual function for the updating of a sensor 
+
+Implemented in \hyperlink{classo_cpt_1_1_sensor_ab4b0dedb06f11bcf2368852035beb2b2}{o\+Cpt\+::\+Sensor}, \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_razor_ac8ee1582eb5c478c73e5e050858d2d7d}{o\+Cpt\+::components\+::sensors\+::\+Razor}, \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_gps_a95976c5d8bba650d2732d4eb43979283}{o\+Cpt\+::components\+::sensors\+::\+Gps}, and \hyperlink{classo_cpt_1_1components_1_1sensors_1_1_p_t100_a66619675288a5344a55242d9bf097aee}{o\+Cpt\+::components\+::sensors\+::\+P\+T100}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1i_sensor_a65e41d8be53d71b1db21bac89c5c3c0d}{}\label{classo_cpt_1_1i_sensor_a65e41d8be53d71b1db21bac89c5c3c0d} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!controller\+\_\+@{controller\+\_\+}}
+\index{controller\+\_\+@{controller\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{controller\+\_\+}{controller\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{i\+Controller\+::ptr} o\+Cpt\+::i\+Sensor\+::controller\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 140 of file Sensor.\+h.
+
+
+
+Referenced by operator==(), and o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::update\+Sensor().
+
+\hypertarget{classo_cpt_1_1i_sensor_a4c9bd54d193ec8f2cc01eede5eadacdc}{}\label{classo_cpt_1_1i_sensor_a4c9bd54d193ec8f2cc01eede5eadacdc} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!id\+\_\+@{id\+\_\+}}
+\index{id\+\_\+@{id\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{id\+\_\+}{id\_}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::i\+Sensor\+::id\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 112 of file Sensor.\+h.
+
+
+
+Referenced by get\+I\+D(), operator==(), and set\+I\+D().
+
+\hypertarget{classo_cpt_1_1i_sensor_a7aa3b0cea67ca97dae2495a20f5f6a04}{}\label{classo_cpt_1_1i_sensor_a7aa3b0cea67ca97dae2495a20f5f6a04} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!ioservice\+\_\+@{ioservice\+\_\+}}
+\index{ioservice\+\_\+@{ioservice\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{ioservice\+\_\+}{ioservice\_}}
+{\footnotesize\ttfamily boost\+::shared\+\_\+ptr$<$boost\+::asio\+::io\+\_\+service$>$ o\+Cpt\+::i\+Sensor\+::ioservice\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 146 of file Sensor.\+h.
+
+
+
+Referenced by o\+Cpt\+::\+Sensor\+::set\+I\+Oservice().
+
+\hypertarget{classo_cpt_1_1i_sensor_acc8826907fbe0c20c38a1e478e6a7c05}{}\label{classo_cpt_1_1i_sensor_acc8826907fbe0c20c38a1e478e6a7c05} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!sensor\+Running\+\_\+@{sensor\+Running\+\_\+}}
+\index{sensor\+Running\+\_\+@{sensor\+Running\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{sensor\+Running\+\_\+}{sensorRunning\_}}
+{\footnotesize\ttfamily bool o\+Cpt\+::i\+Sensor\+::sensor\+Running\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 145 of file Sensor.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+Gps\+::run(), o\+Cpt\+::components\+::sensors\+::\+Razor\+::run(), o\+Cpt\+::\+Sensor\+::run(), o\+Cpt\+::components\+::sensors\+::\+Gps\+::stop(), o\+Cpt\+::components\+::sensors\+::\+Razor\+::stop(), and o\+Cpt\+::\+Sensor\+::stop().
+
+\hypertarget{classo_cpt_1_1i_sensor_a4f4943cf2af0b1a06bf5f0d8c46d1cb8}{}\label{classo_cpt_1_1i_sensor_a4f4943cf2af0b1a06bf5f0d8c46d1cb8} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!sig\+\_\+@{sig\+\_\+}}
+\index{sig\+\_\+@{sig\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{sig\+\_\+}{sig\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1i_sensor_a2e6d170acbc05f0b557bb68671813f6d}{signal\+\_\+t} o\+Cpt\+::i\+Sensor\+::sig\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 143 of file Sensor.\+h.
+
+
+
+Referenced by get\+Sig(), o\+Cpt\+::components\+::sensors\+::\+Gps\+::interpret\+Msg(), o\+Cpt\+::components\+::sensors\+::\+Razor\+::msg\+Handler(), and o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::run().
+
+\hypertarget{classo_cpt_1_1i_sensor_ad27fe02a89f013951a05f296ec457a08}{}\label{classo_cpt_1_1i_sensor_ad27fe02a89f013951a05f296ec457a08} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{state\+\_\+}{state\_}}
+{\footnotesize\ttfamily \hyperlink{structo_cpt_1_1i_sensor_1_1_state}{State} o\+Cpt\+::i\+Sensor\+::state\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 144 of file Sensor.\+h.
+
+
+
+Referenced by get\+State(), o\+Cpt\+::components\+::sensors\+::\+Gps\+::interpret\+Msg(), i\+Sensor(), o\+Cpt\+::components\+::sensors\+::\+Razor\+::msg\+Handler(), o\+Cpt\+::components\+::sensors\+::\+Razor\+::\+Razor(), o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::update\+Sensor(), and o\+Cpt\+::components\+::sensors\+::\+Razor\+::update\+Sensor().
+
+\hypertarget{classo_cpt_1_1i_sensor_ac2a089853910118f6b490c00fc354d77}{}\label{classo_cpt_1_1i_sensor_ac2a089853910118f6b490c00fc354d77} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!timer\+\_\+@{timer\+\_\+}}
+\index{timer\+\_\+@{timer\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{timer\+\_\+}{timer\_}}
+{\footnotesize\ttfamily boost\+::posix\+\_\+time\+::milliseconds o\+Cpt\+::i\+Sensor\+::timer\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 142 of file Sensor.\+h.
+
+
+
+Referenced by get\+Timer(), and set\+Timer().
+
+\hypertarget{classo_cpt_1_1i_sensor_a37396b5c63f5e99cb6e80c266f85dbfa}{}\label{classo_cpt_1_1i_sensor_a37396b5c63f5e99cb6e80c266f85dbfa} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!type\+Of\+Sensor\+\_\+@{type\+Of\+Sensor\+\_\+}}
+\index{type\+Of\+Sensor\+\_\+@{type\+Of\+Sensor\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{type\+Of\+Sensor\+\_\+}{typeOfSensor\_}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::i\+Sensor\+::type\+Of\+Sensor\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 139 of file Sensor.\+h.
+
+
+
+Referenced by get\+Type\+Of\+Sensor(), operator==(), and set\+Type\+Of\+Sensor().
+
+\hypertarget{classo_cpt_1_1i_sensor_aab033b6462d7e8710c006f19c51e033e}{}\label{classo_cpt_1_1i_sensor_aab033b6462d7e8710c006f19c51e033e} 
+\index{o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}!world\+\_\+@{world\+\_\+}}
+\index{world\+\_\+@{world\+\_\+}!o\+Cpt\+::i\+Sensor@{o\+Cpt\+::i\+Sensor}}
+\subsubsection{\texorpdfstring{world\+\_\+}{world\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} o\+Cpt\+::i\+Sensor\+::world\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 141 of file Sensor.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::sensors\+::\+Gps\+::interpret\+Msg(), o\+Cpt\+::components\+::sensors\+::\+Razor\+::msg\+Handler(), o\+Cpt\+::components\+::sensors\+::\+Razor\+::\+Razor(), o\+Cpt\+::components\+::sensors\+::\+P\+T100\+::update\+Sensor(), and o\+Cpt\+::components\+::sensors\+::\+Razor\+::update\+Sensor().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\hyperlink{_sensor_8h}{Sensor.\+h}\item 
+src/\+Core/\hyperlink{_sensor_8cpp}{Sensor.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,115 @@
+\hypertarget{structo_cpt_1_1i_comm_1_1_message}{}\section{o\+Cpt\+:\+:i\+Comm\+:\+:Message Struct Reference}
+\label{structo_cpt_1_1i_comm_1_1_message}\index{o\+Cpt\+::i\+Comm\+::\+Message@{o\+Cpt\+::i\+Comm\+::\+Message}}
+
+
+{\ttfamily \#include $<$Communication.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message} $>$ \hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{ptr}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structo_cpt_1_1i_comm_1_1_message_acabc9841f33a226d3670e524ef8f69c5}{Message} (const std\+::string \&payload, const \hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{World\+::\+Time\+::timepoint\+\_\+t} \&stamp)
+\item 
+\hyperlink{structo_cpt_1_1i_comm_1_1_message_a9f3e20489859c6ff3222f88234b1c93c}{$\sim$\+Message} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{structo_cpt_1_1i_comm_1_1_message_a46117baa6509fd31f7e8cb187cc3f8a9}{Payload}
+\item 
+\hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{World\+::\+Time\+::timepoint\+\_\+t} \hyperlink{structo_cpt_1_1i_comm_1_1_message_ad00181a6c0e5cc88b61f808c1638972f}{Stamp}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message} struct. Each device should receive and send messages with this type, consisting of Payload in the format of a string and a time when it was send or received 
+
+Definition at line 34 of file Communication.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{}\label{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01} 
+\index{o\+Cpt\+::i\+Comm\+::\+Message@{o\+Cpt\+::i\+Comm\+::\+Message}!ptr@{ptr}}
+\index{ptr@{ptr}!o\+Cpt\+::i\+Comm\+::\+Message@{o\+Cpt\+::i\+Comm\+::\+Message}}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$\hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message}$>$ \hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{o\+Cpt\+::i\+Comm\+::\+Message\+::ptr}}
+
+
+
+Definition at line 35 of file Communication.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structo_cpt_1_1i_comm_1_1_message_acabc9841f33a226d3670e524ef8f69c5}{}\label{structo_cpt_1_1i_comm_1_1_message_acabc9841f33a226d3670e524ef8f69c5} 
+\index{o\+Cpt\+::i\+Comm\+::\+Message@{o\+Cpt\+::i\+Comm\+::\+Message}!Message@{Message}}
+\index{Message@{Message}!o\+Cpt\+::i\+Comm\+::\+Message@{o\+Cpt\+::i\+Comm\+::\+Message}}
+\subsubsection{\texorpdfstring{Message()}{Message()}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Comm\+::\+Message\+::\+Message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{payload,  }\item[{const \hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{World\+::\+Time\+::timepoint\+\_\+t} \&}]{stamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A \hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message} constructor taking the payload and the time 
+\begin{DoxyParams}{Parameters}
+{\em payload} & A string containing the payload T\+O\+DO make generic with template \\
+\hline
+{\em stamp} & A time stamp, when the message was received, or is send \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file Communication.\+h.
+
+\hypertarget{structo_cpt_1_1i_comm_1_1_message_a9f3e20489859c6ff3222f88234b1c93c}{}\label{structo_cpt_1_1i_comm_1_1_message_a9f3e20489859c6ff3222f88234b1c93c} 
+\index{o\+Cpt\+::i\+Comm\+::\+Message@{o\+Cpt\+::i\+Comm\+::\+Message}!````~Message@{$\sim$\+Message}}
+\index{````~Message@{$\sim$\+Message}!o\+Cpt\+::i\+Comm\+::\+Message@{o\+Cpt\+::i\+Comm\+::\+Message}}
+\subsubsection{\texorpdfstring{$\sim$\+Message()}{~Message()}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Comm\+::\+Message\+::$\sim$\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The deconstructor 
+
+Definition at line 49 of file Communication.\+h.
+
+
+
+References Payload.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structo_cpt_1_1i_comm_1_1_message_a46117baa6509fd31f7e8cb187cc3f8a9}{}\label{structo_cpt_1_1i_comm_1_1_message_a46117baa6509fd31f7e8cb187cc3f8a9} 
+\index{o\+Cpt\+::i\+Comm\+::\+Message@{o\+Cpt\+::i\+Comm\+::\+Message}!Payload@{Payload}}
+\index{Payload@{Payload}!o\+Cpt\+::i\+Comm\+::\+Message@{o\+Cpt\+::i\+Comm\+::\+Message}}
+\subsubsection{\texorpdfstring{Payload}{Payload}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::i\+Comm\+::\+Message\+::\+Payload}
+
+
+
+Definition at line 49 of file Communication.\+h.
+
+
+
+Referenced by o\+Cpt\+::\+Lo\+Ra\+::send\+Message(), and $\sim$\+Message().
+
+\hypertarget{structo_cpt_1_1i_comm_1_1_message_ad00181a6c0e5cc88b61f808c1638972f}{}\label{structo_cpt_1_1i_comm_1_1_message_ad00181a6c0e5cc88b61f808c1638972f} 
+\index{o\+Cpt\+::i\+Comm\+::\+Message@{o\+Cpt\+::i\+Comm\+::\+Message}!Stamp@{Stamp}}
+\index{Stamp@{Stamp}!o\+Cpt\+::i\+Comm\+::\+Message@{o\+Cpt\+::i\+Comm\+::\+Message}}
+\subsubsection{\texorpdfstring{Stamp}{Stamp}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_world_1_1_time_a6a6e782c3c90622c1c7070b0a223ec4c}{World\+::\+Time\+::timepoint\+\_\+t} o\+Cpt\+::i\+Comm\+::\+Message\+::\+Stamp}
+
+
+
+Definition at line 51 of file Communication.\+h.
+
+
+
+Referenced by o\+Cpt\+::\+Lo\+Ra\+::send\+Message().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\hyperlink{_communication_8h}{Communication.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,455 @@
+\hypertarget{classo_cpt_1_1i_comm}{}\section{o\+Cpt\+:\+:i\+Comm Class Reference}
+\label{classo_cpt_1_1i_comm}\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+
+
+{\ttfamily \#include $<$Communication.\+h$>$}
+
+
+
+Inheritance diagram for o\+Cpt\+:\+:i\+Comm\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classo_cpt_1_1i_comm__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classo_cpt_1_1i_comm}{i\+Comm} $>$ \hyperlink{classo_cpt_1_1i_comm_af0c655f143251b7d03fcd98f89637228}{ptr}
+\item 
+typedef boost\+::signals2\+::signal$<$ void()$>$ \hyperlink{classo_cpt_1_1i_comm_a8226eab43e254e986c1645cb1c500ef7}{signal\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1i_comm_aa9570953ad88324fd17c41ddf59516e3}{i\+Comm} (const std\+::string \&id, const std\+::string \&device, \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} world=\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}(new \hyperlink{classo_cpt_1_1_world}{World}()), \hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{i\+Controller\+::io\+\_\+t} ioservice=\hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{i\+Controller\+::io\+\_\+t}(new boost\+::asio\+::io\+\_\+service()))
+\item 
+virtual \hyperlink{classo_cpt_1_1i_comm_a817351ba50112bb3a850ed3098257a11}{$\sim$i\+Comm} ()
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_comm_a0d15a29fb59dd6a74b56a126d03b9170}{run} ()=0
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_comm_ad73564bd03146a576aaa37db1a38379f}{stop} ()=0
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_comm_aeba385b1daaec5e64c5c573424ab8d24}{initialize} ()=0
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_comm_aed3d4364175d17efc0347b6e954f5aef}{send\+Message} (\hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message} msg)=0
+\item 
+virtual \hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{Message\+::ptr} \hyperlink{classo_cpt_1_1i_comm_a054ee0448f0d2773abce97c424c5c20c}{recieve\+Message} ()=0
+\item 
+virtual void \hyperlink{classo_cpt_1_1i_comm_a27a57fb90cfc9cce21552e8539f08dd7}{recieve\+Async\+Message} ()=0
+\item 
+const std\+::string \& \hyperlink{classo_cpt_1_1i_comm_a4d7452118307e98a10c5aac88f69ca16}{get\+Id} () const
+\item 
+void \hyperlink{classo_cpt_1_1i_comm_ada67d85e8ca1c2b7931ab010de60cda7}{set\+Id} (const std\+::string \&id)
+\item 
+const std\+::string \& \hyperlink{classo_cpt_1_1i_comm_a75b8414ce6c41c5931d9e903ef573031}{get\+Type\+Of\+Comm} () const
+\item 
+void \hyperlink{classo_cpt_1_1i_comm_ad5b257586d4fb17bcdf075e2401312a6}{set\+Type\+Of\+Comm} (const std\+::string \&type\+Of\+Comm)
+\item 
+\hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{Message\+::ptr} \hyperlink{classo_cpt_1_1i_comm_a888e17cd4719170d4cc533ec4eaf1271}{read\+Fi\+Fo\+Msg} ()
+\item 
+std\+::deque$<$ \hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{Message\+::ptr} $>$ $\ast$ \hyperlink{classo_cpt_1_1i_comm_a6fdac5c5dad398d31adf177c900b8054}{get\+Msg\+Queue} ()
+\item 
+void \hyperlink{classo_cpt_1_1i_comm_a7f8322024fbcc1c7ef1fae87fc6aa368}{set\+Ioservice} (const \hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{i\+Controller\+::io\+\_\+t} \&ioservice)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1i_comm_a8226eab43e254e986c1645cb1c500ef7}{signal\+\_\+t} \hyperlink{classo_cpt_1_1i_comm_a575554cfd0889ae4d8920417e3c4ef55}{msg\+Recieved\+Sig}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classo_cpt_1_1i_comm_a65678a6bfb2da392d2932b0cd5d818c6}{id\+\_\+}
+\item 
+std\+::string \hyperlink{classo_cpt_1_1i_comm_a4805d3c40171aa763f029ebe1886e24f}{type\+Of\+Comm\+\_\+}
+\item 
+std\+::string \hyperlink{classo_cpt_1_1i_comm_a26b537ee10eb14c0a15bb2ad4c4b7cda}{device\+\_\+}
+\item 
+boost\+::posix\+\_\+time\+::milliseconds \hyperlink{classo_cpt_1_1i_comm_a1e9989bd934719256f4b50123825c00e}{timer\+\_\+}
+\item 
+std\+::deque$<$ \hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{Message\+::ptr} $>$ \hyperlink{classo_cpt_1_1i_comm_aa4bc236cd4492ea8b4fd2481de58b43f}{msg\+Queue\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{i\+Controller\+::io\+\_\+t} \hyperlink{classo_cpt_1_1i_comm_a40e1c5e7d35a83973c1b913da9143a2f}{ioservice\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} \hyperlink{classo_cpt_1_1i_comm_a982de4fc52aa87006fc29a0b4667b231}{world\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The interface for communication devices 
+
+Definition at line 26 of file Communication.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1i_comm_af0c655f143251b7d03fcd98f89637228}{}\label{classo_cpt_1_1i_comm_af0c655f143251b7d03fcd98f89637228} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!ptr@{ptr}}
+\index{ptr@{ptr}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$\hyperlink{classo_cpt_1_1i_comm}{i\+Comm}$>$ \hyperlink{classo_cpt_1_1i_comm_af0c655f143251b7d03fcd98f89637228}{o\+Cpt\+::i\+Comm\+::ptr}}
+
+
+
+Definition at line 28 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1i_comm_a8226eab43e254e986c1645cb1c500ef7}{}\label{classo_cpt_1_1i_comm_a8226eab43e254e986c1645cb1c500ef7} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!signal\+\_\+t@{signal\+\_\+t}}
+\index{signal\+\_\+t@{signal\+\_\+t}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{signal\+\_\+t}{signal\_t}}
+{\footnotesize\ttfamily typedef boost\+::signals2\+::signal$<$void()$>$ \hyperlink{classo_cpt_1_1i_comm_a8226eab43e254e986c1645cb1c500ef7}{o\+Cpt\+::i\+Comm\+::signal\+\_\+t}}
+
+
+
+Definition at line 29 of file Communication.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1i_comm_aa9570953ad88324fd17c41ddf59516e3}{}\label{classo_cpt_1_1i_comm_aa9570953ad88324fd17c41ddf59516e3} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!i\+Comm@{i\+Comm}}
+\index{i\+Comm@{i\+Comm}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{i\+Comm()}{iComm()}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Comm\+::i\+Comm (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{const std\+::string \&}]{device,  }\item[{\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}}]{world = {\ttfamily \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}(new~\hyperlink{classo_cpt_1_1_world}{World}())},  }\item[{\hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{i\+Controller\+::io\+\_\+t}}]{ioservice = {\ttfamily \hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{i\+Controller\+::io\+\_\+t}(new~boost\+:\+:asio\+:\+:io\+\_\+service())} }\end{DoxyParamCaption})}
+
+The constructor for the communication interface 
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the communication device \\
+\hline
+{\em device} & The device path eq. /dev/tty\+S0 \\
+\hline
+{\em world} & A shared\+\_\+ptr to the world with a default to a newly created one \\
+\hline
+{\em ioservice} & A shared\+\_\+ptr to an A\+S\+IO Input Output service with a newly created one as default \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file Communication.\+cpp.
+
+\hypertarget{classo_cpt_1_1i_comm_a817351ba50112bb3a850ed3098257a11}{}\label{classo_cpt_1_1i_comm_a817351ba50112bb3a850ed3098257a11} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!````~i\+Comm@{$\sim$i\+Comm}}
+\index{````~i\+Comm@{$\sim$i\+Comm}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{$\sim$i\+Comm()}{~iComm()}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Comm\+::$\sim$i\+Comm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The deconstructor 
+
+Definition at line 21 of file Communication.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1i_comm_a4d7452118307e98a10c5aac88f69ca16}{}\label{classo_cpt_1_1i_comm_a4d7452118307e98a10c5aac88f69ca16} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily const std\+::string \& o\+Cpt\+::i\+Comm\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the ID of the communication device \begin{DoxyReturn}{Returns}
+a string with the ID 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file Communication.\+cpp.
+
+
+
+References id\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_comm_a6fdac5c5dad398d31adf177c900b8054}{}\label{classo_cpt_1_1i_comm_a6fdac5c5dad398d31adf177c900b8054} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!get\+Msg\+Queue@{get\+Msg\+Queue}}
+\index{get\+Msg\+Queue@{get\+Msg\+Queue}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{get\+Msg\+Queue()}{getMsgQueue()}}
+{\footnotesize\ttfamily std\+::deque$<$ \hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{i\+Comm\+::\+Message\+::ptr} $>$ $\ast$ o\+Cpt\+::i\+Comm\+::get\+Msg\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A que with received \hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{Message\+::ptr} \begin{DoxyReturn}{Returns}
+a pointer to the \hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message} que 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file Communication.\+cpp.
+
+
+
+References msg\+Queue\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_comm_a75b8414ce6c41c5931d9e903ef573031}{}\label{classo_cpt_1_1i_comm_a75b8414ce6c41c5931d9e903ef573031} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!get\+Type\+Of\+Comm@{get\+Type\+Of\+Comm}}
+\index{get\+Type\+Of\+Comm@{get\+Type\+Of\+Comm}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{get\+Type\+Of\+Comm()}{getTypeOfComm()}}
+{\footnotesize\ttfamily const std\+::string \& o\+Cpt\+::i\+Comm\+::get\+Type\+Of\+Comm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the type of communication device \begin{DoxyReturn}{Returns}
+a string with type of device eq. modem, serial, \hyperlink{classo_cpt_1_1_lo_ra}{Lo\+Ra}, Wi\+Fi 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file Communication.\+cpp.
+
+
+
+References type\+Of\+Comm\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_comm_aeba385b1daaec5e64c5c573424ab8d24}{}\label{classo_cpt_1_1i_comm_aeba385b1daaec5e64c5c573424ab8d24} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!initialize@{initialize}}
+\index{initialize@{initialize}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Comm\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A pure virtual function which initializes the communication device 
+
+Implemented in \hyperlink{classo_cpt_1_1_lo_ra_aa0646143f843d43fcd680344dfcb2a14}{o\+Cpt\+::\+Lo\+Ra}.
+
+\hypertarget{classo_cpt_1_1i_comm_a888e17cd4719170d4cc533ec4eaf1271}{}\label{classo_cpt_1_1i_comm_a888e17cd4719170d4cc533ec4eaf1271} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!read\+Fi\+Fo\+Msg@{read\+Fi\+Fo\+Msg}}
+\index{read\+Fi\+Fo\+Msg@{read\+Fi\+Fo\+Msg}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{read\+Fi\+Fo\+Msg()}{readFiFoMsg()}}
+{\footnotesize\ttfamily \hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{i\+Comm\+::\+Message\+::ptr} o\+Cpt\+::i\+Comm\+::read\+Fi\+Fo\+Msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get a pointer to the first message in Queu \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Communication.\+cpp.
+
+
+
+References msg\+Queue\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_comm_a27a57fb90cfc9cce21552e8539f08dd7}{}\label{classo_cpt_1_1i_comm_a27a57fb90cfc9cce21552e8539f08dd7} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!recieve\+Async\+Message@{recieve\+Async\+Message}}
+\index{recieve\+Async\+Message@{recieve\+Async\+Message}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{recieve\+Async\+Message()}{recieveAsyncMessage()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Comm\+::recieve\+Async\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A pure virtual function which performs the polling for a new message on a seperate threads, so it won\textquotesingle{}t block the current one, it needs to send a signal when the message is received 
+
+Implemented in \hyperlink{classo_cpt_1_1_lo_ra_a6d4aa003a6ad9277998f34ee858b6264}{o\+Cpt\+::\+Lo\+Ra}.
+
+\hypertarget{classo_cpt_1_1i_comm_a054ee0448f0d2773abce97c424c5c20c}{}\label{classo_cpt_1_1i_comm_a054ee0448f0d2773abce97c424c5c20c} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!recieve\+Message@{recieve\+Message}}
+\index{recieve\+Message@{recieve\+Message}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{recieve\+Message()}{recieveMessage()}}
+{\footnotesize\ttfamily virtual \hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{Message\+::ptr} o\+Cpt\+::i\+Comm\+::recieve\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A pure virtual function with a shared\+\_\+ptr to the first in queue received message, this function will hold the current thread \begin{DoxyReturn}{Returns}
+a shared\+\_\+ptr pointing towards the queued \hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message} 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classo_cpt_1_1_lo_ra_a191e265a569a80c53e6829d57d402969}{o\+Cpt\+::\+Lo\+Ra}.
+
+\hypertarget{classo_cpt_1_1i_comm_a0d15a29fb59dd6a74b56a126d03b9170}{}\label{classo_cpt_1_1i_comm_a0d15a29fb59dd6a74b56a126d03b9170} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!run@{run}}
+\index{run@{run}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Comm\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+a pure virtual function which runs the communication device 
+
+Implemented in \hyperlink{classo_cpt_1_1_lo_ra_aacbca715826b810736e9bf5c3a9ce338}{o\+Cpt\+::\+Lo\+Ra}.
+
+\hypertarget{classo_cpt_1_1i_comm_aed3d4364175d17efc0347b6e954f5aef}{}\label{classo_cpt_1_1i_comm_aed3d4364175d17efc0347b6e954f5aef} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!send\+Message@{send\+Message}}
+\index{send\+Message@{send\+Message}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{send\+Message()}{sendMessage()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Comm\+::send\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message}}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A pure virtual function which sends the message 
+\begin{DoxyParams}{Parameters}
+{\em msg} & the \hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message}, consisting of a payload and a time stamp \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classo_cpt_1_1_lo_ra_a053e29e992490cffb90741c009664272}{o\+Cpt\+::\+Lo\+Ra}.
+
+\hypertarget{classo_cpt_1_1i_comm_ada67d85e8ca1c2b7931ab010de60cda7}{}\label{classo_cpt_1_1i_comm_ada67d85e8ca1c2b7931ab010de60cda7} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{set\+Id()}{setId()}}
+{\footnotesize\ttfamily void o\+Cpt\+::i\+Comm\+::set\+Id (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})}
+
+Set the ID of the communication device 
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the communication device \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file Communication.\+cpp.
+
+
+
+References id\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_comm_a7f8322024fbcc1c7ef1fae87fc6aa368}{}\label{classo_cpt_1_1i_comm_a7f8322024fbcc1c7ef1fae87fc6aa368} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!set\+Ioservice@{set\+Ioservice}}
+\index{set\+Ioservice@{set\+Ioservice}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{set\+Ioservice()}{setIoservice()}}
+{\footnotesize\ttfamily void o\+Cpt\+::i\+Comm\+::set\+Ioservice (\begin{DoxyParamCaption}\item[{const \hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{i\+Controller\+::io\+\_\+t} \&}]{ioservice }\end{DoxyParamCaption})}
+
+The A\+S\+IO Input Output service handling the messages 
+\begin{DoxyParams}{Parameters}
+{\em ioservice} & a shared\+\_\+ptr to a IO service \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file Communication.\+cpp.
+
+
+
+References ioservice\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_comm_ad5b257586d4fb17bcdf075e2401312a6}{}\label{classo_cpt_1_1i_comm_ad5b257586d4fb17bcdf075e2401312a6} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!set\+Type\+Of\+Comm@{set\+Type\+Of\+Comm}}
+\index{set\+Type\+Of\+Comm@{set\+Type\+Of\+Comm}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{set\+Type\+Of\+Comm()}{setTypeOfComm()}}
+{\footnotesize\ttfamily void o\+Cpt\+::i\+Comm\+::set\+Type\+Of\+Comm (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type\+Of\+Comm }\end{DoxyParamCaption})}
+
+Set the type of communication device. eq. modem, serial, \hyperlink{classo_cpt_1_1_lo_ra}{Lo\+Ra}, Wi\+Fi 
+\begin{DoxyParams}{Parameters}
+{\em type\+Of\+Comm} & string representing the type of communication \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Communication.\+cpp.
+
+
+
+References type\+Of\+Comm\+\_\+.
+
+\hypertarget{classo_cpt_1_1i_comm_ad73564bd03146a576aaa37db1a38379f}{}\label{classo_cpt_1_1i_comm_ad73564bd03146a576aaa37db1a38379f} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!stop@{stop}}
+\index{stop@{stop}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily virtual void o\+Cpt\+::i\+Comm\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A pure virtual function which stops the communication device 
+
+Implemented in \hyperlink{classo_cpt_1_1_lo_ra_a8300de2590a7ce8b56863eb4059f14ad}{o\+Cpt\+::\+Lo\+Ra}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1i_comm_a26b537ee10eb14c0a15bb2ad4c4b7cda}{}\label{classo_cpt_1_1i_comm_a26b537ee10eb14c0a15bb2ad4c4b7cda} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!device\+\_\+@{device\+\_\+}}
+\index{device\+\_\+@{device\+\_\+}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{device\+\_\+}{device\_}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::i\+Comm\+::device\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 150 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1i_comm_a65678a6bfb2da392d2932b0cd5d818c6}{}\label{classo_cpt_1_1i_comm_a65678a6bfb2da392d2932b0cd5d818c6} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!id\+\_\+@{id\+\_\+}}
+\index{id\+\_\+@{id\+\_\+}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{id\+\_\+}{id\_}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::i\+Comm\+::id\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 148 of file Communication.\+h.
+
+
+
+Referenced by get\+Id(), and set\+Id().
+
+\hypertarget{classo_cpt_1_1i_comm_a40e1c5e7d35a83973c1b913da9143a2f}{}\label{classo_cpt_1_1i_comm_a40e1c5e7d35a83973c1b913da9143a2f} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!ioservice\+\_\+@{ioservice\+\_\+}}
+\index{ioservice\+\_\+@{ioservice\+\_\+}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{ioservice\+\_\+}{ioservice\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{i\+Controller\+::io\+\_\+t} o\+Cpt\+::i\+Comm\+::ioservice\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 153 of file Communication.\+h.
+
+
+
+Referenced by set\+Ioservice().
+
+\hypertarget{classo_cpt_1_1i_comm_aa4bc236cd4492ea8b4fd2481de58b43f}{}\label{classo_cpt_1_1i_comm_aa4bc236cd4492ea8b4fd2481de58b43f} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!msg\+Queue\+\_\+@{msg\+Queue\+\_\+}}
+\index{msg\+Queue\+\_\+@{msg\+Queue\+\_\+}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{msg\+Queue\+\_\+}{msgQueue\_}}
+{\footnotesize\ttfamily std\+::deque$<$\hyperlink{structo_cpt_1_1i_comm_1_1_message_ad2ba828ad76f96a30e3898b2609a4c01}{Message\+::ptr}$>$ o\+Cpt\+::i\+Comm\+::msg\+Queue\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 152 of file Communication.\+h.
+
+
+
+Referenced by get\+Msg\+Queue(), o\+Cpt\+::\+Lo\+Ra\+::message\+Recieved(), and read\+Fi\+Fo\+Msg().
+
+\hypertarget{classo_cpt_1_1i_comm_a575554cfd0889ae4d8920417e3c4ef55}{}\label{classo_cpt_1_1i_comm_a575554cfd0889ae4d8920417e3c4ef55} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!msg\+Recieved\+Sig@{msg\+Recieved\+Sig}}
+\index{msg\+Recieved\+Sig@{msg\+Recieved\+Sig}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{msg\+Recieved\+Sig}{msgRecievedSig}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1i_comm_a8226eab43e254e986c1645cb1c500ef7}{signal\+\_\+t} o\+Cpt\+::i\+Comm\+::msg\+Recieved\+Sig}
+
+A signal which is send when a new \hyperlink{structo_cpt_1_1i_comm_1_1_message}{Message} 
+
+Definition at line 146 of file Communication.\+h.
+
+
+
+Referenced by o\+Cpt\+::\+Lo\+Ra\+::message\+Recieved().
+
+\hypertarget{classo_cpt_1_1i_comm_a1e9989bd934719256f4b50123825c00e}{}\label{classo_cpt_1_1i_comm_a1e9989bd934719256f4b50123825c00e} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!timer\+\_\+@{timer\+\_\+}}
+\index{timer\+\_\+@{timer\+\_\+}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{timer\+\_\+}{timer\_}}
+{\footnotesize\ttfamily boost\+::posix\+\_\+time\+::milliseconds o\+Cpt\+::i\+Comm\+::timer\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 151 of file Communication.\+h.
+
+\hypertarget{classo_cpt_1_1i_comm_a4805d3c40171aa763f029ebe1886e24f}{}\label{classo_cpt_1_1i_comm_a4805d3c40171aa763f029ebe1886e24f} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!type\+Of\+Comm\+\_\+@{type\+Of\+Comm\+\_\+}}
+\index{type\+Of\+Comm\+\_\+@{type\+Of\+Comm\+\_\+}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{type\+Of\+Comm\+\_\+}{typeOfComm\_}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::i\+Comm\+::type\+Of\+Comm\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 149 of file Communication.\+h.
+
+
+
+Referenced by get\+Type\+Of\+Comm(), and set\+Type\+Of\+Comm().
+
+\hypertarget{classo_cpt_1_1i_comm_a982de4fc52aa87006fc29a0b4667b231}{}\label{classo_cpt_1_1i_comm_a982de4fc52aa87006fc29a0b4667b231} 
+\index{o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}!world\+\_\+@{world\+\_\+}}
+\index{world\+\_\+@{world\+\_\+}!o\+Cpt\+::i\+Comm@{o\+Cpt\+::i\+Comm}}
+\subsubsection{\texorpdfstring{world\+\_\+}{world\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} o\+Cpt\+::i\+Comm\+::world\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 154 of file Communication.\+h.
+
+
+
+Referenced by o\+Cpt\+::\+Lo\+Ra\+::message\+Recieved(), and o\+Cpt\+::\+Lo\+Ra\+::send\+Message().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\hyperlink{_communication_8h}{Communication.\+h}\item 
+src/\+Core/\hyperlink{_communication_8cpp}{Communication.\+cpp}\end{DoxyCompactItemize}

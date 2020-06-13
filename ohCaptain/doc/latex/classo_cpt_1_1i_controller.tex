@@ -1,0 +1,167 @@
+\hypertarget{classo_cpt_1_1i_controller}{}\section{o\+Cpt\+:\+:i\+Controller Class Reference}
+\label{classo_cpt_1_1i_controller}\index{o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}}
+
+
+{\ttfamily \#include $<$Controller.\+h$>$}
+
+
+
+Inheritance diagram for o\+Cpt\+:\+:i\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classo_cpt_1_1i_controller__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classo_cpt_1_1i_controller}{i\+Controller} $>$ \hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{ptr}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service $>$ \hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{io\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1i_controller_acb46f6b610629978779f43e14b1c3f23}{i\+Controller} (\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} world)
+\item 
+virtual \hyperlink{classo_cpt_1_1i_controller_aa92cd99292abf1c093cd03420f44f6a0}{$\sim$i\+Controller} ()
+\item 
+virtual std\+::vector$<$ \hyperlink{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff}{protocol\+::adc\+::ptr} $>$ $\ast$ \hyperlink{classo_cpt_1_1i_controller_af414ebaf64b79ac45d1275e62799e36c}{get\+Adc\+Vector} ()=0
+\item 
+virtual \hyperlink{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff}{protocol\+::adc\+::ptr} \hyperlink{classo_cpt_1_1i_controller_a7abf65f5912df117a3ff4c1c9643bba3}{get\+A\+DC} (uint8\+\_\+t id, uint8\+\_\+t device)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff}{protocol\+::adc\+::ptr} $>$ \hyperlink{classo_cpt_1_1i_controller_ad385bb3078176cd3df8a9e51cfdab68a}{adc\+Vector\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} \hyperlink{classo_cpt_1_1i_controller_a77fe51158891ee7af9d5d92a3ff46b20}{world\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The interface for a controller. Each controller like for instance a Beaglebone black, Raspberry PI or x64 computer, should adhere to this interface 
+
+Definition at line 559 of file Controller.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{}\label{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c} 
+\index{o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}!io\+\_\+t@{io\+\_\+t}}
+\index{io\+\_\+t@{io\+\_\+t}!o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}}
+\subsubsection{\texorpdfstring{io\+\_\+t}{io\_t}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$boost\+::asio\+::io\+\_\+service$>$ \hyperlink{classo_cpt_1_1i_controller_a51c3436b03060209f6cd2ddce6df2d0c}{o\+Cpt\+::i\+Controller\+::io\+\_\+t}}
+
+
+
+Definition at line 562 of file Controller.\+h.
+
+\hypertarget{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{}\label{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f} 
+\index{o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}!ptr@{ptr}}
+\index{ptr@{ptr}!o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$\hyperlink{classo_cpt_1_1i_controller}{i\+Controller}$>$ \hyperlink{classo_cpt_1_1i_controller_a6d89a95cd6ad68bb74adfaca2f36370f}{o\+Cpt\+::i\+Controller\+::ptr}}
+
+
+
+Definition at line 561 of file Controller.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1i_controller_acb46f6b610629978779f43e14b1c3f23}{}\label{classo_cpt_1_1i_controller_acb46f6b610629978779f43e14b1c3f23} 
+\index{o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}!i\+Controller@{i\+Controller}}
+\index{i\+Controller@{i\+Controller}!o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}}
+\subsubsection{\texorpdfstring{i\+Controller()}{iController()}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Controller\+::i\+Controller (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr}}]{world }\end{DoxyParamCaption})}
+
+The constructor 
+\begin{DoxyParams}{Parameters}
+{\em world} & a pointer to the \hyperlink{classo_cpt_1_1_world}{World} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 464 of file Controller.\+cpp.
+
+\hypertarget{classo_cpt_1_1i_controller_aa92cd99292abf1c093cd03420f44f6a0}{}\label{classo_cpt_1_1i_controller_aa92cd99292abf1c093cd03420f44f6a0} 
+\index{o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}!````~i\+Controller@{$\sim$i\+Controller}}
+\index{````~i\+Controller@{$\sim$i\+Controller}!o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}}
+\subsubsection{\texorpdfstring{$\sim$i\+Controller()}{~iController()}}
+{\footnotesize\ttfamily o\+Cpt\+::i\+Controller\+::$\sim$i\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The deconstructor 
+
+Definition at line 467 of file Controller.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1i_controller_a7abf65f5912df117a3ff4c1c9643bba3}{}\label{classo_cpt_1_1i_controller_a7abf65f5912df117a3ff4c1c9643bba3} 
+\index{o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}!get\+A\+DC@{get\+A\+DC}}
+\index{get\+A\+DC@{get\+A\+DC}!o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}}
+\subsubsection{\texorpdfstring{get\+A\+D\+C()}{getADC()}}
+{\footnotesize\ttfamily virtual \hyperlink{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff}{protocol\+::adc\+::ptr} o\+Cpt\+::i\+Controller\+::get\+A\+DC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id,  }\item[{uint8\+\_\+t}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A pure virtual function which gets a Pointer to a specific A\+DC 
+\begin{DoxyParams}{Parameters}
+{\em id} & The pin ID \\
+\hline
+{\em device} & the device ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the requested A\+DC 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classo_cpt_1_1_a_r_m_a2f773bcd04719d81994af8930ca974bd}{o\+Cpt\+::\+A\+RM}.
+
+\hypertarget{classo_cpt_1_1i_controller_af414ebaf64b79ac45d1275e62799e36c}{}\label{classo_cpt_1_1i_controller_af414ebaf64b79ac45d1275e62799e36c} 
+\index{o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}!get\+Adc\+Vector@{get\+Adc\+Vector}}
+\index{get\+Adc\+Vector@{get\+Adc\+Vector}!o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}}
+\subsubsection{\texorpdfstring{get\+Adc\+Vector()}{getAdcVector()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\hyperlink{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff}{protocol\+::adc\+::ptr}$>$$\ast$ o\+Cpt\+::i\+Controller\+::get\+Adc\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A pure virtual function which gets a pointer to all available A\+DC, if present. T\+O\+DO check how it handles no A\+DC presents \begin{DoxyReturn}{Returns}
+a vector with pointers the all available A\+D\+Cs 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classo_cpt_1_1_a_r_m_a32e77e29e34f3114f0b766b705366ba8}{o\+Cpt\+::\+A\+RM}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1i_controller_ad385bb3078176cd3df8a9e51cfdab68a}{}\label{classo_cpt_1_1i_controller_ad385bb3078176cd3df8a9e51cfdab68a} 
+\index{o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}!adc\+Vector\+\_\+@{adc\+Vector\+\_\+}}
+\index{adc\+Vector\+\_\+@{adc\+Vector\+\_\+}!o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}}
+\subsubsection{\texorpdfstring{adc\+Vector\+\_\+}{adcVector\_}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classo_cpt_1_1protocol_1_1adc_a94af68cb9c573629a4a1a16f8ebd3dff}{protocol\+::adc\+::ptr}$>$ o\+Cpt\+::i\+Controller\+::adc\+Vector\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 590 of file Controller.\+h.
+
+
+
+Referenced by o\+Cpt\+::components\+::controller\+::\+B\+B\+B\+::\+B\+B\+B(), o\+Cpt\+::\+A\+R\+M\+::get\+A\+D\+C(), and o\+Cpt\+::\+A\+R\+M\+::get\+Adc\+Vector().
+
+\hypertarget{classo_cpt_1_1i_controller_a77fe51158891ee7af9d5d92a3ff46b20}{}\label{classo_cpt_1_1i_controller_a77fe51158891ee7af9d5d92a3ff46b20} 
+\index{o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}!world\+\_\+@{world\+\_\+}}
+\index{world\+\_\+@{world\+\_\+}!o\+Cpt\+::i\+Controller@{o\+Cpt\+::i\+Controller}}
+\subsubsection{\texorpdfstring{world\+\_\+}{world\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1_world_aa6e591e3096d5de71e0cec9039663d67}{World\+::ptr} o\+Cpt\+::i\+Controller\+::world\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 591 of file Controller.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\hyperlink{_controller_8h}{Controller.\+h}\item 
+src/\+Core/\hyperlink{_controller_8cpp}{Controller.\+cpp}\end{DoxyCompactItemize}

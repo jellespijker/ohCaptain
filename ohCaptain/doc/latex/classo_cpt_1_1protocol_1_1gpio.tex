@@ -1,0 +1,842 @@
+\hypertarget{classo_cpt_1_1protocol_1_1gpio}{}\section{o\+Cpt\+:\+:protocol\+:\+:gpio Class Reference}
+\label{classo_cpt_1_1protocol_1_1gpio}\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+
+
+{\ttfamily \#include $<$Controller.\+h$>$}
+
+
+
+Inheritance diagram for o\+Cpt\+:\+:protocol\+:\+:gpio\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classo_cpt_1_1protocol_1_1gpio__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for o\+Cpt\+:\+:protocol\+:\+:gpio\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classo_cpt_1_1protocol_1_1gpio__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5b}{Direction} \{ \hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5bac8229afa7339514d640fdd7512456ec1}{I\+N\+P\+UT} = 105, 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5baa8f40287c9c83f0528feec4792eb1923}{O\+U\+T\+P\+UT} = 111
+ \}
+\item 
+enum \hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656f}{Value} \{ \hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656faa2cdaa57258d16622e014ff5d766f095}{L\+OW} = 48, 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656fade5ff2955239ef2860ee2d06f3be68d4}{H\+I\+GH} = 49
+ \}
+\item 
+enum \hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9}{Edge} \{ \hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9a97a153b16162f7d3ebd04fe1bc59b8f8}{N\+O\+NE} = 110, 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9a33b81c6d79fea86cd39ac781c6038678}{R\+I\+S\+I\+NG} = 114, 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9ad706fd6e134b45f6521f6f10cac1ab3a}{F\+A\+L\+L\+I\+NG} = 102, 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9a4fdd038edea2f194d145a18b371be597}{B\+O\+TH} = 98
+ \}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classo_cpt_1_1protocol_1_1gpio}{gpio} $>$ \hyperlink{classo_cpt_1_1protocol_1_1gpio_acd4fb0fba7a813a8013511b374e73900}{ptr}
+\item 
+typedef boost\+::signals2\+::signal$<$ void()$>$ \hyperlink{classo_cpt_1_1protocol_1_1gpio_aa875802b20c7ef999c44af68e7f23621}{signal\+\_\+t}
+\item 
+typedef std\+::function$<$ void()$>$ \hyperlink{classo_cpt_1_1protocol_1_1gpio_ad553926a5fc9db445e7c9715abede2e3}{cb\+\_\+func}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_a8ceba8e1629d1d6e87da53eb097d81e5}{gpio} (int pin\+Number, \hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5b}{Direction} direction=\hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5bac8229afa7339514d640fdd7512456ec1}{I\+N\+P\+UT}, \hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656f}{Value} value=\hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656faa2cdaa57258d16622e014ff5d766f095}{L\+OW}, \hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9}{Edge} edge=\hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9a97a153b16162f7d3ebd04fe1bc59b8f8}{N\+O\+NE})
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_a8ab3c04e4643a838f8d9ea26367e3545}{$\sim$gpio} ()
+\item 
+int \hyperlink{classo_cpt_1_1protocol_1_1gpio_a66f03a0097a751d56f046e1537432291}{get\+Pin\+Number} () const
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1gpio_a1f3a810d9f15c6021c9df71994c08bd6}{set\+Pin\+Number} (int pin\+Number)
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656f}{Value} \hyperlink{classo_cpt_1_1protocol_1_1gpio_a036e04db41883ec0e33dc9cf279a51f9}{get\+Value} () const
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1gpio_a869cfd12f0b74afedb7dbb40eacfa402}{set\+Value} (\hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656f}{Value} value)
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5b}{Direction} \hyperlink{classo_cpt_1_1protocol_1_1gpio_aa89066f15bd97035908e7df75913c54b}{get\+Direction} () const
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1gpio_acf2779bab1d3e1d5ebccee55b9af6d5e}{set\+Direction} (\hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5b}{Direction} direction)
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9}{Edge} \hyperlink{classo_cpt_1_1protocol_1_1gpio_a1eaae952cf8f11f4d62989dace78607e}{get\+Edge} () const
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1gpio_a026c5bceb1bff0328c2804d2748f8e3d}{set\+Edge} (\hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9}{Edge} edge)
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1gpio_a9eb9df34a1e1aee22c47a8642c34eec0}{set\+Callback\+Function} (\hyperlink{classo_cpt_1_1protocol_1_1gpio_ad553926a5fc9db445e7c9715abede2e3}{cb\+\_\+func} cb)
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1gpio_a0fd140f4fb32047ceba4a9a17891efe0}{wait\+For\+Edge} ()
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1gpio_a02375f321f838da5f738eda8631ae0cc}{wait\+For\+Edge\+Async} ()
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1gpio_a12c30093a002734375b29de19809aab0}{toggle} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \hyperlink{classo_cpt_1_1protocol_1_1gpio_acd4fb0fba7a813a8013511b374e73900}{ptr} $>$ \hyperlink{classo_cpt_1_1protocol_1_1gpio_a2beacd45b177eb627e66a3b252a4aaff}{exported\+Gpios} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_aa875802b20c7ef999c44af68e7f23621}{signal\+\_\+t} \hyperlink{classo_cpt_1_1protocol_1_1gpio_aa24b7c7d759f783bc3e93745edc69a2b}{signal\+Changed}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1gpio_aac8bfbf4530ff929ea83f48e970d0598}{internal\+Cb\+Func} ()
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1gpio_af7fef4210406ea75eb04cc96fd99e7eb}{export\+Pin} (const int \&number)
+\item 
+void \hyperlink{classo_cpt_1_1protocol_1_1gpio_af6383ac93d965d156617147c652ae56f}{unexport\+Pin} (const int \&number)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classo_cpt_1_1protocol_1_1gpio_a0f2972fa7ad1981c7edeae79280aa11f}{write\+Pin\+Value} (const int \&number, const T \&value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classo_cpt_1_1protocol_1_1gpio_a08e30d2b5451a628857d18b3b75e3265}{write\+Pin\+Value} (std\+::string path, const T \&value)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static T \hyperlink{classo_cpt_1_1protocol_1_1gpio_aa604ec2008a852ec0f378b4c98fa3a3c}{read\+Pin\+Value} (const int \&number)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static T \hyperlink{classo_cpt_1_1protocol_1_1gpio_a3e50919a9b9712884d4e868487821dc6}{read\+Pin\+Value} (std\+::string path)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classo_cpt_1_1protocol_1_1gpio_a618c388f95fff31d6decf7f8760e76a9}{pin\+Number\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656f}{Value} \hyperlink{classo_cpt_1_1protocol_1_1gpio_a301d39638a420a299728d353ade3997c}{value\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5b}{Direction} \hyperlink{classo_cpt_1_1protocol_1_1gpio_adb5c9fe44ef91bf37812e9cdfd3141d4}{direction\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9}{Edge} \hyperlink{classo_cpt_1_1protocol_1_1gpio_abdd5f6e987fdca5748a35622f72eaf2f}{edge\+\_\+}
+\item 
+std\+::string \hyperlink{classo_cpt_1_1protocol_1_1gpio_afac9293096c2636fcce60aff2b38698d}{gpiopath\+\_\+}
+\item 
+\hyperlink{classo_cpt_1_1protocol_1_1gpio_ad553926a5fc9db445e7c9715abede2e3}{cb\+\_\+func} \hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d9d6a711dd0ba0d51649b85ca4d5bf4}{cb\+\_\+}
+\item 
+bool \hyperlink{classo_cpt_1_1protocol_1_1gpio_aefa2c3a350dce68af5b9eea8b84f0336}{thread\+Running\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A General Pin Input Output class. This is the class that handles gpio\textquotesingle{}s in user space. Each pin can be set as either input or output, and have a High or a Low out-\//input. When a pin is set as input, it can be polled on the edge, execute a function or send a signal on the rising, falling or changing edge of the signal 
+
+Definition at line 138 of file Controller.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_ad553926a5fc9db445e7c9715abede2e3}{}\label{classo_cpt_1_1protocol_1_1gpio_ad553926a5fc9db445e7c9715abede2e3} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!cb\+\_\+func@{cb\+\_\+func}}
+\index{cb\+\_\+func@{cb\+\_\+func}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{cb\+\_\+func}{cb\_func}}
+{\footnotesize\ttfamily typedef std\+::function$<$void()$>$ \hyperlink{classo_cpt_1_1protocol_1_1gpio_ad553926a5fc9db445e7c9715abede2e3}{o\+Cpt\+::protocol\+::gpio\+::cb\+\_\+func}}
+
+
+
+Definition at line 142 of file Controller.\+h.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_acd4fb0fba7a813a8013511b374e73900}{}\label{classo_cpt_1_1protocol_1_1gpio_acd4fb0fba7a813a8013511b374e73900} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!ptr@{ptr}}
+\index{ptr@{ptr}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$\hyperlink{classo_cpt_1_1protocol_1_1gpio}{gpio}$>$ \hyperlink{classo_cpt_1_1protocol_1_1gpio_acd4fb0fba7a813a8013511b374e73900}{o\+Cpt\+::protocol\+::gpio\+::ptr}}
+
+
+
+Definition at line 140 of file Controller.\+h.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_aa875802b20c7ef999c44af68e7f23621}{}\label{classo_cpt_1_1protocol_1_1gpio_aa875802b20c7ef999c44af68e7f23621} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!signal\+\_\+t@{signal\+\_\+t}}
+\index{signal\+\_\+t@{signal\+\_\+t}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{signal\+\_\+t}{signal\_t}}
+{\footnotesize\ttfamily typedef boost\+::signals2\+::signal$<$void()$>$ \hyperlink{classo_cpt_1_1protocol_1_1gpio_aa875802b20c7ef999c44af68e7f23621}{o\+Cpt\+::protocol\+::gpio\+::signal\+\_\+t}}
+
+
+
+Definition at line 141 of file Controller.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5b}{}\label{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5b} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!Direction@{Direction}}
+\index{Direction@{Direction}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5b}{o\+Cpt\+::protocol\+::gpio\+::\+Direction}}
+
+The Direction of the pin \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+P\+UT@{I\+N\+P\+UT}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!I\+N\+P\+UT@{I\+N\+P\+UT}}}\hypertarget{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5bac8229afa7339514d640fdd7512456ec1}{}\label{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5bac8229afa7339514d640fdd7512456ec1} 
+I\+N\+P\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+U\+T\+P\+UT@{O\+U\+T\+P\+UT}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!O\+U\+T\+P\+UT@{O\+U\+T\+P\+UT}}}\hypertarget{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5baa8f40287c9c83f0528feec4792eb1923}{}\label{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5baa8f40287c9c83f0528feec4792eb1923} 
+O\+U\+T\+P\+UT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 147 of file Controller.\+h.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9}{}\label{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!Edge@{Edge}}
+\index{Edge@{Edge}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{Edge}{Edge}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9}{o\+Cpt\+::protocol\+::gpio\+::\+Edge}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!N\+O\+NE@{N\+O\+NE}}}\hypertarget{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9a97a153b16162f7d3ebd04fe1bc59b8f8}{}\label{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9a97a153b16162f7d3ebd04fe1bc59b8f8} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+I\+S\+I\+NG@{R\+I\+S\+I\+NG}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!R\+I\+S\+I\+NG@{R\+I\+S\+I\+NG}}}\hypertarget{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9a33b81c6d79fea86cd39ac781c6038678}{}\label{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9a33b81c6d79fea86cd39ac781c6038678} 
+R\+I\+S\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+A\+L\+L\+I\+NG@{F\+A\+L\+L\+I\+NG}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!F\+A\+L\+L\+I\+NG@{F\+A\+L\+L\+I\+NG}}}\hypertarget{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9ad706fd6e134b45f6521f6f10cac1ab3a}{}\label{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9ad706fd6e134b45f6521f6f10cac1ab3a} 
+F\+A\+L\+L\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+O\+TH@{B\+O\+TH}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!B\+O\+TH@{B\+O\+TH}}}\hypertarget{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9a4fdd038edea2f194d145a18b371be597}{}\label{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9a4fdd038edea2f194d145a18b371be597} 
+B\+O\+TH&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 157 of file Controller.\+h.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656f}{}\label{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656f} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!Value@{Value}}
+\index{Value@{Value}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{Value}{Value}}
+{\footnotesize\ttfamily enum \hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656f}{o\+Cpt\+::protocol\+::gpio\+::\+Value}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+OW@{L\+OW}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!L\+OW@{L\+OW}}}\hypertarget{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656faa2cdaa57258d16622e014ff5d766f095}{}\label{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656faa2cdaa57258d16622e014ff5d766f095} 
+L\+OW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+I\+GH@{H\+I\+GH}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!H\+I\+GH@{H\+I\+GH}}}\hypertarget{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656fade5ff2955239ef2860ee2d06f3be68d4}{}\label{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656fade5ff2955239ef2860ee2d06f3be68d4} 
+H\+I\+GH&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 152 of file Controller.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a8ceba8e1629d1d6e87da53eb097d81e5}{}\label{classo_cpt_1_1protocol_1_1gpio_a8ceba8e1629d1d6e87da53eb097d81e5} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!gpio@{gpio}}
+\index{gpio@{gpio}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{gpio()}{gpio()}}
+{\footnotesize\ttfamily o\+Cpt\+::protocol\+::gpio\+::gpio (\begin{DoxyParamCaption}\item[{int}]{pin\+Number,  }\item[{\hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5b}{gpio\+::\+Direction}}]{direction = {\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5bac8229afa7339514d640fdd7512456ec1}{I\+N\+P\+UT}},  }\item[{\hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656f}{gpio\+::\+Value}}]{value = {\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656faa2cdaa57258d16622e014ff5d766f095}{L\+OW}},  }\item[{\hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9}{gpio\+::\+Edge}}]{edge = {\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9a97a153b16162f7d3ebd04fe1bc59b8f8}{N\+O\+NE}} }\end{DoxyParamCaption})}
+
+The constructor for the gpio class 
+\begin{DoxyParams}{Parameters}
+{\em pin\+Number} & the pin pumber (in user-\/space mapping) \\
+\hline
+{\em direction} & the Direction of a pin, with a default value as Direction\+::\+I\+N\+P\+UT \\
+\hline
+{\em value} & the start Value of a pin. With a default value of Value\+::\+L\+OW \\
+\hline
+{\em edge} & the Edge of a pin with the default value of Edge\+::\+N\+O\+NE \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 337 of file Controller.\+cpp.
+
+
+
+References cb\+\_\+, direction\+\_\+, edge\+\_\+, export\+Pin(), G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH, gpiopath\+\_\+, internal\+Cb\+Func(), pin\+Number\+\_\+, and value\+\_\+.
+
+
+
+Referenced by exported\+Gpios().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classo_cpt_1_1protocol_1_1gpio_a8ceba8e1629d1d6e87da53eb097d81e5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classo_cpt_1_1protocol_1_1gpio_a8ceba8e1629d1d6e87da53eb097d81e5_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a8ab3c04e4643a838f8d9ea26367e3545}{}\label{classo_cpt_1_1protocol_1_1gpio_a8ab3c04e4643a838f8d9ea26367e3545} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!````~gpio@{$\sim$gpio}}
+\index{````~gpio@{$\sim$gpio}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{$\sim$gpio()}{~gpio()}}
+{\footnotesize\ttfamily o\+Cpt\+::protocol\+::gpio\+::$\sim$gpio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The deconstructor 
+
+Definition at line 353 of file Controller.\+cpp.
+
+
+
+References pin\+Number\+\_\+, and unexport\+Pin().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classo_cpt_1_1protocol_1_1gpio_a8ab3c04e4643a838f8d9ea26367e3545_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a2beacd45b177eb627e66a3b252a4aaff}{}\label{classo_cpt_1_1protocol_1_1gpio_a2beacd45b177eb627e66a3b252a4aaff} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!exported\+Gpios@{exported\+Gpios}}
+\index{exported\+Gpios@{exported\+Gpios}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{exported\+Gpios()}{exportedGpios()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{classo_cpt_1_1protocol_1_1gpio_acd4fb0fba7a813a8013511b374e73900}{gpio\+::ptr} $>$ o\+Cpt\+::protocol\+::gpio\+::exported\+Gpios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Static function which creates a vector containing new gpio shared\+\_\+ptr for each pin that is currently exported in the user space. \begin{DoxyReturn}{Returns}
+A vector with shared\+\_\+ptr\textquotesingle{}s of all exported gpio\textquotesingle{}s in user-\/space 
+\end{DoxyReturn}
+Iterate through all exported pins 
+
+Definition at line 357 of file Controller.\+cpp.
+
+
+
+References gpio(), and G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1gpio_a2beacd45b177eb627e66a3b252a4aaff_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_af7fef4210406ea75eb04cc96fd99e7eb}{}\label{classo_cpt_1_1protocol_1_1gpio_af7fef4210406ea75eb04cc96fd99e7eb} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!export\+Pin@{export\+Pin}}
+\index{export\+Pin@{export\+Pin}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{export\+Pin()}{exportPin()}}
+{\footnotesize\ttfamily void o\+Cpt\+::protocol\+::gpio\+::export\+Pin (\begin{DoxyParamCaption}\item[{const int \&}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Export the pin in user-\/space 
+\begin{DoxyParams}{Parameters}
+{\em number} & the pin number to be exported \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 381 of file Controller.\+cpp.
+
+
+
+References G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH.
+
+
+
+Referenced by gpio().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1gpio_af7fef4210406ea75eb04cc96fd99e7eb_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_aa89066f15bd97035908e7df75913c54b}{}\label{classo_cpt_1_1protocol_1_1gpio_aa89066f15bd97035908e7df75913c54b} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!get\+Direction@{get\+Direction}}
+\index{get\+Direction@{get\+Direction}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{get\+Direction()}{getDirection()}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5b}{gpio\+::\+Direction} o\+Cpt\+::protocol\+::gpio\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the current Direction. note this doesn\textquotesingle{}t take into accoutn external changes done outside this library \begin{DoxyReturn}{Returns}
+either Direction\+::\+I\+N\+P\+UT or Direction\+::\+Output 
+\end{DoxyReturn}
+
+
+Definition at line 314 of file Controller.\+cpp.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a1eaae952cf8f11f4d62989dace78607e}{}\label{classo_cpt_1_1protocol_1_1gpio_a1eaae952cf8f11f4d62989dace78607e} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!get\+Edge@{get\+Edge}}
+\index{get\+Edge@{get\+Edge}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{get\+Edge()}{getEdge()}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9}{gpio\+::\+Edge} o\+Cpt\+::protocol\+::gpio\+::get\+Edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the current Edge of the pin. If the Direction is set to Direction\+::\+I\+N\+P\+UT the value is set in user-\/space, otherwise it is set in the object itself \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 323 of file Controller.\+cpp.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a66f03a0097a751d56f046e1537432291}{}\label{classo_cpt_1_1protocol_1_1gpio_a66f03a0097a751d56f046e1537432291} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!get\+Pin\+Number@{get\+Pin\+Number}}
+\index{get\+Pin\+Number@{get\+Pin\+Number}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{get\+Pin\+Number()}{getPinNumber()}}
+{\footnotesize\ttfamily int o\+Cpt\+::protocol\+::gpio\+::get\+Pin\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the current pin number \begin{DoxyReturn}{Returns}
+an int representing the pin number in user-\/space mapping 
+\end{DoxyReturn}
+
+
+Definition at line 291 of file Controller.\+cpp.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a036e04db41883ec0e33dc9cf279a51f9}{}\label{classo_cpt_1_1protocol_1_1gpio_a036e04db41883ec0e33dc9cf279a51f9} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656f}{gpio\+::\+Value} o\+Cpt\+::protocol\+::gpio\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the current value of the pin, if the Direction is set to Direction\+::\+I\+N\+P\+UT the value is obtained from the user space, otherwise the value is read from object itself \begin{DoxyReturn}{Returns}
+either Value\+::\+H\+I\+GH or Value\+::\+L\+OW 
+\end{DoxyReturn}
+
+
+Definition at line 300 of file Controller.\+cpp.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_aac8bfbf4530ff929ea83f48e970d0598}{}\label{classo_cpt_1_1protocol_1_1gpio_aac8bfbf4530ff929ea83f48e970d0598} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!internal\+Cb\+Func@{internal\+Cb\+Func}}
+\index{internal\+Cb\+Func@{internal\+Cb\+Func}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{internal\+Cb\+Func()}{internalCbFunc()}}
+{\footnotesize\ttfamily void o\+Cpt\+::protocol\+::gpio\+::internal\+Cb\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+The internal callback function, which triggers the signal\+Changed signal 
+
+Definition at line 418 of file Controller.\+cpp.
+
+
+
+References signal\+Changed.
+
+
+
+Referenced by gpio().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classo_cpt_1_1protocol_1_1gpio_aac8bfbf4530ff929ea83f48e970d0598_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_aa604ec2008a852ec0f378b4c98fa3a3c}{}\label{classo_cpt_1_1protocol_1_1gpio_aa604ec2008a852ec0f378b4c98fa3a3c} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!read\+Pin\+Value@{read\+Pin\+Value}}
+\index{read\+Pin\+Value@{read\+Pin\+Value}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{read\+Pin\+Value()}{readPinValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T o\+Cpt\+::protocol\+::gpio\+::read\+Pin\+Value (\begin{DoxyParamCaption}\item[{const int \&}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Static generic function returning the value in user-\/space of either Direction, Edge or Value. Depending on the typename 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The value to return either the Value, Edge or Direction \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & the pin as number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The read value as either Value, Edge or Direction 
+\end{DoxyReturn}
+
+
+Definition at line 291 of file Controller.\+h.
+
+
+
+References G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a3e50919a9b9712884d4e868487821dc6}{}\label{classo_cpt_1_1protocol_1_1gpio_a3e50919a9b9712884d4e868487821dc6} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!read\+Pin\+Value@{read\+Pin\+Value}}
+\index{read\+Pin\+Value@{read\+Pin\+Value}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{read\+Pin\+Value()}{readPinValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T o\+Cpt\+::protocol\+::gpio\+::read\+Pin\+Value (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Static generic function returning the value in user-\/space of either Direction, Edge or Value. Depending on the typename. This function is quicker then the overload function taking the pin number as int. and is therefore preffered to obtain the Value. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The value to return either the Value, Edge or Direction \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the pin as user-\/space path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the read value as either Value, Edge or Direction 
+\end{DoxyReturn}
+
+
+Definition at line 304 of file Controller.\+h.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a9eb9df34a1e1aee22c47a8642c34eec0}{}\label{classo_cpt_1_1protocol_1_1gpio_a9eb9df34a1e1aee22c47a8642c34eec0} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!set\+Callback\+Function@{set\+Callback\+Function}}
+\index{set\+Callback\+Function@{set\+Callback\+Function}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{set\+Callback\+Function()}{setCallbackFunction()}}
+{\footnotesize\ttfamily void o\+Cpt\+::protocol\+::gpio\+::set\+Callback\+Function (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1protocol_1_1gpio_ad553926a5fc9db445e7c9715abede2e3}{gpio\+::cb\+\_\+func}}]{cb }\end{DoxyParamCaption})}
+
+Set a new Callbackfunction which is called on a certain Edge 
+\begin{DoxyParams}{Parameters}
+{\em cb} & the callback function \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 414 of file Controller.\+cpp.
+
+
+
+References cb\+\_\+.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_acf2779bab1d3e1d5ebccee55b9af6d5e}{}\label{classo_cpt_1_1protocol_1_1gpio_acf2779bab1d3e1d5ebccee55b9af6d5e} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!set\+Direction@{set\+Direction}}
+\index{set\+Direction@{set\+Direction}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{set\+Direction()}{setDirection()}}
+{\footnotesize\ttfamily void o\+Cpt\+::protocol\+::gpio\+::set\+Direction (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5b}{gpio\+::\+Direction}}]{direction }\end{DoxyParamCaption})}
+
+Set the Direction of the pin 
+\begin{DoxyParams}{Parameters}
+{\em direction} & the Direction of the pin \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 318 of file Controller.\+cpp.
+
+
+
+References direction\+\_\+.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a026c5bceb1bff0328c2804d2748f8e3d}{}\label{classo_cpt_1_1protocol_1_1gpio_a026c5bceb1bff0328c2804d2748f8e3d} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!set\+Edge@{set\+Edge}}
+\index{set\+Edge@{set\+Edge}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{set\+Edge()}{setEdge()}}
+{\footnotesize\ttfamily void o\+Cpt\+::protocol\+::gpio\+::set\+Edge (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9}{gpio\+::\+Edge}}]{edge }\end{DoxyParamCaption})}
+
+Set the Edge of the of the pin. if the Direction is set to Direction\+::\+I\+N\+P\+UT, the value is set in user-\/space, otherwise it is set in the object itself 
+\begin{DoxyParams}{Parameters}
+{\em edge} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 330 of file Controller.\+cpp.
+
+
+
+References edge\+\_\+.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a1f3a810d9f15c6021c9df71994c08bd6}{}\label{classo_cpt_1_1protocol_1_1gpio_a1f3a810d9f15c6021c9df71994c08bd6} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!set\+Pin\+Number@{set\+Pin\+Number}}
+\index{set\+Pin\+Number@{set\+Pin\+Number}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{set\+Pin\+Number()}{setPinNumber()}}
+{\footnotesize\ttfamily void o\+Cpt\+::protocol\+::gpio\+::set\+Pin\+Number (\begin{DoxyParamCaption}\item[{int}]{pin\+Number }\end{DoxyParamCaption})}
+
+Set the new pinbumber (don\textquotesingle{}t use yet) 
+\begin{DoxyParams}{Parameters}
+{\em pin\+Number} & the pinmuber to be set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 295 of file Controller.\+cpp.
+
+
+
+References pin\+Number\+\_\+.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a869cfd12f0b74afedb7dbb40eacfa402}{}\label{classo_cpt_1_1protocol_1_1gpio_a869cfd12f0b74afedb7dbb40eacfa402} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{set\+Value()}{setValue()}}
+{\footnotesize\ttfamily void o\+Cpt\+::protocol\+::gpio\+::set\+Value (\begin{DoxyParamCaption}\item[{\hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656f}{gpio\+::\+Value}}]{value }\end{DoxyParamCaption})}
+
+Set the current value, if the Direction is set to Direction\+::\+O\+U\+T\+P\+UT the value is set ti userspace, either it is set to object itself 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 307 of file Controller.\+cpp.
+
+
+
+References value\+\_\+.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a12c30093a002734375b29de19809aab0}{}\label{classo_cpt_1_1protocol_1_1gpio_a12c30093a002734375b29de19809aab0} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!toggle@{toggle}}
+\index{toggle@{toggle}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{toggle()}{toggle()}}
+{\footnotesize\ttfamily void o\+Cpt\+::protocol\+::gpio\+::toggle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Toggle the value\+\_\+ of the pin if Value\+::\+High then the value\+\_\+ is set to Value\+::\+L\+OW 
+
+Definition at line 409 of file Controller.\+cpp.
+
+
+
+References gpiopath\+\_\+, and value\+\_\+.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_af6383ac93d965d156617147c652ae56f}{}\label{classo_cpt_1_1protocol_1_1gpio_af6383ac93d965d156617147c652ae56f} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!unexport\+Pin@{unexport\+Pin}}
+\index{unexport\+Pin@{unexport\+Pin}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{unexport\+Pin()}{unexportPin()}}
+{\footnotesize\ttfamily void o\+Cpt\+::protocol\+::gpio\+::unexport\+Pin (\begin{DoxyParamCaption}\item[{const int \&}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Unexport the pin in user-\/space 
+\begin{DoxyParams}{Parameters}
+{\em number} & the pin number to be unexported \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 395 of file Controller.\+cpp.
+
+
+
+References G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH.
+
+
+
+Referenced by $\sim$gpio().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classo_cpt_1_1protocol_1_1gpio_af6383ac93d965d156617147c652ae56f_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a0fd140f4fb32047ceba4a9a17891efe0}{}\label{classo_cpt_1_1protocol_1_1gpio_a0fd140f4fb32047ceba4a9a17891efe0} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!wait\+For\+Edge@{wait\+For\+Edge}}
+\index{wait\+For\+Edge@{wait\+For\+Edge}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{wait\+For\+Edge()}{waitForEdge()}}
+{\footnotesize\ttfamily void o\+Cpt\+::protocol\+::gpio\+::wait\+For\+Edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wait for the occurance of a change in Edge, corresponding with the set value of Edge. When the change is detected the callbackfunction is called. This function blocks the current thread. 
+
+Definition at line 422 of file Controller.\+cpp.
+
+
+
+References cb\+\_\+, direction\+\_\+, and gpiopath\+\_\+.
+
+
+
+Referenced by wait\+For\+Edge\+Async().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classo_cpt_1_1protocol_1_1gpio_a0fd140f4fb32047ceba4a9a17891efe0_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a02375f321f838da5f738eda8631ae0cc}{}\label{classo_cpt_1_1protocol_1_1gpio_a02375f321f838da5f738eda8631ae0cc} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!wait\+For\+Edge\+Async@{wait\+For\+Edge\+Async}}
+\index{wait\+For\+Edge\+Async@{wait\+For\+Edge\+Async}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{wait\+For\+Edge\+Async()}{waitForEdgeAsync()}}
+{\footnotesize\ttfamily void o\+Cpt\+::protocol\+::gpio\+::wait\+For\+Edge\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wait for the ocurrance of a change in Edge, corresponding with the set value of Edge. When the chance is detected the callbackfunction is called. This function creates a new thread, allowing the current thread to run unhindered 
+
+Definition at line 457 of file Controller.\+cpp.
+
+
+
+References wait\+For\+Edge().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classo_cpt_1_1protocol_1_1gpio_a02375f321f838da5f738eda8631ae0cc_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a0f2972fa7ad1981c7edeae79280aa11f}{}\label{classo_cpt_1_1protocol_1_1gpio_a0f2972fa7ad1981c7edeae79280aa11f} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!write\+Pin\+Value@{write\+Pin\+Value}}
+\index{write\+Pin\+Value@{write\+Pin\+Value}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{write\+Pin\+Value()}{writePinValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void o\+Cpt\+::protocol\+::gpio\+::write\+Pin\+Value (\begin{DoxyParamCaption}\item[{const int \&}]{number,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Write the value to the pin. The T parameter determines which value to set 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type could either be Value, Direction ro Direction \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & the pin number as an integer \\
+\hline
+{\em value} & the Value to be set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 331 of file Controller.\+h.
+
+
+
+References G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+A\+TH.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a08e30d2b5451a628857d18b3b75e3265}{}\label{classo_cpt_1_1protocol_1_1gpio_a08e30d2b5451a628857d18b3b75e3265} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!write\+Pin\+Value@{write\+Pin\+Value}}
+\index{write\+Pin\+Value@{write\+Pin\+Value}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{write\+Pin\+Value()}{writePinValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void o\+Cpt\+::protocol\+::gpio\+::write\+Pin\+Value (\begin{DoxyParamCaption}\item[{std\+::string}]{path,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Write the value to the pin, The T paramter determines which value to set. This overload is quicker then the one taking the integer and is therefore preferred 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the type could either be Value, Direction or Edge \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the pin as an user-\/space path \\
+\hline
+{\em value} & the Value to write \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 344 of file Controller.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a7d9d6a711dd0ba0d51649b85ca4d5bf4}{}\label{classo_cpt_1_1protocol_1_1gpio_a7d9d6a711dd0ba0d51649b85ca4d5bf4} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!cb\+\_\+@{cb\+\_\+}}
+\index{cb\+\_\+@{cb\+\_\+}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{cb\+\_\+}{cb\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1gpio_ad553926a5fc9db445e7c9715abede2e3}{cb\+\_\+func} o\+Cpt\+::protocol\+::gpio\+::cb\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 264 of file Controller.\+h.
+
+
+
+Referenced by gpio(), set\+Callback\+Function(), and wait\+For\+Edge().
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_adb5c9fe44ef91bf37812e9cdfd3141d4}{}\label{classo_cpt_1_1protocol_1_1gpio_adb5c9fe44ef91bf37812e9cdfd3141d4} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!direction\+\_\+@{direction\+\_\+}}
+\index{direction\+\_\+@{direction\+\_\+}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{direction\+\_\+}{direction\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1gpio_af7acf963933bbc47d11d6fa1b8ce4d5b}{Direction} o\+Cpt\+::protocol\+::gpio\+::direction\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 261 of file Controller.\+h.
+
+
+
+Referenced by gpio(), set\+Direction(), and wait\+For\+Edge().
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_abdd5f6e987fdca5748a35622f72eaf2f}{}\label{classo_cpt_1_1protocol_1_1gpio_abdd5f6e987fdca5748a35622f72eaf2f} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!edge\+\_\+@{edge\+\_\+}}
+\index{edge\+\_\+@{edge\+\_\+}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{edge\+\_\+}{edge\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1gpio_adbbd34b2bc4394ad5a71d94641dda9f9}{Edge} o\+Cpt\+::protocol\+::gpio\+::edge\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 262 of file Controller.\+h.
+
+
+
+Referenced by gpio(), and set\+Edge().
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_afac9293096c2636fcce60aff2b38698d}{}\label{classo_cpt_1_1protocol_1_1gpio_afac9293096c2636fcce60aff2b38698d} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!gpiopath\+\_\+@{gpiopath\+\_\+}}
+\index{gpiopath\+\_\+@{gpiopath\+\_\+}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{gpiopath\+\_\+}{gpiopath\_}}
+{\footnotesize\ttfamily std\+::string o\+Cpt\+::protocol\+::gpio\+::gpiopath\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 263 of file Controller.\+h.
+
+
+
+Referenced by gpio(), toggle(), and wait\+For\+Edge().
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a618c388f95fff31d6decf7f8760e76a9}{}\label{classo_cpt_1_1protocol_1_1gpio_a618c388f95fff31d6decf7f8760e76a9} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!pin\+Number\+\_\+@{pin\+Number\+\_\+}}
+\index{pin\+Number\+\_\+@{pin\+Number\+\_\+}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{pin\+Number\+\_\+}{pinNumber\_}}
+{\footnotesize\ttfamily int o\+Cpt\+::protocol\+::gpio\+::pin\+Number\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 259 of file Controller.\+h.
+
+
+
+Referenced by gpio(), set\+Pin\+Number(), and $\sim$gpio().
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_aa24b7c7d759f783bc3e93745edc69a2b}{}\label{classo_cpt_1_1protocol_1_1gpio_aa24b7c7d759f783bc3e93745edc69a2b} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!signal\+Changed@{signal\+Changed}}
+\index{signal\+Changed@{signal\+Changed}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{signal\+Changed}{signalChanged}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1gpio_aa875802b20c7ef999c44af68e7f23621}{signal\+\_\+t} o\+Cpt\+::protocol\+::gpio\+::signal\+Changed}
+
+The signal that is send if the internal callback fucntion is executed 
+
+Definition at line 256 of file Controller.\+h.
+
+
+
+Referenced by internal\+Cb\+Func().
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_aefa2c3a350dce68af5b9eea8b84f0336}{}\label{classo_cpt_1_1protocol_1_1gpio_aefa2c3a350dce68af5b9eea8b84f0336} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!thread\+Running\+\_\+@{thread\+Running\+\_\+}}
+\index{thread\+Running\+\_\+@{thread\+Running\+\_\+}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{thread\+Running\+\_\+}{threadRunning\_}}
+{\footnotesize\ttfamily bool o\+Cpt\+::protocol\+::gpio\+::thread\+Running\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 265 of file Controller.\+h.
+
+\hypertarget{classo_cpt_1_1protocol_1_1gpio_a301d39638a420a299728d353ade3997c}{}\label{classo_cpt_1_1protocol_1_1gpio_a301d39638a420a299728d353ade3997c} 
+\index{o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}!value\+\_\+@{value\+\_\+}}
+\index{value\+\_\+@{value\+\_\+}!o\+Cpt\+::protocol\+::gpio@{o\+Cpt\+::protocol\+::gpio}}
+\subsubsection{\texorpdfstring{value\+\_\+}{value\_}}
+{\footnotesize\ttfamily \hyperlink{classo_cpt_1_1protocol_1_1gpio_a7d2d1d34f177f209ad642098d168656f}{Value} o\+Cpt\+::protocol\+::gpio\+::value\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 260 of file Controller.\+h.
+
+
+
+Referenced by gpio(), set\+Value(), and toggle().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\hyperlink{_controller_8h}{Controller.\+h}\item 
+src/\+Core/\hyperlink{_controller_8cpp}{Controller.\+cpp}\end{DoxyCompactItemize}
